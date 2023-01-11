@@ -1,0 +1,8 @@
+{
+  "extends": "@2bad/tsconfig",
+  "compilerOptions": {
+    "outDir": "build",
+    "declaration": true
+  },
+  "include": ["source", "types"]
+}

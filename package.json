@@ -1,0 +1,123 @@
+{
+  "name": "@2bad/ryanair",
+  "version": "1.0.0",
+  "description": "Unofficial REST API client for Ryanair",
+  "keywords": [],
+  "homepage": "https://github.com/2BAD/ryanair#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/ryanair/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2BAD/ryanair.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "exports": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "run-s \"lint -- --fix\"",
+    "prepublishOnly": "run-s clean build",
+    "test": "jest --coverage",
+    "test:integration": "jest integration --coverage",
+    "test:unit": "jest unit --coverage",
+    "preversion": "run-s clean lint test build"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "source/**/*.ts?(x)"
+    ],
+    "coverageDirectory": "coverage",
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "transform": {
+      "\\.[jt]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.json"
+        }
+      ]
+    },
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/"
+    ],
+    "preset": "ts-jest/presets/default-esm",
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ],
+    "testMatch": [
+      "<rootDir>/source/**/test.*.ts?(x)"
+    ],
+    "testTimeout": 30000
+  },
+  "dependencies": {
+    "roarr": "7.14.1",
+    "zod": "3.20.2"
+  },
+  "devDependencies": {
+    "@2bad/tsconfig": "1.4.0",
+    "@types/jest": "29.2.5",
+    "@types/node": "18.11.18",
+    "@typescript-eslint/eslint-plugin": "5.48.0",
+    "@typescript-eslint/parser": "5.48.0",
+    "dotenv": "16.0.3",
+    "eslint": "8.31.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-config-standard-with-typescript": "26.0.0",
+    "eslint-import-resolver-typescript": "3.5.2",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.6.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "jest": "29.3.1",
+    "jest-extended": "3.2.2",
+    "nock": "13.2.9",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.8.1",
+    "rimraf": "3.0.2",
+    "ts-jest": "29.0.3",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.4"
+  },
+  "engines": {
+    "node": "18.13.0"
+  },
+  "volta": {
+    "node": "18.13.0"
+  },
+  "wallaby": {
+    "autoDetect": true,
+    "env": {
+      "params": {
+        "runner": "--experimental-vm-modules"
+      }
+    }
+  }
+}
