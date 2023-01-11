@@ -1,0 +1,43 @@
+## Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+## Editors and IDE
+*.sublime*
+*.code-workspace
+
+## Node.js
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+pids
+logs
+results
+tmp
+node_modules
+npm-debug.log
+
+## Build
+build
+
+## Coverage reports
+coverage
+
+## API keys and secrets
+.env

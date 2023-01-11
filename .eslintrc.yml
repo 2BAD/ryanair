@@ -1,0 +1,34 @@
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project: './tsconfig.json'
+
+ignorePatterns:
+  - 'build'
+
+plugins:
+  - '@typescript-eslint'
+  - 'prettier'
+
+extends:
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:@typescript-eslint/recommended-requiring-type-checking'
+  - 'standard-with-typescript'
+  - 'plugin:promise/recommended'
+  - 'plugin:import/recommended'
+  - 'plugin:import/typescript'
+  - 'plugin:n/recommended'
+  - 'prettier'
+
+settings:
+  import/resolver:
+    # You will also need to install and configure the TypeScript resolver
+    # See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
+    typescript: true
+    node: true
+
+rules:
+  '@typescript-eslint/consistent-type-definitions': ['error', 'type']
+  '@typescript-eslint/promise-function-async': 'off'
+  'import/no-unresolved': 'off'
+  'n/no-missing-import': 'off'
