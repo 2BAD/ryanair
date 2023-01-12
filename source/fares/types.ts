@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { StrDate, StrDateTime } from '../date.type'
+import { StrDate, StrDateTime } from '../date.types'
 
 export const Price = z.object({
   value: z.number(),

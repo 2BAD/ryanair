@@ -1,6 +1,6 @@
-import { IataCode } from '../airport/airport.type'
-import { CheapestFares } from './fare.type'
-import { StrDate } from '../date.type'
+import { IataCode } from '../airports/types'
+import { StrDate } from '../date.types'
+import { CheapestFares } from './types'
 
 /**
  * Returns the cheapest one-way fares between two airports for a given start date
