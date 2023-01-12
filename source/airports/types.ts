@@ -62,6 +62,10 @@ export const Airport = z.object({
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Airport = z.infer<typeof Airport>
 
+export const ListAirport = z.array(Airport)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type ListAirport = z.infer<typeof ListAirport>
+
 export const Destinations = z.array(
   z.object({
     arrivalAirport: Airport,

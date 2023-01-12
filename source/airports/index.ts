@@ -1,3 +1,4 @@
+export { getActive } from './getActive'
 export { getClosest } from './getClosest'
 export { getDestinations } from './getDestinations'
 export { getInfo } from './getInfo'
