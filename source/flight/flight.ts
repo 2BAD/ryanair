@@ -1,4 +1,4 @@
-import { AvailabilityOptions, AvailabilityResponse, FlightDateList } from './flight.type'
+import { AvailabilityOptions, AvailabilityResponse, ListFlightDate } from './flight.type'
 import { IataCode } from '../airport/airport.type'
 
 /**
@@ -8,9 +8,9 @@ import { IataCode } from '../airport/airport.type'
  * @param to The IATA code of the arrival airport
  */
 export const getFlightsDates = async (from: IataCode, to: IataCode): Promise<FlightDateList> => {
-  const url = `https://www.ryanair.com/api/farfnd/3/oneWayFares/${from}/${to}/availabilities`
+  const url = `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/availabilities`
   const res = await fetch(url)
-  const dates = FlightDateList.parse(await res.json())
+  const dates = ListFlightDate.parse(await res.json())
   return dates
 }
 

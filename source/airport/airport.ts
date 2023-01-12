@@ -1,4 +1,4 @@
-import { AirportShort, Airport, Destinations, IataCode } from './airport.type'
+import { AirportShort, Airport, Destinations, IataCode, ListAirportShort } from './airport.type'
 
 /**
  * Returns information about an airport
@@ -8,8 +8,8 @@ import { AirportShort, Airport, Destinations, IataCode } from './airport.type'
 export const getAirportInfo = async (code: IataCode): Promise<Airport> => {
   const url = `https://www.ryanair.com/api/views/locate/5/airports/en/${code}`
   const res = await fetch(url)
-  const info = Airport.parse(await res.json())
-  return info
+  const airport = Airport.parse(await res.json())
+  return airport
 }
 
 /**
@@ -18,8 +18,8 @@ export const getAirportInfo = async (code: IataCode): Promise<Airport> => {
 export const getClosestAirport = async (): Promise<AirportShort> => {
   const url = 'https://www.ryanair.com/api/geoloc/v5/defaultAirport'
   const res = await fetch(url)
-  const info = AirportShort.parse(await res.json())
-  return info
+  const airport = AirportShort.parse(await res.json())
+  return airport
 }
 
 /**

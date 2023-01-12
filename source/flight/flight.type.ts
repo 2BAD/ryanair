@@ -12,9 +12,9 @@ const StrRange0To24 = z.string().min(1).max(2).regex(FROM_0_TO_24_REGEX, FROM_0_
 const StrRange1To25 = z.string().min(1).max(2).regex(FROM_1_TO_25_REGEX, FROM_1_TO_25_ERROR_MESSAGE)
 const StrBoolean = z.union([z.literal('true'), z.literal('false')])
 
-export const FlightDateList = z.array(StrDate)
+export const ListFlightDate = z.array(StrDate)
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-export type FlightDateList = z.infer<typeof FlightDateList>
+export type ListFlightDate = z.infer<typeof ListFlightDate>
 
 export const AvailabilityOptions = z.object({
   ADT: StrRange1To25,
