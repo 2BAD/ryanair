@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { get } from '../client'
 import { Destination, IataCode } from './types'
 
 /**
@@ -9,7 +10,7 @@ import { Destination, IataCode } from './types'
 
 export const getDestinations = async (code: IataCode): Promise<Destination[]> => {
   const url = `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${code}`
-  const res = await fetch(url)
-  const destinations = z.array(Destination).parse(await res.json())
+  const data = await get(url)
+  const destinations = z.array(Destination).parse(data)
   return destinations
 }

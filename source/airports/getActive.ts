@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { get } from '../client'
 import { Airport } from './types'
 
 /**
@@ -7,7 +8,7 @@ import { Airport } from './types'
 
 export const getActive = async (): Promise<Airport[]> => {
   const url = 'https://www.ryanair.com/api/views/locate/5/airports/en/active'
-  const res = await fetch(url)
-  const airports = z.array(Airport).parse(await res.json())
+  const data = await get(url)
+  const airports = z.array(Airport).parse(data)
   return airports
 }

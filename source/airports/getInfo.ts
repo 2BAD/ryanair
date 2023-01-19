@@ -1,3 +1,4 @@
+import { get } from '../client'
 import { Airport, IataCode } from './types'
 
 /**
@@ -8,7 +9,7 @@ import { Airport, IataCode } from './types'
 
 export const getInfo = async (code: IataCode): Promise<Airport> => {
   const url = `https://www.ryanair.com/api/views/locate/5/airports/en/${code}`
-  const res = await fetch(url)
-  const airport = Airport.parse(await res.json())
+  const data = await get(url)
+  const airport = Airport.parse(data)
   return airport
 }

@@ -1,3 +1,4 @@
+import { get } from '../client'
 import { AvailabilityOptions, AvailabilityResponse } from './types'
 
 export const getAvailable = async (
@@ -30,8 +31,8 @@ export const getAvailable = async (
     url.searchParams.append(k, v)
   })
 
-  const res = await fetch(url)
-  const availabilities = AvailabilityResponse.parse(await res.json())
+  const data = await get(url)
+  const availabilities = AvailabilityResponse.parse(data)
 
   return availabilities
 }

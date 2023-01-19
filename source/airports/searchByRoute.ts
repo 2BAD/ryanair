@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { get } from '../client'
 import { AirportConnection } from './types'
 
 /**
@@ -15,7 +16,7 @@ export const searchByRoute = async (
   locale = 'en-gb'
 ): Promise<AirportConnection[]> => {
   const url = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?arrivalPhrase=${to}&departurePhrase=${from}&market=${locale}`
-  const res = await fetch(url)
-  const airports = z.array(AirportConnection).parse(await res.json())
+  const data = await get(url)
+  const airports = z.array(AirportConnection).parse(data)
   return airports
 }

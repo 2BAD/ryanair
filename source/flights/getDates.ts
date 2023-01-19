@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { IataCode } from '../airports/types'
+import { get } from '../client'
 import { FlightDate } from './types'
 
 /**
@@ -11,7 +12,7 @@ import { FlightDate } from './types'
 
 export const getDates = async (from: IataCode, to: IataCode): Promise<FlightDate[]> => {
   const url = `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/availabilities`
-  const res = await fetch(url)
-  const dates = z.array(FlightDate).parse(await res.json())
+  const data = await get(url)
+  const dates = z.array(FlightDate).parse(data)
   return dates
 }
