@@ -43,10 +43,6 @@ export const AirportShort = z.object({
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AirportShort = z.infer<typeof AirportShort>
 
-export const ListAirportShort = z.array(AirportShort)
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export type ListAirportShort = z.infer<typeof ListAirportShort>
-
 export const AirportConnection = z.object({
   arrivalAirport: AirportShort,
   connectingAirport: z.string().nullable(),
@@ -71,18 +67,12 @@ export const Airport = z.object({
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Airport = z.infer<typeof Airport>
 
-export const ListAirport = z.array(Airport)
+export const Destination = z.object({
+  arrivalAirport: Airport,
+  recent: z.boolean(),
+  seasonal: z.boolean(),
+  operator: z.string(),
+  tags: z.array(z.string())
+})
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-export type ListAirport = z.infer<typeof ListAirport>
-
-export const Destinations = z.array(
-  z.object({
-    arrivalAirport: Airport,
-    recent: z.boolean(),
-    seasonal: z.boolean(),
-    operator: z.string(),
-    tags: z.array(z.string())
-  })
-)
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export type Destinations = z.infer<typeof Destinations>
+export type Destination = z.infer<typeof Destination>

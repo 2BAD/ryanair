@@ -1,4 +1,5 @@
-import { Destinations, IataCode } from './types'
+import { z } from 'zod'
+import { Destination, IataCode } from './types'
 
 /**
  * Returns a list of available destinations from an airport
@@ -6,9 +7,9 @@ import { Destinations, IataCode } from './types'
  * @param code The IATA code of the airport
  */
 
-export const getDestinations = async (code: IataCode): Promise<Destinations> => {
+export const getDestinations = async (code: IataCode): Promise<Destination[]> => {
   const url = `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${code}`
   const res = await fetch(url)
-  const destinations = Destinations.parse(await res.json())
+  const destinations = z.array(Destination).parse(await res.json())
   return destinations
 }
