@@ -79,6 +79,8 @@ export const FlightDate = z.object({
   dateOut: StrDateTimeMs,
   flights: z.array(Flight)
 })
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type FlightDate = z.infer<typeof FlightDate>
 
 export const Trip = z.object({
   origin: IataCode,
