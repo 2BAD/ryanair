@@ -9,7 +9,7 @@ import { AirportShort } from './types'
  * @param locale The locale to use when looking up airports
  */
 
-export const searchAirports = async (phrase: string, locale = 'en-gb'): Promise<AirportShort[]> => {
+export const searchByPhrase = async (phrase: string, locale = 'en-gb'): Promise<AirportShort[]> => {
   const url = `https://www.ryanair.com/api/locate/v1/autocomplete/airports?market=${locale}&phrase=${phrase}`
   const data = await get(url)
   const airports = z.array(AirportShort).parse(data)
