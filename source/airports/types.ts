@@ -36,6 +36,7 @@ export const AirportShort = z.object({
   name: z.string(),
   aliases: z.array(z.string()),
   city: Location,
+  macCity: Location.optional(),
   country: Country.omit({ currency: true, defaultAirportCode: true }),
   coordinates: Coordinates
 })
@@ -45,6 +46,14 @@ export type AirportShort = z.infer<typeof AirportShort>
 export const ListAirportShort = z.array(AirportShort)
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type ListAirportShort = z.infer<typeof ListAirportShort>
+
+export const AirportConnection = z.object({
+  arrivalAirport: AirportShort,
+  connectingAirport: z.string().nullable(),
+  operator: z.string()
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type AirportConnection = z.infer<typeof AirportConnection>
 
 export const Airport = z.object({
   code: IataCode,
