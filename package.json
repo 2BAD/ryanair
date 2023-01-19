@@ -1,7 +1,7 @@
 {
   "name": "@2bad/ryanair",
   "version": "1.0.0",
-  "description": "Unofficial REST API client for Ryanair",
+  "description": "TypeScript client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices",
   "keywords": [],
   "homepage": "https://github.com/2BAD/ryanair#readme",
   "bugs": {

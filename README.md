@@ -6,7 +6,7 @@
 [![GitHub Build Status](https://img.shields.io/github/workflow/status/2BAD/ryanair/Integration%20testing?logo=GitHub)](https://github.com/2BAD/ryanair/actions?query=workflow%3A%22Integration+testing%22)
 [![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/ryanair)](https://github.com/2BAD/ryanair/search?l=typescript)
 
-Node client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices.
+TypeScript client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices.
 
 ## ✨ Features
 
