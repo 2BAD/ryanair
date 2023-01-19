@@ -25,18 +25,16 @@ npm install @2bad/ryanair
 ## Usage
 
 ```typescript
-import { getClosest } from '@2bad/ryanair/airports'
-import { cheapestPerDay } from '@2bad/ryanair/fares'
-import { getDates } from '@2bad/ryanair/flights'
+import { airports, fares, flights } from '@2bad/ryanair'
 
 // Get information about the closest airport based on your IP address
-const airport = await getClosest()
+const airport = await airports.getClosest()
 
 // Get a list of available dates from a specific destination
-const dates = await getDates(from: 'BER', to: 'DUB')
+const dates = await flights.getDates(from: 'BER', to: 'DUB')
 
 // Or the cheapest one-way fares between two airports for a given start date
-const fares = await cheapestPerDay(from: 'BER', to: 'DUB', startDate: '2023-10-10')
+const cheapest = await fares.cheapestPerDay(from: 'BER', to: 'DUB', startDate: '2023-10-10')
 ```
 
 ## Getting Started
