@@ -1,27 +1,45 @@
-# Ryanair API Wrapper
+# Ryanair API
 
-This is a small library that wraps the Ryanair API and allows you to easily retrieve information about airports, flights and prices.
+[![NPM version](https://img.shields.io/npm/v/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
+[![License](https://img.shields.io/npm/l/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
+[![Code coverage](https://img.shields.io/codecov/c/github/2BAD/ryanair)](https://codecov.io/gh/2BAD/ryanair)
+[![GitHub Build Status](https://img.shields.io/github/workflow/status/2BAD/ryanair/Integration%20testing?logo=GitHub)](https://github.com/2BAD/ryanair/actions?query=workflow%3A%22Integration+testing%22)
+[![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/ryanair)](https://github.com/2BAD/ryanair/search?l=typescript)
 
-## Getting Started
+Node client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices.
 
-```console
+## ✨ Features
+
+- 🔥 No bullshit
+- 📝 Strongly typed methods and results
+- 💻 Isomorphic, runs on browsers and node
+- 🚀 Native fetch API support
+- 🔍 Endpoint specific functions for convenience
+
+## Install
+
+```shell
 npm install @2bad/ryanair
 ```
 
 ## Usage
 
 ```typescript
-import { getClosestAirport } from '@2bad/ryanair'
+import { getClosest } from '@2bad/ryanair/airports'
+import { cheapestPerDay } from '@2bad/ryanair/fares'
+import { getDates } from '@2bad/ryanair/flights'
 
 // Get information about the closest airport based on your IP address
-const airport = await getClosestAirport()
+const airport = await getClosest()
 
 // Get a list of available dates from a specific destination
-const dates = await getFlightsDates(from: 'WRO', to: 'DUB')
+const dates = await getDates(from: 'BER', to: 'DUB')
 
 // Or the cheapest one-way fares between two airports for a given start date
-const fares = await cheapestPerDay(from: 'WRO', to: 'DUB', startDate: '2022-10-10')
+const fares = await cheapestPerDay(from: 'BER', to: 'DUB', startDate: '2023-10-10')
 ```
+
+## Getting Started
 
 For more information and available functions, please refer to the documentation in the source code.
 
