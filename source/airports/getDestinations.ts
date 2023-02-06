@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { get } from '../client'
-import { Destination, IataCode } from './types'
+import { Destination, type IataCode } from './types'
 
 /**
  * Returns a list of available destinations from an airport

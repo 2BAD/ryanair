@@ -1,6 +1,6 @@
-import { IataCode } from '../airports/types'
+import { type IataCode } from '../airports/types'
 import { get } from '../client'
-import { StrDate } from '../date.types'
+import { type StrDate } from '../date.types'
 import { CheapestFares } from './types'
 
 /**

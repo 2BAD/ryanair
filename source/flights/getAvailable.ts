@@ -1,5 +1,5 @@
 import { get } from '../client'
-import { AvailabilityOptions, AvailabilityResponse } from './types'
+import { type AvailabilityOptions, AvailabilityResponse } from './types'
 
 export const getAvailable = async (
   params: Partial<AvailabilityOptions>

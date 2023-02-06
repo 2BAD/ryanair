@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { IataCode } from '../airports/types'
+import { type IataCode } from '../airports/types'
 import { get } from '../client'
 import { FlightDate } from './types'
 
