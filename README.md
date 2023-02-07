@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
 [![License](https://img.shields.io/npm/l/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
 [![Code coverage](https://img.shields.io/codecov/c/github/2BAD/ryanair)](https://codecov.io/gh/2BAD/ryanair)
-[![GitHub Build Status](https://img.shields.io/github/workflow/status/2BAD/ryanair/Integration%20testing?logo=GitHub)](https://github.com/2BAD/ryanair/actions?query=workflow%3A%22Integration+testing%22)
+[![GitHub Build Status](https://img.shields.io/github/actions/workflow/status/2BAD/ryanair/integration.yml)](https://github.com/2BAD/ryanair/actions/workflows/integration.yml)
 [![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/ryanair)](https://github.com/2BAD/ryanair/search?l=typescript)
 
 TypeScript client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices.
