@@ -48,20 +48,6 @@
       "source/**/*.ts?(x)"
     ],
     "coverageDirectory": "coverage",
-    "extensionsToTreatAsEsm": [
-      ".ts"
-    ],
-    "transform": {
-      "\\.[jt]sx?$": [
-        "ts-jest",
-        {
-          "tsconfig": "tsconfig.json"
-        }
-      ]
-    },
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
     "modulePathIgnorePatterns": [
       "<rootDir>/build/"
     ],

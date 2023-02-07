@@ -20,8 +20,6 @@ jobs:
           node-version-file: 'package.json'
       - run: npm ci
       - run: npm run test:integration
-        env:
-          NODE_OPTIONS: '--experimental-vm-modules --experimental-specifier-resolution=node'
       - uses: codecov/codecov-action@v3
         with:
           flags: integration
