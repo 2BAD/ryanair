@@ -1,0 +1,27 @@
+name: Integration
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  schedule:
+    - cron: '0 20 * * *'
+
+jobs:
+  test:
+    name: test integration with ryanair api
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+      - run: npm ci
+      - run: npm run test:integration
+        env:
+          NODE_OPTIONS: '--experimental-vm-modules --experimental-specifier-resolution=node'
+      - uses: codecov/codecov-action@v3
+        with:
+          flags: integration
