@@ -1,0 +1,9450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airports getActive When asked for a list of active airports 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "AALBORG",
+      "name": "Aalborg",
+    },
+    "code": "AAL",
+    "coordinates": {
+      "latitude": 57.0534,
+      "longitude": 9.5057,
+    },
+    "country": {
+      "code": "dk",
+      "currency": "DKK",
+      "defaultAirportCode": "BLL",
+      "name": "Denmark",
+    },
+    "name": "Aalborg",
+    "region": {
+      "code": "NORTH_DENMARK",
+      "name": "North Denmark",
+    },
+    "seoName": "aalborg",
+    "timeZone": "Europe/Copenhagen",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "AARHUS",
+      "name": "Aarhus",
+    },
+    "code": "AAR",
+    "coordinates": {
+      "latitude": 56.3,
+      "longitude": 10.619,
+    },
+    "country": {
+      "code": "dk",
+      "currency": "DKK",
+      "defaultAirportCode": "BLL",
+      "name": "Denmark",
+    },
+    "name": "Aarhus",
+    "region": {
+      "code": "EAST_JUTLAND",
+      "name": "East Jutland",
+    },
+    "seoName": "aarhus",
+    "timeZone": "Europe/Copenhagen",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ABERDEEN",
+      "name": "Aberdeen",
+    },
+    "code": "ABZ",
+    "coordinates": {
+      "latitude": 57.2019,
+      "longitude": -2.19778,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Aberdeen",
+    "region": {
+      "code": "SCOTLAND",
+      "name": "Scotland",
+    },
+    "seoName": "aberdeen",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LANZAROTE",
+      "name": "Lanzarote",
+    },
+    "code": "ACE",
+    "coordinates": {
+      "latitude": 28.9455,
+      "longitude": -13.6052,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Lanzarote",
+    "region": {
+      "code": "CANARY_ISLES",
+      "name": "Canary Isles",
+    },
+    "seoName": "lanzarote",
+    "timeZone": "Atlantic/Canary",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "AGADIR",
+      "name": "Agadir",
+    },
+    "code": "AGA",
+    "coordinates": {
+      "latitude": 30.325,
+      "longitude": -9.41307,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Agadir",
+    "region": {
+      "code": "SOUSS-MASSA",
+      "name": "Souss-Massa",
+    },
+    "seoName": "agadir",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MALAGA",
+      "name": "Malaga",
+    },
+    "code": "AGP",
+    "coordinates": {
+      "latitude": 36.6749,
+      "longitude": -4.49911,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Malaga",
+    "region": {
+      "code": "COSTA_DE_SOL",
+      "name": "Costa del Sol",
+    },
+    "seoName": "malaga",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ALGHERO",
+      "name": "Alghero",
+    },
+    "code": "AHO",
+    "coordinates": {
+      "latitude": 40.6321,
+      "longitude": 8.29077,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Alghero",
+    "region": {
+      "code": "SARDINIA",
+      "name": "Sardinia",
+    },
+    "seoName": "alghero",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ALICANTE",
+      "name": "Alicante",
+    },
+    "code": "ALC",
+    "coordinates": {
+      "latitude": 38.2822,
+      "longitude": -0.558156,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Alicante",
+    "region": {
+      "code": "COSTA_BLANCA",
+      "name": "Costa Blanca",
+    },
+    "seoName": "alicante",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "AMMAN",
+      "macCode": "JOR",
+      "name": "Amman",
+    },
+    "code": "AMM",
+    "coordinates": {
+      "latitude": 31.9497,
+      "longitude": 35.9328,
+    },
+    "country": {
+      "code": "jo",
+      "currency": "EUR",
+      "defaultAirportCode": "AMM",
+      "name": "Jordan",
+    },
+    "macCity": {
+      "code": "AMMAN",
+      "macCode": "JOR",
+      "name": "Amman",
+    },
+    "name": "Amman Jordan",
+    "region": {
+      "code": "AMMAN_GOVERNORATE",
+      "name": "Amman Governorate",
+    },
+    "seoName": "amman",
+    "timeZone": "Asia/Amman",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "AMSTERDAM",
+      "name": "Amsterdam",
+    },
+    "code": "AMS",
+    "coordinates": {
+      "latitude": 52.3105,
+      "longitude": 4.76827,
+    },
+    "country": {
+      "code": "nl",
+      "currency": "EUR",
+      "defaultAirportCode": "EIN",
+      "name": "Netherlands",
+    },
+    "name": "Amsterdam",
+    "region": {
+      "code": "DEFAULT_NL",
+      "name": "Default NL",
+    },
+    "seoName": "amsterdam",
+    "timeZone": "Europe/Amsterdam",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ANCONA",
+      "name": "Ancona",
+    },
+    "code": "AOI",
+    "coordinates": {
+      "latitude": 43.6163,
+      "longitude": 13.3623,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Ancona",
+    "region": {
+      "code": "MARCHE",
+      "name": "Marche",
+    },
+    "seoName": "ancona",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "AQABA",
+      "name": "Aqaba",
+    },
+    "code": "AQJ",
+    "coordinates": {
+      "latitude": 29.364183,
+      "longitude": 35.010504,
+    },
+    "country": {
+      "code": "jo",
+      "currency": "EUR",
+      "defaultAirportCode": "AMM",
+      "name": "Jordan",
+    },
+    "macCity": {
+      "code": "AMMAN",
+      "macCode": "JOR",
+      "name": "Amman",
+    },
+    "name": "Aqaba Jordan",
+    "region": {
+      "code": "AQABA_GOVERNORATE",
+      "name": "Aqaba Governorate",
+    },
+    "seoName": "aqaba",
+    "timeZone": "Asia/Amman",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "STOCKHOLM",
+      "macCode": "SLM",
+      "name": "Stockholm",
+    },
+    "code": "ARN",
+    "coordinates": {
+      "latitude": 59.6498,
+      "longitude": 17.9239,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "macCity": {
+      "code": "STOCKHOLM",
+      "macCode": "SLM",
+      "name": "Stockholm",
+    },
+    "name": "Stockholm Arlanda",
+    "region": {
+      "code": "STOCKHOLM",
+      "name": "Stockholm",
+    },
+    "seoName": "stockholm-arlandia",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ATHENS",
+      "name": "Athens",
+    },
+    "code": "ATH",
+    "coordinates": {
+      "latitude": 37.9364,
+      "longitude": 23.9445,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Athens",
+    "region": {
+      "code": "DEFAULT_GR",
+      "name": "Default GR",
+    },
+    "seoName": "athens",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BARCELONA",
+      "macCode": "BAR",
+      "name": "Barcelona",
+    },
+    "code": "BCN",
+    "coordinates": {
+      "latitude": 41.2971,
+      "longitude": 2.07846,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "BARCELONA",
+      "macCode": "BAR",
+      "name": "Barcelona",
+    },
+    "name": "Barcelona",
+    "region": {
+      "code": "COSTA_BRAVA",
+      "name": "Costa Brava",
+    },
+    "seoName": "barcelona-el-prat",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BRINDISI",
+      "name": "Brindisi",
+    },
+    "code": "BDS",
+    "coordinates": {
+      "latitude": 40.6576,
+      "longitude": 17.947,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Brindisi",
+    "region": {
+      "code": "PUGLIA",
+      "name": "Puglia",
+    },
+    "seoName": "brindisi",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "code": "BER",
+    "coordinates": {
+      "latitude": 52.3667,
+      "longitude": 13.5033,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "macCity": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "name": "Berlin Brandenburg",
+    "region": {
+      "code": "BERLIN-BRANDENBURG",
+      "name": "Berlin-Brandenburg",
+    },
+    "seoName": "brandenburg",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BELFAST",
+      "macCode": "BEL",
+      "name": "Belfast",
+    },
+    "code": "BFS",
+    "coordinates": {
+      "latitude": 54.6575,
+      "longitude": -6.2158,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "BELFAST",
+      "macCode": "BEL",
+      "name": "Belfast",
+    },
+    "name": "Belfast International",
+    "region": {
+      "code": "NORTHERN_IRELAND",
+      "name": "Northern Ireland",
+    },
+    "seoName": "belfast-international",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BERGAMO",
+      "name": "Bergamo",
+    },
+    "code": "BGY",
+    "coordinates": {
+      "latitude": 45.6739,
+      "longitude": 9.70417,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "MILAN",
+      "macCode": "MIL",
+      "name": "Milan",
+    },
+    "name": "Milan Bergamo",
+    "region": {
+      "code": "LOMBARDY",
+      "name": "Lombardy",
+    },
+    "seoName": "milan-bergamo",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BIRMINGHAM",
+      "name": "Birmingham",
+    },
+    "code": "BHX",
+    "coordinates": {
+      "latitude": 52.4539,
+      "longitude": -1.74803,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Birmingham",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "birmingham",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BIARRITZ",
+      "name": "Biarritz",
+    },
+    "code": "BIQ",
+    "coordinates": {
+      "latitude": 43.4684,
+      "longitude": -1.52332,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Biarritz",
+    "region": {
+      "code": "AQUITAINE",
+      "name": "Aquitaine",
+    },
+    "seoName": "biarritz",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BODRUM",
+      "name": "Bodrum",
+    },
+    "code": "BJV",
+    "coordinates": {
+      "latitude": 37.2506,
+      "longitude": 27.6642,
+    },
+    "country": {
+      "code": "tr",
+      "currency": "EUR",
+      "defaultAirportCode": "DLM",
+      "name": "Turkey",
+    },
+    "name": "Bodrum",
+    "region": {
+      "code": "DEFAULT_TR",
+      "name": "Default TR",
+    },
+    "seoName": "bodrum",
+    "timeZone": "Europe/Istanbul",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BILLUND",
+      "name": "Billund",
+    },
+    "code": "BLL",
+    "coordinates": {
+      "latitude": 55.7403,
+      "longitude": 9.15178,
+    },
+    "country": {
+      "code": "dk",
+      "currency": "DKK",
+      "defaultAirportCode": "BLL",
+      "name": "Denmark",
+    },
+    "name": "Billund",
+    "region": {
+      "code": "SOUTHERN_DENMARK",
+      "name": "Southern Denmark",
+    },
+    "seoName": "billund",
+    "timeZone": "Europe/Copenhagen",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BOLOGNA",
+      "name": "Bologna",
+    },
+    "code": "BLQ",
+    "coordinates": {
+      "latitude": 44.5354,
+      "longitude": 11.2887,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Bologna",
+    "region": {
+      "code": "EMILIA-ROMAGNA",
+      "name": "Emilia-Romagna",
+    },
+    "seoName": "bologna",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BANJA_LUKA",
+      "name": "Banja Luka",
+    },
+    "code": "BNX",
+    "coordinates": {
+      "latitude": 44.5629,
+      "longitude": 17.1731,
+    },
+    "country": {
+      "code": "ba",
+      "currency": "EUR",
+      "defaultAirportCode": "BNX",
+      "name": "Bosnia & Herzegovina",
+    },
+    "name": "Banja Luka",
+    "region": {
+      "code": "DEFAULT_BA",
+      "name": "Default BA",
+    },
+    "seoName": "banja_luka",
+    "timeZone": "Europe/Sarajevo",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BORDEAUX",
+      "name": "Bordeaux",
+    },
+    "code": "BOD",
+    "coordinates": {
+      "latitude": 44.8283,
+      "longitude": -0.715556,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Bordeaux",
+    "region": {
+      "code": "AQUITAINE",
+      "name": "Aquitaine",
+    },
+    "seoName": "bordeaux",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BOURNEMOUTH",
+      "name": "Bournemouth",
+    },
+    "code": "BOH",
+    "coordinates": {
+      "latitude": 50.78,
+      "longitude": -1.8425,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Bournemouth",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "bournemouth",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BURGAS",
+      "name": "Burgas",
+    },
+    "code": "BOJ",
+    "coordinates": {
+      "latitude": 42.3413,
+      "longitude": 27.3055,
+    },
+    "country": {
+      "code": "bg",
+      "currency": "EUR",
+      "defaultAirportCode": "PDV",
+      "name": "Bulgaria",
+    },
+    "name": "Burgas",
+    "region": {
+      "code": "DEFAULT_BG",
+      "name": "Default BG",
+    },
+    "seoName": "burgas",
+    "timeZone": "Europe/Sofia",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BREMEN",
+      "name": "Bremen",
+    },
+    "code": "BRE",
+    "coordinates": {
+      "latitude": 53.0475,
+      "longitude": 8.78667,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Bremen",
+    "region": {
+      "code": "BREMEN-OLDENBURG",
+      "name": "Bremen-Oldenburg",
+    },
+    "seoName": "bremen",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BARI",
+      "name": "Bari",
+    },
+    "code": "BRI",
+    "coordinates": {
+      "latitude": 41.1389,
+      "longitude": 16.7606,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Bari",
+    "region": {
+      "code": "PUGLIA",
+      "name": "Puglia",
+    },
+    "seoName": "bari",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BRNO",
+      "name": "Brno",
+    },
+    "code": "BRQ",
+    "coordinates": {
+      "latitude": 49.1513,
+      "longitude": 16.6944,
+    },
+    "country": {
+      "code": "cz",
+      "currency": "CZK",
+      "defaultAirportCode": "PRG",
+      "name": "Czech Republic",
+    },
+    "name": "Brno",
+    "region": {
+      "code": "SOUTH_MORAVIAN",
+      "name": "South Moravian",
+    },
+    "seoName": "brno",
+    "timeZone": "Europe/Prague",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BRISTOL",
+      "name": "Bristol",
+    },
+    "code": "BRS",
+    "coordinates": {
+      "latitude": 51.3827,
+      "longitude": -2.71909,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Bristol",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "bristol",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BRUSSELS",
+      "macCode": "BRL",
+      "name": "Brussels",
+    },
+    "code": "BRU",
+    "coordinates": {
+      "latitude": 50.9014,
+      "longitude": 4.48444,
+    },
+    "country": {
+      "code": "be",
+      "currency": "EUR",
+      "defaultAirportCode": "BRU",
+      "name": "Belgium",
+    },
+    "macCity": {
+      "code": "BRUSSELS",
+      "macCode": "BRL",
+      "name": "Brussels",
+    },
+    "name": "Brussels",
+    "region": {
+      "code": "WALLONIA",
+      "name": "Wallonia",
+    },
+    "seoName": "brussels-zaventem",
+    "timeZone": "Europe/Brussels",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BASEL",
+      "name": "Basel",
+    },
+    "code": "BSL",
+    "coordinates": {
+      "latitude": 47.5896,
+      "longitude": 7.52991,
+    },
+    "country": {
+      "code": "ch",
+      "currency": "CHF",
+      "defaultAirportCode": "BSL",
+      "name": "Switzerland",
+    },
+    "name": "Basel",
+    "region": {
+      "code": "DEFAULT_CH",
+      "name": "Default CH",
+    },
+    "seoName": "basel",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BRATISLAVA",
+      "name": "Bratislava",
+    },
+    "code": "BTS",
+    "coordinates": {
+      "latitude": 48.1702,
+      "longitude": 17.2127,
+    },
+    "country": {
+      "code": "sk",
+      "currency": "EUR",
+      "defaultAirportCode": "BTS",
+      "name": "Slovakia",
+    },
+    "name": "Bratislava",
+    "region": {
+      "code": "BRATISLAVA",
+      "name": "Bratislava",
+    },
+    "seoName": "bratislava",
+    "timeZone": "Europe/Bratislava",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BUDAPEST",
+      "name": "Budapest",
+    },
+    "code": "BUD",
+    "coordinates": {
+      "latitude": 47.4369,
+      "longitude": 19.2556,
+    },
+    "country": {
+      "code": "hu",
+      "currency": "HUF",
+      "defaultAirportCode": "BUD",
+      "name": "Hungary",
+    },
+    "name": "Budapest",
+    "region": {
+      "code": "CENTRAL_HUNGARY",
+      "name": "Central Hungary",
+    },
+    "seoName": "budapest",
+    "timeZone": "Europe/Budapest",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PARIS",
+      "macCode": "PAR",
+      "name": "Paris",
+    },
+    "code": "BVA",
+    "coordinates": {
+      "latitude": 49.4544,
+      "longitude": 2.11278,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "macCity": {
+      "code": "PARIS",
+      "macCode": "PAR",
+      "name": "Paris",
+    },
+    "name": "Paris Beauvais",
+    "region": {
+      "code": "PICARDY",
+      "name": "Picardy",
+    },
+    "seoName": "paris-beauvais",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BRIVE",
+      "name": "Brive",
+    },
+    "code": "BVE",
+    "coordinates": {
+      "latitude": 45.1508,
+      "longitude": 1.46917,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Brive",
+    "region": {
+      "code": "DEFAULT_FR",
+      "name": "Default FR",
+    },
+    "seoName": "brive",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BYDGOSZCZ",
+      "name": "Bydgoszcz",
+    },
+    "code": "BZG",
+    "coordinates": {
+      "latitude": 53.0968,
+      "longitude": 17.9777,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Bydgoszcz",
+    "region": {
+      "code": "KUJAWSKO-POMORSKIE",
+      "name": "Kujawsko-Pomorskie",
+    },
+    "seoName": "bydgoszcz",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BEZIERS",
+      "name": "Beziers",
+    },
+    "code": "BZR",
+    "coordinates": {
+      "latitude": 43.3235,
+      "longitude": 3.3539,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Beziers",
+    "region": {
+      "code": "LANGUEDOC-ROUSSILLON",
+      "name": "Languedoc-Roussillon",
+    },
+    "seoName": "beziers",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CAGLIARI",
+      "name": "Cagliari",
+    },
+    "code": "CAG",
+    "coordinates": {
+      "latitude": 39.2515,
+      "longitude": 9.05428,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Cagliari",
+    "region": {
+      "code": "SARDINIA",
+      "name": "Sardinia",
+    },
+    "seoName": "cagliari",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CARCASSONNE",
+      "name": "Carcassonne",
+    },
+    "code": "CCF",
+    "coordinates": {
+      "latitude": 43.216,
+      "longitude": 2.30632,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Carcassonne",
+    "region": {
+      "code": "LANGUEDOC-ROUSSILLON",
+      "name": "Languedoc-Roussillon",
+    },
+    "seoName": "carcassonne",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CASTELLON",
+      "name": "Castellon",
+    },
+    "code": "CDT",
+    "coordinates": {
+      "latitude": 39.999,
+      "longitude": 0.026,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "VALENCIA",
+      "macCode": "VNC",
+      "name": "Valencia",
+    },
+    "name": "Castellon (Valencia)",
+    "region": {
+      "code": "COSTA_AZAHAR",
+      "name": "Costa Azahar",
+    },
+    "seoName": "castellon",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CLERMONT_FERRAND",
+      "name": "Clermont Ferrand",
+    },
+    "code": "CFE",
+    "coordinates": {
+      "latitude": 45.7867,
+      "longitude": 3.16917,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Clermont",
+    "region": {
+      "code": "AUVERGNE",
+      "name": "Auvergne",
+    },
+    "seoName": "clermont-ferrand",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CORFU",
+      "name": "Corfu",
+    },
+    "code": "CFU",
+    "coordinates": {
+      "latitude": 39.6019,
+      "longitude": 19.9117,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Corfu",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "corfu",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "COLOGNE",
+      "name": "Cologne",
+    },
+    "code": "CGN",
+    "coordinates": {
+      "latitude": 50.8659,
+      "longitude": 7.14274,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Cologne",
+    "region": {
+      "code": "NORTH_RHINE-WESTPHALIA",
+      "name": "North Rhine-Westphalia",
+    },
+    "seoName": "cologne-bonn",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CHANIA",
+      "name": "Chania",
+    },
+    "code": "CHQ",
+    "coordinates": {
+      "latitude": 35.5317,
+      "longitude": 24.1497,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Chania",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "crete",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ROME",
+      "macCode": "ROM",
+      "name": "Rome",
+    },
+    "code": "CIA",
+    "coordinates": {
+      "latitude": 41.7994,
+      "longitude": 12.5949,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "ROME",
+      "macCode": "ROM",
+      "name": "Rome",
+    },
+    "name": "Rome Ciampino",
+    "region": {
+      "code": "LAZIO",
+      "name": "Lazio",
+    },
+    "seoName": "rome-ciampino",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "COMISO",
+      "name": "Comiso",
+    },
+    "code": "CIY",
+    "coordinates": {
+      "latitude": 36.9946,
+      "longitude": 14.6072,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Comiso",
+    "region": {
+      "code": "SICILY",
+      "name": "Sicily",
+    },
+    "seoName": "comiso",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CLUJ",
+      "name": "Cluj",
+    },
+    "code": "CLJ",
+    "coordinates": {
+      "latitude": 46.785,
+      "longitude": 23.6861,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Cluj",
+    "region": {
+      "code": "DEFAULT_RO",
+      "name": "Default RO",
+    },
+    "seoName": "cluj",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "COPENHAGEN",
+      "name": "Copenhagen",
+    },
+    "code": "CPH",
+    "coordinates": {
+      "latitude": 55.6181,
+      "longitude": 12.6561,
+    },
+    "country": {
+      "code": "dk",
+      "currency": "DKK",
+      "defaultAirportCode": "BLL",
+      "name": "Denmark",
+    },
+    "name": "Copenhagen",
+    "region": {
+      "code": "BORNHOLM",
+      "name": "Bornholm",
+    },
+    "seoName": "copenhagen",
+    "timeZone": "Europe/Copenhagen",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CHARLEROI",
+      "name": "Charleroi",
+    },
+    "code": "CRL",
+    "coordinates": {
+      "latitude": 50.4592,
+      "longitude": 4.45382,
+    },
+    "country": {
+      "code": "be",
+      "currency": "EUR",
+      "defaultAirportCode": "BRU",
+      "name": "Belgium",
+    },
+    "macCity": {
+      "code": "BRUSSELS",
+      "macCode": "BRL",
+      "name": "Brussels",
+    },
+    "name": "Brussels Charleroi",
+    "region": {
+      "code": "WALLONIA",
+      "name": "Wallonia",
+    },
+    "seoName": "brussels-charleroi",
+    "timeZone": "Europe/Brussels",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CROTONE",
+      "name": "Crotone",
+    },
+    "code": "CRV",
+    "coordinates": {
+      "latitude": 38.99722,
+      "longitude": 17.08028,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Crotone",
+    "region": {
+      "code": "CALABRIA",
+      "name": "Calabria",
+    },
+    "seoName": "crotone",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CATANIA",
+      "name": "Catania",
+    },
+    "code": "CTA",
+    "coordinates": {
+      "latitude": 37.4668,
+      "longitude": 15.0664,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Catania",
+    "region": {
+      "code": "SICILY",
+      "name": "Sicily",
+    },
+    "seoName": "catania",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CUNEO",
+      "name": "Cuneo",
+    },
+    "code": "CUF",
+    "coordinates": {
+      "latitude": 44.547,
+      "longitude": 7.62322,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Cuneo",
+    "region": {
+      "code": "PIEDMONT",
+      "name": "Piedmont",
+    },
+    "seoName": "cuneo",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "CARDIFF",
+      "name": "Cardiff",
+    },
+    "code": "CWL",
+    "coordinates": {
+      "latitude": 51.3967,
+      "longitude": -3.34333,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Cardiff",
+    "region": {
+      "code": "WALES",
+      "name": "Wales",
+    },
+    "seoName": "cardiff",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DUBROVNIK",
+      "name": "Dubrovnik",
+    },
+    "code": "DBV",
+    "coordinates": {
+      "latitude": 42.5614,
+      "longitude": 18.2683,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Dubrovnik",
+    "region": {
+      "code": "DEFAULT_HR",
+      "name": "Default HR",
+    },
+    "seoName": "dubrovnik",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DOLE",
+      "name": "Dole",
+    },
+    "code": "DLE",
+    "coordinates": {
+      "latitude": 47.039,
+      "longitude": 5.42725,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Dole",
+    "region": {
+      "code": "FRANCHE-COMTE",
+      "name": "Franche-Comté",
+    },
+    "seoName": "dole",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DALAMAN",
+      "name": "Dalaman",
+    },
+    "code": "DLM",
+    "coordinates": {
+      "latitude": 36.7147,
+      "longitude": 28.7928,
+    },
+    "country": {
+      "code": "tr",
+      "currency": "EUR",
+      "defaultAirportCode": "DLM",
+      "name": "Turkey",
+    },
+    "name": "Dalaman",
+    "region": {
+      "code": "MUGLA_PROVINCE",
+      "name": "Mugla Province",
+    },
+    "seoName": "dalaman",
+    "timeZone": "Europe/Istanbul",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DRESDEN",
+      "name": "Dresden",
+    },
+    "code": "DRS",
+    "coordinates": {
+      "latitude": 51.1344,
+      "longitude": 13.7681,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Dresden",
+    "region": {
+      "code": "DEFAULT_DE",
+      "name": "Default DE",
+    },
+    "seoName": "dresden",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DORTMUND",
+      "name": "Dortmund",
+    },
+    "code": "DTM",
+    "coordinates": {
+      "latitude": 51.5183,
+      "longitude": 7.61224,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Dortmund",
+    "region": {
+      "code": "RHINE-RUHR",
+      "name": "Rhine-Ruhr",
+    },
+    "seoName": "dortmund",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "DUBLIN",
+      "name": "Dublin",
+    },
+    "code": "DUB",
+    "coordinates": {
+      "latitude": 53.4213,
+      "longitude": -6.27007,
+    },
+    "country": {
+      "code": "ie",
+      "currency": "EUR",
+      "defaultAirportCode": "DUB",
+      "name": "Ireland",
+    },
+    "name": "Dublin",
+    "region": {
+      "code": "LEINSTER",
+      "name": "Leinster",
+    },
+    "seoName": "dublin",
+    "timeZone": "Europe/Dublin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "EDINBURGH",
+      "name": "Edinburgh",
+    },
+    "code": "EDI",
+    "coordinates": {
+      "latitude": 55.95,
+      "longitude": -3.3725,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Edinburgh",
+    "region": {
+      "code": "SCOTLAND",
+      "name": "Scotland",
+    },
+    "seoName": "edinburgh",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KEFALONIA",
+      "name": "Kefalonia",
+    },
+    "code": "EFL",
+    "coordinates": {
+      "latitude": 38.1201,
+      "longitude": 20.5005,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Kefalonia",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "kefalonia",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BERGERAC",
+      "name": "Bergerac",
+    },
+    "code": "EGC",
+    "coordinates": {
+      "latitude": 44.8253,
+      "longitude": 0.518611,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Bergerac",
+    "region": {
+      "code": "AQUITAINE",
+      "name": "Aquitaine",
+    },
+    "seoName": "bergerac",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "EINDHOVEN",
+      "name": "Eindhoven",
+    },
+    "code": "EIN",
+    "coordinates": {
+      "latitude": 51.4501,
+      "longitude": 5.37453,
+    },
+    "country": {
+      "code": "nl",
+      "currency": "EUR",
+      "defaultAirportCode": "EIN",
+      "name": "Netherlands",
+    },
+    "name": "Eindhoven",
+    "region": {
+      "code": "NORTH_BRABANT",
+      "name": "North Brabant",
+    },
+    "seoName": "eindhoven",
+    "timeZone": "Europe/Amsterdam",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "EAST_MIDLANDS",
+      "name": "East Midlands",
+    },
+    "code": "EMA",
+    "coordinates": {
+      "latitude": 52.8311,
+      "longitude": -1.32806,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "East Midlands",
+    "region": {
+      "code": "EAST_MIDLANDS",
+      "name": "East Midlands",
+    },
+    "seoName": "east-midlands",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ESSAOUIRA",
+      "name": "Essaouira",
+    },
+    "code": "ESU",
+    "coordinates": {
+      "latitude": 31.3918,
+      "longitude": -9.6757,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Essaouira",
+    "region": {
+      "code": "MARRAKESH-SAFI",
+      "name": "Marrakesh-Safi",
+    },
+    "seoName": "essaouira",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "EILAT",
+      "name": "Eilat",
+    },
+    "code": "ETM",
+    "coordinates": {
+      "latitude": 29.7237,
+      "longitude": 35.0114,
+    },
+    "country": {
+      "code": "il",
+      "currency": "EUR",
+      "defaultAirportCode": "VDA",
+      "name": "Israel",
+    },
+    "name": "Eilat Ramon",
+    "region": {
+      "code": "DEFAULT_IL",
+      "name": "Default IL",
+    },
+    "seoName": "eilat-ramon",
+    "timeZone": "Asia/Jerusalem",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "EXETER",
+      "name": "Exeter",
+    },
+    "code": "EXT",
+    "coordinates": {
+      "latitude": 50.7344,
+      "longitude": -3.4139,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Exeter",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "exeter",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "FARO",
+      "name": "Faro",
+    },
+    "code": "FAO",
+    "coordinates": {
+      "latitude": 37.0144,
+      "longitude": -7.96591,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Faro",
+    "region": {
+      "code": "ALGARVE",
+      "name": "Algarve",
+    },
+    "seoName": "faro",
+    "timeZone": "Europe/Lisbon",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ROME",
+      "macCode": "ROM",
+      "name": "Rome",
+    },
+    "code": "FCO",
+    "coordinates": {
+      "latitude": 41.8045,
+      "longitude": 12.2508,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "ROME",
+      "macCode": "ROM",
+      "name": "Rome",
+    },
+    "name": "Rome Fiumicino",
+    "region": {
+      "code": "LAZIO",
+      "name": "Lazio",
+    },
+    "seoName": "rome-fiumicino",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "FEZ",
+      "name": "Fez",
+    },
+    "code": "FEZ",
+    "coordinates": {
+      "latitude": 33.9273,
+      "longitude": -4.97796,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Fez",
+    "region": {
+      "code": "FES-MEKNES",
+      "name": "Fes-Meknes",
+    },
+    "seoName": "fez",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "KARLSRUHE",
+      "name": "Karlsruhe",
+    },
+    "code": "FKB",
+    "coordinates": {
+      "latitude": 48.7794,
+      "longitude": 8.0805,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Karlsruhe / Baden-Baden",
+    "region": {
+      "code": "BADEN-WURTTEMBERG",
+      "name": "Baden-Württemberg",
+    },
+    "seoName": "karlsruhe-baden",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MEMMINGEN",
+      "name": "Memmingen",
+    },
+    "code": "FMM",
+    "coordinates": {
+      "latitude": 47.9888,
+      "longitude": 10.2395,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Memmingen",
+    "region": {
+      "code": "SWABIA",
+      "name": "Swabia",
+    },
+    "seoName": "munich-memmingen",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MUNSTER",
+      "name": "Münster",
+    },
+    "code": "FMO",
+    "coordinates": {
+      "latitude": 52.1346,
+      "longitude": 7.68483,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Münster",
+    "region": {
+      "code": "NORTH_RHINE-WESTPHALIA",
+      "name": "North Rhine-Westphalia",
+    },
+    "seoName": "munster",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "FUNCHAL",
+      "name": "Funchal",
+    },
+    "code": "FNC",
+    "coordinates": {
+      "latitude": 32.6942,
+      "longitude": -16.7781,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Madeira Funchal",
+    "region": {
+      "code": "MADEIRA",
+      "name": "Madeira",
+    },
+    "seoName": "funchal",
+    "timeZone": "Atlantic/Madeira",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NIMES",
+      "name": "Nimes",
+    },
+    "code": "FNI",
+    "coordinates": {
+      "latitude": 43.7574,
+      "longitude": 4.41635,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Nimes",
+    "region": {
+      "code": "LANGUEDOC-ROUSSILLON",
+      "name": "Languedoc-Roussillon",
+    },
+    "seoName": "nimes",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "BOLOGNA",
+      "name": "Bologna",
+    },
+    "code": "FRL",
+    "coordinates": {
+      "latitude": 44.1948,
+      "longitude": 12.0701,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Bologna Forli",
+    "region": {
+      "code": "EMILIA-ROMAGNA",
+      "name": "Emilia-Romagna",
+    },
+    "seoName": "bologna-forli",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "FIGARI",
+      "name": "Figari",
+    },
+    "code": "FSC",
+    "coordinates": {
+      "latitude": 41.5006,
+      "longitude": 9.09778,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Figari",
+    "region": {
+      "code": "CORSICA",
+      "name": "Corsica",
+    },
+    "seoName": "figari",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "FUERTEVENTURA",
+      "name": "Fuerteventura",
+    },
+    "code": "FUE",
+    "coordinates": {
+      "latitude": 28.4527,
+      "longitude": -13.8638,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Fuerteventura",
+    "region": {
+      "code": "CANARY_ISLES",
+      "name": "Canary Isles",
+    },
+    "seoName": "fuerteventura",
+    "timeZone": "Atlantic/Canary",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GDANSK",
+      "name": "Gdansk",
+    },
+    "code": "GDN",
+    "coordinates": {
+      "latitude": 54.3776,
+      "longitude": 18.4662,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Gdansk",
+    "region": {
+      "code": "POMERANIA",
+      "name": "Pomerania",
+    },
+    "seoName": "gdansk",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GLASGOW",
+      "macCode": "GLW",
+      "name": "Glasgow",
+    },
+    "code": "GLA",
+    "coordinates": {
+      "latitude": 55.87194,
+      "longitude": -4.43306,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "GLASGOW",
+      "macCode": "GLW",
+      "name": "Glasgow",
+    },
+    "name": "Glasgow",
+    "region": {
+      "code": "SCOTLAND",
+      "name": "Scotland",
+    },
+    "seoName": "glasgow",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "GRENOBLE",
+      "name": "Grenoble",
+    },
+    "code": "GNB",
+    "coordinates": {
+      "latitude": 45.3629,
+      "longitude": 5.32937,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Grenoble",
+    "region": {
+      "code": "RHONE-ALPES",
+      "name": "Rhône-Alpes",
+    },
+    "seoName": "grenoble",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "GENOA",
+      "name": "Genoa",
+    },
+    "code": "GOA",
+    "coordinates": {
+      "latitude": 44.4133,
+      "longitude": 8.8375,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Genoa",
+    "region": {
+      "code": "LIGURIA",
+      "name": "Liguria",
+    },
+    "seoName": "genoa",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GOTHENBURG",
+      "name": "Gothenburg",
+    },
+    "code": "GOT",
+    "coordinates": {
+      "latitude": 57.6741,
+      "longitude": 12.2925,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Göteborg Landvetter",
+    "region": {
+      "code": "GOTHENBURG",
+      "name": "Gothenburg",
+    },
+    "seoName": "gothenburg-landvetter",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GIRONA",
+      "name": "Girona",
+    },
+    "code": "GRO",
+    "coordinates": {
+      "latitude": 41.901,
+      "longitude": 2.76055,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "BARCELONA",
+      "macCode": "BAR",
+      "name": "Barcelona",
+    },
+    "name": "Barcelona Girona",
+    "region": {
+      "code": "COSTA_BRAVA",
+      "name": "Costa Brava",
+    },
+    "seoName": "barcelona-girona",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "HAMBURG",
+      "name": "Hamburg",
+    },
+    "code": "HAM",
+    "coordinates": {
+      "latitude": 53.63028,
+      "longitude": 9.99111,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Hamburg",
+    "region": {
+      "code": "METROPOLREGION_HAMBURG",
+      "name": "Metropolregion Hamburg",
+    },
+    "seoName": "hamburg",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "HELSINKI",
+      "name": "Helsinki",
+    },
+    "code": "HEL",
+    "coordinates": {
+      "latitude": 60.3172,
+      "longitude": 24.9633,
+    },
+    "country": {
+      "code": "fi",
+      "currency": "EUR",
+      "defaultAirportCode": "TMP",
+      "name": "Finland",
+    },
+    "name": "Helsinki",
+    "region": {
+      "code": "UUSIMAA",
+      "name": "Uusimaa",
+    },
+    "seoName": "helsinki",
+    "timeZone": "Europe/Helsinki",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "HERAKLION",
+      "name": "Heraklion",
+    },
+    "code": "HER",
+    "coordinates": {
+      "latitude": 35.3397,
+      "longitude": 25.1803,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Heraklion Crete",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "heraklion-crete",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "FRANKFURT",
+      "macCode": "FRT",
+      "name": "Frankfurt",
+    },
+    "code": "HHN",
+    "coordinates": {
+      "latitude": 49.9487,
+      "longitude": 7.26389,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "macCity": {
+      "code": "FRANKFURT",
+      "macCode": "FRT",
+      "name": "Frankfurt",
+    },
+    "name": "Frankfurt Hahn",
+    "region": {
+      "code": "DEFAULT_DE",
+      "name": "Default DE",
+    },
+    "seoName": "frankfurt-hahn",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "IASI",
+      "name": "IASI",
+    },
+    "code": "IAS",
+    "coordinates": {
+      "latitude": 47.17889,
+      "longitude": 27.617,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Iasi",
+    "region": {
+      "code": "DEFAULT_RO",
+      "name": "Default RO",
+    },
+    "seoName": "iasi",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "IBIZA",
+      "name": "Ibiza",
+    },
+    "code": "IBZ",
+    "coordinates": {
+      "latitude": 38.8729,
+      "longitude": 1.37312,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Ibiza",
+    "region": {
+      "code": "BALEARIC_ISLANDS",
+      "name": "Balearic Islands",
+    },
+    "seoName": "ibiza",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NIS",
+      "name": "Nis",
+    },
+    "code": "INI",
+    "coordinates": {
+      "latitude": 43.3372,
+      "longitude": 21.8536,
+    },
+    "country": {
+      "code": "rs",
+      "currency": "EUR",
+      "defaultAirportCode": "STN",
+      "name": "Serbia",
+    },
+    "name": "Nis",
+    "region": {
+      "code": "DEFAULT_RS",
+      "name": "Default RS",
+    },
+    "seoName": "nis",
+    "timeZone": "Europe/Belgrade",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MYKONOS",
+      "name": "Mykonos",
+    },
+    "code": "JMK",
+    "coordinates": {
+      "latitude": 37.4351,
+      "longitude": 25.3481,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Mykonos",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "mykonos",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SKIATHOS",
+      "name": "Skiathos",
+    },
+    "code": "JSI",
+    "coordinates": {
+      "latitude": 39.1775,
+      "longitude": 23.5036,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Skiathos",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "skiathos",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SANTORINI",
+      "name": "Santorini",
+    },
+    "code": "JTR",
+    "coordinates": {
+      "latitude": 36.3992,
+      "longitude": 25.4793,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Santorini",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "santorini",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KOS",
+      "name": "Kos",
+    },
+    "code": "KGS",
+    "coordinates": {
+      "latitude": 36.7933,
+      "longitude": 27.0917,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Kos",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "kos",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KERRY",
+      "name": "Kerry",
+    },
+    "code": "KIR",
+    "coordinates": {
+      "latitude": 52.1809,
+      "longitude": -9.52378,
+    },
+    "country": {
+      "code": "ie",
+      "currency": "EUR",
+      "defaultAirportCode": "DUB",
+      "name": "Ireland",
+    },
+    "name": "Kerry",
+    "region": {
+      "code": "MUNSTER",
+      "name": "Munster",
+    },
+    "seoName": "kerry",
+    "timeZone": "Europe/Dublin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KLAGENFURT",
+      "name": "Klagenfurt",
+    },
+    "code": "KLU",
+    "coordinates": {
+      "latitude": 46.6425,
+      "longitude": 14.3377,
+    },
+    "country": {
+      "code": "at",
+      "currency": "EUR",
+      "defaultAirportCode": "VIE",
+      "name": "Austria",
+    },
+    "name": "Klagenfurt",
+    "region": {
+      "code": "DEFAULT_AT",
+      "name": "Default AT",
+    },
+    "seoName": "klagenfurt",
+    "timeZone": "Europe/Vienna",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KALAMATA",
+      "name": "Kalamata",
+    },
+    "code": "KLX",
+    "coordinates": {
+      "latitude": 37.0683,
+      "longitude": 22.0255,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Kalamata",
+    "region": {
+      "code": "PELOPONNESE_PENINSULA",
+      "name": "Peloponnese peninsula",
+    },
+    "seoName": "kalamata",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "KRAKOW",
+      "name": "Krakow",
+    },
+    "code": "KRK",
+    "coordinates": {
+      "latitude": 50.0777,
+      "longitude": 19.7848,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Krakow",
+    "region": {
+      "code": "MALOPOLSKA",
+      "name": "Malopolska",
+    },
+    "seoName": "krakow",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KOSICE",
+      "name": "Kosice",
+    },
+    "code": "KSC",
+    "coordinates": {
+      "latitude": 48.6631,
+      "longitude": 21.2411,
+    },
+    "country": {
+      "code": "sk",
+      "currency": "EUR",
+      "defaultAirportCode": "BTS",
+      "name": "Slovakia",
+    },
+    "name": "Kosice",
+    "region": {
+      "code": "KOSICE",
+      "name": "Kosice",
+    },
+    "seoName": "kosice",
+    "timeZone": "Europe/Bratislava",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "KATOWICE",
+      "name": "Katowice",
+    },
+    "code": "KTW",
+    "coordinates": {
+      "latitude": 50.4743,
+      "longitude": 19.08,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Katowice",
+    "region": {
+      "code": "UPPER_SILESIA",
+      "name": "Upper Silesia",
+    },
+    "seoName": "katowice",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "KAUNAS",
+      "name": "Kaunas",
+    },
+    "code": "KUN",
+    "coordinates": {
+      "latitude": 54.9639,
+      "longitude": 24.0848,
+    },
+    "country": {
+      "code": "lt",
+      "currency": "EUR",
+      "defaultAirportCode": "KUN",
+      "name": "Lithuania",
+    },
+    "name": "Kaunas",
+    "region": {
+      "code": "KAUNAS",
+      "name": "Kaunas",
+    },
+    "seoName": "kaunas",
+    "timeZone": "Europe/Vilnius",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LEEDS",
+      "name": "Leeds",
+    },
+    "code": "LBA",
+    "coordinates": {
+      "latitude": 53.8659,
+      "longitude": -1.66057,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Leeds Bradford",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "leeds",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LARNACA",
+      "name": "Larnaca",
+    },
+    "code": "LCA",
+    "coordinates": {
+      "latitude": 34.8751,
+      "longitude": 33.6249,
+    },
+    "country": {
+      "code": "cy",
+      "currency": "EUR",
+      "defaultAirportCode": "PFO",
+      "name": "Cyprus",
+    },
+    "name": "Larnaca",
+    "region": {
+      "code": "DEFAULT_CY",
+      "name": "Default CY",
+    },
+    "seoName": "larnaca",
+    "timeZone": "Asia/Nicosia",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LODZ",
+      "name": "Lodz",
+    },
+    "code": "LCJ",
+    "coordinates": {
+      "latitude": 51.7219,
+      "longitude": 19.3981,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Lodz",
+    "region": {
+      "code": "LODZ",
+      "name": "Lodz",
+    },
+    "seoName": "lodz",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LOURDES",
+      "name": "Lourdes",
+    },
+    "code": "LDE",
+    "coordinates": {
+      "latitude": 43.1787,
+      "longitude": -0.006439,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Lourdes",
+    "region": {
+      "code": "MIDI-PYRENEES",
+      "name": "Midi-Pyrénées",
+    },
+    "seoName": "lourdes",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "DERRY",
+      "name": "Derry",
+    },
+    "code": "LDY",
+    "coordinates": {
+      "latitude": 55.0428,
+      "longitude": -7.16111,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Derry",
+    "region": {
+      "code": "NORTHERN_IRELAND",
+      "name": "Northern Ireland",
+    },
+    "seoName": "derry",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ALMERIA",
+      "name": "Almeria",
+    },
+    "code": "LEI",
+    "coordinates": {
+      "latitude": 36.8439,
+      "longitude": -2.3701,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Almeria",
+    "region": {
+      "code": "ANDALUSIA",
+      "name": "Andalusia",
+    },
+    "seoName": "almeria",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LEIPZIG",
+      "name": "Leipzig",
+    },
+    "code": "LEJ",
+    "coordinates": {
+      "latitude": 51.4324,
+      "longitude": 12.2416,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Leipzig",
+    "region": {
+      "code": "DEFAULT_DE",
+      "name": "Default DE",
+    },
+    "seoName": "leipzig-halle",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "code": "LGW",
+    "coordinates": {
+      "latitude": 51.1481,
+      "longitude": -0.190278,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "name": "London Gatwick",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "london-gatwick",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LIMOGES",
+      "name": "Limoges",
+    },
+    "code": "LIG",
+    "coordinates": {
+      "latitude": 45.8628,
+      "longitude": 1.17944,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Limoges",
+    "region": {
+      "code": "LIMOUSIN",
+      "name": "Limousin",
+    },
+    "seoName": "limoges",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LILLE",
+      "name": "Lille",
+    },
+    "code": "LIL",
+    "coordinates": {
+      "latitude": 50.5619,
+      "longitude": 3.08944,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Lille",
+    "region": {
+      "code": "NORD-PAS-DE-CALAIS",
+      "name": "Nord-Pas-de-Calais",
+    },
+    "seoName": "lille",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LISBON",
+      "name": "Lisbon",
+    },
+    "code": "LIS",
+    "coordinates": {
+      "latitude": 38.7813,
+      "longitude": -9.13592,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Lisbon",
+    "region": {
+      "code": "LISBON",
+      "name": "Lisbon",
+    },
+    "seoName": "lisbon",
+    "timeZone": "Europe/Lisbon",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LULEA",
+      "name": "Luleå",
+    },
+    "code": "LLA",
+    "coordinates": {
+      "latitude": 65.5425,
+      "longitude": 22.1219,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Lulea",
+    "region": {
+      "code": "NORRBOTTEN",
+      "name": "Norrbotten",
+    },
+    "seoName": "lulea",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GRAN_CANARIA",
+      "name": "Gran Canaria",
+    },
+    "code": "LPA",
+    "coordinates": {
+      "latitude": 27.9319,
+      "longitude": -15.3866,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Gran Canaria",
+    "region": {
+      "code": "CANARY_ISLES",
+      "name": "Canary Isles",
+    },
+    "seoName": "gran-canaria",
+    "timeZone": "Atlantic/Canary",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LIVERPOOL",
+      "name": "Liverpool",
+    },
+    "code": "LPL",
+    "coordinates": {
+      "latitude": 53.3336,
+      "longitude": -2.84972,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Liverpool",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "liverpool",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LAPPEENRANTA",
+      "name": "Lappeenranta",
+    },
+    "code": "LPP",
+    "coordinates": {
+      "latitude": 61.0446,
+      "longitude": 28.1444,
+    },
+    "country": {
+      "code": "fi",
+      "currency": "EUR",
+      "defaultAirportCode": "TMP",
+      "name": "Finland",
+    },
+    "name": "Lappeenranta",
+    "region": {
+      "code": "SOUTH_KARELIA",
+      "name": "South Karelia",
+    },
+    "seoName": "lappeenranta",
+    "timeZone": "Europe/Helsinki",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LA_ROCHELLE",
+      "name": "La Rochelle",
+    },
+    "code": "LRH",
+    "coordinates": {
+      "latitude": 46.1792,
+      "longitude": -1.19528,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "La Rochelle",
+    "region": {
+      "code": "POITOU-CHARENTES",
+      "name": "Poitou-Charentes",
+    },
+    "seoName": "la-rochelle",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "code": "LTN",
+    "coordinates": {
+      "latitude": 51.8747,
+      "longitude": -0.368333,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "name": "London Luton",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "london-luton",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LUXEMBOURG",
+      "name": "Luxembourg",
+    },
+    "code": "LUX",
+    "coordinates": {
+      "latitude": 49.6233,
+      "longitude": 6.2044,
+    },
+    "country": {
+      "code": "lu",
+      "currency": "EUR",
+      "defaultAirportCode": "STN",
+      "name": "Luxembourg",
+    },
+    "name": "Luxembourg",
+    "region": {
+      "code": "DEFAULT_LU",
+      "name": "Default LU",
+    },
+    "seoName": "luxembourg",
+    "timeZone": "Europe/Luxembourg",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "LUBLIN",
+      "name": "Lublin",
+    },
+    "code": "LUZ",
+    "coordinates": {
+      "latitude": 51.2319,
+      "longitude": 22.6903,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Lublin",
+    "region": {
+      "code": "LUBLIN",
+      "name": "Lublin",
+    },
+    "seoName": "lublin",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MADRID",
+      "name": "Madrid",
+    },
+    "code": "MAD",
+    "coordinates": {
+      "latitude": 40.4936,
+      "longitude": -3.56676,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Madrid",
+    "region": {
+      "code": "MADRID",
+      "name": "Madrid",
+    },
+    "seoName": "madrid",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MENORCA",
+      "name": "Menorca",
+    },
+    "code": "MAH",
+    "coordinates": {
+      "latitude": 39.8626,
+      "longitude": 4.21865,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Menorca",
+    "region": {
+      "code": "BALEARIC_ISLANDS",
+      "name": "Balearic Islands",
+    },
+    "seoName": "mahon-menorca",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MANCHESTER",
+      "name": "Manchester",
+    },
+    "code": "MAN",
+    "coordinates": {
+      "latitude": 53.3537,
+      "longitude": -2.27495,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Manchester",
+    "region": {
+      "code": "GREATER_MANCHESTER",
+      "name": "Greater Manchester",
+    },
+    "seoName": "manchester",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MALTA",
+      "name": "Malta",
+    },
+    "code": "MLA",
+    "coordinates": {
+      "latitude": 35.8575,
+      "longitude": 14.4775,
+    },
+    "country": {
+      "code": "mt",
+      "currency": "EUR",
+      "defaultAirportCode": "MLA",
+      "name": "Malta",
+    },
+    "name": "Malta",
+    "region": {
+      "code": "MALTA",
+      "name": "Malta",
+    },
+    "seoName": "malta",
+    "timeZone": "Europe/Malta",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NEWCASTLE",
+      "name": "Newcastle",
+    },
+    "code": "MME",
+    "coordinates": {
+      "latitude": 54.5092,
+      "longitude": -1.42941,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Teesside",
+    "region": {
+      "code": "TYNE_AND_WEAR",
+      "name": "Tyne and Wear",
+    },
+    "seoName": "teesside",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MALMO",
+      "name": "Malmo",
+    },
+    "code": "MMX",
+    "coordinates": {
+      "latitude": 55.5363,
+      "longitude": 13.3762,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Malmo",
+    "region": {
+      "code": "DEFAULT_SE",
+      "name": "Default SE",
+    },
+    "seoName": "malmo",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MARSEILLE",
+      "name": "Marseille",
+    },
+    "code": "MRS",
+    "coordinates": {
+      "latitude": 43.4393,
+      "longitude": 5.22142,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Marseille",
+    "region": {
+      "code": "PROVENCE-ALPES-COTE_DAZUR_FRENCH_RIVIERA",
+      "name": "French Riviera",
+    },
+    "seoName": "marseille",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MAASTRICHT",
+      "name": "Maastricht",
+    },
+    "code": "MST",
+    "coordinates": {
+      "latitude": 50.9117,
+      "longitude": 5.77014,
+    },
+    "country": {
+      "code": "nl",
+      "currency": "EUR",
+      "defaultAirportCode": "EIN",
+      "name": "Netherlands",
+    },
+    "name": "Maastricht",
+    "region": {
+      "code": "LIMBURG",
+      "name": "Limburg",
+    },
+    "seoName": "maastricht",
+    "timeZone": "Europe/Amsterdam",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MILAN",
+      "macCode": "MIL",
+      "name": "Milan",
+    },
+    "code": "MXP",
+    "coordinates": {
+      "latitude": 45.63,
+      "longitude": 8.7231,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "MILAN",
+      "macCode": "MIL",
+      "name": "Milan",
+    },
+    "name": "Milan Malpensa",
+    "region": {
+      "code": "LOMBARDY",
+      "name": "Lombardy",
+    },
+    "seoName": "milan-malpensa",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "NAPLES",
+      "name": "Naples",
+    },
+    "code": "NAP",
+    "coordinates": {
+      "latitude": 40.5304,
+      "longitude": 14.1727,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Naples",
+    "region": {
+      "code": "CAMPANIA",
+      "name": "Campania",
+    },
+    "seoName": "naples",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NICE",
+      "name": "Nice",
+    },
+    "code": "NCE",
+    "coordinates": {
+      "latitude": 43.6584,
+      "longitude": 7.21587,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Nice",
+    "region": {
+      "code": "PROVENCE-ALPES-COTE_DAZUR_FRENCH_RIVIERA",
+      "name": "French Riviera",
+    },
+    "seoName": "nice",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NEWCASTLE",
+      "name": "Newcastle",
+    },
+    "code": "NCL",
+    "coordinates": {
+      "latitude": 55.0375,
+      "longitude": -1.69167,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Newcastle",
+    "region": {
+      "code": "TYNE_AND_WEAR",
+      "name": "Tyne and Wear",
+    },
+    "seoName": "newcastle",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NADOR",
+      "name": "Nador",
+    },
+    "code": "NDR",
+    "coordinates": {
+      "latitude": 34.9888,
+      "longitude": -3.02821,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Nador",
+    "region": {
+      "code": "ORIENTAL-RIF",
+      "name": "Oriental-Rif",
+    },
+    "seoName": "nador",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "KNOCK",
+      "name": "Knock",
+    },
+    "code": "NOC",
+    "coordinates": {
+      "latitude": 53.9103,
+      "longitude": -8.81849,
+    },
+    "country": {
+      "code": "ie",
+      "currency": "EUR",
+      "defaultAirportCode": "DUB",
+      "name": "Ireland",
+    },
+    "name": "Knock",
+    "region": {
+      "code": "MAYO",
+      "name": "Mayo",
+    },
+    "seoName": "knock",
+    "timeZone": "Europe/Dublin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NEWQUAY",
+      "name": "Newquay",
+    },
+    "code": "NQY",
+    "coordinates": {
+      "latitude": 50.4406,
+      "longitude": -4.99541,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "name": "Newquay Cornwall",
+    "region": {
+      "code": "DEFAULT_GB",
+      "name": "Default GB",
+    },
+    "seoName": "newquay",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "DUSSELDORF",
+      "macCode": "DOF",
+      "name": "Dusseldorf",
+    },
+    "code": "NRN",
+    "coordinates": {
+      "latitude": 51.6024,
+      "longitude": 6.14217,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "macCity": {
+      "code": "DUSSELDORF",
+      "macCode": "DOF",
+      "name": "Dusseldorf",
+    },
+    "name": "Dusseldorf Weeze",
+    "region": {
+      "code": "NORTH_RHINE-WESTPHALIA",
+      "name": "North Rhine-Westphalia",
+    },
+    "seoName": "dusseldorf",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "NANTES",
+      "name": "Nantes",
+    },
+    "code": "NTE",
+    "coordinates": {
+      "latitude": 47.1532,
+      "longitude": -1.61073,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Nantes",
+    "region": {
+      "code": "PAYS_DE_LA_LOIRE",
+      "name": "Pays de la Loire",
+    },
+    "seoName": "nantes",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "NUREMBERG",
+      "name": "Nuremberg",
+    },
+    "code": "NUE",
+    "coordinates": {
+      "latitude": 49.4987,
+      "longitude": 11.0669,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Nuremberg",
+    "region": {
+      "code": "MIDDLE_FRANCONIA",
+      "name": "Middle Franconia",
+    },
+    "seoName": "nuremberg",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ORADEA",
+      "name": "Oradea",
+    },
+    "code": "OMR",
+    "coordinates": {
+      "latitude": 47.025299,
+      "longitude": 21.9025,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Oradea",
+    "region": {
+      "code": "DEFAULT_RO",
+      "name": "Default RO",
+    },
+    "seoName": "oradea",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PORTO",
+      "name": "Porto",
+    },
+    "code": "OPO",
+    "coordinates": {
+      "latitude": 41.2481,
+      "longitude": -8.68139,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Porto",
+    "region": {
+      "code": "DEFAULT_PT",
+      "name": "Default PT",
+    },
+    "seoName": "porto",
+    "timeZone": "Europe/Lisbon",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OREBRO",
+      "name": "Örebro",
+    },
+    "code": "ORB",
+    "coordinates": {
+      "latitude": 59.2275,
+      "longitude": 15.0462,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Orebro",
+    "region": {
+      "code": "NARKE",
+      "name": "Närke",
+    },
+    "seoName": "orebro",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "CORK",
+      "name": "Cork",
+    },
+    "code": "ORK",
+    "coordinates": {
+      "latitude": 51.8413,
+      "longitude": -8.49111,
+    },
+    "country": {
+      "code": "ie",
+      "currency": "EUR",
+      "defaultAirportCode": "DUB",
+      "name": "Ireland",
+    },
+    "name": "Cork",
+    "region": {
+      "code": "MUNSTER",
+      "name": "Munster",
+    },
+    "seoName": "cork",
+    "timeZone": "Europe/Dublin",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OSLO",
+      "macCode": "OSO",
+      "name": "Oslo",
+    },
+    "code": "OSL",
+    "coordinates": {
+      "latitude": 60.2028,
+      "longitude": 11.0839,
+    },
+    "country": {
+      "code": "no",
+      "currency": "NOK",
+      "defaultAirportCode": "RYG",
+      "name": "Norway",
+    },
+    "macCity": {
+      "code": "OSLO",
+      "macCode": "OSO",
+      "name": "Oslo",
+    },
+    "name": "Oslo",
+    "region": {
+      "code": "OSLO",
+      "name": "Oslo",
+    },
+    "seoName": "oslo",
+    "timeZone": "Europe/Oslo",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OSTRAVA",
+      "name": "Ostrava",
+    },
+    "code": "OSR",
+    "coordinates": {
+      "latitude": 49.6963,
+      "longitude": 18.1111,
+    },
+    "country": {
+      "code": "cz",
+      "currency": "CZK",
+      "defaultAirportCode": "PRG",
+      "name": "Czech Republic",
+    },
+    "name": "Ostrava",
+    "region": {
+      "code": "MORAVIAN-SILESIAN",
+      "name": "Moravian-Silesian",
+    },
+    "seoName": "ostrava",
+    "timeZone": "Europe/Prague",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "BUCHAREST",
+      "name": "Bucharest",
+    },
+    "code": "OTP",
+    "coordinates": {
+      "latitude": 44.5722,
+      "longitude": 26.1022,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Bucharest",
+    "region": {
+      "code": "BUCHAREST",
+      "name": "Bucharest",
+    },
+    "seoName": "Bucharest-Otopeni",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OUJDA",
+      "name": "Oujda",
+    },
+    "code": "OUD",
+    "coordinates": {
+      "latitude": 34.7872,
+      "longitude": -1.92399,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Oujda",
+    "region": {
+      "code": "ORIENTAL-RIF",
+      "name": "Oriental-Rif",
+    },
+    "seoName": "oujda",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OVIEDO",
+      "name": "Oviedo",
+    },
+    "code": "OVD",
+    "coordinates": {
+      "latitude": 43.5636,
+      "longitude": -6.03462,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Asturias",
+    "region": {
+      "code": "DEFAULT_ES",
+      "name": "Default ES",
+    },
+    "seoName": "asturias",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OUARZAZATE",
+      "name": "Ouarzazate",
+    },
+    "code": "OZZ",
+    "coordinates": {
+      "latitude": 30.9392,
+      "longitude": -6.9094,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Ouarzazate",
+    "region": {
+      "code": "DRAA-TAFILALET",
+      "name": "Drâa-Tafilalet",
+    },
+    "seoName": "ouarzazate",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PADERBORN",
+      "name": "Paderborn",
+    },
+    "code": "PAD",
+    "coordinates": {
+      "latitude": 51.3655,
+      "longitude": 8.3702,
+    },
+    "country": {
+      "code": "de",
+      "currency": "EUR",
+      "defaultAirportCode": "HHN",
+      "name": "Germany",
+    },
+    "name": "Paderborn",
+    "region": {
+      "code": "NORTH_RHINE-WESTPHALIA",
+      "name": "North Rhine-Westphalia",
+    },
+    "seoName": "paderborn",
+    "timeZone": "Europe/Berlin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PONTA_DELGADA",
+      "name": "Ponta Delgada",
+    },
+    "code": "PDL",
+    "coordinates": {
+      "latitude": 37.74194,
+      "longitude": -25.69778,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Ponta Delgada",
+    "region": {
+      "code": "AZORES",
+      "name": "Azores",
+    },
+    "seoName": "ponta-delgada",
+    "timeZone": "Atlantic/Azores",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PLOVDIV",
+      "name": "Plovdiv",
+    },
+    "code": "PDV",
+    "coordinates": {
+      "latitude": 42.0678,
+      "longitude": 24.8508,
+    },
+    "country": {
+      "code": "bg",
+      "currency": "EUR",
+      "defaultAirportCode": "PDV",
+      "name": "Bulgaria",
+    },
+    "name": "Plovdiv",
+    "region": {
+      "code": "EASTERN_RUMELIA",
+      "name": "Eastern Rumelia",
+    },
+    "seoName": "plovdiv",
+    "timeZone": "Europe/Sofia",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PARDUBICE",
+      "name": "Pardubice",
+    },
+    "code": "PED",
+    "coordinates": {
+      "latitude": 50.0048,
+      "longitude": 15.4419,
+    },
+    "country": {
+      "code": "cz",
+      "currency": "CZK",
+      "defaultAirportCode": "PRG",
+      "name": "Czech Republic",
+    },
+    "name": "Pardubice",
+    "region": {
+      "code": "EAST_BOHEMIAN",
+      "name": "East Bohemian",
+    },
+    "seoName": "pardubice",
+    "timeZone": "Europe/Prague",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PERUGIA",
+      "name": "Perugia",
+    },
+    "code": "PEG",
+    "coordinates": {
+      "latitude": 43.0959,
+      "longitude": 12.5132,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Perugia",
+    "region": {
+      "code": "UMBRIA",
+      "name": "Umbria",
+    },
+    "seoName": "perugia",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PAPHOS",
+      "name": "Paphos",
+    },
+    "code": "PFO",
+    "coordinates": {
+      "latitude": 34.718,
+      "longitude": 32.4857,
+    },
+    "country": {
+      "code": "cy",
+      "currency": "EUR",
+      "defaultAirportCode": "PFO",
+      "name": "Cyprus",
+    },
+    "name": "Paphos",
+    "region": {
+      "code": "PAPHOS",
+      "name": "Paphos",
+    },
+    "seoName": "paphos",
+    "timeZone": "Asia/Nicosia",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PERPIGNAN",
+      "name": "Perpignan",
+    },
+    "code": "PGF",
+    "coordinates": {
+      "latitude": 42.7404,
+      "longitude": 2.87067,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Perpignan",
+    "region": {
+      "code": "LANGUEDOC-ROUSSILLON",
+      "name": "Languedoc-Roussillon",
+    },
+    "seoName": "perpignan",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "GLASGOW",
+      "macCode": "GLW",
+      "name": "Glasgow",
+    },
+    "code": "PIK",
+    "coordinates": {
+      "latitude": 55.5094,
+      "longitude": -4.58667,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "GLASGOW",
+      "macCode": "GLW",
+      "name": "Glasgow",
+    },
+    "name": "Glasgow Prestwick",
+    "region": {
+      "code": "SCOTLAND",
+      "name": "Scotland",
+    },
+    "seoName": "glasgow-prestwick",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "POITIERS",
+      "name": "Poitiers",
+    },
+    "code": "PIS",
+    "coordinates": {
+      "latitude": 46.5877,
+      "longitude": 0.306666,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Poitiers",
+    "region": {
+      "code": "POITOU-CHARENTES",
+      "name": "Poitou-Charentes",
+    },
+    "seoName": "poitiers",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PALANGA",
+      "name": "Palanga",
+    },
+    "code": "PLQ",
+    "coordinates": {
+      "latitude": 55.9733,
+      "longitude": 21.0939,
+    },
+    "country": {
+      "code": "lt",
+      "currency": "EUR",
+      "defaultAirportCode": "KUN",
+      "name": "Lithuania",
+    },
+    "name": "Palanga",
+    "region": {
+      "code": "DEFAULT_LT",
+      "name": "Default LT",
+    },
+    "seoName": "palanga",
+    "timeZone": "Europe/Vilnius",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PARMA",
+      "name": "Parma",
+    },
+    "code": "PMF",
+    "coordinates": {
+      "latitude": 44.8245,
+      "longitude": 10.2964,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Parma",
+    "region": {
+      "code": "EMILIA-ROMAGNA",
+      "name": "Emilia-Romagna",
+    },
+    "seoName": "parma",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [
+      "majorca",
+      "mallorca",
+    ],
+    "base": true,
+    "city": {
+      "code": "PALMA",
+      "name": "Palma",
+    },
+    "code": "PMI",
+    "coordinates": {
+      "latitude": 39.5517,
+      "longitude": 2.73881,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Palma de Mallorca",
+    "region": {
+      "code": "DEFAULT_ES",
+      "name": "Default ES",
+    },
+    "seoName": "palma-mallorca",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PALERMO",
+      "name": "Palermo",
+    },
+    "code": "PMO",
+    "coordinates": {
+      "latitude": 38.176,
+      "longitude": 13.091,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Palermo",
+    "region": {
+      "code": "SICILY",
+      "name": "Sicily",
+    },
+    "seoName": "palermo",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "POZNAN",
+      "name": "Poznan",
+    },
+    "code": "POZ",
+    "coordinates": {
+      "latitude": 52.421,
+      "longitude": 16.8263,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Poznan",
+    "region": {
+      "code": "WIELKOPOLSKA",
+      "name": "Wielkopolska",
+    },
+    "seoName": "poznan",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PRAGUE",
+      "name": "Prague",
+    },
+    "code": "PRG",
+    "coordinates": {
+      "latitude": 50.1008,
+      "longitude": 14.26,
+    },
+    "country": {
+      "code": "cz",
+      "currency": "CZK",
+      "defaultAirportCode": "PRG",
+      "name": "Czech Republic",
+    },
+    "name": "Prague",
+    "region": {
+      "code": "CENTRAL_BOHEMIAN",
+      "name": "Central Bohemian",
+    },
+    "seoName": "prague",
+    "timeZone": "Europe/Prague",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PISA",
+      "name": "Pisa",
+    },
+    "code": "PSA",
+    "coordinates": {
+      "latitude": 43.6839,
+      "longitude": 10.3927,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Pisa",
+    "region": {
+      "code": "TUSCANY",
+      "name": "Tuscany",
+    },
+    "seoName": "pisa",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "PESCARA",
+      "name": "Pescara",
+    },
+    "code": "PSR",
+    "coordinates": {
+      "latitude": 42.4317,
+      "longitude": 14.1811,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Pescara",
+    "region": {
+      "code": "ABRUZZO",
+      "name": "Abruzzo",
+    },
+    "seoName": "pescara",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PULA",
+      "name": "Pula",
+    },
+    "code": "PUY",
+    "coordinates": {
+      "latitude": 44.8935,
+      "longitude": 13.9222,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Pula",
+    "region": {
+      "code": "DEFAULT_HR",
+      "name": "Default HR",
+    },
+    "seoName": "pula",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PREVEZA",
+      "name": "Preveza",
+    },
+    "code": "PVK",
+    "coordinates": {
+      "latitude": 38.9256,
+      "longitude": 20.7653,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Preveza - Aktion",
+    "region": {
+      "code": "PREVEZA",
+      "name": "Preveza",
+    },
+    "seoName": "preveza-aktion",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "MARRAKESH",
+      "name": "Marrakesh",
+    },
+    "code": "RAK",
+    "coordinates": {
+      "latitude": 31.6069,
+      "longitude": -8.0363,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Marrakesh",
+    "region": {
+      "code": "MARRAKESH-SAFI",
+      "name": "Marrakesh-Safi",
+    },
+    "seoName": "marrakesh",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "RABAT",
+      "name": "Rabat",
+    },
+    "code": "RBA",
+    "coordinates": {
+      "latitude": 34.0515,
+      "longitude": -6.75152,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Rabat",
+    "region": {
+      "code": "RABAT-SALE-KENITRA",
+      "name": "Rabat-Sale-Kenitra",
+    },
+    "seoName": "rabat",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "RODEZ",
+      "name": "Rodez",
+    },
+    "code": "RDZ",
+    "coordinates": {
+      "latitude": 44.4079,
+      "longitude": 2.48267,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Rodez",
+    "region": {
+      "code": "MIDI-PYRENEES",
+      "name": "Midi-Pyrénées",
+    },
+    "seoName": "rodez",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "REUS",
+      "name": "Reus",
+    },
+    "code": "REU",
+    "coordinates": {
+      "latitude": 41.1474,
+      "longitude": 1.16717,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "BARCELONA",
+      "macCode": "BAR",
+      "name": "Barcelona",
+    },
+    "name": "Barcelona Reus",
+    "region": {
+      "code": "COSTA_DORADA",
+      "name": "Costa Dorada",
+    },
+    "seoName": "barcelona-reus",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "RHODES",
+      "name": "Rhodes",
+    },
+    "code": "RHO",
+    "coordinates": {
+      "latitude": 36.4054,
+      "longitude": 28.0862,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Rhodes",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "rhodes",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "RIGA",
+      "name": "Riga",
+    },
+    "code": "RIX",
+    "coordinates": {
+      "latitude": 56.9236,
+      "longitude": 23.9711,
+    },
+    "country": {
+      "code": "lv",
+      "currency": "EUR",
+      "defaultAirportCode": "RIX",
+      "name": "Latvia",
+    },
+    "name": "Riga",
+    "region": {
+      "code": "RIGA_PLANNING_REGION",
+      "name": "Riga Planning Region",
+    },
+    "seoName": "riga",
+    "timeZone": "Europe/Riga",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "RIJEKA",
+      "name": "Rijeka",
+    },
+    "code": "RJK",
+    "coordinates": {
+      "latitude": 45.2169,
+      "longitude": 14.5703,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Rijeka",
+    "region": {
+      "code": "KVARNER_BAY",
+      "name": "Kvarner Bay",
+    },
+    "seoName": "rijeka",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "RIMINI",
+      "name": "Rimini",
+    },
+    "code": "RMI",
+    "coordinates": {
+      "latitude": 44.0203,
+      "longitude": 12.6117,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Rimini",
+    "region": {
+      "code": "DEFAULT_IT",
+      "name": "Default IT",
+    },
+    "seoName": "rimini",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "MURCIA",
+      "name": "Murcia",
+    },
+    "code": "RMU",
+    "coordinates": {
+      "latitude": 37.7903,
+      "longitude": -1.1418,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Murcia International",
+    "region": {
+      "code": "COSTA_CALIDA",
+      "name": "Costa Calida",
+    },
+    "seoName": "murcia-international",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ROVANIEMI",
+      "name": "Rovaniemi",
+    },
+    "code": "RVN",
+    "coordinates": {
+      "latitude": 66.5631,
+      "longitude": 25.8301,
+    },
+    "country": {
+      "code": "fi",
+      "currency": "EUR",
+      "defaultAirportCode": "TMP",
+      "name": "Finland",
+    },
+    "name": "Lapland Rovaniemi",
+    "region": {
+      "code": "DEFAULT_FI",
+      "name": "Default FI",
+    },
+    "seoName": "lapland-rovaniemi",
+    "timeZone": "Europe/Helsinki",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "RZESZOW",
+      "name": "Rzeszow",
+    },
+    "code": "RZE",
+    "coordinates": {
+      "latitude": 50.11,
+      "longitude": 22.019,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Rzeszow",
+    "region": {
+      "code": "PODKARPACKIE",
+      "name": "Podkarpackie",
+    },
+    "seoName": "rzeszow",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SIBIU",
+      "name": "Sibiu",
+    },
+    "code": "SBZ",
+    "coordinates": {
+      "latitude": 45.7858,
+      "longitude": 24.0856,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Sibiu",
+    "region": {
+      "code": "TRANSYLVANIA",
+      "name": "Transylvania",
+    },
+    "seoName": "sibiu",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "SANTIAGO",
+      "name": "Santiago",
+    },
+    "code": "SCQ",
+    "coordinates": {
+      "latitude": 42.8963,
+      "longitude": -8.41514,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Santiago",
+    "region": {
+      "code": "GALICIA",
+      "name": "Galicia",
+    },
+    "seoName": "santiago-de-compostela",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SUCEAVA",
+      "name": "Suceava",
+    },
+    "code": "SCV",
+    "coordinates": {
+      "latitude": 47.6875,
+      "longitude": 26.3542,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Suceava",
+    "region": {
+      "code": "DEFAULT_RO",
+      "name": "Default RO",
+    },
+    "seoName": "suceava",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SANTANDER",
+      "name": "Santander",
+    },
+    "code": "SDR",
+    "coordinates": {
+      "latitude": 43.4271,
+      "longitude": -3.82001,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Santander",
+    "region": {
+      "code": "CANTABRIA",
+      "name": "Cantabria",
+    },
+    "seoName": "santander",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SKELLEFTEA",
+      "name": "Skelleftea",
+    },
+    "code": "SFT",
+    "coordinates": {
+      "latitude": 64.6248,
+      "longitude": 21.0769,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Skelleftea",
+    "region": {
+      "code": "SKELLEFTEA",
+      "name": "Skellefteå",
+    },
+    "seoName": "skelleftea",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "THESSALONIKI",
+      "name": "Thessaloniki",
+    },
+    "code": "SKG",
+    "coordinates": {
+      "latitude": 40.5197,
+      "longitude": 22.9709,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Thessaloniki",
+    "region": {
+      "code": "CENTRAL_MACEDONIA",
+      "name": "Central Macedonia",
+    },
+    "seoName": "thessaloniki",
+    "timeZone": "Europe/Athens",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "SHANNON",
+      "name": "Shannon",
+    },
+    "code": "SNN",
+    "coordinates": {
+      "latitude": 52.702,
+      "longitude": -8.92482,
+    },
+    "country": {
+      "code": "ie",
+      "currency": "EUR",
+      "defaultAirportCode": "DUB",
+      "name": "Ireland",
+    },
+    "name": "Shannon",
+    "region": {
+      "code": "MUNSTER",
+      "name": "Munster",
+    },
+    "seoName": "shannon",
+    "timeZone": "Europe/Dublin",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "SOFIA",
+      "name": "Sofia",
+    },
+    "code": "SOF",
+    "coordinates": {
+      "latitude": 42.67,
+      "longitude": 23.35,
+    },
+    "country": {
+      "code": "bg",
+      "currency": "EUR",
+      "defaultAirportCode": "PDV",
+      "name": "Bulgaria",
+    },
+    "name": "Sofia",
+    "region": {
+      "code": "DEFAULT_BG",
+      "name": "Default BG",
+    },
+    "seoName": "sofia",
+    "timeZone": "Europe/Sofia",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SPLIT",
+      "name": "Split",
+    },
+    "code": "SPU",
+    "coordinates": {
+      "latitude": 43.5389,
+      "longitude": 16.2981,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Split",
+    "region": {
+      "code": "DALMATIAN",
+      "name": "Dalmatian",
+    },
+    "seoName": "split",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "code": "STN",
+    "coordinates": {
+      "latitude": 51.885,
+      "longitude": 0.235,
+    },
+    "country": {
+      "code": "gb",
+      "currency": "GBP",
+      "defaultAirportCode": "STN",
+      "name": "United Kingdom",
+    },
+    "macCity": {
+      "code": "LONDON",
+      "macCode": "LON",
+      "name": "London",
+    },
+    "name": "London Stansted",
+    "region": {
+      "code": "ENGLAND",
+      "name": "England",
+    },
+    "seoName": "london-stansted",
+    "timeZone": "Europe/London",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "LAMEZIA",
+      "name": "Lamezia",
+    },
+    "code": "SUF",
+    "coordinates": {
+      "latitude": 38.9054,
+      "longitude": 16.2423,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Lamezia",
+    "region": {
+      "code": "CALABRIA",
+      "name": "Calabria",
+    },
+    "seoName": "lamezia",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "SEVILLE",
+      "name": "Seville",
+    },
+    "code": "SVQ",
+    "coordinates": {
+      "latitude": 37.418,
+      "longitude": -5.89311,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Seville",
+    "region": {
+      "code": "ANDALUSIA",
+      "name": "Andalusia",
+    },
+    "seoName": "seville",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "STRASBOURG",
+      "name": "Strasbourg",
+    },
+    "code": "SXB",
+    "coordinates": {
+      "latitude": 48.5383,
+      "longitude": 7.62823,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Strasbourg",
+    "region": {
+      "code": "ALSACE",
+      "name": "Alsace",
+    },
+    "seoName": "strasbourg",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SALZBURG",
+      "name": "Salzburg",
+    },
+    "code": "SZG",
+    "coordinates": {
+      "latitude": 47.7933,
+      "longitude": 13.0043,
+    },
+    "country": {
+      "code": "at",
+      "currency": "EUR",
+      "defaultAirportCode": "VIE",
+      "name": "Austria",
+    },
+    "name": "Salzburg",
+    "region": {
+      "code": "SALZBURG",
+      "name": "Salzburg",
+    },
+    "seoName": "salzburg",
+    "timeZone": "Europe/Vienna",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "OLSZTYN",
+      "name": "Olsztyn",
+    },
+    "code": "SZY",
+    "coordinates": {
+      "latitude": 53.4819,
+      "longitude": 20.9378,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Olsztyn - Mazury",
+    "region": {
+      "code": "MASURIA",
+      "name": "Masuria",
+    },
+    "seoName": "olsztyn-mazury",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SZCZECIN",
+      "name": "Szczecin",
+    },
+    "code": "SZZ",
+    "coordinates": {
+      "latitude": 53.5847,
+      "longitude": 14.9022,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Szczecin",
+    "region": {
+      "code": "POMERANIA",
+      "name": "Pomerania",
+    },
+    "seoName": "szczecin",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TERCEIRA",
+      "name": "Terceira",
+    },
+    "code": "TER",
+    "coordinates": {
+      "latitude": 38.761944,
+      "longitude": -27.090833,
+    },
+    "country": {
+      "code": "pt",
+      "currency": "EUR",
+      "defaultAirportCode": "LIS",
+      "name": "Portugal",
+    },
+    "name": "Terceira Lajes",
+    "region": {
+      "code": "AZORES",
+      "name": "Azores",
+    },
+    "seoName": "terceira-lajes",
+    "timeZone": "Atlantic/Azores",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TENERIFE",
+      "macCode": "TEN",
+      "name": "Tenerife",
+    },
+    "code": "TFN",
+    "coordinates": {
+      "latitude": 28.4827,
+      "longitude": -16.3415,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "TENERIFE",
+      "macCode": "TEN",
+      "name": "Tenerife",
+    },
+    "name": "Tenerife North",
+    "region": {
+      "code": "CANARY_ISLES",
+      "name": "Canary Isles",
+    },
+    "seoName": "tenerife-north",
+    "timeZone": "Atlantic/Canary",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "TENERIFE",
+      "macCode": "TEN",
+      "name": "Tenerife",
+    },
+    "code": "TFS",
+    "coordinates": {
+      "latitude": 28.0445,
+      "longitude": -16.5725,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "TENERIFE",
+      "macCode": "TEN",
+      "name": "Tenerife",
+    },
+    "name": "Tenerife South",
+    "region": {
+      "code": "CANARY_ISLES",
+      "name": "Canary Isles",
+    },
+    "seoName": "tenerife-south",
+    "timeZone": "Atlantic/Canary",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PODGORICA",
+      "name": "Podgorica",
+    },
+    "code": "TGD",
+    "coordinates": {
+      "latitude": 42.3594,
+      "longitude": 19.2519,
+    },
+    "country": {
+      "code": "me",
+      "currency": "EUR",
+      "defaultAirportCode": "TGD",
+      "name": "Montenegro",
+    },
+    "name": "Podgorica",
+    "region": {
+      "code": "DEFAULT_ME",
+      "name": "Default ME",
+    },
+    "seoName": "podgorica-montenegro",
+    "timeZone": "Europe/Podgorica",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TALLINN",
+      "name": "Tallinn",
+    },
+    "code": "TLL",
+    "coordinates": {
+      "latitude": 59.4133,
+      "longitude": 24.8328,
+    },
+    "country": {
+      "code": "ee",
+      "currency": "EUR",
+      "defaultAirportCode": "TLL",
+      "name": "Estonia",
+    },
+    "name": "Tallinn",
+    "region": {
+      "code": "HARJU",
+      "name": "Harju",
+    },
+    "seoName": "tallinn",
+    "timeZone": "Europe/Tallinn",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "TOULOUSE",
+      "name": "Toulouse",
+    },
+    "code": "TLS",
+    "coordinates": {
+      "latitude": 43.6044,
+      "longitude": 1.4439,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Toulouse",
+    "region": {
+      "code": "MIDI-PYRENEES",
+      "name": "Midi-Pyrénées",
+    },
+    "seoName": "toulouse",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TEL_AVIV",
+      "name": "Tel Aviv",
+    },
+    "code": "TLV",
+    "coordinates": {
+      "latitude": 32.0034,
+      "longitude": 34.5258,
+    },
+    "country": {
+      "code": "il",
+      "currency": "EUR",
+      "defaultAirportCode": "VDA",
+      "name": "Israel",
+    },
+    "name": "Tel Aviv",
+    "region": {
+      "code": "DEFAULT_IL",
+      "name": "Default IL",
+    },
+    "seoName": "tel-aviv",
+    "timeZone": "Asia/Jerusalem",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TAMPERE",
+      "name": "Tampere",
+    },
+    "code": "TMP",
+    "coordinates": {
+      "latitude": 61.4141,
+      "longitude": 23.6044,
+    },
+    "country": {
+      "code": "fi",
+      "currency": "EUR",
+      "defaultAirportCode": "TMP",
+      "name": "Finland",
+    },
+    "name": "Tampere",
+    "region": {
+      "code": "PIRKANMAA",
+      "name": "Pirkanmaa",
+    },
+    "seoName": "tampere",
+    "timeZone": "Europe/Helsinki",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TANGIER",
+      "name": "Tangier",
+    },
+    "code": "TNG",
+    "coordinates": {
+      "latitude": 35.7269,
+      "longitude": -5.91689,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Tangier",
+    "region": {
+      "code": "TANGIER-TETUAN",
+      "name": "Tangier-Tetuan",
+    },
+    "seoName": "tangier",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "TRAPANI",
+      "name": "Trapani",
+    },
+    "code": "TPS",
+    "coordinates": {
+      "latitude": 37.9114,
+      "longitude": 12.488,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Trapani-Marsala",
+    "region": {
+      "code": "SICILY",
+      "name": "Sicily",
+    },
+    "seoName": "trapani",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "SANDEFJORD",
+      "name": "Sandefjord",
+    },
+    "code": "TRF",
+    "coordinates": {
+      "latitude": 59.1867,
+      "longitude": 10.2586,
+    },
+    "country": {
+      "code": "no",
+      "currency": "NOK",
+      "defaultAirportCode": "RYG",
+      "name": "Norway",
+    },
+    "macCity": {
+      "code": "OSLO",
+      "macCode": "OSO",
+      "name": "Oslo",
+    },
+    "name": "Oslo Torp",
+    "region": {
+      "code": "VESTFOLD",
+      "name": "Vestfold",
+    },
+    "seoName": "oslo-torp",
+    "timeZone": "Europe/Oslo",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "TURIN",
+      "name": "Turin",
+    },
+    "code": "TRN",
+    "coordinates": {
+      "latitude": 45.2008,
+      "longitude": 7.64963,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Turin",
+    "region": {
+      "code": "PIEDMONT",
+      "name": "Piedmont",
+    },
+    "seoName": "turin",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TRIESTE",
+      "name": "Trieste",
+    },
+    "code": "TRS",
+    "coordinates": {
+      "latitude": 45.8275,
+      "longitude": 13.4722,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Trieste",
+    "region": {
+      "code": "FRIULI-VENEZIA_GIULIA",
+      "name": "Friuli-Venezia Giulia",
+    },
+    "seoName": "trieste",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VENICE",
+      "macCode": "VEN",
+      "name": "Venice",
+    },
+    "code": "TSF",
+    "coordinates": {
+      "latitude": 45.6484,
+      "longitude": 12.1944,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "VENICE",
+      "macCode": "VEN",
+      "name": "Venice",
+    },
+    "name": "Venice Treviso",
+    "region": {
+      "code": "VENETO",
+      "name": "Veneto",
+    },
+    "seoName": "venice-treviso",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "TIMISOARA",
+      "name": "Timisoara",
+    },
+    "code": "TSR",
+    "coordinates": {
+      "latitude": 45.81,
+      "longitude": 21.3381,
+    },
+    "country": {
+      "code": "ro",
+      "currency": "EUR",
+      "defaultAirportCode": "OTP",
+      "name": "Romania",
+    },
+    "name": "Timisoara",
+    "region": {
+      "code": "BANAT",
+      "name": "Banat",
+    },
+    "seoName": "timisoara",
+    "timeZone": "Europe/Bucharest",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TETOUAN",
+      "name": "Tétouan",
+    },
+    "code": "TTU",
+    "coordinates": {
+      "latitude": 35.5944,
+      "longitude": -5.32,
+    },
+    "country": {
+      "code": "ma",
+      "currency": "MAD",
+      "defaultAirportCode": "FEZ",
+      "name": "Morocco",
+    },
+    "name": "Tétouan",
+    "region": {
+      "code": "DEFAULT_MA",
+      "name": "Default MA",
+    },
+    "seoName": "tetouan",
+    "timeZone": "Africa/Casablanca",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TOURS",
+      "name": "Tours",
+    },
+    "code": "TUF",
+    "coordinates": {
+      "latitude": 47.4322,
+      "longitude": 0.727606,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "name": "Tours Loire Valley",
+    "region": {
+      "code": "CENTRE",
+      "name": "Centre",
+    },
+    "seoName": "tours",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "TUZLA",
+      "name": "Tuzla",
+    },
+    "code": "TZL",
+    "coordinates": {
+      "latitude": 44.4586,
+      "longitude": 18.7247,
+    },
+    "country": {
+      "code": "ba",
+      "currency": "EUR",
+      "defaultAirportCode": "BNX",
+      "name": "Bosnia & Herzegovina",
+    },
+    "name": "Tuzla",
+    "region": {
+      "code": "TUZLA",
+      "name": "Tuzla",
+    },
+    "seoName": "tuzla",
+    "timeZone": "Europe/Sarajevo",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VARNA",
+      "name": "Varna",
+    },
+    "code": "VAR",
+    "coordinates": {
+      "latitude": 43.1355,
+      "longitude": 27.4931,
+    },
+    "country": {
+      "code": "bg",
+      "currency": "EUR",
+      "defaultAirportCode": "PDV",
+      "name": "Bulgaria",
+    },
+    "name": "Varna",
+    "region": {
+      "code": "DEFAULT_BG",
+      "name": "Default BG",
+    },
+    "seoName": "varna",
+    "timeZone": "Europe/Sofia",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VISBY",
+      "name": "Visby",
+    },
+    "code": "VBY",
+    "coordinates": {
+      "latitude": 57.6596,
+      "longitude": 18.3424,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Visby Gotland",
+    "region": {
+      "code": "GOTLAND",
+      "name": "Gotland",
+    },
+    "seoName": "visby-gotland",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VENICE",
+      "macCode": "VEN",
+      "name": "Venice",
+    },
+    "code": "VCE",
+    "coordinates": {
+      "latitude": 45.5053,
+      "longitude": 12.3519,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "macCity": {
+      "code": "VENICE",
+      "macCode": "VEN",
+      "name": "Venice",
+    },
+    "name": "Venice M.Polo",
+    "region": {
+      "code": "VENETO",
+      "name": "Veneto",
+    },
+    "seoName": "venice",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "VIGO",
+      "name": "Vigo",
+    },
+    "code": "VGO",
+    "coordinates": {
+      "latitude": 42.23,
+      "longitude": -8.63,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Vigo",
+    "region": {
+      "code": "GALICIA",
+      "name": "Galicia",
+    },
+    "seoName": "vigo",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "VIENNA",
+      "name": "Vienna",
+    },
+    "code": "VIE",
+    "coordinates": {
+      "latitude": 48.0639,
+      "longitude": 16.3415,
+    },
+    "country": {
+      "code": "at",
+      "currency": "EUR",
+      "defaultAirportCode": "VIE",
+      "name": "Austria",
+    },
+    "name": "Vienna",
+    "region": {
+      "code": "VIENNA",
+      "name": "Vienna",
+    },
+    "seoName": "vienna",
+    "timeZone": "Europe/Vienna",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VITORIA-GASTEIZ",
+      "name": "Vitoria-Gasteiz",
+    },
+    "code": "VIT",
+    "coordinates": {
+      "latitude": 42.8828,
+      "longitude": -2.7244,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Vitoria (Basque Country)",
+    "region": {
+      "code": "DEFAULT_ES",
+      "name": "Default ES",
+    },
+    "seoName": "vitoria",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "VALENCIA",
+      "macCode": "VNC",
+      "name": "Valencia",
+    },
+    "code": "VLC",
+    "coordinates": {
+      "latitude": 39.4893,
+      "longitude": -0.481625,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "macCity": {
+      "code": "VALENCIA",
+      "macCode": "VNC",
+      "name": "Valencia",
+    },
+    "name": "Valencia",
+    "region": {
+      "code": "COSTA_AZAHAR",
+      "name": "Costa Azahar",
+    },
+    "seoName": "valencia",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VALLADOLID",
+      "name": "Valladolid",
+    },
+    "code": "VLL",
+    "coordinates": {
+      "latitude": 41.7061,
+      "longitude": -4.85194,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Valladolid",
+    "region": {
+      "code": "CASTILE-LEON",
+      "name": "Castile-Leon",
+    },
+    "seoName": "valladolid",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "VILNIUS",
+      "name": "Vilnius",
+    },
+    "code": "VNO",
+    "coordinates": {
+      "latitude": 54.6341,
+      "longitude": 25.2858,
+    },
+    "country": {
+      "code": "lt",
+      "currency": "EUR",
+      "defaultAirportCode": "KUN",
+      "name": "Lithuania",
+    },
+    "name": "Vilnius",
+    "region": {
+      "code": "VILNIUS",
+      "name": "Vilnius",
+    },
+    "seoName": "vilnius",
+    "timeZone": "Europe/Vilnius",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VERONA",
+      "name": "Verona",
+    },
+    "code": "VRN",
+    "coordinates": {
+      "latitude": 45.3957,
+      "longitude": 10.8885,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Verona",
+    "region": {
+      "code": "VENETO",
+      "name": "Veneto",
+    },
+    "seoName": "verona",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "STOCKHOLM",
+      "macCode": "SLM",
+      "name": "Stockholm",
+    },
+    "code": "VST",
+    "coordinates": {
+      "latitude": 59.5894,
+      "longitude": 16.6336,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "macCity": {
+      "code": "STOCKHOLM",
+      "macCode": "SLM",
+      "name": "Stockholm",
+    },
+    "name": "Stockholm Västerås",
+    "region": {
+      "code": "STOCKHOLM",
+      "name": "Stockholm",
+    },
+    "seoName": "stockholm-vasteras",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "VAXJO",
+      "name": "Växjö",
+    },
+    "code": "VXO",
+    "coordinates": {
+      "latitude": 56.9291,
+      "longitude": 14.728,
+    },
+    "country": {
+      "code": "se",
+      "currency": "SEK",
+      "defaultAirportCode": "NYO",
+      "name": "Sweden",
+    },
+    "name": "Växjö Småland",
+    "region": {
+      "code": "KRONOBERG",
+      "name": "Kronoberg",
+    },
+    "seoName": "vaxjo",
+    "timeZone": "Europe/Stockholm",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "WARSAW",
+      "name": "Warsaw",
+    },
+    "code": "WAW",
+    "coordinates": {
+      "latitude": 52.1657,
+      "longitude": 20.9671,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Warsaw Chopin",
+    "region": {
+      "code": "VOIVODSHIP",
+      "name": "Voivodship",
+    },
+    "seoName": "warsaw-chopin",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "WARSAW",
+      "name": "Warsaw",
+    },
+    "code": "WMI",
+    "coordinates": {
+      "latitude": 52.4511,
+      "longitude": 20.6517,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Warsaw Modlin",
+    "region": {
+      "code": "VOIVODSHIP",
+      "name": "Voivodship",
+    },
+    "seoName": "warsaw-modlin",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "WROCLAW",
+      "name": "Wroclaw",
+    },
+    "code": "WRO",
+    "coordinates": {
+      "latitude": 51.1027,
+      "longitude": 16.8858,
+    },
+    "country": {
+      "code": "pl",
+      "currency": "PLN",
+      "defaultAirportCode": "WMI",
+      "name": "Poland",
+    },
+    "name": "Wroclaw",
+    "region": {
+      "code": "LOWER_SILESIAN_VOIVODESHIP",
+      "name": "Lower Silesian Voivodeship",
+    },
+    "seoName": "wroclaw",
+    "timeZone": "Europe/Warsaw",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "PARIS",
+      "macCode": "PAR",
+      "name": "Paris",
+    },
+    "code": "XCR",
+    "coordinates": {
+      "latitude": 48.7761,
+      "longitude": 4.18449,
+    },
+    "country": {
+      "code": "fr",
+      "currency": "EUR",
+      "defaultAirportCode": "BVA",
+      "name": "France",
+    },
+    "macCity": {
+      "code": "PARIS",
+      "macCode": "PAR",
+      "name": "Paris",
+    },
+    "name": "Paris Vatry",
+    "region": {
+      "code": "PICARDY",
+      "name": "Picardy",
+    },
+    "seoName": "paris-vatry",
+    "timeZone": "Europe/Paris",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "JEREZ",
+      "name": "Jerez",
+    },
+    "code": "XRY",
+    "coordinates": {
+      "latitude": 36.7446,
+      "longitude": -6.06011,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Jerez",
+    "region": {
+      "code": "ANDALUSIA",
+      "name": "Andalusia",
+    },
+    "seoName": "jerez",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ZADAR",
+      "name": "Zadar",
+    },
+    "code": "ZAD",
+    "coordinates": {
+      "latitude": 44.1083,
+      "longitude": 15.3467,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Zadar",
+    "region": {
+      "code": "DALMATIAN",
+      "name": "Dalmatian",
+    },
+    "seoName": "zadar",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": true,
+    "city": {
+      "code": "ZAGREB",
+      "name": "Zagreb",
+    },
+    "code": "ZAG",
+    "coordinates": {
+      "latitude": 45.7431,
+      "longitude": 16.0689,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Zagreb",
+    "region": {
+      "code": "CROATIA_PROPER",
+      "name": "Croatia Proper",
+    },
+    "seoName": "zagreb",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ZARAGOZA",
+      "name": "Zaragoza",
+    },
+    "code": "ZAZ",
+    "coordinates": {
+      "latitude": 41.6662,
+      "longitude": -1.04155,
+    },
+    "country": {
+      "code": "es",
+      "currency": "EUR",
+      "defaultAirportCode": "BCN",
+      "name": "Spain",
+    },
+    "name": "Zaragoza",
+    "region": {
+      "code": "ARAGON",
+      "name": "Aragon",
+    },
+    "seoName": "zaragoza",
+    "timeZone": "Europe/Madrid",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
+      "code": "ZAKYNTHOS",
+      "name": "Zakynthos",
+    },
+    "code": "ZTH",
+    "coordinates": {
+      "latitude": 37.7509,
+      "longitude": 20.8843,
+    },
+    "country": {
+      "code": "gr",
+      "currency": "EUR",
+      "defaultAirportCode": "ATH",
+      "name": "Greece",
+    },
+    "name": "Zakynthos",
+    "region": {
+      "code": "GREEK_ISLANDS",
+      "name": "Greek Islands",
+    },
+    "seoName": "zakinthos",
+    "timeZone": "Europe/Athens",
+  },
+]
+`;
+
+exports[`Airports getClosest When asked for the closest airport 
+	 Then should be able to retrieve data and parse it 1`] = `
+{
+  "aliases": [],
+  "city": {
+    "code": "PODGORICA",
+    "name": "Podgorica",
+  },
+  "code": "TGD",
+  "coordinates": {
+    "latitude": 42.3594,
+    "longitude": 19.2519,
+  },
+  "country": {
+    "code": "me",
+    "name": "Montenegro",
+  },
+  "name": "Podgorica",
+}
+`;
+
+exports[`Airports getDestinations When asked for destinations from a specific airport 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "LANZAROTE",
+        "name": "Lanzarote",
+      },
+      "code": "ACE",
+      "coordinates": {
+        "latitude": 28.9455,
+        "longitude": -13.6052,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Lanzarote",
+      "region": {
+        "code": "CANARY_ISLES",
+        "name": "Canary Isles",
+      },
+      "seoName": "lanzarote",
+      "timeZone": "Atlantic/Canary",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MALAGA",
+        "name": "Malaga",
+      },
+      "code": "AGP",
+      "coordinates": {
+        "latitude": 36.6749,
+        "longitude": -4.49911,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Malaga",
+      "region": {
+        "code": "COSTA_DE_SOL",
+        "name": "Costa del Sol",
+      },
+      "seoName": "malaga",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "ALICANTE",
+        "name": "Alicante",
+      },
+      "code": "ALC",
+      "coordinates": {
+        "latitude": 38.2822,
+        "longitude": -0.558156,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Alicante",
+      "region": {
+        "code": "COSTA_BLANCA",
+        "name": "Costa Blanca",
+      },
+      "seoName": "alicante",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "ATHENS",
+        "name": "Athens",
+      },
+      "code": "ATH",
+      "coordinates": {
+        "latitude": 37.9364,
+        "longitude": 23.9445,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Athens",
+      "region": {
+        "code": "DEFAULT_GR",
+        "name": "Default GR",
+      },
+      "seoName": "athens",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BARCELONA",
+        "macCode": "BAR",
+        "name": "Barcelona",
+      },
+      "code": "BCN",
+      "coordinates": {
+        "latitude": 41.2971,
+        "longitude": 2.07846,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "BARCELONA",
+        "macCode": "BAR",
+        "name": "Barcelona",
+      },
+      "name": "Barcelona",
+      "region": {
+        "code": "COSTA_BRAVA",
+        "name": "Costa Brava",
+      },
+      "seoName": "barcelona-el-prat",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BERGAMO",
+        "name": "Bergamo",
+      },
+      "code": "BGY",
+      "coordinates": {
+        "latitude": 45.6739,
+        "longitude": 9.70417,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "name": "Milan Bergamo",
+      "region": {
+        "code": "LOMBARDY",
+        "name": "Lombardy",
+      },
+      "seoName": "milan-bergamo",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BILLUND",
+        "name": "Billund",
+      },
+      "code": "BLL",
+      "coordinates": {
+        "latitude": 55.7403,
+        "longitude": 9.15178,
+      },
+      "country": {
+        "code": "dk",
+        "currency": "DKK",
+        "defaultAirportCode": "BLL",
+        "name": "Denmark",
+      },
+      "name": "Billund",
+      "region": {
+        "code": "SOUTHERN_DENMARK",
+        "name": "Southern Denmark",
+      },
+      "seoName": "billund",
+      "timeZone": "Europe/Copenhagen",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BOLOGNA",
+        "name": "Bologna",
+      },
+      "code": "BLQ",
+      "coordinates": {
+        "latitude": 44.5354,
+        "longitude": 11.2887,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Bologna",
+      "region": {
+        "code": "EMILIA-ROMAGNA",
+        "name": "Emilia-Romagna",
+      },
+      "seoName": "bologna",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "BANJA_LUKA",
+        "name": "Banja Luka",
+      },
+      "code": "BNX",
+      "coordinates": {
+        "latitude": 44.5629,
+        "longitude": 17.1731,
+      },
+      "country": {
+        "code": "ba",
+        "currency": "EUR",
+        "defaultAirportCode": "BNX",
+        "name": "Bosnia & Herzegovina",
+      },
+      "name": "Banja Luka",
+      "region": {
+        "code": "DEFAULT_BA",
+        "name": "Default BA",
+      },
+      "seoName": "banja_luka",
+      "timeZone": "Europe/Sarajevo",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BARI",
+        "name": "Bari",
+      },
+      "code": "BRI",
+      "coordinates": {
+        "latitude": 41.1389,
+        "longitude": 16.7606,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Bari",
+      "region": {
+        "code": "PUGLIA",
+        "name": "Puglia",
+      },
+      "seoName": "bari",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BRUSSELS",
+        "macCode": "BRL",
+        "name": "Brussels",
+      },
+      "code": "BRU",
+      "coordinates": {
+        "latitude": 50.9014,
+        "longitude": 4.48444,
+      },
+      "country": {
+        "code": "be",
+        "currency": "EUR",
+        "defaultAirportCode": "BRU",
+        "name": "Belgium",
+      },
+      "macCity": {
+        "code": "BRUSSELS",
+        "macCode": "BRL",
+        "name": "Brussels",
+      },
+      "name": "Brussels",
+      "region": {
+        "code": "WALLONIA",
+        "name": "Wallonia",
+      },
+      "seoName": "brussels-zaventem",
+      "timeZone": "Europe/Brussels",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BUDAPEST",
+        "name": "Budapest",
+      },
+      "code": "BUD",
+      "coordinates": {
+        "latitude": 47.4369,
+        "longitude": 19.2556,
+      },
+      "country": {
+        "code": "hu",
+        "currency": "HUF",
+        "defaultAirportCode": "BUD",
+        "name": "Hungary",
+      },
+      "name": "Budapest",
+      "region": {
+        "code": "CENTRAL_HUNGARY",
+        "name": "Central Hungary",
+      },
+      "seoName": "budapest",
+      "timeZone": "Europe/Budapest",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "CORFU",
+        "name": "Corfu",
+      },
+      "code": "CFU",
+      "coordinates": {
+        "latitude": 39.6019,
+        "longitude": 19.9117,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Corfu",
+      "region": {
+        "code": "GREEK_ISLANDS",
+        "name": "Greek Islands",
+      },
+      "seoName": "corfu",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "CHANIA",
+        "name": "Chania",
+      },
+      "code": "CHQ",
+      "coordinates": {
+        "latitude": 35.5317,
+        "longitude": 24.1497,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Chania",
+      "region": {
+        "code": "GREEK_ISLANDS",
+        "name": "Greek Islands",
+      },
+      "seoName": "crete",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "CATANIA",
+        "name": "Catania",
+      },
+      "code": "CTA",
+      "coordinates": {
+        "latitude": 37.4668,
+        "longitude": 15.0664,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Catania",
+      "region": {
+        "code": "SICILY",
+        "name": "Sicily",
+      },
+      "seoName": "catania",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "DUBLIN",
+        "name": "Dublin",
+      },
+      "code": "DUB",
+      "coordinates": {
+        "latitude": 53.4213,
+        "longitude": -6.27007,
+      },
+      "country": {
+        "code": "ie",
+        "currency": "EUR",
+        "defaultAirportCode": "DUB",
+        "name": "Ireland",
+      },
+      "name": "Dublin",
+      "region": {
+        "code": "LEINSTER",
+        "name": "Leinster",
+      },
+      "seoName": "dublin",
+      "timeZone": "Europe/Dublin",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "EDINBURGH",
+        "name": "Edinburgh",
+      },
+      "code": "EDI",
+      "coordinates": {
+        "latitude": 55.95,
+        "longitude": -3.3725,
+      },
+      "country": {
+        "code": "gb",
+        "currency": "GBP",
+        "defaultAirportCode": "STN",
+        "name": "United Kingdom",
+      },
+      "name": "Edinburgh",
+      "region": {
+        "code": "SCOTLAND",
+        "name": "Scotland",
+      },
+      "seoName": "edinburgh",
+      "timeZone": "Europe/London",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "EAST_MIDLANDS",
+        "name": "East Midlands",
+      },
+      "code": "EMA",
+      "coordinates": {
+        "latitude": 52.8311,
+        "longitude": -1.32806,
+      },
+      "country": {
+        "code": "gb",
+        "currency": "GBP",
+        "defaultAirportCode": "STN",
+        "name": "United Kingdom",
+      },
+      "name": "East Midlands",
+      "region": {
+        "code": "EAST_MIDLANDS",
+        "name": "East Midlands",
+      },
+      "seoName": "east-midlands",
+      "timeZone": "Europe/London",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "FARO",
+        "name": "Faro",
+      },
+      "code": "FAO",
+      "coordinates": {
+        "latitude": 37.0144,
+        "longitude": -7.96591,
+      },
+      "country": {
+        "code": "pt",
+        "currency": "EUR",
+        "defaultAirportCode": "LIS",
+        "name": "Portugal",
+      },
+      "name": "Faro",
+      "region": {
+        "code": "ALGARVE",
+        "name": "Algarve",
+      },
+      "seoName": "faro",
+      "timeZone": "Europe/Lisbon",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "ROME",
+        "macCode": "ROM",
+        "name": "Rome",
+      },
+      "code": "FCO",
+      "coordinates": {
+        "latitude": 41.8045,
+        "longitude": 12.2508,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "ROME",
+        "macCode": "ROM",
+        "name": "Rome",
+      },
+      "name": "Rome Fiumicino",
+      "region": {
+        "code": "LAZIO",
+        "name": "Lazio",
+      },
+      "seoName": "rome-fiumicino",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "FUERTEVENTURA",
+        "name": "Fuerteventura",
+      },
+      "code": "FUE",
+      "coordinates": {
+        "latitude": 28.4527,
+        "longitude": -13.8638,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Fuerteventura",
+      "region": {
+        "code": "CANARY_ISLES",
+        "name": "Canary Isles",
+      },
+      "seoName": "fuerteventura",
+      "timeZone": "Atlantic/Canary",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "HERAKLION",
+        "name": "Heraklion",
+      },
+      "code": "HER",
+      "coordinates": {
+        "latitude": 35.3397,
+        "longitude": 25.1803,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Heraklion Crete",
+      "region": {
+        "code": "GREEK_ISLANDS",
+        "name": "Greek Islands",
+      },
+      "seoName": "heraklion-crete",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "IBIZA",
+        "name": "Ibiza",
+      },
+      "code": "IBZ",
+      "coordinates": {
+        "latitude": 38.8729,
+        "longitude": 1.37312,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Ibiza",
+      "region": {
+        "code": "BALEARIC_ISLANDS",
+        "name": "Balearic Islands",
+      },
+      "seoName": "ibiza",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "KOS",
+        "name": "Kos",
+      },
+      "code": "KGS",
+      "coordinates": {
+        "latitude": 36.7933,
+        "longitude": 27.0917,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Kos",
+      "region": {
+        "code": "GREEK_ISLANDS",
+        "name": "Greek Islands",
+      },
+      "seoName": "kos",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "KRAKOW",
+        "name": "Krakow",
+      },
+      "code": "KRK",
+      "coordinates": {
+        "latitude": 50.0777,
+        "longitude": 19.7848,
+      },
+      "country": {
+        "code": "pl",
+        "currency": "PLN",
+        "defaultAirportCode": "WMI",
+        "name": "Poland",
+      },
+      "name": "Krakow",
+      "region": {
+        "code": "MALOPOLSKA",
+        "name": "Malopolska",
+      },
+      "seoName": "krakow",
+      "timeZone": "Europe/Warsaw",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "LISBON",
+        "name": "Lisbon",
+      },
+      "code": "LIS",
+      "coordinates": {
+        "latitude": 38.7813,
+        "longitude": -9.13592,
+      },
+      "country": {
+        "code": "pt",
+        "currency": "EUR",
+        "defaultAirportCode": "LIS",
+        "name": "Portugal",
+      },
+      "name": "Lisbon",
+      "region": {
+        "code": "LISBON",
+        "name": "Lisbon",
+      },
+      "seoName": "lisbon",
+      "timeZone": "Europe/Lisbon",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "GRAN_CANARIA",
+        "name": "Gran Canaria",
+      },
+      "code": "LPA",
+      "coordinates": {
+        "latitude": 27.9319,
+        "longitude": -15.3866,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Gran Canaria",
+      "region": {
+        "code": "CANARY_ISLES",
+        "name": "Canary Isles",
+      },
+      "seoName": "gran-canaria",
+      "timeZone": "Atlantic/Canary",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "LUXEMBOURG",
+        "name": "Luxembourg",
+      },
+      "code": "LUX",
+      "coordinates": {
+        "latitude": 49.6233,
+        "longitude": 6.2044,
+      },
+      "country": {
+        "code": "lu",
+        "currency": "EUR",
+        "defaultAirportCode": "STN",
+        "name": "Luxembourg",
+      },
+      "name": "Luxembourg",
+      "region": {
+        "code": "DEFAULT_LU",
+        "name": "Default LU",
+      },
+      "seoName": "luxembourg",
+      "timeZone": "Europe/Luxembourg",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MADRID",
+        "name": "Madrid",
+      },
+      "code": "MAD",
+      "coordinates": {
+        "latitude": 40.4936,
+        "longitude": -3.56676,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Madrid",
+      "region": {
+        "code": "MADRID",
+        "name": "Madrid",
+      },
+      "seoName": "madrid",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MANCHESTER",
+        "name": "Manchester",
+      },
+      "code": "MAN",
+      "coordinates": {
+        "latitude": 53.3537,
+        "longitude": -2.27495,
+      },
+      "country": {
+        "code": "gb",
+        "currency": "GBP",
+        "defaultAirportCode": "STN",
+        "name": "United Kingdom",
+      },
+      "name": "Manchester",
+      "region": {
+        "code": "GREATER_MANCHESTER",
+        "name": "Greater Manchester",
+      },
+      "seoName": "manchester",
+      "timeZone": "Europe/London",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MARSEILLE",
+        "name": "Marseille",
+      },
+      "code": "MRS",
+      "coordinates": {
+        "latitude": 43.4393,
+        "longitude": 5.22142,
+      },
+      "country": {
+        "code": "fr",
+        "currency": "EUR",
+        "defaultAirportCode": "BVA",
+        "name": "France",
+      },
+      "name": "Marseille",
+      "region": {
+        "code": "PROVENCE-ALPES-COTE_DAZUR_FRENCH_RIVIERA",
+        "name": "French Riviera",
+      },
+      "seoName": "marseille",
+      "timeZone": "Europe/Paris",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "code": "MXP",
+      "coordinates": {
+        "latitude": 45.63,
+        "longitude": 8.7231,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "name": "Milan Malpensa",
+      "region": {
+        "code": "LOMBARDY",
+        "name": "Lombardy",
+      },
+      "seoName": "milan-malpensa",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "PORTO",
+        "name": "Porto",
+      },
+      "code": "OPO",
+      "coordinates": {
+        "latitude": 41.2481,
+        "longitude": -8.68139,
+      },
+      "country": {
+        "code": "pt",
+        "currency": "EUR",
+        "defaultAirportCode": "LIS",
+        "name": "Portugal",
+      },
+      "name": "Porto",
+      "region": {
+        "code": "DEFAULT_PT",
+        "name": "Default PT",
+      },
+      "seoName": "porto",
+      "timeZone": "Europe/Lisbon",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "BUCHAREST",
+        "name": "Bucharest",
+      },
+      "code": "OTP",
+      "coordinates": {
+        "latitude": 44.5722,
+        "longitude": 26.1022,
+      },
+      "country": {
+        "code": "ro",
+        "currency": "EUR",
+        "defaultAirportCode": "OTP",
+        "name": "Romania",
+      },
+      "name": "Bucharest",
+      "region": {
+        "code": "BUCHAREST",
+        "name": "Bucharest",
+      },
+      "seoName": "Bucharest-Otopeni",
+      "timeZone": "Europe/Bucharest",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "PAPHOS",
+        "name": "Paphos",
+      },
+      "code": "PFO",
+      "coordinates": {
+        "latitude": 34.718,
+        "longitude": 32.4857,
+      },
+      "country": {
+        "code": "cy",
+        "currency": "EUR",
+        "defaultAirportCode": "PFO",
+        "name": "Cyprus",
+      },
+      "name": "Paphos",
+      "region": {
+        "code": "PAPHOS",
+        "name": "Paphos",
+      },
+      "seoName": "paphos",
+      "timeZone": "Asia/Nicosia",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [
+        "majorca",
+        "mallorca",
+      ],
+      "base": true,
+      "city": {
+        "code": "PALMA",
+        "name": "Palma",
+      },
+      "code": "PMI",
+      "coordinates": {
+        "latitude": 39.5517,
+        "longitude": 2.73881,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "name": "Palma de Mallorca",
+      "region": {
+        "code": "DEFAULT_ES",
+        "name": "Default ES",
+      },
+      "seoName": "palma-mallorca",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "PALERMO",
+        "name": "Palermo",
+      },
+      "code": "PMO",
+      "coordinates": {
+        "latitude": 38.176,
+        "longitude": 13.091,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Palermo",
+      "region": {
+        "code": "SICILY",
+        "name": "Sicily",
+      },
+      "seoName": "palermo",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "PISA",
+        "name": "Pisa",
+      },
+      "code": "PSA",
+      "coordinates": {
+        "latitude": 43.6839,
+        "longitude": 10.3927,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Pisa",
+      "region": {
+        "code": "TUSCANY",
+        "name": "Tuscany",
+      },
+      "seoName": "pisa",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "MARRAKESH",
+        "name": "Marrakesh",
+      },
+      "code": "RAK",
+      "coordinates": {
+        "latitude": 31.6069,
+        "longitude": -8.0363,
+      },
+      "country": {
+        "code": "ma",
+        "currency": "MAD",
+        "defaultAirportCode": "FEZ",
+        "name": "Morocco",
+      },
+      "name": "Marrakesh",
+      "region": {
+        "code": "MARRAKESH-SAFI",
+        "name": "Marrakesh-Safi",
+      },
+      "seoName": "marrakesh",
+      "timeZone": "Africa/Casablanca",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "RHODES",
+        "name": "Rhodes",
+      },
+      "code": "RHO",
+      "coordinates": {
+        "latitude": 36.4054,
+        "longitude": 28.0862,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Rhodes",
+      "region": {
+        "code": "GREEK_ISLANDS",
+        "name": "Greek Islands",
+      },
+      "seoName": "rhodes",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "RIGA",
+        "name": "Riga",
+      },
+      "code": "RIX",
+      "coordinates": {
+        "latitude": 56.9236,
+        "longitude": 23.9711,
+      },
+      "country": {
+        "code": "lv",
+        "currency": "EUR",
+        "defaultAirportCode": "RIX",
+        "name": "Latvia",
+      },
+      "name": "Riga",
+      "region": {
+        "code": "RIGA_PLANNING_REGION",
+        "name": "Riga Planning Region",
+      },
+      "seoName": "riga",
+      "timeZone": "Europe/Riga",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "THESSALONIKI",
+        "name": "Thessaloniki",
+      },
+      "code": "SKG",
+      "coordinates": {
+        "latitude": 40.5197,
+        "longitude": 22.9709,
+      },
+      "country": {
+        "code": "gr",
+        "currency": "EUR",
+        "defaultAirportCode": "ATH",
+        "name": "Greece",
+      },
+      "name": "Thessaloniki",
+      "region": {
+        "code": "CENTRAL_MACEDONIA",
+        "name": "Central Macedonia",
+      },
+      "seoName": "thessaloniki",
+      "timeZone": "Europe/Athens",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "SOFIA",
+        "name": "Sofia",
+      },
+      "code": "SOF",
+      "coordinates": {
+        "latitude": 42.67,
+        "longitude": 23.35,
+      },
+      "country": {
+        "code": "bg",
+        "currency": "EUR",
+        "defaultAirportCode": "PDV",
+        "name": "Bulgaria",
+      },
+      "name": "Sofia",
+      "region": {
+        "code": "DEFAULT_BG",
+        "name": "Default BG",
+      },
+      "seoName": "sofia",
+      "timeZone": "Europe/Sofia",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "LONDON",
+        "macCode": "LON",
+        "name": "London",
+      },
+      "code": "STN",
+      "coordinates": {
+        "latitude": 51.885,
+        "longitude": 0.235,
+      },
+      "country": {
+        "code": "gb",
+        "currency": "GBP",
+        "defaultAirportCode": "STN",
+        "name": "United Kingdom",
+      },
+      "macCity": {
+        "code": "LONDON",
+        "macCode": "LON",
+        "name": "London",
+      },
+      "name": "London Stansted",
+      "region": {
+        "code": "ENGLAND",
+        "name": "England",
+      },
+      "seoName": "london-stansted",
+      "timeZone": "Europe/London",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "TENERIFE",
+        "macCode": "TEN",
+        "name": "Tenerife",
+      },
+      "code": "TFS",
+      "coordinates": {
+        "latitude": 28.0445,
+        "longitude": -16.5725,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "TENERIFE",
+        "macCode": "TEN",
+        "name": "Tenerife",
+      },
+      "name": "Tenerife South",
+      "region": {
+        "code": "CANARY_ISLES",
+        "name": "Canary Isles",
+      },
+      "seoName": "tenerife-south",
+      "timeZone": "Atlantic/Canary",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "PODGORICA",
+        "name": "Podgorica",
+      },
+      "code": "TGD",
+      "coordinates": {
+        "latitude": 42.3594,
+        "longitude": 19.2519,
+      },
+      "country": {
+        "code": "me",
+        "currency": "EUR",
+        "defaultAirportCode": "TGD",
+        "name": "Montenegro",
+      },
+      "name": "Podgorica",
+      "region": {
+        "code": "DEFAULT_ME",
+        "name": "Default ME",
+      },
+      "seoName": "podgorica-montenegro",
+      "timeZone": "Europe/Podgorica",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "TALLINN",
+        "name": "Tallinn",
+      },
+      "code": "TLL",
+      "coordinates": {
+        "latitude": 59.4133,
+        "longitude": 24.8328,
+      },
+      "country": {
+        "code": "ee",
+        "currency": "EUR",
+        "defaultAirportCode": "TLL",
+        "name": "Estonia",
+      },
+      "name": "Tallinn",
+      "region": {
+        "code": "HARJU",
+        "name": "Harju",
+      },
+      "seoName": "tallinn",
+      "timeZone": "Europe/Tallinn",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "TEL_AVIV",
+        "name": "Tel Aviv",
+      },
+      "code": "TLV",
+      "coordinates": {
+        "latitude": 32.0034,
+        "longitude": 34.5258,
+      },
+      "country": {
+        "code": "il",
+        "currency": "EUR",
+        "defaultAirportCode": "VDA",
+        "name": "Israel",
+      },
+      "name": "Tel Aviv",
+      "region": {
+        "code": "DEFAULT_IL",
+        "name": "Default IL",
+      },
+      "seoName": "tel-aviv",
+      "timeZone": "Asia/Jerusalem",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "code": "TSF",
+      "coordinates": {
+        "latitude": 45.6484,
+        "longitude": 12.1944,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "name": "Venice Treviso",
+      "region": {
+        "code": "VENETO",
+        "name": "Veneto",
+      },
+      "seoName": "venice-treviso",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "code": "VCE",
+      "coordinates": {
+        "latitude": 45.5053,
+        "longitude": 12.3519,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "name": "Venice M.Polo",
+      "region": {
+        "code": "VENETO",
+        "name": "Veneto",
+      },
+      "seoName": "venice",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "VALENCIA",
+        "macCode": "VNC",
+        "name": "Valencia",
+      },
+      "code": "VLC",
+      "coordinates": {
+        "latitude": 39.4893,
+        "longitude": -0.481625,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "VALENCIA",
+        "macCode": "VNC",
+        "name": "Valencia",
+      },
+      "name": "Valencia",
+      "region": {
+        "code": "COSTA_AZAHAR",
+        "name": "Costa Azahar",
+      },
+      "seoName": "valencia",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "VILNIUS",
+        "name": "Vilnius",
+      },
+      "code": "VNO",
+      "coordinates": {
+        "latitude": 54.6341,
+        "longitude": 25.2858,
+      },
+      "country": {
+        "code": "lt",
+        "currency": "EUR",
+        "defaultAirportCode": "KUN",
+        "name": "Lithuania",
+      },
+      "name": "Vilnius",
+      "region": {
+        "code": "VILNIUS",
+        "name": "Vilnius",
+      },
+      "seoName": "vilnius",
+      "timeZone": "Europe/Vilnius",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "ZADAR",
+        "name": "Zadar",
+      },
+      "code": "ZAD",
+      "coordinates": {
+        "latitude": 44.1083,
+        "longitude": 15.3467,
+      },
+      "country": {
+        "code": "hr",
+        "currency": "EUR",
+        "defaultAirportCode": "ZAD",
+        "name": "Croatia",
+      },
+      "name": "Zadar",
+      "region": {
+        "code": "DALMATIAN",
+        "name": "Dalmatian",
+      },
+      "seoName": "zadar",
+      "timeZone": "Europe/Zagreb",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+]
+`;
+
+exports[`Airports getInfo When asked for info on specific airport 
+	 Then should be able to retrieve data and parse it 1`] = `
+{
+  "aliases": [],
+  "base": true,
+  "city": {
+    "code": "BERLIN",
+    "macCode": "BER",
+    "name": "Berlin",
+  },
+  "code": "BER",
+  "coordinates": {
+    "latitude": 52.3667,
+    "longitude": 13.5033,
+  },
+  "country": {
+    "code": "de",
+    "currency": "EUR",
+    "defaultAirportCode": "HHN",
+    "name": "Germany",
+  },
+  "macCity": {
+    "code": "BERLIN",
+    "macCode": "BER",
+    "name": "Berlin",
+  },
+  "name": "Berlin Brandenburg",
+  "region": {
+    "code": "BERLIN-BRANDENBURG",
+    "name": "Berlin-Brandenburg",
+  },
+  "seoName": "brandenburg",
+  "timeZone": "Europe/Berlin",
+}
+`;
+
+exports[`Airports searchByPhrase When searched for an airport by a phrase 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "aliases": [],
+    "city": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "code": "BER",
+    "coordinates": {
+      "latitude": 52.3667,
+      "longitude": 13.5033,
+    },
+    "country": {
+      "code": "de",
+      "name": "Germany",
+    },
+    "macCity": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "name": "Berlin Brandenburg",
+  },
+]
+`;
+
+exports[`Airports searchByPhrase When searched for an airport by a phrase using different locale 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "aliases": [],
+    "city": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "code": "BER",
+    "coordinates": {
+      "latitude": 52.3667,
+      "longitude": 13.5033,
+    },
+    "country": {
+      "code": "de",
+      "name": "Deutschland",
+    },
+    "macCity": {
+      "code": "BERLIN",
+      "macCode": "BER",
+      "name": "Berlin",
+    },
+    "name": "Berlin Brandenburg",
+  },
+]
+`;
+
+exports[`Airports searchByRoute When searched for an airport by a route using both points 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BERLIN",
+        "macCode": "BER",
+        "name": "Berlin",
+      },
+      "code": "BER",
+      "coordinates": {
+        "latitude": 52.3667,
+        "longitude": 13.5033,
+      },
+      "country": {
+        "code": "de",
+        "name": "Germany",
+      },
+      "macCity": {
+        "code": "BERLIN",
+        "macCode": "BER",
+        "name": "Berlin",
+      },
+      "name": "Berlin Brandenburg",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+]
+`;
+
+exports[`Airports searchByRoute When searched for an airport by a route using only starting point 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "LANZAROTE",
+        "name": "Lanzarote",
+      },
+      "code": "ACE",
+      "coordinates": {
+        "latitude": 28.9455,
+        "longitude": -13.6052,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Lanzarote",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MALAGA",
+        "name": "Malaga",
+      },
+      "code": "AGP",
+      "coordinates": {
+        "latitude": 36.6749,
+        "longitude": -4.49911,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Malaga",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "ALICANTE",
+        "name": "Alicante",
+      },
+      "code": "ALC",
+      "coordinates": {
+        "latitude": 38.2822,
+        "longitude": -0.558156,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Alicante",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "ATHENS",
+        "name": "Athens",
+      },
+      "code": "ATH",
+      "coordinates": {
+        "latitude": 37.9364,
+        "longitude": 23.9445,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Athens",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BARCELONA",
+        "macCode": "BAR",
+        "name": "Barcelona",
+      },
+      "code": "BCN",
+      "coordinates": {
+        "latitude": 41.2971,
+        "longitude": 2.07846,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "BARCELONA",
+        "macCode": "BAR",
+        "name": "Barcelona",
+      },
+      "name": "Barcelona",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BERGAMO",
+        "name": "Bergamo",
+      },
+      "code": "BGY",
+      "coordinates": {
+        "latitude": 45.6739,
+        "longitude": 9.70417,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "name": "Milan Bergamo",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BILLUND",
+        "name": "Billund",
+      },
+      "code": "BLL",
+      "coordinates": {
+        "latitude": 55.7403,
+        "longitude": 9.15178,
+      },
+      "country": {
+        "code": "dk",
+        "name": "Denmark",
+      },
+      "name": "Billund",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BOLOGNA",
+        "name": "Bologna",
+      },
+      "code": "BLQ",
+      "coordinates": {
+        "latitude": 44.5354,
+        "longitude": 11.2887,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "name": "Bologna",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BANJA_LUKA",
+        "name": "Banja Luka",
+      },
+      "code": "BNX",
+      "coordinates": {
+        "latitude": 44.5629,
+        "longitude": 17.1731,
+      },
+      "country": {
+        "code": "ba",
+        "name": "Bosnia & Herzegovina",
+      },
+      "name": "Banja Luka",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BARI",
+        "name": "Bari",
+      },
+      "code": "BRI",
+      "coordinates": {
+        "latitude": 41.1389,
+        "longitude": 16.7606,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "name": "Bari",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BRUSSELS",
+        "macCode": "BRL",
+        "name": "Brussels",
+      },
+      "code": "BRU",
+      "coordinates": {
+        "latitude": 50.9014,
+        "longitude": 4.48444,
+      },
+      "country": {
+        "code": "be",
+        "name": "Belgium",
+      },
+      "macCity": {
+        "code": "BRUSSELS",
+        "macCode": "BRL",
+        "name": "Brussels",
+      },
+      "name": "Brussels",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BUDAPEST",
+        "name": "Budapest",
+      },
+      "code": "BUD",
+      "coordinates": {
+        "latitude": 47.4369,
+        "longitude": 19.2556,
+      },
+      "country": {
+        "code": "hu",
+        "name": "Hungary",
+      },
+      "name": "Budapest",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "CORFU",
+        "name": "Corfu",
+      },
+      "code": "CFU",
+      "coordinates": {
+        "latitude": 39.6019,
+        "longitude": 19.9117,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Corfu",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "CHANIA",
+        "name": "Chania",
+      },
+      "code": "CHQ",
+      "coordinates": {
+        "latitude": 35.5317,
+        "longitude": 24.1497,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Chania",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "CATANIA",
+        "name": "Catania",
+      },
+      "code": "CTA",
+      "coordinates": {
+        "latitude": 37.4668,
+        "longitude": 15.0664,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "name": "Catania",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "DUBLIN",
+        "name": "Dublin",
+      },
+      "code": "DUB",
+      "coordinates": {
+        "latitude": 53.4213,
+        "longitude": -6.27007,
+      },
+      "country": {
+        "code": "ie",
+        "name": "Ireland",
+      },
+      "name": "Dublin",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "EDINBURGH",
+        "name": "Edinburgh",
+      },
+      "code": "EDI",
+      "coordinates": {
+        "latitude": 55.95,
+        "longitude": -3.3725,
+      },
+      "country": {
+        "code": "gb",
+        "name": "United Kingdom",
+      },
+      "name": "Edinburgh",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "EAST_MIDLANDS",
+        "name": "East Midlands",
+      },
+      "code": "EMA",
+      "coordinates": {
+        "latitude": 52.8311,
+        "longitude": -1.32806,
+      },
+      "country": {
+        "code": "gb",
+        "name": "United Kingdom",
+      },
+      "name": "East Midlands",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "FARO",
+        "name": "Faro",
+      },
+      "code": "FAO",
+      "coordinates": {
+        "latitude": 37.0144,
+        "longitude": -7.96591,
+      },
+      "country": {
+        "code": "pt",
+        "name": "Portugal",
+      },
+      "name": "Faro",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "ROME",
+        "macCode": "ROM",
+        "name": "Rome",
+      },
+      "code": "FCO",
+      "coordinates": {
+        "latitude": 41.8045,
+        "longitude": 12.2508,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "ROME",
+        "macCode": "ROM",
+        "name": "Rome",
+      },
+      "name": "Rome Fiumicino",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "FUERTEVENTURA",
+        "name": "Fuerteventura",
+      },
+      "code": "FUE",
+      "coordinates": {
+        "latitude": 28.4527,
+        "longitude": -13.8638,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Fuerteventura",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "HERAKLION",
+        "name": "Heraklion",
+      },
+      "code": "HER",
+      "coordinates": {
+        "latitude": 35.3397,
+        "longitude": 25.1803,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Heraklion Crete",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "IBIZA",
+        "name": "Ibiza",
+      },
+      "code": "IBZ",
+      "coordinates": {
+        "latitude": 38.8729,
+        "longitude": 1.37312,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Ibiza",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "KOS",
+        "name": "Kos",
+      },
+      "code": "KGS",
+      "coordinates": {
+        "latitude": 36.7933,
+        "longitude": 27.0917,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Kos",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "KRAKOW",
+        "name": "Krakow",
+      },
+      "code": "KRK",
+      "coordinates": {
+        "latitude": 50.0777,
+        "longitude": 19.7848,
+      },
+      "country": {
+        "code": "pl",
+        "name": "Poland",
+      },
+      "name": "Krakow",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "LISBON",
+        "name": "Lisbon",
+      },
+      "code": "LIS",
+      "coordinates": {
+        "latitude": 38.7813,
+        "longitude": -9.13592,
+      },
+      "country": {
+        "code": "pt",
+        "name": "Portugal",
+      },
+      "name": "Lisbon",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "GRAN_CANARIA",
+        "name": "Gran Canaria",
+      },
+      "code": "LPA",
+      "coordinates": {
+        "latitude": 27.9319,
+        "longitude": -15.3866,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Gran Canaria",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "LUXEMBOURG",
+        "name": "Luxembourg",
+      },
+      "code": "LUX",
+      "coordinates": {
+        "latitude": 49.6233,
+        "longitude": 6.2044,
+      },
+      "country": {
+        "code": "lu",
+        "name": "Luxembourg",
+      },
+      "name": "Luxembourg",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MADRID",
+        "name": "Madrid",
+      },
+      "code": "MAD",
+      "coordinates": {
+        "latitude": 40.4936,
+        "longitude": -3.56676,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Madrid",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MANCHESTER",
+        "name": "Manchester",
+      },
+      "code": "MAN",
+      "coordinates": {
+        "latitude": 53.3537,
+        "longitude": -2.27495,
+      },
+      "country": {
+        "code": "gb",
+        "name": "United Kingdom",
+      },
+      "name": "Manchester",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MARSEILLE",
+        "name": "Marseille",
+      },
+      "code": "MRS",
+      "coordinates": {
+        "latitude": 43.4393,
+        "longitude": 5.22142,
+      },
+      "country": {
+        "code": "fr",
+        "name": "France",
+      },
+      "name": "Marseille",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "code": "MXP",
+      "coordinates": {
+        "latitude": 45.63,
+        "longitude": 8.7231,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "MILAN",
+        "macCode": "MIL",
+        "name": "Milan",
+      },
+      "name": "Milan Malpensa",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "PORTO",
+        "name": "Porto",
+      },
+      "code": "OPO",
+      "coordinates": {
+        "latitude": 41.2481,
+        "longitude": -8.68139,
+      },
+      "country": {
+        "code": "pt",
+        "name": "Portugal",
+      },
+      "name": "Porto",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "BUCHAREST",
+        "name": "Bucharest",
+      },
+      "code": "OTP",
+      "coordinates": {
+        "latitude": 44.5722,
+        "longitude": 26.1022,
+      },
+      "country": {
+        "code": "ro",
+        "name": "Romania",
+      },
+      "name": "Bucharest",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "PAPHOS",
+        "name": "Paphos",
+      },
+      "code": "PFO",
+      "coordinates": {
+        "latitude": 34.718,
+        "longitude": 32.4857,
+      },
+      "country": {
+        "code": "cy",
+        "name": "Cyprus",
+      },
+      "name": "Paphos",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [
+        "majorca",
+        "mallorca",
+      ],
+      "city": {
+        "code": "PALMA",
+        "name": "Palma",
+      },
+      "code": "PMI",
+      "coordinates": {
+        "latitude": 39.5517,
+        "longitude": 2.73881,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "name": "Palma de Mallorca",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "PALERMO",
+        "name": "Palermo",
+      },
+      "code": "PMO",
+      "coordinates": {
+        "latitude": 38.176,
+        "longitude": 13.091,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "name": "Palermo",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "PISA",
+        "name": "Pisa",
+      },
+      "code": "PSA",
+      "coordinates": {
+        "latitude": 43.6839,
+        "longitude": 10.3927,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "name": "Pisa",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "MARRAKESH",
+        "name": "Marrakesh",
+      },
+      "code": "RAK",
+      "coordinates": {
+        "latitude": 31.6069,
+        "longitude": -8.0363,
+      },
+      "country": {
+        "code": "ma",
+        "name": "Morocco",
+      },
+      "name": "Marrakesh",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "RHODES",
+        "name": "Rhodes",
+      },
+      "code": "RHO",
+      "coordinates": {
+        "latitude": 36.4054,
+        "longitude": 28.0862,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Rhodes",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "RIGA",
+        "name": "Riga",
+      },
+      "code": "RIX",
+      "coordinates": {
+        "latitude": 56.9236,
+        "longitude": 23.9711,
+      },
+      "country": {
+        "code": "lv",
+        "name": "Latvia",
+      },
+      "name": "Riga",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "THESSALONIKI",
+        "name": "Thessaloniki",
+      },
+      "code": "SKG",
+      "coordinates": {
+        "latitude": 40.5197,
+        "longitude": 22.9709,
+      },
+      "country": {
+        "code": "gr",
+        "name": "Greece",
+      },
+      "name": "Thessaloniki",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "SOFIA",
+        "name": "Sofia",
+      },
+      "code": "SOF",
+      "coordinates": {
+        "latitude": 42.67,
+        "longitude": 23.35,
+      },
+      "country": {
+        "code": "bg",
+        "name": "Bulgaria",
+      },
+      "name": "Sofia",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "LONDON",
+        "macCode": "LON",
+        "name": "London",
+      },
+      "code": "STN",
+      "coordinates": {
+        "latitude": 51.885,
+        "longitude": 0.235,
+      },
+      "country": {
+        "code": "gb",
+        "name": "United Kingdom",
+      },
+      "macCity": {
+        "code": "LONDON",
+        "macCode": "LON",
+        "name": "London",
+      },
+      "name": "London Stansted",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "TENERIFE",
+        "macCode": "TEN",
+        "name": "Tenerife",
+      },
+      "code": "TFS",
+      "coordinates": {
+        "latitude": 28.0445,
+        "longitude": -16.5725,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "TENERIFE",
+        "macCode": "TEN",
+        "name": "Tenerife",
+      },
+      "name": "Tenerife South",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "PODGORICA",
+        "name": "Podgorica",
+      },
+      "code": "TGD",
+      "coordinates": {
+        "latitude": 42.3594,
+        "longitude": 19.2519,
+      },
+      "country": {
+        "code": "me",
+        "name": "Montenegro",
+      },
+      "name": "Podgorica",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "TALLINN",
+        "name": "Tallinn",
+      },
+      "code": "TLL",
+      "coordinates": {
+        "latitude": 59.4133,
+        "longitude": 24.8328,
+      },
+      "country": {
+        "code": "ee",
+        "name": "Estonia",
+      },
+      "name": "Tallinn",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "TEL_AVIV",
+        "name": "Tel Aviv",
+      },
+      "code": "TLV",
+      "coordinates": {
+        "latitude": 32.0034,
+        "longitude": 34.5258,
+      },
+      "country": {
+        "code": "il",
+        "name": "Israel",
+      },
+      "name": "Tel Aviv",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "code": "TSF",
+      "coordinates": {
+        "latitude": 45.6484,
+        "longitude": 12.1944,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "name": "Venice Treviso",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "code": "VCE",
+      "coordinates": {
+        "latitude": 45.5053,
+        "longitude": 12.3519,
+      },
+      "country": {
+        "code": "it",
+        "name": "Italy",
+      },
+      "macCity": {
+        "code": "VENICE",
+        "macCode": "VEN",
+        "name": "Venice",
+      },
+      "name": "Venice M.Polo",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "VALENCIA",
+        "macCode": "VNC",
+        "name": "Valencia",
+      },
+      "code": "VLC",
+      "coordinates": {
+        "latitude": 39.4893,
+        "longitude": -0.481625,
+      },
+      "country": {
+        "code": "es",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "VALENCIA",
+        "macCode": "VNC",
+        "name": "Valencia",
+      },
+      "name": "Valencia",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "VILNIUS",
+        "name": "Vilnius",
+      },
+      "code": "VNO",
+      "coordinates": {
+        "latitude": 54.6341,
+        "longitude": 25.2858,
+      },
+      "country": {
+        "code": "lt",
+        "name": "Lithuania",
+      },
+      "name": "Vilnius",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "city": {
+        "code": "ZADAR",
+        "name": "Zadar",
+      },
+      "code": "ZAD",
+      "coordinates": {
+        "latitude": 44.1083,
+        "longitude": 15.3467,
+      },
+      "country": {
+        "code": "hr",
+        "name": "Croatia",
+      },
+      "name": "Zadar",
+    },
+    "connectingAirport": null,
+    "operator": "RYANAIR",
+  },
+]
+`;
