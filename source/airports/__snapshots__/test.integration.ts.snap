@@ -6361,19 +6361,19 @@ exports[`Airports getClosest When asked for the closest airport
 {
   "aliases": [],
   "city": {
-    "code": "PODGORICA",
-    "name": "Podgorica",
+    "code": "DUBLIN",
+    "name": "Dublin",
   },
-  "code": "TGD",
+  "code": "DUB",
   "coordinates": {
-    "latitude": 42.3594,
-    "longitude": 19.2519,
+    "latitude": 53.4213,
+    "longitude": -6.27007,
   },
   "country": {
-    "code": "me",
-    "name": "Montenegro",
+    "code": "ie",
+    "name": "Ireland",
   },
-  "name": "Podgorica",
+  "name": "Dublin",
 }
 `;
 
