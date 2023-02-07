@@ -9,15 +9,10 @@
  */
 
 export const get = async (url: string | URL): Promise<unknown> => {
-  return await fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP Error ${response.status}: ${response.statusText}`)
-      }
-      const data = response.json()
-      return data
-    })
-    .catch((error) => {
-      console.error(error)
-    })
+  const response = await fetch(url)
+  if (!response.ok) {
+    throw new Error(`HTTP Error ${response.status}: ${response.statusText}`)
+  }
+  const data = await response.json()
+  return data
 }
