@@ -22,4 +22,5 @@ jobs:
       - run: npm run test:integration
       - uses: codecov/codecov-action@v3
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           flags: integration
