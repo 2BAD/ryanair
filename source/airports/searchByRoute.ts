@@ -11,11 +11,11 @@ import { AirportConnection } from './types'
  */
 
 export const searchByRoute = async (
-  to = '',
   from = '',
+  to = '',
   locale = 'en-gb'
 ): Promise<AirportConnection[]> => {
-  const url = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?arrivalPhrase=${to}&departurePhrase=${from}&market=${locale}`
+  const url = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=${locale}`
   const data = await get(url)
   const airports = z.array(AirportConnection).parse(data)
   return airports
