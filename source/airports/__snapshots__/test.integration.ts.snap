@@ -3918,6 +3918,32 @@ exports[`Airports getActive When asked for a list of active airports
     "aliases": [],
     "base": false,
     "city": {
+      "code": "OSIJEK",
+      "name": "Osijek",
+    },
+    "code": "OSI",
+    "coordinates": {
+      "latitude": 45.4627,
+      "longitude": 18.8102,
+    },
+    "country": {
+      "code": "hr",
+      "currency": "EUR",
+      "defaultAirportCode": "ZAD",
+      "name": "Croatia",
+    },
+    "name": "Osijek",
+    "region": {
+      "code": "SLAVONIA",
+      "name": "Slavonia",
+    },
+    "seoName": "osijek",
+    "timeZone": "Europe/Zagreb",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
       "code": "OSLO",
       "macCode": "OSO",
       "name": "Oslo",
