@@ -96,13 +96,5 @@
   },
   "engines": {
     "node": "^18 || ^19"
-  },
-  "wallaby": {
-    "autoDetect": true,
-    "env": {
-      "params": {
-        "runner": "--experimental-vm-modules"
-      }
-    }
   }
 }
