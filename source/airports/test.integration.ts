@@ -1,6 +1,11 @@
+import * as client from './../client'
 import * as airports from './index'
 
 describe('Airports', () => {
+  afterEach(() => {
+    jest.restoreAllMocks()
+  })
+
   describe('getActive', () => {
     it('When asked for a list of active airports \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
@@ -20,6 +25,16 @@ describe('Airports', () => {
   })
 
   describe('getDestinations', () => {
+    it('When passed iata code \n\t Then should call the correct API URL', async () => {
+      expect.assertions(1)
+      const getSpy = jest.spyOn(client, 'get')
+      const code = 'BER'
+      await airports.getDestinations(code)
+
+      expect(getSpy).toHaveBeenCalledWith(
+        `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${code}`
+      )
+    })
     it('When asked for destinations from a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
@@ -33,6 +48,16 @@ describe('Airports', () => {
   })
 
   describe('getInfo', () => {
+    it('When passed iata code \n\t Then should call the correct API URL', async () => {
+      expect.assertions(1)
+      const getSpy = jest.spyOn(client, 'get')
+      const code = 'BER'
+      await airports.getInfo(code)
+
+      expect(getSpy).toHaveBeenCalledWith(
+        `https://www.ryanair.com/api/views/locate/5/airports/en/${code}`
+      )
+    })
     it('When asked for info on specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
@@ -67,6 +92,30 @@ describe('Airports', () => {
   })
 
   describe('searchByRoute', () => {
+    it('When provided with only required parameters \n\t Then should calls the correct URL with default locale', async () => {
+      expect.assertions(1)
+      const getSpy = jest.spyOn(client, 'get')
+      const from = 'BER'
+      const to = 'BCN'
+      const expectedUrl = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=en-gb`
+
+      await airports.searchByRoute(from, to)
+
+      expect(getSpy).toHaveBeenCalledWith(expectedUrl)
+    })
+
+    it('When provided with locale \n\t Then should calls the correct URL with custom locale', async () => {
+      expect.assertions(1)
+      const getSpy = jest.spyOn(client, 'get')
+      const from = 'BER'
+      const to = 'BCN'
+      const locale = 'es-es'
+      const expectedUrl = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=${locale}`
+
+      await airports.searchByRoute(from, to, locale)
+
+      expect(getSpy).toHaveBeenCalledWith(expectedUrl)
+    })
     it('When searched for an airport by a route using only starting point \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 

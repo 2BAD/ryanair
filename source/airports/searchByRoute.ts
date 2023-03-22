@@ -11,7 +11,7 @@ import { AirportConnection } from './types'
  */
 
 export const searchByRoute = async (
-  from = '',
+  from: string,
   to = '',
   locale = 'en-gb'
 ): Promise<AirportConnection[]> => {
