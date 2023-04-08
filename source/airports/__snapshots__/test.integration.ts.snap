@@ -3812,32 +3812,6 @@ exports[`Airports getActive When asked for a list of active airports
   },
   {
     "aliases": [],
-    "base": false,
-    "city": {
-      "code": "ORADEA",
-      "name": "Oradea",
-    },
-    "code": "OMR",
-    "coordinates": {
-      "latitude": 47.025299,
-      "longitude": 21.9025,
-    },
-    "country": {
-      "code": "ro",
-      "currency": "EUR",
-      "defaultAirportCode": "OTP",
-      "name": "Romania",
-    },
-    "name": "Oradea",
-    "region": {
-      "code": "DEFAULT_RO",
-      "name": "Default RO",
-    },
-    "seoName": "oradea",
-    "timeZone": "Europe/Bucharest",
-  },
-  {
-    "aliases": [],
     "base": true,
     "city": {
       "code": "PORTO",
@@ -4898,32 +4872,6 @@ exports[`Airports getActive When asked for a list of active airports
   },
   {
     "aliases": [],
-    "base": false,
-    "city": {
-      "code": "SIBIU",
-      "name": "Sibiu",
-    },
-    "code": "SBZ",
-    "coordinates": {
-      "latitude": 45.7858,
-      "longitude": 24.0856,
-    },
-    "country": {
-      "code": "ro",
-      "currency": "EUR",
-      "defaultAirportCode": "OTP",
-      "name": "Romania",
-    },
-    "name": "Sibiu",
-    "region": {
-      "code": "TRANSYLVANIA",
-      "name": "Transylvania",
-    },
-    "seoName": "sibiu",
-    "timeZone": "Europe/Bucharest",
-  },
-  {
-    "aliases": [],
     "base": true,
     "city": {
       "code": "SANTIAGO",
@@ -4947,32 +4895,6 @@ exports[`Airports getActive When asked for a list of active airports
     },
     "seoName": "santiago-de-compostela",
     "timeZone": "Europe/Madrid",
-  },
-  {
-    "aliases": [],
-    "base": false,
-    "city": {
-      "code": "SUCEAVA",
-      "name": "Suceava",
-    },
-    "code": "SCV",
-    "coordinates": {
-      "latitude": 47.6875,
-      "longitude": 26.3542,
-    },
-    "country": {
-      "code": "ro",
-      "currency": "EUR",
-      "defaultAirportCode": "OTP",
-      "name": "Romania",
-    },
-    "name": "Suceava",
-    "region": {
-      "code": "DEFAULT_RO",
-      "name": "Default RO",
-    },
-    "seoName": "suceava",
-    "timeZone": "Europe/Bucharest",
   },
   {
     "aliases": [],
@@ -5704,32 +5626,6 @@ exports[`Airports getActive When asked for a list of active airports
     },
     "seoName": "venice-treviso",
     "timeZone": "Europe/Rome",
-  },
-  {
-    "aliases": [],
-    "base": true,
-    "city": {
-      "code": "TIMISOARA",
-      "name": "Timisoara",
-    },
-    "code": "TSR",
-    "coordinates": {
-      "latitude": 45.81,
-      "longitude": 21.3381,
-    },
-    "country": {
-      "code": "ro",
-      "currency": "EUR",
-      "defaultAirportCode": "OTP",
-      "name": "Romania",
-    },
-    "name": "Timisoara",
-    "region": {
-      "code": "BANAT",
-      "name": "Banat",
-    },
-    "seoName": "timisoara",
-    "timeZone": "Europe/Bucharest",
   },
   {
     "aliases": [],
