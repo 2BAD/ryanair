@@ -18,4 +18,5 @@ jobs:
           node-version-file: 'package.json'
       - run: npm ci
       - run: npm run lint
+      - run: npm run format:check
       - run: npm run build
