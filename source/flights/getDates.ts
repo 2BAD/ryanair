@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { type IataCode } from '../airports/types'
 import { get } from '../client'
-import { FlightDate } from './types'
+import { StrDate } from '../date.types'
 
 /**
  * Returns a list of available flight dates between two airports
@@ -10,9 +10,9 @@ import { FlightDate } from './types'
  * @param to The IATA code of the arrival airport
  */
 
-export const getDates = async (from: IataCode, to: IataCode): Promise<FlightDate[]> => {
+export const getDates = async (from: IataCode, to: IataCode): Promise<StrDate[]> => {
   const url = `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/availabilities`
   const data = await get(url)
-  const dates = z.array(FlightDate).parse(data)
+  const dates = z.array(StrDate).parse(data)
   return dates
 }
