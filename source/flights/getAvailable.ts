@@ -4,8 +4,7 @@ import { type AvailabilityOptions, AvailabilityResponse } from './types'
 export const getAvailable = async (
   params: Partial<AvailabilityOptions>
 ): Promise<AvailabilityResponse> => {
-  const url = new URL('https://www.ryanair.com/api/booking/v4/en-gb/availability')
-  const defaultOptions: AvailabilityOptions = {
+  const defaults: AvailabilityOptions = {
     ADT: '1',
     CHD: '0',
     DateIn: '',
@@ -25,11 +24,9 @@ export const getAvailable = async (
     ToUs: 'AGREED'
   }
 
-  const options = { ...defaultOptions, ...params }
+  const urlParams = new URLSearchParams({ ...defaults, ...params })
 
-  Object.entries(options).forEach(([k, v]) => {
-    url.searchParams.append(k, v)
-  })
+  const url = `https://www.ryanair.com/api/booking/v4/en-gb/availability?${urlParams.toString()}`
 
   const data = await get(url)
   const availabilities = AvailabilityResponse.parse(data)
