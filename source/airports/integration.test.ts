@@ -72,9 +72,7 @@ describe('Airports', () => {
       const code = 'BER'
       await airports.getInfo(code)
 
-      expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/views/locate/5/airports/en/${code}`
-      )
+      expect(getSpy).toHaveBeenCalledWith(`https://www.ryanair.com/api/views/locate/5/airports/en/${code}`)
     })
     it('When asked for info on specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)

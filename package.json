@@ -47,7 +47,7 @@
     "test:integration": "vitest run integration --coverage"
   },
   "prettier": {
-    "printWidth": 100,
+    "printWidth": 120,
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none"

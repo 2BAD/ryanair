@@ -1,9 +1,7 @@
 import { get } from '../client'
 import { type AvailabilityOptions, AvailabilityResponse } from './types'
 
-export const getAvailable = async (
-  params: Partial<AvailabilityOptions>
-): Promise<AvailabilityResponse> => {
+export const getAvailable = async (params: Partial<AvailabilityOptions>): Promise<AvailabilityResponse> => {
   const defaults: AvailabilityOptions = {
     ADT: '1',
     CHD: '0',
