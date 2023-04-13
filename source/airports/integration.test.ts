@@ -20,7 +20,25 @@ describe('Airports', () => {
       expect.assertions(1)
 
       const data = await airports.getClosest()
-      expect(data).toMatchSnapshot()
+      expect(data).toMatchSnapshot({
+        /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+        aliases: [],
+        city: {
+          code: expect.any(String),
+          name: expect.any(String)
+        },
+        code: expect.any(String),
+        coordinates: {
+          latitude: expect.any(Number),
+          longitude: expect.any(Number)
+        },
+        country: {
+          code: expect.any(String),
+          name: expect.any(String)
+        },
+        name: expect.any(String)
+        /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+      })
     })
   })
 

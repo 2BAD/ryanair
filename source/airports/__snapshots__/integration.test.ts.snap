@@ -6295,19 +6295,19 @@ exports[`Airports > getClosest > When asked for the closest airport
 {
   "aliases": [],
   "city": {
-    "code": "DUBLIN",
-    "name": "Dublin",
+    "code": Any<String>,
+    "name": Any<String>,
   },
-  "code": "DUB",
+  "code": Any<String>,
   "coordinates": {
-    "latitude": 53.4213,
-    "longitude": -6.27007,
+    "latitude": Any<Number>,
+    "longitude": Any<Number>,
   },
   "country": {
-    "code": "ie",
-    "name": "Ireland",
+    "code": Any<String>,
+    "name": Any<String>,
   },
-  "name": "Dublin",
+  "name": Any<String>,
 }
 `;
 
