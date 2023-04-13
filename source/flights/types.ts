@@ -10,7 +10,7 @@ const FROM_1_TO_25_ERROR_MESSAGE = 'Only numbers between 1 and 25 are accepted.'
 const StrRange1To4 = z.string().length(1).regex(/[1-4]/)
 const StrRange0To24 = z.string().min(1).max(2).regex(FROM_0_TO_24_REGEX, FROM_0_TO_24_ERROR_MESSAGE)
 const StrRange1To25 = z.string().min(1).max(2).regex(FROM_1_TO_25_REGEX, FROM_1_TO_25_ERROR_MESSAGE)
-const StrBoolean = z.union([z.literal('true'), z.literal('false')])
+const StrBoolean = z.string().regex(/true|false/g)
 
 export const AvailabilityOptions = z.object({
   ADT: StrRange1To25,
@@ -18,7 +18,7 @@ export const AvailabilityOptions = z.object({
   DateIn: z.union([StrDate, z.string().max(0)]),
   DateOut: StrDate,
   Destination: IataCode,
-  Disc: z.literal('0'),
+  Disc: z.string(),
   INF: StrRange0To24,
   Origin: IataCode,
   TEEN: StrRange0To24,
@@ -29,7 +29,7 @@ export const AvailabilityOptions = z.object({
   FlexDaysBeforeIn: StrRange1To4,
   FlexDaysIn: StrRange1To4,
   RoundTrip: StrBoolean,
-  ToUs: z.literal('AGREED')
+  ToUs: z.string().regex(/AGREED/g)
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AvailabilityOptions = z.infer<typeof AvailabilityOptions>
