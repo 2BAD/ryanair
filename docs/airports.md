@@ -90,5 +90,9 @@ Searches for airports with available routes from the departure phrase to the arr
 ```typescript
 import { airports } from '@2bad/ryanair'
 
-const airports = await airports.searchByRoute('Berlin', 'Paris', 'fr-fr')
+const from = 'Berlin'
+const to = 'Paris'
+const locale = 'fr-fr'
+
+const airports = await airports.searchByRoute(from, to, locale)
 ```

@@ -31,10 +31,10 @@ import { airports, fares, flights } from '@2bad/ryanair'
 const airport = await airports.getClosest()
 
 // Get a list of available dates from a specific destination
-const dates = await flights.getDates(from: 'BER', to: 'DUB')
+const dates = await flights.getDates('BER', 'DUB')
 
 // Or the cheapest one-way fares between two airports for a given start date
-const cheapest = await fares.cheapestPerDay(from: 'BER', to: 'DUB', startDate: '2023-10-10')
+const cheapest = await fares.cheapestPerDay('BER', 'DUB', '2023-10-10')
 ```
 
 ## API
@@ -46,6 +46,8 @@ const cheapest = await fares.cheapestPerDay(from: 'BER', to: 'DUB', startDate: '
   - [getInfo(code: IataCode)](docs/airports.md#getinfocode-iatacode)
   - [searchByPhrase(phrase: string, locale = 'en-gb')](docs/airports.md#searchbyphrasephrase-string-locale--en-gb)
   - [searchByRoute(from: string, to = '', locale = 'en-gb')](docs/airports.md#searchbyroutefrom-string-to---locale--en-gb)
+- [Fares API](docs/fares.md#fares-api)
+  - [cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](docs/fares.md#cheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
 
 ## Error handling
 
