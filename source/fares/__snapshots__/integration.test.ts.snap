@@ -76,9 +76,9 @@ exports[`Fares > cheapestPerDay > When provided with all parameters
         "unavailable": false,
       },
       {
-        "arrivalDate": "2024-01-06T23:40:00",
+        "arrivalDate": "2024-01-06T22:05:00",
         "day": "2024-01-06",
-        "departureDate": "2024-01-06T22:30:00",
+        "departureDate": "2024-01-06T20:55:00",
         "price": {
           "currencyCode": "EUR",
           "currencySymbol": "€",
@@ -244,9 +244,9 @@ exports[`Fares > cheapestPerDay > When provided with all parameters
         "unavailable": false,
       },
       {
-        "arrivalDate": "2024-01-18T23:25:00",
+        "arrivalDate": "2024-01-18T08:30:00",
         "day": "2024-01-18",
-        "departureDate": "2024-01-18T22:15:00",
+        "departureDate": "2024-01-18T07:20:00",
         "price": {
           "currencyCode": "EUR",
           "currencySymbol": "€",
@@ -328,9 +328,9 @@ exports[`Fares > cheapestPerDay > When provided with all parameters
         "unavailable": false,
       },
       {
-        "arrivalDate": "2024-01-24T20:55:00",
+        "arrivalDate": "2024-01-24T12:20:00",
         "day": "2024-01-24",
-        "departureDate": "2024-01-24T19:45:00",
+        "departureDate": "2024-01-24T11:10:00",
         "price": {
           "currencyCode": "EUR",
           "currencySymbol": "€",
