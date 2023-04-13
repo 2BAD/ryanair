@@ -6040,6 +6040,7 @@ exports[`Airports getActive When asked for a list of active airports
     "base": true,
     "city": {
       "code": "WARSAW",
+      "macCode": "WWA",
       "name": "Warsaw",
     },
     "code": "WAW",
@@ -6052,6 +6053,11 @@ exports[`Airports getActive When asked for a list of active airports
       "currency": "PLN",
       "defaultAirportCode": "WMI",
       "name": "Poland",
+    },
+    "macCity": {
+      "code": "WARSAW",
+      "macCode": "WWA",
+      "name": "Warsaw",
     },
     "name": "Warsaw Chopin",
     "region": {
@@ -6066,6 +6072,7 @@ exports[`Airports getActive When asked for a list of active airports
     "base": true,
     "city": {
       "code": "WARSAW",
+      "macCode": "WWA",
       "name": "Warsaw",
     },
     "code": "WMI",
@@ -6078,6 +6085,11 @@ exports[`Airports getActive When asked for a list of active airports
       "currency": "PLN",
       "defaultAirportCode": "WMI",
       "name": "Poland",
+    },
+    "macCity": {
+      "code": "WARSAW",
+      "macCode": "WWA",
+      "name": "Warsaw",
     },
     "name": "Warsaw Modlin",
     "region": {
