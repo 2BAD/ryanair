@@ -37,9 +37,15 @@ const dates = await flights.getDates(from: 'BER', to: 'DUB')
 const cheapest = await fares.cheapestPerDay(from: 'BER', to: 'DUB', startDate: '2023-10-10')
 ```
 
-## Getting Started
+## API
 
-For more information and available functions, please refer to the documentation in the source code.
+- [Airports](docs/airports.md#airports-api)
+  - [getActive()](docs/airports.md#getactive)
+  - [getClosest()](docs/airports.md#getclosest)
+  - [getDestinations(code: IataCode)](docs/airports.md#getdestinationscode-iatacode)
+  - [getInfo(code: IataCode)](docs/airports.md#getinfocode-iatacode)
+  - [searchByPhrase(phrase: string, locale = 'en-gb')](docs/airports.md#searchbyphrasephrase-string-locale--en-gb)
+  - [searchByRoute(from: string, to = '', locale = 'en-gb')](docs/airports.md#searchbyroutefrom-string-to---locale--en-gb)
 
 ## Error handling
 

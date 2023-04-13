@@ -2,6 +2,14 @@
 
 Source code: [`source/airports/index.ts`](../source/airports/index.ts)
 
+- [Airports API](#airports-api)
+  - [getActive()](#getactive)
+  - [getClosest()](#getclosest)
+  - [getDestinations(code: IataCode)](#getdestinationscode-iatacode)
+  - [getInfo(code: IataCode)](#getinfocode-iatacode)
+  - [searchByPhrase(phrase: string, locale = 'en-gb')](#searchbyphrasephrase-string-locale--en-gb)
+  - [searchByRoute(from: string, to = '', locale = 'en-gb')](#searchbyroutefrom-string-to---locale--en-gb)
+
 ### <code>getActive()</code>
 
 Retrieves a list of all active airports.
