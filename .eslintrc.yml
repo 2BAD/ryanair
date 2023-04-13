@@ -9,27 +9,29 @@ ignorePatterns:
 plugins:
   - '@typescript-eslint'
   - 'prettier'
+  - 'import'
 
 extends:
   - 'eslint:recommended'
   - 'plugin:@typescript-eslint/recommended'
   - 'plugin:@typescript-eslint/recommended-requiring-type-checking'
+  - 'plugin:@typescript-eslint/strict'
   - 'standard-with-typescript'
   - 'plugin:promise/recommended'
   - 'plugin:import/recommended'
   - 'plugin:import/typescript'
   - 'plugin:n/recommended'
-  - 'prettier'
+  - 'plugin:prettier/recommended'
 
 settings:
   import/resolver:
-    # You will also need to install and configure the TypeScript resolver
-    # See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
     typescript: true
     node: true
 
 rules:
   '@typescript-eslint/consistent-type-definitions': ['error', 'type']
   '@typescript-eslint/promise-function-async': 'off'
-  'import/no-unresolved': 'off'
+  'import/no-default-export': 'error'
+  'import/no-unresolved': 'error'
+  # disabled since it's already covered by the 'import/no-unresolved'
   'n/no-missing-import': 'off'
