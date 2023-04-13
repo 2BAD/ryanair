@@ -1,9 +1,9 @@
-import * as client from './../client'
+import * as client from '../client'
 import * as airports from './index'
 
 describe('Airports', () => {
   afterEach(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   describe('getActive', () => {
@@ -27,7 +27,7 @@ describe('Airports', () => {
   describe('getDestinations', () => {
     it('When passed iata code \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
-      const getSpy = jest.spyOn(client, 'get')
+      const getSpy = vi.spyOn(client, 'get')
       const code = 'BER'
       await airports.getDestinations(code)
 
@@ -50,7 +50,7 @@ describe('Airports', () => {
   describe('getInfo', () => {
     it('When passed iata code \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
-      const getSpy = jest.spyOn(client, 'get')
+      const getSpy = vi.spyOn(client, 'get')
       const code = 'BER'
       await airports.getInfo(code)
 
@@ -94,7 +94,7 @@ describe('Airports', () => {
   describe('searchByRoute', () => {
     it('When provided with only required parameters \n\t Then should calls the correct URL with default locale', async () => {
       expect.assertions(1)
-      const getSpy = jest.spyOn(client, 'get')
+      const getSpy = vi.spyOn(client, 'get')
       const from = 'BER'
       const to = 'BCN'
       const expectedUrl = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=en-gb`
@@ -106,7 +106,7 @@ describe('Airports', () => {
 
     it('When provided with locale \n\t Then should calls the correct URL with custom locale', async () => {
       expect.assertions(1)
-      const getSpy = jest.spyOn(client, 'get')
+      const getSpy = vi.spyOn(client, 'get')
       const from = 'BER'
       const to = 'BCN'
       const locale = 'es-es'

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Airports getActive When asked for a list of active airports 
+exports[`Airports > getActive > When asked for a list of active airports 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -6290,7 +6290,7 @@ exports[`Airports getActive When asked for a list of active airports
 ]
 `;
 
-exports[`Airports getClosest When asked for the closest airport 
+exports[`Airports > getClosest > When asked for the closest airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 {
   "aliases": [],
@@ -6311,7 +6311,7 @@ exports[`Airports getClosest When asked for the closest airport
 }
 `;
 
-exports[`Airports getDestinations When asked for destinations from a specific airport 
+exports[`Airports > getDestinations > When asked for destinations from a specific airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -8075,7 +8075,7 @@ exports[`Airports getDestinations When asked for destinations from a specific ai
 ]
 `;
 
-exports[`Airports getInfo When asked for info on specific airport 
+exports[`Airports > getInfo > When asked for info on specific airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 {
   "aliases": [],
@@ -8111,7 +8111,7 @@ exports[`Airports getInfo When asked for info on specific airport
 }
 `;
 
-exports[`Airports searchByPhrase When searched for an airport by a phrase 
+exports[`Airports > searchByPhrase > When searched for an airport by a phrase 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -8140,7 +8140,7 @@ exports[`Airports searchByPhrase When searched for an airport by a phrase
 ]
 `;
 
-exports[`Airports searchByPhrase When searched for an airport by a phrase using different locale 
+exports[`Airports > searchByPhrase > When searched for an airport by a phrase using different locale 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -8169,7 +8169,7 @@ exports[`Airports searchByPhrase When searched for an airport by a phrase using 
 ]
 `;
 
-exports[`Airports searchByRoute When searched for an airport by a route using both points 
+exports[`Airports > searchByRoute > When searched for an airport by a route using both points 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -8202,7 +8202,7 @@ exports[`Airports searchByRoute When searched for an airport by a route using bo
 ]
 `;
 
-exports[`Airports searchByRoute When searched for an airport by a route using only starting point 
+exports[`Airports > searchByRoute > When searched for an airport by a route using only starting point 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {

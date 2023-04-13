@@ -4,6 +4,7 @@ parserOptions:
 
 ignorePatterns:
   - 'build'
+  - 'vitest.config.ts'
 
 plugins:
   - '@typescript-eslint'
