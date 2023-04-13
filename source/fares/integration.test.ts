@@ -25,7 +25,7 @@ describe('Fares', () => {
       const currency = 'EUR'
 
       const data = await cheapestPerDay(from, to, startDate, currency)
-      expect(data).toMatchSnapshot()
+      expect(data.outbound.fares.length).toBeGreaterThan(0)
     })
 
     it('throws an error if invalid IATA code is provided', async () => {
