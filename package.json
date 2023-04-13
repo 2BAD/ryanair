@@ -29,9 +29,12 @@
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "clean": "rimraf build",
+    "format:check": "prettier --check source/**/*.ts",
+    "format:fix": "prettier --write source/**/*.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "run-s \"lint -- --fix\"",
     "prepublishOnly": "run-s clean build",
+    "preversion": "run-s clean lint test build",
     "test": "vitest run",
     "test:integration": "vitest run integration --coverage"
   },
