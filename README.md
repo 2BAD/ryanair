@@ -6,7 +6,7 @@
 [![GitHub Build Status](https://img.shields.io/github/actions/workflow/status/2BAD/ryanair/integration.yml)](https://github.com/2BAD/ryanair/actions/workflows/integration.yml)
 [![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/ryanair)](https://github.com/2BAD/ryanair/search?l=typescript)
 
-TypeScript client for the unofficial Ryanair API that allows you to easily retrieve information about airports, flights and prices.
+Unofficial typeScript client for the Ryanair API that allows you to easily retrieve information about airports, flights and prices.
 
 ## ✨ Features
 
