@@ -9,8 +9,8 @@ Source code: [`source/fares/index.ts`](../source/fares/index.ts)
 
 Searches for cheapest one-way fares between two airports for a given start date
 
-- **from: string** - The IATA code of the departure airport
-- **to: string** - The IATA code of the arrival airport
+- **from: IataCode** - The IATA code of the departure airport
+- **to: IataCode** - The IATA code of the arrival airport
 - **startDate: string** - The start date for the search in the format "YYYY-MM-DD"
 - **currency: string** (optional, defaults to 'EUR') - The currency to use for the fares.
 

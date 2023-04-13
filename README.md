@@ -50,6 +50,9 @@ const cheapest = await fares.cheapestPerDay('BER', 'DUB', '2023-10-10')
   - [searchByRoute(from: string, to = '', locale = 'en-gb')](docs/airports.md#searchbyroutefrom-string-to---locale--en-gb)
 - [Fares API](docs/fares.md#fares-api)
   - [cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](docs/fares.md#cheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
+- [Flights API](docs/flights.md#flights-api)
+  - [getDates(from: IataCode, to: IataCode)](docs/flights.md#getdatesfrom-iatacode-to-iatacode)
+  - [getAvailable(params: Partial<AvailabilityOptions>)](docs/flights.md#getavailableparams-partial)
 
 ## Error handling
 
