@@ -33,8 +33,7 @@
     "lint:fix": "run-s \"lint -- --fix\"",
     "prepublishOnly": "run-s clean build",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "preversion": "run-s clean lint test build"
+    "test:integration": "vitest run integration --coverage"
   },
   "prettier": {
     "printWidth": 100,
