@@ -1,6 +1,6 @@
-## Airports API
+# Airports API
 
-Source code: [`source/airports/index.ts`](../source/airports/index.ts)
+Source code: [`source/airports/`](../source/airports/)
 
 - [Airports API](#airports-api)
   - [getActive()](#getactive)
@@ -10,7 +10,7 @@ Source code: [`source/airports/index.ts`](../source/airports/index.ts)
   - [searchByPhrase(phrase: string, locale = 'en-gb')](#searchbyphrasephrase-string-locale--en-gb)
   - [searchByRoute(from: string, to = '', locale = 'en-gb')](#searchbyroutefrom-string-to---locale--en-gb)
 
-### <code>getActive()</code>
+## <code>getActive()</code>
 
 Retrieves a list of all active airports.
 
@@ -22,7 +22,7 @@ import { airports } from '@2bad/ryanair'
 const airports = await airports.getClosest()
 ```
 
-### <code>getClosest()</code>
+## <code>getClosest()</code>
 
 Returns information about the closest airport based on the user's IP address.
 
@@ -34,7 +34,7 @@ import { airports } from '@2bad/ryanair'
 const airport = await airports.getClosest()
 ```
 
-### <code>getDestinations(code: IataCode)</code>
+## <code>getDestinations(code: IataCode)</code>
 
 Returns a list of available destinations from an airport.
 
@@ -48,7 +48,7 @@ import { airports } from '@2bad/ryanair'
 const destinations = await airports.getDestinations('BER')
 ```
 
-### <code>getInfo(code: IataCode)</code>
+## <code>getInfo(code: IataCode)</code>
 
 Returns information about an airport.
 
@@ -62,7 +62,7 @@ import { airports } from '@2bad/ryanair'
 const info = await airports.getInfo('BER')
 ```
 
-### <code>searchByPhrase(phrase: string, locale = 'en-gb')</code>
+## <code>searchByPhrase(phrase: string, locale = 'en-gb')</code>
 
 Searches for airports matching the given phrase.
 
@@ -77,7 +77,7 @@ import { airports } from '@2bad/ryanair'
 const airports = await airports.searchByPhrase('Berlin')
 ```
 
-### <code>searchByRoute(from: string, to = '', locale = 'en-gb')</code>
+## <code>searchByRoute(from: string, to = '', locale = 'en-gb')</code>
 
 Searches for airports with available routes from the departure phrase to the arrival phrase.
 

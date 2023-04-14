@@ -1,11 +1,11 @@
-## Fares API
+# Fares API
 
-Source code: [`source/fares/index.ts`](../source/fares/index.ts)
+Source code: [`source/fares/`](../source/fares/)
 
 - [Fares API](#fares-api)
   - [cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](#cheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
 
-### <code>cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
+## <code>cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
 
 Searches for cheapest one-way fares between two airports for a given start date
 

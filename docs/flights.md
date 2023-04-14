@@ -1,12 +1,12 @@
-## Flights API
+# Flights API
 
-Source code: [`source/flights/index.ts`](../source/flights/index.ts)
+Source code: [`source/flights/`](../source/flights/)
 
 - [Flights API](#flights-api)
   - [getDates(from: IataCode, to: IataCode)](#getdatesfrom-iatacode-to-iatacode)
-  - [getAvailable(params: Partial<AvailabilityOptions>)](#getavailableparams-partial)
+  - [getAvailable(params: Partial)](#getavailableparams-partial)
 
-### <code>getDates(from: IataCode, to: IataCode)</code>
+## <code>getDates(from: IataCode, to: IataCode)</code>
 
 Returns a list of available flight dates between two airports
 
@@ -24,7 +24,7 @@ const to = 'LTN' // London Luton airport
 const airports = await flights.getDates(from, to)
 ```
 
-### <code>getAvailable(params: Partial<AvailabilityOptions>)</code>
+## <code>getAvailable(params: Partial<AvailabilityOptions>)</code>
 
 Returns the list of available flights between two airports based on the provided options. It accepts a partial object of type AvailabilityOptions for specifying the search criteria. The properties of the object are explained below:
 
