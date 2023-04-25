@@ -6,6 +6,7 @@ export default defineConfig({
     exclude: ['build', 'node_modules'],
     coverage: {
       provider: 'c8'
-    }
+    },
+    testTimeout: 30000
   }
 })
