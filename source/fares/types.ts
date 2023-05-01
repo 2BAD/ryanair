@@ -25,8 +25,8 @@ export type Fare = z.infer<typeof Fare>
 export const CheapestFares = z.object({
   outbound: z.object({
     fares: z.array(Fare),
-    minFare: Fare,
-    maxFare: Fare
+    minFare: Fare.nullable(),
+    maxFare: Fare.nullable()
   })
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
