@@ -19,4 +19,5 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
+      - run: npm run test:unit
       - run: npm run build

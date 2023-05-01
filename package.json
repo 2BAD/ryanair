@@ -39,12 +39,13 @@
     "clean": "rimraf build",
     "format:check": "prettier --check source/**/*.ts",
     "format:fix": "prettier --write source/**/*.ts",
-    "lint": "eslint . --ext .ts",
     "lint:fix": "run-s \"lint -- --fix\"",
+    "lint": "eslint . --ext .ts",
     "prepublishOnly": "run-s clean build",
     "preversion": "run-s clean lint test build",
-    "test": "vitest run",
-    "test:integration": "vitest run integration --coverage"
+    "test:integration": "vitest run integration --coverage",
+    "test:unit": "vitest run unit --coverage",
+    "test": "vitest run"
   },
   "prettier": {
     "printWidth": 120,

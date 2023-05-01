@@ -1,4 +1,5 @@
 import * as client from '../client'
+import { tomorrow } from '../utils/date'
 import { cheapestPerDay } from './index'
 
 describe('Fares', () => {
@@ -8,7 +9,7 @@ describe('Fares', () => {
       const getSpy = vi.spyOn(client, 'get')
       const from = 'DUB' // Dublin airport
       const to = 'LTN' // London Luton airport
-      const startDate = '2024-01-01'
+      const startDate = tomorrow()
       const currency = 'EUR'
       await cheapestPerDay(from, to, startDate, currency)
 
@@ -21,7 +22,7 @@ describe('Fares', () => {
       expect.assertions(1)
       const from = 'DUB' // Dublin airport
       const to = 'LTN' // London Luton airport
-      const startDate = '2024-01-01'
+      const startDate = tomorrow()
       const currency = 'EUR'
 
       const data = await cheapestPerDay(from, to, startDate, currency)
@@ -31,7 +32,7 @@ describe('Fares', () => {
     it('throws an error if invalid IATA code is provided', async () => {
       const from = 'WRONG_IATA_CODE'
       const to = 'LTN' // London Luton airport
-      const startDate = '2024-01-01'
+      const startDate = tomorrow()
       const currency = 'EUR'
 
       await expect(cheapestPerDay(from, to, startDate, currency)).rejects.toThrow('HTTP Error')

@@ -1,4 +1,5 @@
 import * as client from '../client'
+import { tomorrow } from '../utils/date'
 import { getDates, getAvailable } from './index'
 
 describe('Flights', () => {
@@ -42,7 +43,7 @@ describe('Flights', () => {
         ADT: '5',
         CHD: '2',
         DateIn: '',
-        DateOut: '2024-01-21',
+        DateOut: tomorrow(),
         Destination: 'DUB',
         Disc: '0',
         INF: '0',
@@ -74,7 +75,7 @@ describe('Flights', () => {
         ADT: '1',
         CHD: '0',
         DateIn: '',
-        DateOut: '2023-01-24',
+        DateOut: tomorrow(),
         Destination: 'BRU',
         Disc: '0',
         INF: '0',
@@ -102,7 +103,7 @@ describe('Flights', () => {
       expect.assertions(1)
       const options = {
         ADT: '1',
-        DateOut: '2024-01-01'
+        DateOut: tomorrow()
       }
       await getAvailable(options)
 
