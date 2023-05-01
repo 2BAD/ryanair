@@ -8,7 +8,7 @@ export const getAvailable = async (params: Partial<AvailabilityOptions>): Promis
     CHD: '0',
     DateIn: '',
     DateOut: tomorrow(),
-    Destination: 'BRU',
+    Destination: 'KRK',
     Disc: '0',
     INF: '0',
     Origin: 'BER',

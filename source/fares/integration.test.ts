@@ -7,8 +7,8 @@ describe('Fares', () => {
     it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'DUB' // Dublin airport
-      const to = 'LTN' // London Luton airport
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
       const currency = 'EUR'
       await cheapestPerDay(from, to, startDate, currency)
@@ -20,8 +20,8 @@ describe('Fares', () => {
 
     it('When provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
-      const from = 'DUB' // Dublin airport
-      const to = 'LTN' // London Luton airport
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
       const currency = 'EUR'
 
@@ -29,9 +29,9 @@ describe('Fares', () => {
       expect(data.outbound.fares.length).toBeGreaterThan(0)
     })
 
-    it('throws an error if invalid IATA code is provided', async () => {
+    it('When asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       const from = 'WRONG_IATA_CODE'
-      const to = 'LTN' // London Luton airport
+      const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
       const currency = 'EUR'
 

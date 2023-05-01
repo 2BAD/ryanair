@@ -8176,25 +8176,19 @@ exports[`Airports > searchByRoute > When searched for an airport by a route usin
     "arrivalAirport": {
       "aliases": [],
       "city": {
-        "code": "BERLIN",
-        "macCode": "BER",
-        "name": "Berlin",
+        "code": "KRAKOW",
+        "name": "Krakow",
       },
-      "code": "BER",
+      "code": "KRK",
       "coordinates": {
-        "latitude": 52.3667,
-        "longitude": 13.5033,
+        "latitude": 50.0777,
+        "longitude": 19.7848,
       },
       "country": {
-        "code": "de",
-        "name": "Germany",
+        "code": "pl",
+        "name": "Poland",
       },
-      "macCity": {
-        "code": "BERLIN",
-        "macCode": "BER",
-        "name": "Berlin",
-      },
-      "name": "Berlin Brandenburg",
+      "name": "Krakow",
     },
     "connectingAirport": null,
     "operator": "RYANAIR",

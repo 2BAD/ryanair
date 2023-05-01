@@ -112,7 +112,7 @@ describe('Airports', () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER'
-      const to = 'BCN'
+      const to = 'KRK'
       const expectedUrl = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=en-gb`
 
       await airports.searchByRoute(from, to)
@@ -124,7 +124,7 @@ describe('Airports', () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER'
-      const to = 'BCN'
+      const to = 'KRK'
       const locale = 'es-es'
       const expectedUrl = `https://www.ryanair.com/api/locate/v1/autocomplete/routes?departurePhrase=${from}&arrivalPhrase=${to}&market=${locale}`
 
@@ -141,7 +141,7 @@ describe('Airports', () => {
     it('When searched for an airport by a route using both points \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
-      const data = await airports.searchByRoute('BRU', 'BER')
+      const data = await airports.searchByRoute('BER', 'KRK')
       expect(data).toMatchSnapshot()
     })
     it('When searched for an airport by a route using wrong iata code \n\t Then should get an empty array', async () => {

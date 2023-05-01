@@ -7,8 +7,8 @@ describe('Flights', () => {
     it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'DUB' // Dublin airport
-      const to = 'LTN' // London Luton airport
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
 
       await getDates(from, to)
 
@@ -19,17 +19,17 @@ describe('Flights', () => {
 
     it('When provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
-      const from = 'DUB' // Dublin airport
-      const to = 'LTN' // London Luton airport
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
 
       const data = await getDates(from, to)
       expect(data.length).toBeGreaterThan(0)
     })
 
-    it('throws an error if invalid IATA code is provided', async () => {
+    it('When asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
       const from = 'WRONG_IATA_CODE'
-      const to = 'LTN' // London Luton airport
+      const to = 'KRK' // Krakow airport
 
       await expect(getDates(from, to)).rejects.toThrow('HTTP Error')
     })
@@ -44,10 +44,10 @@ describe('Flights', () => {
         CHD: '2',
         DateIn: '',
         DateOut: tomorrow(),
-        Destination: 'DUB',
+        Destination: 'BER',
         Disc: '0',
         INF: '0',
-        Origin: 'LTN',
+        Origin: 'KRK',
         TEEN: '0',
         promoCode: 'PROMO',
         IncludeConnectingFlights: 'true',
@@ -76,7 +76,7 @@ describe('Flights', () => {
         CHD: '0',
         DateIn: '',
         DateOut: tomorrow(),
-        Destination: 'BRU',
+        Destination: 'KRK',
         Disc: '0',
         INF: '0',
         Origin: 'BER',

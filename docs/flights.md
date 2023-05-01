@@ -32,7 +32,7 @@ Returns the list of available flights between two airports based on the provided
 - **CHD: number** (default is 0) - Number of children
 - **DateIn: string** - Date of incoming flight in YYYY-MM-DD format (default is empty string)
 - **DateOut: string** - Date of outgoing flight in YYYY-MM-DD format (default is set to tomorrow)
-- **Destination: IataCode** - IATA code of destination airport (default is set to BRU)
+- **Destination: IataCode** - IATA code of destination airport (default is set to KRK)
 - **Disc: string** (default is 0) - Discount amount
 - **INF: number** (default is 0) - Number of infants
 - **Origin: IataCode** - IATA code of the origin airport (default is set to BER)
