@@ -31,7 +31,7 @@ Returns the list of available flights between two airports based on the provided
 - **ADT: number** (default is 1) - Number of adults
 - **CHD: number** (default is 0) - Number of children
 - **DateIn: string** - Date of incoming flight in YYYY-MM-DD format (default is empty string)
-- **DateOut: string** - Date of outgoing flight in YYYY-MM-DD format (default is set to January 24, 2023)
+- **DateOut: string** - Date of outgoing flight in YYYY-MM-DD format (default is set to tomorrow)
 - **Destination: IataCode** - IATA code of destination airport (default is set to BRU)
 - **Disc: string** (default is 0) - Discount amount
 - **INF: number** (default is 0) - Number of infants

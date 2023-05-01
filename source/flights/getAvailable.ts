@@ -1,4 +1,5 @@
 import { get } from '../client'
+import { tomorrow } from '../utils/date'
 import { type AvailabilityOptions, AvailabilityResponse } from './types'
 
 export const getAvailable = async (params: Partial<AvailabilityOptions>): Promise<AvailabilityResponse> => {
@@ -6,7 +7,7 @@ export const getAvailable = async (params: Partial<AvailabilityOptions>): Promis
     ADT: '1',
     CHD: '0',
     DateIn: '',
-    DateOut: '2023-01-24',
+    DateOut: tomorrow(),
     Destination: 'BRU',
     Disc: '0',
     INF: '0',
