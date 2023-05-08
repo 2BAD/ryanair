@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: test integration with ryanair api on node@${{ matrix.node-version }}
+    name: node@${{ matrix.node-version }}
     runs-on: ubuntu-latest
 
     strategy:
