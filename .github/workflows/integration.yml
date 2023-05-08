@@ -10,14 +10,18 @@ on:
 
 jobs:
   test:
-    name: test integration with ryanair api
+    name: test integration with ryanair api on node@${{ matrix.node-version }}
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['16', '18', '20']
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version-file: 'package.json'
+          node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run test:integration
       - uses: codecov/codecov-action@v3
