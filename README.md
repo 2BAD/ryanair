@@ -12,8 +12,7 @@ Unofficial typescript client for the Ryanair API that allows you to easily retri
 
 - 🔥 No bullshit
 - 📝 Strongly typed methods and results
-- 💻 Isomorphic, runs on browsers and node
-- 🚀 Native fetch API support
+- 🍪 Handles cookies and sessions automatically
 - 🔍 Endpoint specific functions for convenience
 
 ## Install

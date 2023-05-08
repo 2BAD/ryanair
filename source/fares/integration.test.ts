@@ -35,7 +35,7 @@ describe('Fares', () => {
       const startDate = tomorrow()
       const currency = 'EUR'
 
-      await expect(cheapestPerDay(from, to, startDate, currency)).rejects.toThrow('HTTP Error')
+      await expect(cheapestPerDay(from, to, startDate, currency)).rejects.toThrow('Response code 400 (Bad Request)')
     })
   })
 })

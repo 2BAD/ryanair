@@ -31,7 +31,7 @@ describe('Flights', () => {
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
 
-      await expect(getDates(from, to)).rejects.toThrow('HTTP Error')
+      await expect(getDates(from, to)).rejects.toThrow('Response code 400 (Bad Request)')
     })
   })
 

@@ -61,7 +61,7 @@ describe('Airports', () => {
     })
     it('When asked for destinations from a nonexisting airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getDestinations('WRONG_IATA_CODE')).rejects.toThrow('HTTP Error')
+      await expect(airports.getDestinations('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
     })
   })
 
@@ -82,7 +82,7 @@ describe('Airports', () => {
     })
     it('When asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getInfo('WRONG_IATA_CODE')).rejects.toThrow('HTTP Error')
+      await expect(airports.getInfo('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
     })
   })
 
