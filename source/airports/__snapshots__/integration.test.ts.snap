@@ -1318,6 +1318,32 @@ exports[`Airports > getActive > When asked for a list of active airports
     "aliases": [],
     "base": false,
     "city": {
+      "code": "COMISO",
+      "name": "Comiso",
+    },
+    "code": "CIY",
+    "coordinates": {
+      "latitude": 36.9946,
+      "longitude": 14.6072,
+    },
+    "country": {
+      "code": "it",
+      "currency": "EUR",
+      "defaultAirportCode": "BGY",
+      "name": "Italy",
+    },
+    "name": "Comiso",
+    "region": {
+      "code": "SICILY",
+      "name": "Sicily",
+    },
+    "seoName": "comiso",
+    "timeZone": "Europe/Rome",
+  },
+  {
+    "aliases": [],
+    "base": false,
+    "city": {
       "code": "CLUJ",
       "name": "Cluj",
     },
