@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - CHANGELOG.md file in the repository
+- Retrieve and retain necessary cookies to access specific API endpoints
 - Helper function to generate tomorrow date for tests 87199676f87df57d7626f4fe39740f2abe36c52a
 
 ### Fixed
