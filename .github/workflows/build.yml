@@ -8,14 +8,18 @@ on:
 
 jobs:
   test:
-    name: build
+    name: build on node@${{ matrix.node }}
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['16', '18', '20']
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version-file: 'package.json'
+          node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
