@@ -66,7 +66,7 @@ export const Flight = z.object({
   faresLeft: z.number(),
   flightKey: z.string(),
   infantsLeft: z.number(),
-  regularFare: FareType,
+  regularFare: FareType.nullish(),
   operatedBy: z.string(),
   segments: z.array(Segment),
   flightNumber: z.string(),
