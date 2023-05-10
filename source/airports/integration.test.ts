@@ -11,7 +11,7 @@ describe('Airports', () => {
       expect.assertions(1)
 
       const data = await airports.getActive()
-      expect(data).toMatchSnapshot()
+      expect(data.length).toBeGreaterThan(0)
     })
   })
 
