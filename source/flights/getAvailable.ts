@@ -1,6 +1,6 @@
-import { get } from '../client'
-import { tomorrow } from '../utils/date'
-import { type AvailabilityOptions, AvailabilityResponse } from './types'
+import { get } from '~/client'
+import { tomorrow } from '~/utils/date'
+import { type AvailabilityOptions, AvailabilityResponse } from '~/flights/types'
 
 export const getAvailable = async (params: Partial<AvailabilityOptions>): Promise<AvailabilityResponse> => {
   const defaults: AvailabilityOptions = {

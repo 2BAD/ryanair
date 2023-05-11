@@ -3,7 +3,10 @@
   "compilerOptions": {
     "outDir": "build",
     "declaration": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "paths": {
+      "~/*": ["./source/*"]
+    }
   },
   "include": ["source", "types"],
   "tsc-alias": {

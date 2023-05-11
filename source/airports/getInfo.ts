@@ -1,5 +1,5 @@
-import { get } from '../client'
-import { Airport, type IataCode } from './types'
+import { get } from '~/client'
+import { Airport, type IataCode } from '~/airports/types'
 
 /**
  * Returns information about an airport

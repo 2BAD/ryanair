@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '../client'
-import { AirportShort } from './types'
+import { get } from '~/client'
+import { AirportShort } from '~/airports/types'
 
 /**
  * Search for airports matching the given phrase

@@ -1,5 +1,5 @@
-import { get } from '../client'
-import { AirportShort } from './types'
+import { get } from '~/client'
+import { AirportShort } from '~/airports/types'
 
 /**
  * Returns information about the closest airport based on the user's IP address.

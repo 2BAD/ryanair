@@ -8,5 +8,10 @@ export default defineConfig({
       provider: 'c8'
     },
     testTimeout: 30000
+  },
+  resolve: {
+    alias: {
+      '~': './source'
+    }
   }
 })

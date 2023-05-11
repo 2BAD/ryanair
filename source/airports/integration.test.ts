@@ -1,5 +1,5 @@
-import * as client from '../client'
-import * as airports from './index'
+import * as client from '~/client'
+import * as airports from '~/airports'
 
 describe('Airports', () => {
   afterEach(() => {

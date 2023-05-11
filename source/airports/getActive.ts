@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '../client'
-import { Airport } from './types'
+import { get } from '~/client'
+import { Airport } from '~/airports/types'
 
 /**
  * Retrieves a list of all active airports
