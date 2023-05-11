@@ -35,17 +35,19 @@
     "build"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "run-s compile fix-alias",
     "clean": "rimraf build",
+    "compile": "tsc --project tsconfig.json",
+    "fix-alias": "tsc-alias -p tsconfig.json",
     "format:check": "prettier --check source/**/*.ts",
     "format:fix": "prettier --write source/**/*.ts",
-    "lint:fix": "run-s \"lint -- --fix\"",
     "lint": "eslint . --ext .ts",
+    "lint:fix": "run-s \"lint -- --fix\"",
     "prepublishOnly": "run-s clean build",
     "preversion": "run-s clean lint test build",
+    "test": "vitest run",
     "test:integration": "vitest run integration --coverage",
-    "test:unit": "vitest run unit --coverage",
-    "test": "vitest run"
+    "test:unit": "vitest run unit --coverage"
   },
   "prettier": {
     "printWidth": 120,
@@ -77,6 +79,7 @@
     "prettier": "2.8.8",
     "rimraf": "5.0.0",
     "ts-node": "10.9.1",
+    "tsc-alias": "1.8.6",
     "typescript": "5.0.4",
     "vitest": "0.31.0"
   },

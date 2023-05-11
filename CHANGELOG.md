@@ -17,22 +17,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [2.0.1] - 2023-05-11
+
+### Fixed
+
+- Resolved `ERR_UNSUPPORTED_DIR_IMPORT` error for module import by resolving full path in build output with `tsc-alias`
 
 ## [2.0.0] - 2023-05-08
 
 ### Breaking Changes
+
 - The replacement of `fetch` with `got` resulted in the loss of support for browsers.
 
 ### Added
+
 - CHANGELOG.md file in the repository
 - Retrieve and retain necessary cookies to access specific API endpoints
 - Helper function to generate tomorrow date for tests 87199676f87df57d7626f4fe39740f2abe36c52a
 
 ### Fixed
+
 - `CheapestFares.outbound.minFare` and `...maxFare` can be null 86d49f21f24c1d846bd138a72679cf791ec7a611
 - `FareType` can be undefined 0abff91974ffe5957d4598799a08abaf47ace067
 
 ### Changed
+
 - Updated headings in documentation and some other cosmetic changes
 - Changed prettier printWidth to 120 symbols
 - Set tests timeouts for `vitest` to 30 seconds
