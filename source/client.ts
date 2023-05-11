@@ -2,13 +2,11 @@ import { got } from 'got'
 import { CookieJar, type Cookie } from 'tough-cookie'
 
 /**
- * Performs a GET request to the specified URL and returns the response data as a promise
+ * Extend `got` http client so every time request is made we check if there is a `rid.sig` cookie
+ * that is needed for certain endpoints to work
  *
- * @param url The URL to send the GET request to
  * @return A promise that resolves with the response data or rejects with an error
  */
-
-// export const get = async (url: string | URL): Promise<unknown> => {
 
 export const get = got.extend({
   hooks: {

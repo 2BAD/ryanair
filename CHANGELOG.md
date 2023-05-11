@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `FareType` can be undefined 0abff91974ffe5957d4598799a08abaf47ace067
 
 ### Changed
-- Updated headings in documentations and some other cosmetic changes
+- Updated headings in documentation and some other cosmetic changes
 - Changed prettier printWidth to 120 symbols
 - Set tests timeouts for `vitest` to 30 seconds
 - Unify origin and destination airports for testing purposes f72af1be09c7d697bbd18951d923e6c5fe0addd6
