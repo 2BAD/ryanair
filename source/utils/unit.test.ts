@@ -1,5 +1,5 @@
-import { StrDate } from '../date.types'
-import { tomorrow } from './date'
+import { StrDate } from '~/date.types'
+import { tomorrow } from '~/utils/date'
 
 describe('tomorrow', () => {
   it('should return a string in YYYY-MM-DD format', () => {

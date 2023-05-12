@@ -1,3 +1,3 @@
-export { getAvailable } from './getAvailable'
-export { getDates } from './getDates'
-export { getDailyPrices } from './getDailyPrices'
+export { getAvailable } from '~/flights/getAvailable'
+export { getDates } from '~/flights/getDates'
+export { getDailyPrices } from '~/flights/getDailyPrices'

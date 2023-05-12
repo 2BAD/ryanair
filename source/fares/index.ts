@@ -1,1 +1,1 @@
-export { cheapestPerDay } from './cheapestPerDay'
+export { cheapestPerDay } from '~/fares/cheapestPerDay'
