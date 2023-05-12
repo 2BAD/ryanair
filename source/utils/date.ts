@@ -1,4 +1,4 @@
-import { eachMonthOfInterval, format } from 'date-fns'
+import { addDays, eachMonthOfInterval, format } from 'date-fns'
 import { type StrDate } from '~/date.types'
 
 /**
@@ -7,10 +7,10 @@ import { type StrDate } from '~/date.types'
 
 export const tomorrow = (): string => {
   const currentDate = new Date()
-  currentDate.setDate(currentDate.getDate() + 1)
+  const tomorrowDate = addDays(currentDate, 1)
 
   // Format the date into 'YYYY-MM-DD' format
-  return currentDate.toISOString().slice(0, 10)
+  return format(tomorrowDate, 'yyyy-MM-dd')
 }
 
 /**
