@@ -37,8 +37,8 @@
   "scripts": {
     "build": "run-s compile fix-alias",
     "clean": "rimraf build",
-    "compile": "tsc --project tsconfig.json",
-    "fix-alias": "tsc-alias -p tsconfig.json",
+    "compile": "tsc --project tsconfig.build.json",
+    "fix-alias": "tsc-alias -p tsconfig.build.json",
     "format:check": "prettier --check source/**/*.ts",
     "format:fix": "prettier --write source/**/*.ts",
     "lint": "eslint . --ext .ts",

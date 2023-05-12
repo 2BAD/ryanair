@@ -2,14 +2,11 @@
   "extends": "@2bad/tsconfig",
   "compilerOptions": {
     "outDir": "build",
+    "baseUrl": "source",
     "declaration": true,
     "types": ["vitest/globals"],
     "paths": {
-      "~/*": ["./source/*"]
+      "~/*": ["./*"]
     }
-  },
-  "include": ["source", "types"],
-  "tsc-alias": {
-    "resolveFullPaths": true
   }
 }
