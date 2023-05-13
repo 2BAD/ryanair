@@ -108,10 +108,3 @@ export const AvailabilityResponse = z.object({
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AvailabilityResponse = z.infer<typeof AvailabilityResponse>
-
-export const DailyPrice = z.object({
-  day: StrDate,
-  price: Price.nullable()
-})
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export type DailyPrice = z.infer<typeof DailyPrice>
