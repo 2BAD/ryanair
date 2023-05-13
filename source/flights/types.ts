@@ -1,7 +1,6 @@
 import { z } from 'zod'
 import { IataCode } from '~/airports/types'
 import { StrDate, StrDateTimeMs } from '~/date.types'
-import { Price } from '~/fares/types'
 
 const FROM_0_TO_24_REGEX = /\b([0-9]|1[0-9]|2[0-4])\b/g
 const FROM_0_TO_24_ERROR_MESSAGE = 'Only numbers between 0 and 24 are accepted.'
