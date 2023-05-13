@@ -53,6 +53,14 @@ const cheapest = await fares.cheapestPerDay('BER', 'DUB', '2023-10-10')
   - [getDates(from: IataCode, to: IataCode)](docs/flights.md#getdatesfrom-iatacode-to-iatacode)
   - [getAvailable(params: Partial<AvailabilityOptions>)](docs/flights.md#getavailableparams-partial)
 
+## IATA codes
+
+IATA codes are three-letter codes used by the International Air Transport Association (IATA) to identify airports, airlines, and other entities in the aviation industry. These codes are used primarily for ticketing, scheduling, and other administrative purposes.
+
+Airport codes are the most common type of IATA code. They consist of three letters, with the first two letters representing the country and the third letter representing the airport. For example, LAX is the IATA code for Los Angeles International Airport in the United States.
+
+For a full list of available IATA codes, please visit this [page](https://www.iata.org/en/publications/directories/code-search/).
+
 ## Error handling
 
 Each function throws an Error if the request to the API fails or the response is invalid. Make sure to handle them or use try-catch statement.
