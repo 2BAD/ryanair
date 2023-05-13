@@ -7,7 +7,7 @@ Source code: [`source/fares/`](../source/fares/)
 
 ## <code>cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
 
-Searches for cheapest one-way fares between two airports for a given start date
+Searches for cheapest one-way fares between two airports for a given month
 
 - **from: IataCode** - The IATA code of the departure airport
 - **to: IataCode** - The IATA code of the arrival airport

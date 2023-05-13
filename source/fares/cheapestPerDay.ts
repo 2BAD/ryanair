@@ -4,7 +4,7 @@ import { type StrDate } from '~/date.types'
 import { CheapestFares } from '~/fares/types'
 
 /**
- * Returns the cheapest one-way fares between two airports for a given start date
+ * Returns the cheapest one-way fares between two airports for a given month
  *
  * @param from The IATA code of the departure airport
  * @param to The IATA code of the arrival airport
