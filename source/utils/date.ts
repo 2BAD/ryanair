@@ -1,4 +1,4 @@
-import { addDays, eachMonthOfInterval, format } from 'date-fns'
+import { addDays, addMonths, eachMonthOfInterval, format } from 'date-fns'
 import { type StrDate } from '~/date.types'
 
 /**
@@ -11,6 +11,18 @@ export const tomorrow = (): string => {
 
   // Format the date into 'YYYY-MM-DD' format
   return format(tomorrowDate, 'yyyy-MM-dd')
+}
+
+/**
+ * Calculates the date for the next month (formatted as 'YYYY-MM-DD')
+ */
+
+export const nextMonth = (): string => {
+  const currentDate = new Date()
+  const nextMonthDate = addMonths(currentDate, 1)
+
+  // Format the date into 'YYYY-MM-DD' format
+  return format(nextMonthDate, 'yyyy-MM-dd')
 }
 
 /**
