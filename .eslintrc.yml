@@ -22,6 +22,8 @@ extends:
   - 'plugin:import/typescript'
   - 'plugin:n/recommended'
   - 'plugin:prettier/recommended'
+  - 'plugin:jsdoc/recommended-typescript-error'
+  - 'plugin:vitest/all'
 
 settings:
   import/resolver:
@@ -35,3 +37,9 @@ rules:
   'import/no-unresolved': 'error'
   # disabled since it's already covered by the 'import/no-unresolved'
   'n/no-missing-import': 'off'
+  'jsdoc/require-returns': 'off'
+  'jsdoc/require-throws': 'error'
+  'jsdoc/require-param': ['error', checkDestructured: false]
+  'jsdoc/check-param-names': ['error', checkDestructured: false]
+  'jsdoc/tag-lines': ['error', 'any', startLines: 1]
+  'vitest/no-hooks': ['error', 'allow': ['afterEach']]
