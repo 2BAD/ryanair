@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`date > zod StrDate type > should throw error for wrong date string format 1`] = `
+"[
+  {
+    \\"validation\\": \\"regex\\",
+    \\"code\\": \\"invalid_string\\",
+    \\"message\\": \\"Invalid\\",
+    \\"path\\": []
+  }
+]"
+`;

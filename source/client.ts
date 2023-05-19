@@ -5,7 +5,7 @@ import { CookieJar, Cookie } from 'tough-cookie'
  * Extend `got` http client so every time request is made we check if there is a `rid.sig` cookie
  * that is needed for certain endpoints to work
  *
- * @return A promise that resolves with the response data or rejects with an error
+ * @returns A promise that resolves with the response data or rejects with an error
  */
 
 export const get = got.extend({

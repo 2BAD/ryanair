@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Airports > getClosest > When asked for the closest airport 
+exports[`airports > getClosest > when asked for the closest airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 {
   "aliases": [],
@@ -21,7 +21,7 @@ exports[`Airports > getClosest > When asked for the closest airport
 }
 `;
 
-exports[`Airports > getDestinations > When asked for destinations from a specific airport 
+exports[`airports > getDestinations > when asked for destinations from a specific airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -1785,7 +1785,7 @@ exports[`Airports > getDestinations > When asked for destinations from a specifi
 ]
 `;
 
-exports[`Airports > getInfo > When asked for info on specific airport 
+exports[`airports > getInfo > when asked for info on specific airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 {
   "aliases": [],
@@ -1821,7 +1821,7 @@ exports[`Airports > getInfo > When asked for info on specific airport
 }
 `;
 
-exports[`Airports > searchByPhrase > When searched for an airport by a phrase 
+exports[`airports > searchByPhrase > when searched for an airport by a phrase 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -1850,7 +1850,7 @@ exports[`Airports > searchByPhrase > When searched for an airport by a phrase
 ]
 `;
 
-exports[`Airports > searchByPhrase > When searched for an airport by a phrase using different locale 
+exports[`airports > searchByPhrase > when searched for an airport by a phrase using different locale 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -1879,7 +1879,7 @@ exports[`Airports > searchByPhrase > When searched for an airport by a phrase us
 ]
 `;
 
-exports[`Airports > searchByRoute > When searched for an airport by a route using both points 
+exports[`airports > searchByRoute > when searched for an airport by a route using both points 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {
@@ -1906,7 +1906,7 @@ exports[`Airports > searchByRoute > When searched for an airport by a route usin
 ]
 `;
 
-exports[`Airports > searchByRoute > When searched for an airport by a route using only starting point 
+exports[`airports > searchByRoute > when searched for an airport by a route using only starting point 
 	 Then should be able to retrieve data and parse it 1`] = `
 [
   {

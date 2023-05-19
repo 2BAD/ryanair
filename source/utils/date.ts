@@ -30,7 +30,6 @@ export const nextMonth = (): string => {
  *
  * @param startDate - The start date of the range (formatted as 'YYYY-MM-DD')
  * @param endDate - The end date of the range (formatted as 'YYYY-MM-DD')
- *
  */
 export const getFirstDayOfEachMonthInRange = (startDate: StrDate, endDate: StrDate): StrDate[] => {
   const dates = eachMonthOfInterval({ start: new Date(startDate), end: new Date(endDate) })

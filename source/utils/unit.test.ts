@@ -43,7 +43,7 @@ describe('date', () => {
   describe('getFirstDayOfEachMonthInRange', () => {
     it('returns an array', () => {
       const result = getFirstDayOfEachMonthInRange('2020-01-01', '2020-12-31')
-      expect(Array.isArray(result)).toBe(true)
+      expect(Array.isArray(result)).toBeTruthy()
     })
 
     it('throws a RangeError when start date is after end date', () => {
@@ -59,7 +59,7 @@ describe('date', () => {
     it('returns an array containing first day of each month within the given range', () => {
       const result = getFirstDayOfEachMonthInRange('2023-06-15', '2024-03-10')
       expect(result).toHaveLength(10)
-      expect(result).toEqual([
+      expect(result).toStrictEqual([
         '2023-06-01',
         '2023-07-01',
         '2023-08-01',
@@ -77,12 +77,12 @@ describe('date', () => {
   describe('zod StrDate type', () => {
     it('should pass zod type validation', () => {
       const dateString = '2022-01-31'
-      expect(StrDate.parse(dateString)).toEqual(dateString)
+      expect(StrDate.parse(dateString)).toStrictEqual(dateString)
     })
 
     it('should throw error for wrong date string format', () => {
       const dateString = '2022/01/31'
-      expect(() => StrDate.parse(dateString)).toThrowError()
+      expect(() => StrDate.parse(dateString)).toThrowErrorMatchingSnapshot()
     })
   })
 })

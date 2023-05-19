@@ -2,9 +2,9 @@ import * as client from '~/client'
 import { tomorrow } from '~/utils/date'
 import { getDates, getAvailable } from '~/flights'
 
-describe('Flights', () => {
+describe('flights', () => {
   describe('getDates', () => {
-    it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
+    it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
@@ -17,7 +17,7 @@ describe('Flights', () => {
       )
     })
 
-    it('When provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
+    it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -26,7 +26,7 @@ describe('Flights', () => {
       expect(data.length).toBeGreaterThan(0)
     })
 
-    it('When asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
+    it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
@@ -36,7 +36,7 @@ describe('Flights', () => {
   })
 
   describe('getAvailable', () => {
-    it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
+    it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const options = {
@@ -67,7 +67,7 @@ describe('Flights', () => {
       )
     })
 
-    it('When provided single parameter \n\t Then should fallback to defaults', async () => {
+    it('when provided single parameter \n\t Then should fallback to defaults', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const options = { ADT: '1' }
@@ -99,7 +99,7 @@ describe('Flights', () => {
       )
     })
 
-    it('When provided asked for a valid destination \n\t Then should be able to retrieve data and parse it', async () => {
+    it('when provided asked for a valid destination \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
       const options = {
         ADT: '1',

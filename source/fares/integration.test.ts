@@ -2,9 +2,9 @@ import * as client from '~/client'
 import { cheapestPerDay, getDailyFaresInRange } from '~/fares'
 import { nextMonth, tomorrow } from '~/utils/date'
 
-describe('Fares', () => {
+describe('fares', () => {
   describe('cheapestPerDay', () => {
-    it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
+    it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
@@ -18,7 +18,7 @@ describe('Fares', () => {
       )
     })
 
-    it('When provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
+    it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -29,7 +29,7 @@ describe('Fares', () => {
       expect(data.outbound.fares.length).toBeGreaterThan(0)
     })
 
-    it('When asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
+    it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -40,7 +40,7 @@ describe('Fares', () => {
   })
 
   describe('getDailyFaresInRange', () => {
-    it('When provided with all parameters \n\t Then should call the correct API URL', async () => {
+    it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
@@ -60,7 +60,7 @@ describe('Fares', () => {
       )
     })
 
-    it('When provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
+    it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -72,7 +72,7 @@ describe('Fares', () => {
       expect(data.length).toBeGreaterThan(0)
     })
 
-    it('When provided with all parameters \n\t Then should not have any nullish prices', async () => {
+    it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -81,7 +81,7 @@ describe('Fares', () => {
       const currency = 'EUR'
 
       const data = await getDailyFaresInRange(from, to, startDate, endDate, currency)
-      expect(data.every((fare) => fare.price !== null)).toBe(true)
+      expect(data.every((fare) => fare.price !== null)).toBeTruthy()
     })
   })
 })
