@@ -21,7 +21,7 @@ import { flights } from '@2bad/ryanair'
 const from = 'DUB' // Dublin airport
 const to = 'LTN' // London Luton airport
 
-const airports = await flights.getDates(from, to)
+const flights = await flights.getDates(from, to)
 ```
 
 ## <code>getAvailable(params: Partial<AvailabilityOptions>)</code>
@@ -61,5 +61,5 @@ const options = {
   Destination: 'LTN' // London Luton airport
 }
 
-const airports = await flights.getAvailable(options)
+const flights = await flights.getAvailable(options)
 ```
