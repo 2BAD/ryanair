@@ -17,6 +17,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [3.0.0] - 2023-05-20
+
+### Breaking Changes
+
+- The method `fares.cheapestPerDay()` has been renamed to `fares.getCheapestPerDay()`. This change was made to maintain consistency across all other methods.
+
+### Added
+
+- A new method, fares.getDailyFaresInRange(), has been included.
+- Various utility methods to work with dates using date-fns.
+- Renovate config has been configured to update dependencies every week automatically.
+- Eslint plugins have been added to validate jsdoc blocks and tests.
+
+### Fixed
+
+- A separate tsconfig has been added for build purposes to avoid shipping test files with builds.
+
+### Changed
+
+- Dev dependencies have been updated and cleaned up
+
 ## [2.0.2] - 2023-05-11
 
 ### Fixed
