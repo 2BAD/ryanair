@@ -1,9 +1,9 @@
 import * as client from '~/client'
-import { cheapestPerDay, getDailyFaresInRange } from '~/fares'
+import { getCheapestPerDay, getDailyFaresInRange } from '~/fares'
 import { nextMonth, tomorrow } from '~/utils/date'
 
 describe('fares', () => {
-  describe('cheapestPerDay', () => {
+  describe('getCheapestPerDay', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
@@ -11,7 +11,7 @@ describe('fares', () => {
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
       const currency = 'EUR'
-      await cheapestPerDay(from, to, startDate, currency)
+      await getCheapestPerDay(from, to, startDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
         `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
@@ -25,7 +25,7 @@ describe('fares', () => {
       const startDate = tomorrow()
       const currency = 'EUR'
 
-      const data = await cheapestPerDay(from, to, startDate, currency)
+      const data = await getCheapestPerDay(from, to, startDate, currency)
       expect(data.outbound.fares.length).toBeGreaterThan(0)
     })
 
@@ -35,7 +35,7 @@ describe('fares', () => {
       const startDate = tomorrow()
       const currency = 'EUR'
 
-      await expect(cheapestPerDay(from, to, startDate, currency)).rejects.toThrow('Response code 400 (Bad Request)')
+      await expect(getCheapestPerDay(from, to, startDate, currency)).rejects.toThrow('Response code 400 (Bad Request)')
     })
   })
 

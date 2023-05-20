@@ -35,7 +35,7 @@ const airport = await airports.getClosest()
 const dates = await flights.getDates('BER', 'DUB')
 
 // Or the cheapest one-way fares between two airports for a given start date
-const cheapest = await fares.cheapestPerDay('BER', 'DUB', '2023-10-10')
+const cheapest = await fares.getCheapestPerDay('BER', 'DUB', '2023-10-10')
 ```
 
 ## API
@@ -48,7 +48,7 @@ const cheapest = await fares.cheapestPerDay('BER', 'DUB', '2023-10-10')
   - [searchByPhrase(phrase: string, locale = 'en-gb')](docs/airports.md#searchbyphrasephrase-string-locale--en-gb)
   - [searchByRoute(from: string, to = '', locale = 'en-gb')](docs/airports.md#searchbyroutefrom-string-to---locale--en-gb)
 - [Fares](docs/fares.md#fares-api)
-  - [cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](docs/fares.md#cheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
+  - [getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](docs/fares.md#getcheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
 - [Flights](docs/flights.md#flights-api)
   - [getDates(from: IataCode, to: IataCode)](docs/flights.md#getdatesfrom-iatacode-to-iatacode)
   - [getAvailable(params: Partial<AvailabilityOptions>)](docs/flights.md#getavailableparams-partial)

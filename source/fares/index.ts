@@ -1,2 +1,2 @@
-export { cheapestPerDay } from '~/fares/cheapestPerDay'
+export { getCheapestPerDay } from '~/fares/getCheapestPerDay'
 export { getDailyFaresInRange } from '~/fares/getDailyFaresInRange'

@@ -11,7 +11,7 @@ import { CheapestFares } from '~/fares/types'
  * @param startDate The start date for the search in the format "YYYY-MM-DD"
  * @param currency The currency to use for the fares
  */
-export const cheapestPerDay = async (
+export const getCheapestPerDay = async (
   from: IataCode,
   to: IataCode,
   startDate: StrDate,

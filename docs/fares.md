@@ -3,9 +3,9 @@
 Source code: [`source/fares/`](../source/fares/)
 
 - [Fares API](#fares-api)
-  - [cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](#cheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
+  - [getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](#getcheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
 
-## <code>cheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
+## <code>getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
 
 Searches for cheapest one-way fares between two airports for a given month
 
@@ -24,5 +24,5 @@ const to = 'LTN' // London Luton airport
 const startDate = '2024-01-01'
 const currency = 'EUR'
 
-const airports = await fares.cheapestPerDay(from, to, startDate, currency)
+const airports = await fares.getCheapestPerDay(from, to, startDate, currency)
 ```

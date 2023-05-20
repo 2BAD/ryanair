@@ -1,6 +1,6 @@
 import { type IataCode } from '~/airports/types'
 import { type StrDate } from '~/date.types'
-import { cheapestPerDay } from '~/fares'
+import { getCheapestPerDay } from '~/fares'
 import { type Fare } from '~/fares/types'
 import { getFirstDayOfEachMonthInRange } from '~/utils/date'
 
@@ -21,7 +21,7 @@ export const getDailyFaresInRange = async (
   currency = 'EUR'
 ): Promise<Fare[]> => {
   const months = getFirstDayOfEachMonthInRange(startDate, endDate)
-  const requests = months.map((month) => cheapestPerDay(from, to, month, currency))
+  const requests = months.map((month) => getCheapestPerDay(from, to, month, currency))
   const result = await Promise.all(requests)
   return result.flatMap(({ outbound: { fares } }) => fares.filter(({ price }) => price !== null))
 }
