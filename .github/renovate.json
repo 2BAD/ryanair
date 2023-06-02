@@ -12,8 +12,11 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "action"],
       "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"]
     }
   ]
 }
