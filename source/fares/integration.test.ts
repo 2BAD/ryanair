@@ -1,6 +1,6 @@
-import * as client from '~/client'
-import { getCheapestPerDay, getDailyFaresInRange } from '~/fares'
-import { nextMonth, tomorrow } from '~/utils/date'
+import * as client from '~/client.ts'
+import { getCheapestPerDay, getDailyFaresInRange } from '~/fares/index.ts'
+import { nextMonth, tomorrow } from '~/utils/date.ts'
 
 describe('fares', () => {
   describe('getCheapestPerDay', () => {

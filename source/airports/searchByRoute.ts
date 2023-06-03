@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '~/client'
-import { AirportConnection } from '~/airports/types'
+import { get } from '~/client.ts'
+import { AirportConnection } from '~/airports/types.ts'
 
 /**
  * Search for airports with available routes from the departure phrase to the arrival phrase

@@ -1,6 +1,6 @@
-import * as client from '~/client'
-import { tomorrow } from '~/utils/date'
-import { getDates, getAvailable } from '~/flights'
+import * as client from '~/client.ts'
+import { tomorrow } from '~/utils/date.ts'
+import { getDates, getAvailable } from '~/flights/index.ts'
 
 describe('flights', () => {
   describe('getDates', () => {

@@ -1,2 +1,2 @@
-export { getAvailable } from '~/flights/getAvailable'
-export { getDates } from '~/flights/getDates'
+export { getAvailable } from '~/flights/getAvailable.ts'
+export { getDates } from '~/flights/getDates.ts'

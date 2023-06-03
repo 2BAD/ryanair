@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '~/client'
-import { AirportShort } from '~/airports/types'
+import { get } from '~/client.ts'
+import { AirportShort } from '~/airports/types.ts'
 
 /**
  * Search for airports matching the given phrase

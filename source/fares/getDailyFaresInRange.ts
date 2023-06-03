@@ -1,8 +1,8 @@
-import { type IataCode } from '~/airports/types'
-import { type StrDate } from '~/date.types'
-import { getCheapestPerDay } from '~/fares'
-import { type Fare } from '~/fares/types'
-import { getFirstDayOfEachMonthInRange } from '~/utils/date'
+import { type IataCode } from '~/airports/types.ts'
+import { type StrDate } from '~/date.types.ts'
+import { getCheapestPerDay } from '~/fares/index.ts'
+import { type Fare } from '~/fares/types.ts'
+import { getFirstDayOfEachMonthInRange } from '~/utils/date.ts'
 
 /**
  * Retrieve daily fares for a given origin and destination airport, within a specified date range.

@@ -1,2 +1,2 @@
-export { getCheapestPerDay } from '~/fares/getCheapestPerDay'
-export { getDailyFaresInRange } from '~/fares/getDailyFaresInRange'
+export { getCheapestPerDay } from '~/fares/getCheapestPerDay.ts'
+export { getDailyFaresInRange } from '~/fares/getDailyFaresInRange.ts'

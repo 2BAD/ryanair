@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { type IataCode } from '~/airports/types'
-import { get } from '~/client'
-import { StrDate } from '~/date.types'
+import { type IataCode } from '~/airports/types.ts'
+import { get } from '~/client.ts'
+import { StrDate } from '~/date.types.ts'
 
 /**
  * Returns a list of available flight dates between two airports

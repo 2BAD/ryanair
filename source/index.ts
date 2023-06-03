@@ -1,3 +1,3 @@
-export * as airports from '~/airports'
-export * as fares from '~/fares'
-export * as flights from '~/flights'
+export * as airports from '~/airports/index.ts'
+export * as fares from '~/fares/index.ts'
+export * as flights from '~/flights/index.ts'

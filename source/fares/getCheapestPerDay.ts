@@ -1,7 +1,7 @@
-import { type IataCode } from '~/airports/types'
-import { get } from '~/client'
-import { type StrDate } from '~/date.types'
-import { CheapestFares } from '~/fares/types'
+import { type IataCode } from '~/airports/types.ts'
+import { get } from '~/client.ts'
+import { type StrDate } from '~/date.types.ts'
+import { CheapestFares } from '~/fares/types.ts'
 
 /**
  * Returns the cheapest one-way fares between two airports for a given month
@@ -11,6 +11,7 @@ import { CheapestFares } from '~/fares/types'
  * @param startDate The start date for the search in the format "YYYY-MM-DD"
  * @param currency The currency to use for the fares
  */
+
 export const getCheapestPerDay = async (
   from: IataCode,
   to: IataCode,
