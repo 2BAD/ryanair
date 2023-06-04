@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "test": ".*\\.ts$",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true
+    },
+    "target": "esnext",
+    "baseUrl": "./source",
+    "paths": {
+      "~/*": ["./*"]
+    }
+  },
+  "module": {
+    "type": "es6"
+  }
+}
