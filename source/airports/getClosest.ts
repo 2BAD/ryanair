@@ -2,7 +2,7 @@ import { get } from '~/client.ts'
 import { AirportShort } from '~/airports/types.ts'
 
 /**
- * Returns information about the closest airport based on the user's IP address.
+ * Returns information about the closest airport based on the user's IP address
  */
 
 export const getClosest = async (): Promise<AirportShort> => {

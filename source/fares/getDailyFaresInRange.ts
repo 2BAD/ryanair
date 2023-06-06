@@ -5,13 +5,13 @@ import { type Fare } from '~/fares/types.ts'
 import { getFirstDayOfEachMonthInRange } from '~/utils/date.ts'
 
 /**
- * Retrieve daily fares for a given origin and destination airport, within a specified date range.
+ * Retrieve daily fares for a given origin and destination airport, within a specified date range
  *
- * @param from - The IATA code for the origin airport.
- * @param to - The IATA code for the destination airport.
- * @param startDate - The start date of the search range, in yyyy-mm-dd format.
- * @param endDate - The end date of the search range, in yyyy-mm-dd format.
- * @param currency - The currency code to use for pricing data (default is EUR).
+ * @param from - The IATA code for the origin airport
+ * @param to - The IATA code for the destination airport
+ * @param startDate - The start date of the search range, in yyyy-mm-dd format
+ * @param endDate - The end date of the search range, in yyyy-mm-dd format
+ * @param currency - The currency code to use for pricing data (default is EUR)
  */
 
 export const getDailyFaresInRange = async (
