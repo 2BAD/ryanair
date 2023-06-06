@@ -31,3 +31,11 @@ export const CheapestFares = z.object({
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type CheapestFares = z.infer<typeof CheapestFares>
+
+export const RoundTrip = z.object({
+  departure: Fare,
+  return: Fare,
+  price: z.number()
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type RoundTrip = z.infer<typeof RoundTrip>
