@@ -1,6 +1,6 @@
 import * as client from '~/client.ts'
-import { getCheapestPerDay, getDailyFaresInRange } from '~/fares/index.ts'
-import { nextMonth, tomorrow } from '~/utils/date.ts'
+import { getCheapestPerDay, getDailyFaresInRange, getCheapestRoundTrip } from '~/fares/index.ts'
+import { isAfterISO, nextMonth, tomorrow } from '~/utils/date.ts'
 
 describe('fares', () => {
   describe('getCheapestPerDay', () => {
@@ -82,6 +82,65 @@ describe('fares', () => {
 
       const data = await getDailyFaresInRange(from, to, startDate, endDate, currency)
       expect(data.every((fare) => fare.price !== null)).toBeTruthy()
+    })
+  })
+
+  describe('getCheapestRoundTrip', () => {
+    it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
+      expect.assertions(1)
+      const getSpy = vi.spyOn(client, 'get')
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
+      const startDate = tomorrow()
+      const endDate = tomorrow()
+      const currency = 'EUR'
+
+      const [year, month] = startDate.split('-')
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      const firstDayOfMonth = `${year}-${month}-01`
+
+      await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+
+      expect(getSpy).toHaveBeenCalledWith(
+        `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
+      )
+    })
+
+    it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
+      expect.assertions(1)
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
+      const startDate = tomorrow()
+      const endDate = nextMonth()
+      const currency = 'EUR'
+
+      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      expect(data.length).toBeGreaterThan(0)
+    })
+
+    it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
+      expect.assertions(2)
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
+      const startDate = tomorrow()
+      const endDate = nextMonth()
+      const currency = 'EUR'
+
+      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      expect(data.every((trip) => trip.departure.price !== null)).toBeTruthy()
+      expect(data.every((trip) => trip.return.price !== null)).toBeTruthy()
+    })
+
+    it('when provided with all parameters \n\t Then should have return trips after departure', async () => {
+      expect.assertions(1)
+      const from = 'BER' // Berlin airport
+      const to = 'KRK' // Krakow airport
+      const startDate = tomorrow()
+      const endDate = nextMonth()
+      const currency = 'EUR'
+
+      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      expect(data.every((trip) => isAfterISO(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })
 })
