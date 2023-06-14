@@ -1,4 +1,4 @@
-import { addDays, addMonths, eachMonthOfInterval, format } from 'date-fns'
+import { addDays, addMonths, eachMonthOfInterval, format, isAfter } from 'date-fns'
 import { type StrDate } from '~/date.types.ts'
 
 /**
@@ -23,6 +23,19 @@ export const nextMonth = (): string => {
 
   // Format the date into 'YYYY-MM-DD' format
   return format(nextMonthDate, 'yyyy-MM-dd')
+}
+
+/**
+ * Returns true if the first ISO-formatted date is after the second ISO-formatted date.
+ *
+ * @param firstDate - The first date (formatted as 'YYYY-MM-DD')
+ * @param secondDate - The second date (formatted as 'YYYY-MM-DD')
+ */
+
+export const isAfterISO = (firstDate: string, secondDate: string): boolean => {
+  const first = new Date(firstDate)
+  const second = new Date(secondDate)
+  return isAfter(first, second)
 }
 
 /**
