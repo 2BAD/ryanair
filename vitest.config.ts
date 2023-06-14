@@ -5,7 +5,7 @@ export default defineConfig({
     globals: true,
     exclude: ['build', 'node_modules'],
     coverage: {
-      provider: 'c8'
+      provider: 'v8'
     },
     testTimeout: 30000
   },
