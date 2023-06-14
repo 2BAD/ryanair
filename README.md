@@ -41,17 +41,17 @@ const cheapest = await fares.getCheapestPerDay('BER', 'DUB', '2023-10-10')
 ## API
 
 - [Airports](docs/airports.md#airports-api)
-  - [getActive()](docs/airports.md#getactive)
-  - [getClosest()](docs/airports.md#getclosest)
-  - [getDestinations(code: IataCode)](docs/airports.md#getdestinationscode-iatacode)
-  - [getInfo(code: IataCode)](docs/airports.md#getinfocode-iatacode)
+  - [getActive](docs/airports.md#getactive)
+  - [getClosest](docs/airports.md#getclosest)
+  - [getDestinations](docs/airports.md#getdestinationscode-iatacode)
+  - [getInfo](docs/airports.md#getinfocode-iatacode)
 - [Fares](docs/fares.md#fares-api)
-  - [getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](docs/fares.md#getcheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
-  - [getDailyFaresInRange(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR')](docs/fares.md#getdailyfaresinrangefrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur)
-  - [getCheapestRoundTrip(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR', limit = 10)](docs/fares.md#findcheapestroundtripfrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur-limit--10)
+  - [getCheapestPerDay](docs/fares.md#getcheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
+  - [getDailyFaresInRange](docs/fares.md#getdailyfaresinrangefrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur)
+  - [getCheapestRoundTrip](docs/fares.md#findcheapestroundtripfrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur-limit--10)
 - [Flights](docs/flights.md#flights-api)
-  - [getDates(from: IataCode, to: IataCode)](docs/flights.md#getdatesfrom-iatacode-to-iatacode)
-  - [getAvailable(params: Partial<AvailabilityOptions>)](docs/flights.md#getavailableparams-partial)
+  - [getDates](docs/flights.md#getdatesfrom-iatacode-to-iatacode)
+  - [getAvailable](docs/flights.md#getavailableparams-partial)
 
 ## IATA codes
 
