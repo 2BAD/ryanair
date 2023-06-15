@@ -1,3 +1,4 @@
+import tsconfigPaths from 'vite-tsconfig-paths'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
@@ -9,9 +10,5 @@ export default defineConfig({
     },
     testTimeout: 30000
   },
-  resolve: {
-    alias: {
-      '~': './source'
-    }
-  }
+  plugins: [tsconfigPaths()]
 })
