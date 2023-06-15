@@ -12,6 +12,7 @@ describe('date', () => {
       const result = tomorrow()
       const [year, month, day] = result.split('-').map((part) => parseInt(part))
 
+      // @ts-expect-error even if the values are going to be undefined the test will cover it
       const date = new Date(year, month - 1, day)
 
       expect(date.getFullYear()).toBe(year)
@@ -30,6 +31,7 @@ describe('date', () => {
       const result = nextMonth()
       const [year, month, day] = result.split('-').map((part) => parseInt(part))
 
+      // @ts-expect-error even if the values are going to be undefined the test will cover it
       const date = new Date(year, month - 1, day)
 
       expect(date.getFullYear()).toBe(year)
