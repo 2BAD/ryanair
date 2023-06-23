@@ -17,6 +17,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [4.0.0] - 2023-06-23
+
+### Breaking Changes
+
+- The `airports.searchByPhrase` and `airports.searchByRoute` methods have been removed as the `autocomplete` endpoint can no longer be publicly accessed.
+
+### Added
+
+- The `fares.getCheapestRoundTrip` method has been added, which finds the cheapest round trip fares for a given route and date range in a specific currency.
+
+### Changed
+
+- TypeScript compilation has been switched from `tsc` to `swc`.
+- Paths have been updated to conform with the esm module resolution specification.
+- `allowImportingTsExtensions` has been set to true.
+- Dependencies have been updated.
+
 ## [3.0.0] - 2023-05-20
 
 ### Breaking Changes
@@ -77,6 +94,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2017-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/2BAD/ryanair/compare/v3.0.0...v4.0.0
+[3.0.0]: https://github.com/2BAD/ryanair/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/2BAD/ryanair/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/2BAD/ryanair/releases/tag/v1.0.0
