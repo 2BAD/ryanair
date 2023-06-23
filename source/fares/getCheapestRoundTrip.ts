@@ -4,7 +4,7 @@ import { type StrDate } from '~/date.types.ts'
 import { getFarePrice, sortByPrice } from '~/fares/helpers.ts'
 import { getDailyFaresInRange } from '~/fares/index.ts'
 import { type RoundTrip } from '~/fares/types.ts'
-import { isAfterISO } from '~/utils/date.ts'
+import { isAfterISO } from '~/helpers/date.ts'
 
 /**
  * Finds the cheapest round trip fares for a given route and date range in a specific currency
