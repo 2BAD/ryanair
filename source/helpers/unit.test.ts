@@ -1,5 +1,5 @@
 import { StrDate } from '~/date.types.ts'
-import { getFirstDayOfEachMonthInRange, nextMonth, tomorrow } from '~/utils/date.ts'
+import { getFirstDayOfEachMonthInRange, nextMonth, tomorrow } from '~/helpers/date.ts'
 
 describe('date', () => {
   describe('tomorrow', () => {

@@ -1,12 +1,10 @@
 import fastCartesian from 'fast-cartesian'
 import { type IataCode } from '~/airports/types.ts'
 import { type StrDate } from '~/date.types.ts'
+import { getFarePrice, sortByPrice } from '~/fares/helpers.ts'
 import { getDailyFaresInRange } from '~/fares/index.ts'
-import { type Fare, type RoundTrip } from '~/fares/types.ts'
+import { type RoundTrip } from '~/fares/types.ts'
 import { isAfterISO } from '~/utils/date.ts'
-
-const getFarePrice = (f: Fare): number => (f.price !== null ? f.price.value : 0)
-const sortByPrice = (a: Fare, b: Fare): number => getFarePrice(a) - getFarePrice(b)
 
 /**
  * Finds the cheapest round trip fares for a given route and date range in a specific currency

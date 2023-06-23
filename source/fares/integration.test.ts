@@ -1,6 +1,6 @@
 import * as client from '~/client.ts'
-import { getCheapestPerDay, getDailyFaresInRange, getCheapestRoundTrip } from '~/fares/index.ts'
-import { isAfterISO, nextMonth, tomorrow } from '~/utils/date.ts'
+import { getCheapestPerDay, getCheapestRoundTrip, getDailyFaresInRange } from '~/fares/index.ts'
+import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
 
 describe('fares', () => {
   describe('getCheapestPerDay', () => {
