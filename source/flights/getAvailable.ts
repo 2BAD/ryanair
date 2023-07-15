@@ -10,16 +10,16 @@ export const getAvailable = async (params: Partial<AvailabilityOptions>): Promis
     DateOut: tomorrow(),
     Destination: 'KRK',
     Disc: '0',
+    FlexDaysBeforeIn: '2',
+    FlexDaysBeforeOut: '2',
+    FlexDaysIn: '2',
+    FlexDaysOut: '2',
+    IncludeConnectingFlights: 'false',
     INF: '0',
     Origin: 'BER',
-    TEEN: '0',
     promoCode: '',
-    IncludeConnectingFlights: 'false',
-    FlexDaysBeforeOut: '2',
-    FlexDaysOut: '2',
-    FlexDaysBeforeIn: '2',
-    FlexDaysIn: '2',
     RoundTrip: 'false',
+    TEEN: '0',
     ToUs: 'AGREED'
   }
 
