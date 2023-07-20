@@ -17,6 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [5.0.0] - 2023-07-20
+
+### Breaking Changes
+
+- Removed `got` HTTP client dependency. This was previously used for cookie spoofing, which is no longer required.
+- Support for node@16 has been dropped as it has reached its End of Life (EOL).
+
 ## [4.0.0] - 2023-06-23
 
 ### Breaking Changes
@@ -94,7 +101,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2017-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v4.0.0...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/2BAD/ryanair/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/2BAD/ryanair/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/2BAD/ryanair/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/2BAD/ryanair/compare/v1.0.0...v2.0.0
