@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '~/client.ts'
 import { Destination, type IataCode } from '~/airports/types.ts'
+import { get } from '~/client.ts'
 
 /**
  * Returns a list of available destinations from an airport
