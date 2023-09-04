@@ -120,6 +120,14 @@ describe('airports', () => {
 
       expect(data).toHaveLength(1)
     })
+    it('when asked for route between two airports that do not have one leg connection \n\t Then should return an empty array', async () => {
+      expect.assertions(1)
+      const from = 'VBY' // Visby Gotland airport
+      const to = 'OUD' // Oujda airport
+      const data = await airports.getRoutes(from, to)
+
+      expect(data).toHaveLength(0)
+    })
     it('when asked for info on non existing airports \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
