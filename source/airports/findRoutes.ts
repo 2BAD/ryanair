@@ -12,12 +12,12 @@ const getIataCodes = (destinations: Destination[]): Set<IataCode> => {
 }
 
 /**
- * Retrieves available routes between two airports.
+ * Finds available routes between two airports.
  *
  * @param from - The departure airport IATA code.
  * @param to - The arrival airport IATA code.
  */
-export const getRoutes = async (from: IataCode, to: IataCode): Promise<IataCode[][]> => {
+export const findRoutes = async (from: IataCode, to: IataCode): Promise<IataCode[][]> => {
   const [departureDestinations, arrivalDestinations] = await Promise.all([
     airports.getDestinations(from),
     airports.getDestinations(to)

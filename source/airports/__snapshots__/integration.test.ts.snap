@@ -1,5 +1,106 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`airports > findRoutes > when asked for specific route between two airports 
+	 Then should be able to retrieve data and parse it 1`] = `
+[
+  [
+    "BER",
+    "AGP",
+    "GDN",
+  ],
+  [
+    "BER",
+    "ALC",
+    "GDN",
+  ],
+  [
+    "BER",
+    "BCN",
+    "GDN",
+  ],
+  [
+    "BER",
+    "BGY",
+    "GDN",
+  ],
+  [
+    "BER",
+    "BLL",
+    "GDN",
+  ],
+  [
+    "BER",
+    "CFU",
+    "GDN",
+  ],
+  [
+    "BER",
+    "CHQ",
+    "GDN",
+  ],
+  [
+    "BER",
+    "DUB",
+    "GDN",
+  ],
+  [
+    "BER",
+    "EDI",
+    "GDN",
+  ],
+  [
+    "BER",
+    "FCO",
+    "GDN",
+  ],
+  [
+    "BER",
+    "KRK",
+    "GDN",
+  ],
+  [
+    "BER",
+    "MAN",
+    "GDN",
+  ],
+  [
+    "BER",
+    "PFO",
+    "GDN",
+  ],
+  [
+    "BER",
+    "PSA",
+    "GDN",
+  ],
+  [
+    "BER",
+    "RIX",
+    "GDN",
+  ],
+  [
+    "BER",
+    "STN",
+    "GDN",
+  ],
+  [
+    "BER",
+    "TGD",
+    "GDN",
+  ],
+  [
+    "BER",
+    "TSF",
+    "GDN",
+  ],
+  [
+    "BER",
+    "ZAD",
+    "GDN",
+  ],
+]
+`;
+
 exports[`airports > getClosest > when asked for the closest airport 
 	 Then should be able to retrieve data and parse it 1`] = `
 {
@@ -1819,105 +1920,4 @@ exports[`airports > getInfo > when asked for info on specific airport
   "seoName": "brandenburg",
   "timeZone": "Europe/Berlin",
 }
-`;
-
-exports[`airports > getRoutes > when asked for specific route between two airports 
-	 Then should be able to retrieve data and parse it 1`] = `
-[
-  [
-    "BER",
-    "AGP",
-    "GDN",
-  ],
-  [
-    "BER",
-    "ALC",
-    "GDN",
-  ],
-  [
-    "BER",
-    "BCN",
-    "GDN",
-  ],
-  [
-    "BER",
-    "BGY",
-    "GDN",
-  ],
-  [
-    "BER",
-    "BLL",
-    "GDN",
-  ],
-  [
-    "BER",
-    "CFU",
-    "GDN",
-  ],
-  [
-    "BER",
-    "CHQ",
-    "GDN",
-  ],
-  [
-    "BER",
-    "DUB",
-    "GDN",
-  ],
-  [
-    "BER",
-    "EDI",
-    "GDN",
-  ],
-  [
-    "BER",
-    "FCO",
-    "GDN",
-  ],
-  [
-    "BER",
-    "KRK",
-    "GDN",
-  ],
-  [
-    "BER",
-    "MAN",
-    "GDN",
-  ],
-  [
-    "BER",
-    "PFO",
-    "GDN",
-  ],
-  [
-    "BER",
-    "PSA",
-    "GDN",
-  ],
-  [
-    "BER",
-    "RIX",
-    "GDN",
-  ],
-  [
-    "BER",
-    "STN",
-    "GDN",
-  ],
-  [
-    "BER",
-    "TGD",
-    "GDN",
-  ],
-  [
-    "BER",
-    "TSF",
-    "GDN",
-  ],
-  [
-    "BER",
-    "ZAD",
-    "GDN",
-  ],
-]
 `;

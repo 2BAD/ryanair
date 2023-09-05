@@ -86,13 +86,13 @@ describe('airports', () => {
     })
   })
 
-  describe('getRoutes', () => {
+  describe('findRoutes', () => {
     it('when passed iata codes \n\t Then should call the correct API URLs', async () => {
       expect.assertions(3)
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
-      await airports.getRoutes(from, to)
+      await airports.findRoutes(from, to)
 
       expect(getSpy).toHaveBeenNthCalledWith(
         1,
@@ -108,7 +108,7 @@ describe('airports', () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'GDN' // Gdansk airport
-      const data = await airports.getRoutes(from, to)
+      const data = await airports.findRoutes(from, to)
 
       expect(data).toMatchSnapshot()
     })
@@ -116,7 +116,7 @@ describe('airports', () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
-      const data = await airports.getRoutes(from, to)
+      const data = await airports.findRoutes(from, to)
 
       expect(data).toHaveLength(1)
     })
@@ -124,7 +124,7 @@ describe('airports', () => {
       expect.assertions(1)
       const from = 'VBY' // Visby Gotland airport
       const to = 'OUD' // Oujda airport
-      const data = await airports.getRoutes(from, to)
+      const data = await airports.findRoutes(from, to)
 
       expect(data).toHaveLength(0)
     })
@@ -132,7 +132,7 @@ describe('airports', () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'WRONG_IATA'
-      await expect(airports.getRoutes(from, to)).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.findRoutes(from, to)).rejects.toThrow('Response code 404 (Not Found)')
     })
   })
 })
