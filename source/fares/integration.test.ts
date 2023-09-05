@@ -1,5 +1,5 @@
 import * as client from '~/client.ts'
-import { getCheapestPerDay, getCheapestRoundTrip, getDailyFaresInRange } from '~/fares/index.ts'
+import { findCheapestRoundTrip, findDailyFaresInRange, getCheapestPerDay } from '~/fares/index.ts'
 import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
 
 describe('fares', () => {
@@ -39,7 +39,7 @@ describe('fares', () => {
     })
   })
 
-  describe('getDailyFaresInRange', () => {
+  describe('findDailyFaresInRange', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
@@ -53,7 +53,7 @@ describe('fares', () => {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       const firstDayOfMonth = `${year}-${month}-01`
 
-      await getDailyFaresInRange(from, to, startDate, endDate, currency)
+      await findDailyFaresInRange(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
         `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
@@ -68,7 +68,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await getDailyFaresInRange(from, to, startDate, endDate, currency)
+      const data = await findDailyFaresInRange(from, to, startDate, endDate, currency)
       expect(data.length).toBeGreaterThan(0)
     })
 
@@ -80,12 +80,12 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await getDailyFaresInRange(from, to, startDate, endDate, currency)
+      const data = await findDailyFaresInRange(from, to, startDate, endDate, currency)
       expect(data.every((fare) => fare.price !== null)).toBeTruthy()
     })
   })
 
-  describe('getCheapestRoundTrip', () => {
+  describe('findCheapestRoundTrip', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
@@ -99,7 +99,7 @@ describe('fares', () => {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       const firstDayOfMonth = `${year}-${month}-01`
 
-      await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      await findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
         `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
@@ -114,7 +114,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.length).toBeGreaterThan(0)
     })
 
@@ -126,7 +126,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.every((trip) => trip.departure.price !== null)).toBeTruthy()
       expect(data.every((trip) => trip.return.price !== null)).toBeTruthy()
     })
@@ -139,7 +139,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await getCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.every((trip) => isAfterISO(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })

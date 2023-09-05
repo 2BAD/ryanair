@@ -2,7 +2,7 @@ import fastCartesian from 'fast-cartesian'
 import { type IataCode } from '~/airports/types.ts'
 import { type StrDate } from '~/date.types.ts'
 import { getFarePrice, sortByPrice } from '~/fares/helpers.ts'
-import { getDailyFaresInRange } from '~/fares/index.ts'
+import { findDailyFaresInRange } from '~/fares/index.ts'
 import { type RoundTrip } from '~/fares/types.ts'
 import { isAfterISO } from '~/helpers/date.ts'
 
@@ -18,7 +18,7 @@ import { isAfterISO } from '~/helpers/date.ts'
  * @returns An array of objects representing the cheapest round trip fares found
  */
 
-export const getCheapestRoundTrip = async (
+export const findCheapestRoundTrip = async (
   from: IataCode,
   to: IataCode,
   startDate: StrDate,
@@ -27,8 +27,8 @@ export const getCheapestRoundTrip = async (
   limit = 10
 ): Promise<RoundTrip[]> => {
   const [outboundPrices, inboundPrices] = await Promise.all([
-    getDailyFaresInRange(from, to, startDate, endDate, currency),
-    getDailyFaresInRange(to, from, startDate, endDate, currency)
+    findDailyFaresInRange(from, to, startDate, endDate, currency),
+    findDailyFaresInRange(to, from, startDate, endDate, currency)
   ])
 
   const sortedOutboundPrices = outboundPrices.sort(sortByPrice).slice(0, limit)

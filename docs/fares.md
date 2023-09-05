@@ -4,8 +4,8 @@ Source code: [`source/fares/`](../source/fares/)
 
 - [Fares API](#fares-api)
   - [getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')](#getcheapestperdayfrom-iatacode-to-iatacode-startdate-strdate-currency--eur)
-  - [getDailyFaresInRange(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR')](#getdailyfaresinrangefrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur)
-  - [getCheapestRoundTrip(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR', limit = 10)](#findcheapestroundtripfrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur-limit--10)
+  - [findDailyFaresInRange(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR')](#finddailyfaresinrangefrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur)
+  - [findCheapestRoundTrip(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR', limit = 10)](#findCheapestRoundTripfrom-iatacode-to-iatacode-startdate-strdate-enddate-strdate-currency--eur-limit--10)
 
 ## <code>getCheapestPerDay(from: IataCode, to: IataCode, startDate: StrDate, currency = 'EUR')</code>
 
@@ -29,9 +29,9 @@ const currency = 'EUR'
 const fares = await fares.getCheapestPerDay(from, to, startDate, currency)
 ```
 
-## <code>getDailyFaresInRange(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR')</code>
+## <code>findDailyFaresInRange(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR')</code>
 
-Retrieve daily fares for a given origin and destination airport, within a specified date range.
+Find daily fares for a given origin and destination airport, within a specified date range.
 
 - **from: IataCode** - The IATA code of the departure airport
 - **to: IataCode** - The IATA code of the arrival airport
@@ -50,10 +50,10 @@ const startDate = '2024-01-01'
 const endDate = '2024-06-01'
 const currency = 'EUR'
 
-const fares = await fares.getDailyFaresInRange(from, to, startDate, endDate, currency)
+const fares = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
 ```
 
-## <code>getCheapestRoundTrip(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR', limit = 10)</code>
+## <code>findCheapestRoundTrip(from: IataCode, to: IataCode, startDate: StrDate, endDate: StrDate, currency = 'EUR', limit = 10)</code>
 
 Finds the cheapest round trip fares for a given route and date range in a specific currency
 
@@ -76,5 +76,5 @@ const endDate = '2024-06-01'
 const currency = 'EUR'
 const limit = 10
 
-const trips = await fares.getCheapestRoundTrip(from, to, startDate, endDate, currency, limit)
+const trips = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency, limit)
 ```
