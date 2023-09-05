@@ -1,5 +1,5 @@
 import { type IataCode } from '~/airports/types.ts'
-import { get } from '~/client.ts'
+import { get } from '~/client/index.ts'
 import { type StrDate } from '~/date.types.ts'
 import { CheapestFares } from '~/fares/types.ts'
 

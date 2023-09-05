@@ -1,5 +1,5 @@
-import { get } from '~/client.ts'
 import { AirportShort } from '~/airports/types.ts'
+import { get } from '~/client/index.ts'
 
 /**
  * Returns information about the closest airport based on the user's IP address

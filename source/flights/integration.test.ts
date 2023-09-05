@@ -1,4 +1,4 @@
-import * as client from '~/client.ts'
+import * as client from '~/client/index.ts'
 import { getAvailable, getDates } from '~/flights/index.ts'
 import { tomorrow } from '~/helpers/date.ts'
 

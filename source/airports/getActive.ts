@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { get } from '~/client.ts'
 import { Airport } from '~/airports/types.ts'
+import { get } from '~/client/index.ts'
 
 /**
  * Retrieves a list of all active airports

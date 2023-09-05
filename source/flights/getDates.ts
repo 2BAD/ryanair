@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { type IataCode } from '~/airports/types.ts'
-import { get } from '~/client.ts'
+import { get } from '~/client/index.ts'
 import { StrDate } from '~/date.types.ts'
 
 /**

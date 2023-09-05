@@ -1,4 +1,4 @@
-import { get } from '~/client.ts'
+import { get } from '~/client/index.ts'
 import { AvailabilityResponse, type AvailabilityOptions } from '~/flights/types.ts'
 import { tomorrow } from '~/helpers/date.ts'
 

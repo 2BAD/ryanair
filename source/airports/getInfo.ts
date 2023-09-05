@@ -1,5 +1,5 @@
-import { get } from '~/client.ts'
 import { Airport, type IataCode } from '~/airports/types.ts'
+import { get } from '~/client/index.ts'
 
 /**
  * Returns information about an airport

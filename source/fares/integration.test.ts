@@ -1,4 +1,4 @@
-import * as client from '~/client.ts'
+import * as client from '~/client/index.ts'
 import { findCheapestRoundTrip, findDailyFaresInRange, getCheapestPerDay } from '~/fares/index.ts'
 import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
 
