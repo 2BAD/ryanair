@@ -7,6 +7,7 @@ Source code: [`source/airports/`](../source/airports/)
   - [getClosest()](#getclosest)
   - [getDestinations(code: IataCode)](#getdestinationscode-iatacode)
   - [getInfo(code: IataCode)](#getinfocode-iatacode)
+  - [findRoutes(from: IataCode, to: IataCode)](#findroutesfrom-iatacode-to-iatacode)
 
 ## <code>getActive()</code>
 
@@ -58,4 +59,19 @@ Returns information about an airport.
 import { airports } from '@2bad/ryanair'
 
 const info = await airports.getInfo('BER')
+```
+
+## <code>findRoutes(from: IataCode, to: IataCode)</code>
+
+Finds available routes between two airports.
+
+**from: IataCode** - The departure airport IATA code.
+**to: IataCode** - The arrival airport IATA code.
+
+**Returns: `Promise<IataCode[][]>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const routes = await airports.findRoutes('BER', 'GDN') // [["BER", "AGP", "GDN"], [ "BER", "ALC", "GDN",], ...]
 ```
