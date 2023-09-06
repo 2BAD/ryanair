@@ -1,7 +1,7 @@
 import { got } from 'got'
 import { debounce } from '~/client/hooks/debounce.ts'
 
-export const DELAY_MS = 500
+export const DELAY_MS: number | [number, number] = 500
 
 /**
  * Extend `got` http client so every time request is made we check if there is a `rid.sig` cookie
