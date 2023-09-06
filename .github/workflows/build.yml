@@ -23,4 +23,8 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run test:unit
+      - uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unit
       - run: npm run build
