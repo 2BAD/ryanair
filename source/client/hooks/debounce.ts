@@ -14,6 +14,12 @@ export type OptionsWithDebounce = {
   context: Debounce & Record<string, unknown>
 } & Options
 
+/**
+ * Merge the debounce properties into the options instance
+ *
+ * @param raw - Plain request options, right before their normalization.
+ * @param options - The `Got` options object.
+ */
 const initOptionsHook: InitHook = (raw: Debounce & OptionsInit, options: Options) => {
   if (raw.debounce) {
     options.context['debounce'] = {
@@ -24,6 +30,11 @@ const initOptionsHook: InitHook = (raw: Debounce & OptionsInit, options: Options
   }
 }
 
+/**
+ * Debounce hook used as a BeforeRequestHook.
+ *
+ * @param options - The `Got` options object with debounce properties.
+ */
 const debounceHook: BeforeRequestHook = async (options: OptionsWithDebounce) => {
   if (!options.context.debounce) return
   const { debounce } = options.context

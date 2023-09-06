@@ -46,9 +46,6 @@ Returns the list of available flights between two airports based on the provided
 - **RoundTrip: string** (default is set to false) - Boolean value to get return flight
 - **ToUs: string** (default is set to `AGREED`) - String value indicating acceptance of terms & conditions
 
-- **from: IataCode** - The IATA code of the departure airport
-- **to: IataCode** - The IATA code of the arrival airport
-
 **Returns: `Promise<AvailabilityResponse>`**
 
 ```typescript

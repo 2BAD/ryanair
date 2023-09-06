@@ -17,7 +17,6 @@ import { isAfterISO } from '~/helpers/date.ts'
  * @param limit - The maximum number of round trip fares to return (default: 10)
  * @returns An array of objects representing the cheapest round trip fares found
  */
-
 export const findCheapestRoundTrip = async (
   from: IataCode,
   to: IataCode,

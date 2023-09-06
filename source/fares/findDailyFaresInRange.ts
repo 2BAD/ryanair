@@ -13,7 +13,6 @@ import { getFirstDayOfEachMonthInRange } from '~/helpers/date.ts'
  * @param endDate - The end date of the search range, in yyyy-mm-dd format
  * @param currency - The currency code to use for pricing data (default is EUR)
  */
-
 export const findDailyFaresInRange = async (
   from: IataCode,
   to: IataCode,
