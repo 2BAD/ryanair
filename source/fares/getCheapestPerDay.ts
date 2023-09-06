@@ -6,10 +6,10 @@ import { CheapestFares } from '~/fares/types.ts'
 /**
  * Returns the cheapest one-way fares between two airports for a given month
  *
- * @param from The IATA code of the departure airport
- * @param to The IATA code of the arrival airport
- * @param startDate The start date for the search in the format "YYYY-MM-DD"
- * @param currency The currency to use for the fares
+ * @param from - The IATA code of the departure airport
+ * @param to - The IATA code of the arrival airport
+ * @param startDate - The start date for the search in the format "YYYY-MM-DD"
+ * @param currency - The currency to use for the fares
  */
 
 export const getCheapestPerDay = async (

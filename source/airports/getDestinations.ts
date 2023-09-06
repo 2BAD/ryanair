@@ -5,7 +5,7 @@ import { get } from '~/client/index.ts'
 /**
  * Returns a list of available destinations from an airport
  *
- * @param code The IATA code of the airport
+ * @param code - The IATA code of the airport
  */
 
 export const getDestinations = async (code: IataCode): Promise<Destination[]> => {

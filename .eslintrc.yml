@@ -43,4 +43,5 @@ rules:
   'jsdoc/require-param': ['error', checkDestructured: false]
   'jsdoc/check-param-names': ['error', checkDestructured: false]
   'jsdoc/tag-lines': ['error', 'any', startLines: 1]
+  'jsdoc/require-hyphen-before-param-description': 'error'
   'vitest/no-hooks': ['error', 'allow': ['afterEach']]

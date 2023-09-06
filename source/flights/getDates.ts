@@ -6,8 +6,8 @@ import { StrDate } from '~/date.types.ts'
 /**
  * Returns a list of available flight dates between two airports
  *
- * @param from The IATA code of the departure airport
- * @param to The IATA code of the arrival airport
+ * @param from - The IATA code of the departure airport
+ * @param to - The IATA code of the arrival airport
  */
 
 export const getDates = async (from: IataCode, to: IataCode): Promise<StrDate[]> => {

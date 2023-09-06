@@ -9,12 +9,12 @@ import { isAfterISO } from '~/helpers/date.ts'
 /**
  * Finds the cheapest round trip fares for a given route and date range in a specific currency
  *
- * @param from The IATA code of the origin airport
- * @param to The IATA code of the destination airport
+ * @param from - The IATA code of the origin airport
+ * @param to - The IATA code of the destination airport
  * @param startDate - The start date of the search range, in yyyy-mm-dd format
  * @param endDate - The end date of the search range, in yyyy-mm-dd format
- * @param currency The currency to use for pricing (default: 'EUR')
- * @param limit The maximum number of round trip fares to return (default: 10)
+ * @param currency - The currency to use for pricing (default: 'EUR')
+ * @param limit - The maximum number of round trip fares to return (default: 10)
  * @returns An array of objects representing the cheapest round trip fares found
  */
 
