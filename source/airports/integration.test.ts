@@ -138,7 +138,7 @@ describe('airports', () => {
   })
 
   describe('calculateDistance', () => {
-    it('when passed two set of coordinates \n\t Then should calculate distance between them', async () => {
+    it('when passed two set of coordinates \n\t Then should calculate distance between them', () => {
       expect.assertions(2)
       const from = {
         latitude: 52.3667,
