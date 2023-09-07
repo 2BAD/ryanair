@@ -24,7 +24,7 @@ export const Country = z.object({
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Country = z.infer<typeof Country>
 
-const Coordinates = z.object({
+export const Coordinates = z.object({
   latitude: z.number(),
   longitude: z.number()
 })

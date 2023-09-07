@@ -1,4 +1,5 @@
 import * as airports from '~/airports/index.ts'
+import { type Airport } from '~/airports/types.ts'
 import * as client from '~/client/index.ts'
 
 describe('airports', () => {
@@ -133,6 +134,20 @@ describe('airports', () => {
       const from = 'BER' // Berlin airport
       const to = 'WRONG_IATA'
       await expect(airports.findRoutes(from, to)).rejects.toThrow('Response code 404 (Not Found)')
+    })
+  })
+
+  describe('calculateDistance', () => {
+    it('when passed two airport objects \n\t Then should calculate distance between them', async () => {
+      expect.assertions(2)
+      const activeAirports = await airports.getActive()
+      const airportsMap = new Map(activeAirports.map((a) => [a.code, a]))
+      const from = airportsMap.get('BER') as Airport // Berlin airport
+      const to = airportsMap.get('KRK') as Airport // Krakow airport
+      const distance = airports.calculateDistance([from, to])
+
+      expect(distance).toBeGreaterThan(505800)
+      expect(distance).toBeLessThan(506000)
     })
   })
 })
