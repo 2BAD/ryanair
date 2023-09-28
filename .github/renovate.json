@@ -15,10 +15,7 @@
       "automergeType": "branch"
     },
     {
-      "matchUpdateTypes": ["major"],
-      "matchDepTypes": ["dependencies", "devDependencies", "action"],
-      "automerge": false,
-      "automergeType": "branch"
+      "matchUpdateTypes": ["major"]
     }
   ]
 }
