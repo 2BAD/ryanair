@@ -17,6 +17,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [6.0.0] - 2023-07-20
+
+- Rolled back to `got` based client since cookie modification is impossible with `fetch`.
+- Prefixed methods that require multiple API calls and computations with `find...`:
+  - `getCheapestRoundTrip()` -> `findCheapestRoundTrip()`
+  - `getDailyFaresInRange()` -> `findDailyFaresInRange()`
+
+### Added
+
+- Implemented debounce to limit requests at a rate of 100 per minute.
+- Added `airports.findRoutes()` - to find available routes between two airports.
+- Added `airports.calculateDistance()` - calculates distance between two geo points using the haversine formula.
+
+### Fixed
+
+- Used spoofed cookie value to circumvent API restrictions.
+
 ## [5.0.0] - 2023-07-20
 
 ### Breaking Changes

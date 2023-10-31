@@ -8,13 +8,6 @@
 
 Unofficial typescript client for the Ryanair API that allows you to easily retrieve information about airports, flights and prices.
 
-## ✨ Features
-
-- 🔥 No bullshit.
-- 📝 Strongly-typed client that provides compile-time errors, along with IntelliSense for methods, property names, types, and descriptions.
-- 🔍 Extension of the original API that allows you to easily find the cheapest tickets, non-direct flight connections, etc.
-- 🍪 Automatically handles cookies and sessions.
-
 ## Install
 
 ```shell

@@ -4,7 +4,7 @@ import { debounce } from '~/client/hooks/debounce.ts'
 export const DELAY_MS: number | [number, number] = 500
 
 /**
- * Extend `got` http client so every time request is made we check if there is a `rid.sig` cookie
+ * Extend `got` http client so every time request is made there is a `rid.sig` cookie
  * that is needed for certain endpoints to work
  *
  * @returns A promise that resolves with the response data or rejects with an error
