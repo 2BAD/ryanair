@@ -1,6 +1,7 @@
 import { type IataCode } from '~/airports/types.ts'
 import { get } from '~/client/index.ts'
 import { type StrDate } from '~/date.types.ts'
+import { FARE_FINDER_API } from '~/endpoints.ts'
 import { CheapestFares } from '~/fares/types.ts'
 
 /**
@@ -17,7 +18,7 @@ export const getCheapestPerDay = async (
   startDate: StrDate,
   currency = 'EUR'
 ): Promise<CheapestFares> => {
-  const url = `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
+  const url = `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
   const data = await get(url)
   const fares = CheapestFares.parse(data)
   return fares

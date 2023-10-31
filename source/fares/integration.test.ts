@@ -1,4 +1,5 @@
 import * as client from '~/client/index.ts'
+import { FARE_FINDER_API } from '~/endpoints.ts'
 import { findCheapestRoundTrip, findDailyFaresInRange, getCheapestPerDay } from '~/fares/index.ts'
 import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
 
@@ -14,7 +15,7 @@ describe('fares', () => {
       await getCheapestPerDay(from, to, startDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
+        `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
       )
     })
 
@@ -56,7 +57,7 @@ describe('fares', () => {
       await findDailyFaresInRange(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
+        `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })
 
@@ -102,7 +103,7 @@ describe('fares', () => {
       await findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
+        `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })
 

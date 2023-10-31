@@ -1,4 +1,5 @@
 import { get } from '~/client/index.ts'
+import { BOOKING_API } from '~/endpoints.ts'
 import { AvailabilityResponse, type AvailabilityOptions } from '~/flights/types.ts'
 import { tomorrow } from '~/helpers/date.ts'
 
@@ -47,7 +48,7 @@ export const getAvailable = async (params: Partial<AvailabilityOptions>): Promis
 
   const urlParams = new URLSearchParams({ ...defaults, ...params })
 
-  const url = `https://www.ryanair.com/api/booking/v4/en-gb/availability?${urlParams.toString()}`
+  const url = `${BOOKING_API}/availability?${urlParams.toString()}`
 
   const data = await get(url)
   const availabilities = AvailabilityResponse.parse(data)

@@ -1,6 +1,7 @@
 import * as airports from '~/airports/index.ts'
 import { type Airport } from '~/airports/types.ts'
 import * as client from '~/client/index.ts'
+import { VIEWS_API } from '~/endpoints.ts'
 
 describe('airports', () => {
   afterEach(() => {
@@ -50,9 +51,7 @@ describe('airports', () => {
       const code = 'BER'
       await airports.getDestinations(code)
 
-      expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${code}`
-      )
+      expect(getSpy).toHaveBeenCalledWith(`${VIEWS_API}/searchWidget/routes/en/airport/${code}`)
     })
     it('when asked for destinations from a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
@@ -73,7 +72,7 @@ describe('airports', () => {
       const code = 'BER'
       await airports.getInfo(code)
 
-      expect(getSpy).toHaveBeenCalledWith(`https://www.ryanair.com/api/views/locate/5/airports/en/${code}`)
+      expect(getSpy).toHaveBeenCalledWith(`${VIEWS_API}/5/airports/en/${code}`)
     })
     it('when asked for info on specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
@@ -95,14 +94,8 @@ describe('airports', () => {
       const to = 'KRK' // Krakow airport
       await airports.findRoutes(from, to)
 
-      expect(getSpy).toHaveBeenNthCalledWith(
-        1,
-        `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${from}`
-      )
-      expect(getSpy).toHaveBeenNthCalledWith(
-        2,
-        `https://www.ryanair.com/api/views/locate/searchWidget/routes/en/airport/${to}`
-      )
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${VIEWS_API}/searchWidget/routes/en/airport/${from}`)
+      expect(getSpy).toHaveBeenNthCalledWith(2, `${VIEWS_API}/searchWidget/routes/en/airport/${to}`)
       expect(getSpy).toHaveBeenCalledTimes(2)
     })
     it('when asked for specific route between two airports \n\t Then should be able to retrieve data and parse it', async () => {

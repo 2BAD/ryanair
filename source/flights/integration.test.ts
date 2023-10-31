@@ -1,4 +1,5 @@
 import * as client from '~/client/index.ts'
+import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
 import { getAvailable, getDates } from '~/flights/index.ts'
 import { tomorrow } from '~/helpers/date.ts'
 
@@ -12,9 +13,7 @@ describe('flights', () => {
 
       await getDates(from, to)
 
-      expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/farfnd/v4/oneWayFares/${from}/${to}/availabilities`
-      )
+      expect(getSpy).toHaveBeenCalledWith(`${FARE_FINDER_API}/oneWayFares/${from}/${to}/availabilities`)
     })
 
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
@@ -62,9 +61,7 @@ describe('flights', () => {
 
       await getAvailable(options)
 
-      expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/booking/v4/en-gb/availability?${urlParams.toString()}`
-      )
+      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided single parameter \n\t Then should fallback to defaults', async () => {
@@ -94,9 +91,7 @@ describe('flights', () => {
 
       await getAvailable(options)
 
-      expect(getSpy).toHaveBeenCalledWith(
-        `https://www.ryanair.com/api/booking/v4/en-gb/availability?${urlParams.toString()}`
-      )
+      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided asked for a valid destination \n\t Then should be able to retrieve data and parse it', async () => {
