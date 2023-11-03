@@ -17,7 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [6.0.0] - 2023-07-20
+## [6.0.1] - 2023-11-03
+
+### Fixed
+
+- Addressed an issue where both `swc` and `tsc` were generating module specifiers with the `.ts` extension by utilizing the `fix-ext.sh` script
+
+## [6.0.0] - 2023-10-31
 
 ### Breaking Changes
 
@@ -120,9 +126,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2017-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v5.0.0...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v6.0.1...HEAD
+[6.0.1]: https://github.com/2BAD/ryanair/compare/v6.0.0...v1.0.0
+[6.0.0]: https://github.com/2BAD/ryanair/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/2BAD/ryanair/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/2BAD/ryanair/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/2BAD/ryanair/compare/v2.0.0...v3.0.0
+[2.0.2]: https://github.com/2BAD/ryanair/compare/v2.0.1...v2.0.2
+[2.0.1]: https://github.com/2BAD/ryanair/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/2BAD/ryanair/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/2BAD/ryanair/releases/tag/v1.0.0
