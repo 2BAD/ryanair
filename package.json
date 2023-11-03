@@ -1,6 +1,6 @@
 {
   "name": "@2bad/ryanair",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Unofficial typescript client for the Ryanair API that allows you to easily retrieve information about airports, flights and prices.",
   "keywords": [
     "api-client",
