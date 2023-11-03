@@ -1,6 +1,13 @@
+root: true
+
 parser: '@typescript-eslint/parser'
 parserOptions:
-  project: './tsconfig.json'
+  project: true
+
+settings:
+  import/resolver:
+    typescript: true
+    node: true
 
 ignorePatterns:
   - 'build'
@@ -13,9 +20,9 @@ plugins:
 
 extends:
   - 'eslint:recommended'
-  - 'plugin:@typescript-eslint/recommended'
-  - 'plugin:@typescript-eslint/recommended-requiring-type-checking'
-  - 'plugin:@typescript-eslint/strict'
+  - 'plugin:@typescript-eslint/recommended-type-checked'
+  - 'plugin:@typescript-eslint/stylistic-type-checked'
+  - 'plugin:@typescript-eslint/strict-type-checked'
   - 'standard-with-typescript'
   - 'plugin:promise/recommended'
   - 'plugin:import/recommended'
@@ -24,11 +31,6 @@ extends:
   - 'plugin:prettier/recommended'
   - 'plugin:jsdoc/recommended-typescript-error'
   - 'plugin:vitest/all'
-
-settings:
-  import/resolver:
-    typescript: true
-    node: true
 
 rules:
   '@typescript-eslint/consistent-type-definitions': ['error', 'type']
