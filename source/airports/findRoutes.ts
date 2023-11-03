@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import * as airports from '~/airports/index.ts'
-import { IataCode, type Destination } from './types.js'
+import { IataCode, type Destination } from './types.ts'
 
 /**
  * Retrieves IATA codes from an array of destinations.
