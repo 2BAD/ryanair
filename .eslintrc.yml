@@ -35,6 +35,7 @@ extends:
 rules:
   '@typescript-eslint/consistent-type-definitions': ['error', 'type']
   '@typescript-eslint/strict-boolean-expressions': ['error', allowNullableObject: true]
+  '@typescript-eslint/non-nullable-type-assertion-style': 'off'
   '@typescript-eslint/promise-function-async': 'off'
   'import/no-default-export': 'error'
   'import/no-unresolved': 'error'
