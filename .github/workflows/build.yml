@@ -16,16 +16,16 @@ jobs:
         node-version: ['18', '20', '21']
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run check
       - run: npm run test:unit
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unit
