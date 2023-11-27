@@ -3,21 +3,24 @@
   "extends": ["config:best-practices", "schedule:weekly", "group:allNonMajor", ":pinAllExceptPeerDependencies"],
   "rebaseWhen": "behind-base-branch",
   "commitMessageLowerCase": "auto",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": "after 4am on Monday"
-  },
+  "automerge": true,
+  "automergeType": "branch",
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchDepTypes": ["dependencies", "devDependencies", "action"],
-      "automerge": true,
-      "automergeType": "branch",
-      "schedule": "before 4am on Monday"
+      "schedule": "before 3am on Monday",
+      "automergeSchedule": "after 3am and before 4am on Monday"
     },
     {
-      "matchUpdateTypes": ["major"]
+      "matchUpdateTypes": ["major"],
+      "schedule": "every month on the first Monday of the month",
+      "automerge": false
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "after 4am and before 5am on Monday",
+    "automergeSchedule": "after 5am and before 6am on Monday"
+  }
 }
