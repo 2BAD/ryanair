@@ -43,8 +43,8 @@
     "check:format": "prettier --check 'source/**/*.ts'",
     "fix": "run-s fix:code fix:format",
     "fix:alias": "tsc-alias -p tsconfig.build.json",
-    "fix:ext": "./fix-ext.sh",
     "fix:code": "run-s 'lint -- --fix'",
+    "fix:ext": "./fix-ext.sh",
     "fix:format": "prettier --write 'source/**/*.ts'",
     "postbuild": "run-s fix:alias fix:ext",
     "prebuild": "rimraf build",
@@ -98,6 +98,8 @@
     "node": ">=18"
   },
   "volta": {
-    "node": "20.10.0"
-  }
+    "node": "20.10.0",
+    "npm": "10.2.4"
+  },
+  "packageManager": "npm@10.2.4"
 }
