@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
 [![License](https://img.shields.io/npm/l/@2bad/ryanair)](https://www.npmjs.com/package/@2bad/ryanair)
-[![GitHub Build Status](https://img.shields.io/github/actions/workflow/status/2BAD/ryanair/integration.yml)](https://github.com/2BAD/ryanair/actions/workflows/integration.yml)
+[![GitHub Build Status](https://img.shields.io/github/actions/workflow/status/2BAD/ryanair/build.yml)](https://github.com/2BAD/ryanair/actions/workflows/build.yml)
 [![Code coverage](https://img.shields.io/codecov/c/github/2BAD/ryanair)](https://codecov.io/gh/2BAD/ryanair)
 [![Written in TypeScript](https://img.shields.io/github/languages/top/2BAD/ryanair)](https://github.com/2BAD/ryanair/search?l=typescript)
 
