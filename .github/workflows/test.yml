@@ -1,4 +1,4 @@
-name: Integration
+name: Test
 
 on:
   push:
@@ -10,12 +10,18 @@ on:
 
 jobs:
   test:
-    name: node@${{ matrix.node-version }}
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: ['18', '20', '21']
+        node-version:
+          - 18
+          - 20
+          - 21
+        os-release:
+          - ubuntu-latest
+          - windows-latest
+
+    runs-on: ${{ matrix.os-release }}
+    name: ${{ matrix.os-release }}-node@${{ matrix.node-version }}
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
@@ -24,7 +30,17 @@ jobs:
       - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - run: npm ci
+
+      - run: npm run test:unit
+      - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unit
+
+      - run: rm -rf coverage
+
       - run: npm run test:integration
       - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
         with:
