@@ -9,8 +9,7 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchDepTypes": ["dependencies", "devDependencies", "action"],
-      "schedule": "before 3am on Monday",
-      "automergeSchedule": "after 3am and before 4am on Monday"
+      "schedule": "before 3am on Monday"
     },
     {
       "matchUpdateTypes": ["major"],
@@ -20,7 +19,6 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": "after 4am and before 5am on Monday",
-    "automergeSchedule": "after 5am and before 6am on Monday"
+    "schedule": "after 4am on Monday"
   }
 }
