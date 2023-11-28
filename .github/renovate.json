@@ -14,7 +14,7 @@
     },
     {
       "matchUpdateTypes": ["major"],
-      "schedule": "every month on the first Monday of the month",
+      "schedule": "every 4 weeks on Monday",
       "automerge": false
     }
   ],
