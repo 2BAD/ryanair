@@ -1,5 +1,8 @@
 import { StrDate } from '~/date.types.ts'
+import { type Fare } from '~/fares/types.ts'
 import { getFirstDayOfEachMonthInRange, nextMonth, tomorrow } from '~/helpers/date.ts'
+import { getFarePrice } from '~/helpers/fares.ts'
+import { extractCoordinates, type Location } from './location.ts'
 
 describe('date', () => {
   describe('tomorrow', () => {
@@ -73,16 +76,104 @@ describe('date', () => {
       ])
     })
   })
+})
 
-  describe('zod StrDate type', () => {
-    it('should pass zod type validation', () => {
-      const dateString = '2022-01-31'
-      expect(StrDate.parse(dateString)).toStrictEqual(dateString)
-    })
+describe('zod StrDate type', () => {
+  it('should pass zod type validation', () => {
+    const dateString = '2022-01-31'
+    expect(StrDate.parse(dateString)).toStrictEqual(dateString)
+  })
 
-    it('should throw error for wrong date string format', () => {
-      const dateString = '2022/01/31'
-      expect(() => StrDate.parse(dateString)).toThrowErrorMatchingSnapshot()
-    })
+  it('should throw error for wrong date string format', () => {
+    const dateString = '2022/01/31'
+    expect(() => StrDate.parse(dateString)).toThrowErrorMatchingSnapshot()
+  })
+})
+
+describe('getFarePrice', () => {
+  it('should return 0 if Fare price is null', () => {
+    const fare: Fare = {
+      day: '2023-09-01',
+      arrivalDate: '2023-09-01T12:40:00',
+      departureDate: '2023-09-01T11:15:00',
+      price: null,
+      soldOut: false,
+      unavailable: false
+    }
+    expect(getFarePrice(fare)).toBe(0)
+  })
+
+  it('should return Fare price if not null', () => {
+    const fare: Fare = {
+      day: '2023-09-01',
+      arrivalDate: '2023-09-01T12:40:00',
+      departureDate: '2023-09-01T11:15:00',
+      price: {
+        value: 56.12,
+        valueMainUnit: '56',
+        valueFractionalUnit: '12',
+        currencyCode: 'EUR',
+        currencySymbol: '€'
+      },
+      soldOut: false,
+      unavailable: false
+    }
+    expect(getFarePrice(fare)).toBe(56.12)
+  })
+})
+
+describe('extractCoordinates', () => {
+  it('should extract coordinates from Airport object', () => {
+    const airport = {
+      code: 'BER',
+      name: 'Berlin Brandenburg',
+      seoName: 'brandenburg',
+      aliases: [],
+      base: true,
+      city: {
+        name: 'Berlin',
+        code: 'BERLIN',
+        macCode: 'BER'
+      },
+      macCity: {
+        name: 'Berlin',
+        code: 'BERLIN',
+        macCode: 'BER'
+      },
+      region: {
+        name: 'Berlin-Brandenburg',
+        code: 'BERLIN-BRANDENBURG'
+      },
+      country: {
+        code: 'de',
+        iso3code: 'DEU',
+        name: 'Germany',
+        currency: 'EUR',
+        defaultAirportCode: 'HHN',
+        schengen: true
+      },
+      coordinates: {
+        latitude: 52.3667,
+        longitude: 13.5033
+      },
+      timeZone: 'Europe/Berlin'
+    }
+
+    expect(extractCoordinates(airport)).toStrictEqual(airport.coordinates)
+  })
+
+  it('should extract coordinates from Location object', () => {
+    const coordinates = {
+      latitude: 52.3667,
+      longitude: 13.5033
+    }
+    expect(extractCoordinates(coordinates)).toStrictEqual(coordinates)
+  })
+
+  it('should throw an error when provided with wrong data', () => {
+    const badInput = { unexpectedField: true }
+    expect(() => extractCoordinates(badInput as unknown as Location)).toThrow(
+      'Unable to extract coordinates from location: ' + JSON.stringify(badInput)
+    )
   })
 })
