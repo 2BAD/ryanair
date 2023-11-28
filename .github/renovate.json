@@ -1,24 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", "schedule:weekly", "group:allNonMajor", ":pinAllExceptPeerDependencies"],
-  "rebaseWhen": "behind-base-branch",
-  "commitMessageLowerCase": "auto",
-  "automerge": true,
-  "automergeType": "branch",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchDepTypes": ["dependencies", "devDependencies", "action"],
-      "schedule": "before 3am on Monday"
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "schedule": "every 4 weeks on Monday",
-      "automerge": false
-    }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": "after 4am on Monday"
-  }
+  "extends": [
+    "config:best-practices",
+    "group:allNonMajor",
+    "schedule:weekly",
+    "schedule:automergeWeekly",
+    ":automergeAll",
+    ":automergeBranch",
+    ":approveMajorUpdates",
+    ":maintainLockFilesWeekly",
+    ":pinAllExceptPeerDependencies",
+    ":rebaseStalePrs",
+    "helpers:pinGitHubActionDigests"
+  ]
 }
