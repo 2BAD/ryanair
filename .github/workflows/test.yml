@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: ${{ matrix.os-release }}-node@${{ matrix.node-version }}
+    name: test on ${{ matrix.os-release }} node@${{ matrix.node-version }}
     runs-on: ${{ matrix.os-release }}
 
     strategy:

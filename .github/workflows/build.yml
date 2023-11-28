@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: node@${{ matrix.node-version }}
+    name: build on node@${{ matrix.node-version }}
     runs-on: ubuntu-latest
 
     strategy:
