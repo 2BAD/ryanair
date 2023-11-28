@@ -10,6 +10,9 @@ on:
 
 jobs:
   test:
+    name: ${{ matrix.os-release }}-node@${{ matrix.node-version }}
+    runs-on: ${{ matrix.os-release }}
+
     strategy:
       matrix:
         node-version:
@@ -20,9 +23,6 @@ jobs:
           - ubuntu-latest
           - windows-latest
 
-    runs-on: ${{ matrix.os-release }}
-    name: ${{ matrix.os-release }}-node@${{ matrix.node-version }}
-
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
@@ -30,6 +30,20 @@ jobs:
       - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
         with:
           node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+      - run: npm run test
+
+  coverage:
+    name: collect coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
+        with:
+          node-version-file: 'package.json'
 
       - run: npm ci
 
