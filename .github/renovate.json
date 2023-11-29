@@ -1,16 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices",
-    "group:allNonMajor",
-    "schedule:weekly",
-    "schedule:automergeWeekly",
-    ":automergeAll",
-    ":automergeBranch",
-    ":approveMajorUpdates",
-    ":maintainLockFilesWeekly",
-    ":pinAllExceptPeerDependencies",
-    ":rebaseStalePrs",
-    "helpers:pinGitHubActionDigests"
-  ]
+  "extends": ["github>2bad/renovate-config:default"]
 }
