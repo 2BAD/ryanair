@@ -51,7 +51,6 @@ describe('fares', () => {
       const currency = 'EUR'
 
       const [year, month] = startDate.split('-')
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       const firstDayOfMonth = `${year}-${month}-01`
 
       await findDailyFaresInRange(from, to, startDate, endDate, currency)

@@ -39,7 +39,7 @@
     "build:swc": "swc ./source -d ./build",
     "build:types": "tsc --project tsconfig.build.json",
     "check": "run-p check:*",
-    "check:code": "eslint . --ext .ts",
+    "check:code": "eslint . --ext .ts --report-unused-disable-directives --max-warnings 0",
     "check:format": "prettier --check 'source/**/*.ts'",
     "fix": "run-s fix:code fix:format",
     "fix:alias": "tsc-alias -p tsconfig.build.json",
