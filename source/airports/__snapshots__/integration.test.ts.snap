@@ -625,6 +625,38 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
   {
     "arrivalAirport": {
       "aliases": [],
+      "base": false,
+      "city": {
+        "code": "DUBROVNIK",
+        "name": "Dubrovnik",
+      },
+      "code": "DBV",
+      "coordinates": {
+        "latitude": 42.5614,
+        "longitude": 18.2683,
+      },
+      "country": {
+        "code": "hr",
+        "currency": "EUR",
+        "defaultAirportCode": "ZAD",
+        "name": "Croatia",
+      },
+      "name": "Dubrovnik",
+      "region": {
+        "code": "DEFAULT_HR",
+        "name": "Default HR",
+      },
+      "seoName": "dubrovnik",
+      "timeZone": "Europe/Zagreb",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
       "base": true,
       "city": {
         "code": "DUBLIN",
