@@ -333,6 +333,38 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       "aliases": [],
       "base": true,
       "city": {
+        "code": "BIRMINGHAM",
+        "name": "Birmingham",
+      },
+      "code": "BHX",
+      "coordinates": {
+        "latitude": 52.4539,
+        "longitude": -1.74803,
+      },
+      "country": {
+        "code": "gb",
+        "currency": "GBP",
+        "defaultAirportCode": "STN",
+        "name": "United Kingdom",
+      },
+      "name": "Birmingham",
+      "region": {
+        "code": "ENGLAND",
+        "name": "England",
+      },
+      "seoName": "birmingham",
+      "timeZone": "Europe/London",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
         "code": "BILLUND",
         "name": "Billund",
       },
@@ -974,6 +1006,38 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "seoName": "krakow",
       "timeZone": "Europe/Warsaw",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": true,
+      "city": {
+        "code": "KAUNAS",
+        "name": "Kaunas",
+      },
+      "code": "KUN",
+      "coordinates": {
+        "latitude": 54.9639,
+        "longitude": 24.0848,
+      },
+      "country": {
+        "code": "lt",
+        "currency": "EUR",
+        "defaultAirportCode": "KUN",
+        "name": "Lithuania",
+      },
+      "name": "Kaunas",
+      "region": {
+        "code": "KAUNAS",
+        "name": "Kaunas",
+      },
+      "seoName": "kaunas",
+      "timeZone": "Europe/Vilnius",
     },
     "operator": "FR",
     "recent": true,
