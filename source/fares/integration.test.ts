@@ -7,6 +7,7 @@ describe('fares', () => {
   describe('getCheapestPerDay', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -14,13 +15,15 @@ describe('fares', () => {
       const currency = 'EUR'
       await getCheapestPerDay(from, to, startDate, currency)
 
-      expect(getSpy).toHaveBeenCalledWith(
+      expect(getSpy).toHaveBeenNthCalledWith(
+        1,
         `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${startDate}&currency=${currency}`
       )
     })
 
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -31,6 +34,8 @@ describe('fares', () => {
     })
 
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
+      expect.assertions(1)
+
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -43,6 +48,7 @@ describe('fares', () => {
   describe('findDailyFaresInRange', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -55,13 +61,15 @@ describe('fares', () => {
 
       await findDailyFaresInRange(from, to, startDate, endDate, currency)
 
-      expect(getSpy).toHaveBeenCalledWith(
+      expect(getSpy).toHaveBeenNthCalledWith(
+        1,
         `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })
 
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -74,6 +82,7 @@ describe('fares', () => {
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -88,6 +97,7 @@ describe('fares', () => {
   describe('findCheapestRoundTrip', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
@@ -100,13 +110,15 @@ describe('fares', () => {
 
       await findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
-      expect(getSpy).toHaveBeenCalledWith(
+      expect(getSpy).toHaveBeenNthCalledWith(
+        1,
         `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })
 
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -119,6 +131,7 @@ describe('fares', () => {
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
       expect.assertions(2)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
@@ -132,6 +145,7 @@ describe('fares', () => {
 
     it('when provided with all parameters \n\t Then should have return trips after departure', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()

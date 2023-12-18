@@ -7,17 +7,19 @@ describe('flights', () => {
   describe('getDates', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
 
       await getDates(from, to)
 
-      expect(getSpy).toHaveBeenCalledWith(`${FARE_FINDER_API}/oneWayFares/${from}/${to}/availabilities`)
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${FARE_FINDER_API}/oneWayFares/${from}/${to}/availabilities`)
     })
 
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
+
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
 
@@ -27,6 +29,7 @@ describe('flights', () => {
 
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
+
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
 
@@ -37,6 +40,7 @@ describe('flights', () => {
   describe('getAvailable', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const options = {
         ADT: '5',
@@ -61,11 +65,12 @@ describe('flights', () => {
 
       await getAvailable(options)
 
-      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided single parameter \n\t Then should fallback to defaults', async () => {
       expect.assertions(1)
+
       const getSpy = vi.spyOn(client, 'get')
       const options = { ADT: '1' }
       const defaults = {
@@ -91,11 +96,12 @@ describe('flights', () => {
 
       await getAvailable(options)
 
-      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided asked for a valid destination \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
+
       const options = {
         ADT: '1',
         DateOut: tomorrow()

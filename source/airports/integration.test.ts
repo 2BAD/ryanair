@@ -50,7 +50,7 @@ describe('airports', () => {
       const code = 'BER'
       await airports.getDestinations(code)
 
-      expect(getSpy).toHaveBeenCalledWith(`${VIEWS_API}/searchWidget/routes/en/airport/${code}`)
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${VIEWS_API}/searchWidget/routes/en/airport/${code}`)
     })
     it('when asked for destinations from a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
@@ -71,7 +71,7 @@ describe('airports', () => {
       const code = 'BER'
       await airports.getInfo(code)
 
-      expect(getSpy).toHaveBeenCalledWith(`${VIEWS_API}/5/airports/en/${code}`)
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${VIEWS_API}/5/airports/en/${code}`)
     })
     it('when asked for info on specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)

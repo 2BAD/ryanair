@@ -4,6 +4,8 @@ import { TIMETABLE_API } from '~/endpoints'
 
 describe('http client', () => {
   it('debounce concurrent requests', async () => {
+    expect.assertions(1)
+
     const API_ENDPOINT = `${TIMETABLE_API}/schedules/period`
     const requests = Array.from({ length: 10 }, () => get(API_ENDPOINT))
 

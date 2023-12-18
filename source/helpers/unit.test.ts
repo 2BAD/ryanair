@@ -7,11 +7,15 @@ import { extractCoordinates, type Location } from './location.ts'
 describe('date', () => {
   describe('tomorrow', () => {
     it('should return a string in YYYY-MM-DD format', () => {
+      expect.assertions(1)
+
       const result = tomorrow()
       expect(result).toMatch(/^\d{4}-\d{2}-\d{2}$/)
     })
 
     it('should return a valid date', () => {
+      expect.assertions(3)
+
       const result = tomorrow()
       const [year, month, day] = result.split('-').map((part) => parseInt(part))
 
@@ -26,11 +30,15 @@ describe('date', () => {
 
   describe('nextMonth', () => {
     it('should return a string in YYYY-MM-DD format', () => {
+      expect.assertions(1)
+
       const result = nextMonth()
       expect(result).toMatch(/^\d{4}-\d{2}-\d{2}$/)
     })
 
     it('should return a valid date', () => {
+      expect.assertions(3)
+
       const result = nextMonth()
       const [year, month, day] = result.split('-').map((part) => parseInt(part))
 
@@ -45,21 +53,29 @@ describe('date', () => {
 
   describe('getFirstDayOfEachMonthInRange', () => {
     it('returns an array', () => {
+      expect.assertions(1)
+
       const result = getFirstDayOfEachMonthInRange('2020-01-01', '2020-12-31')
       expect(Array.isArray(result)).toBeTruthy()
     })
 
     it('throws a RangeError when start date is after end date', () => {
+      expect.assertions(1)
+
       expect(() => getFirstDayOfEachMonthInRange('2021-01-01', '2020-12-31')).toThrow(RangeError)
     })
 
     it('returns an array of length 1 when start and end dates are in the same month', () => {
+      expect.assertions(2)
+
       const result = getFirstDayOfEachMonthInRange('2022-05-15', '2022-05-20')
       expect(result).toHaveLength(1)
       expect(result[0]).toBe('2022-05-01')
     })
 
     it('returns an array containing first day of each month within the given range', () => {
+      expect.assertions(2)
+
       const result = getFirstDayOfEachMonthInRange('2023-06-15', '2024-03-10')
       expect(result).toHaveLength(10)
       expect(result).toStrictEqual([
@@ -80,11 +96,15 @@ describe('date', () => {
 
 describe('zod StrDate type', () => {
   it('should pass zod type validation', () => {
+    expect.assertions(1)
+
     const dateString = '2022-01-31'
     expect(StrDate.parse(dateString)).toStrictEqual(dateString)
   })
 
   it('should throw error for wrong date string format', () => {
+    expect.assertions(1)
+
     const dateString = '2022/01/31'
     expect(() => StrDate.parse(dateString)).toThrowErrorMatchingSnapshot()
   })
@@ -92,6 +112,8 @@ describe('zod StrDate type', () => {
 
 describe('getFarePrice', () => {
   it('should return 0 if Fare price is null', () => {
+    expect.assertions(1)
+
     const fare: Fare = {
       day: '2023-09-01',
       arrivalDate: '2023-09-01T12:40:00',
@@ -104,6 +126,8 @@ describe('getFarePrice', () => {
   })
 
   it('should return Fare price if not null', () => {
+    expect.assertions(1)
+
     const fare: Fare = {
       day: '2023-09-01',
       arrivalDate: '2023-09-01T12:40:00',
@@ -124,6 +148,8 @@ describe('getFarePrice', () => {
 
 describe('extractCoordinates', () => {
   it('should extract coordinates from Airport object', () => {
+    expect.assertions(1)
+
     const airport = {
       code: 'BER',
       name: 'Berlin Brandenburg',
@@ -163,6 +189,8 @@ describe('extractCoordinates', () => {
   })
 
   it('should extract coordinates from Location object', () => {
+    expect.assertions(1)
+
     const coordinates = {
       latitude: 52.3667,
       longitude: 13.5033
@@ -171,6 +199,8 @@ describe('extractCoordinates', () => {
   })
 
   it('should throw an error when provided with wrong data', () => {
+    expect.assertions(1)
+
     const badInput = { unexpectedField: true }
     expect(() => extractCoordinates(badInput as unknown as Location)).toThrow(
       'Unable to extract coordinates from location: ' + JSON.stringify(badInput)
