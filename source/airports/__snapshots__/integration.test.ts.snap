@@ -427,38 +427,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
   {
     "arrivalAirport": {
       "aliases": [],
-      "base": false,
-      "city": {
-        "code": "BANJA_LUKA",
-        "name": "Banja Luka",
-      },
-      "code": "BNX",
-      "coordinates": {
-        "latitude": 44.5629,
-        "longitude": 17.1731,
-      },
-      "country": {
-        "code": "ba",
-        "currency": "EUR",
-        "defaultAirportCode": "BNX",
-        "name": "Bosnia & Herzegovina",
-      },
-      "name": "Banja Luka",
-      "region": {
-        "code": "DEFAULT_BA",
-        "name": "Default BA",
-      },
-      "seoName": "banja_luka",
-      "timeZone": "Europe/Sarajevo",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
       "base": true,
       "city": {
         "code": "BARI",

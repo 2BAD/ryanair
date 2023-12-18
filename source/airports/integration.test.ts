@@ -1,5 +1,4 @@
 import * as airports from '~/airports/index.ts'
-import { type Airport } from '~/airports/types.ts'
 import * as client from '~/client/index.ts'
 import { VIEWS_API } from '~/endpoints.ts'
 
@@ -148,10 +147,8 @@ describe('airports', () => {
     })
     it('when passed two airport objects \n\t Then should calculate distance between them', async () => {
       expect.assertions(2)
-      const activeAirports = await airports.getActive()
-      const airportsMap = new Map(activeAirports.map((a) => [a.code, a]))
-      const from = airportsMap.get('BER') as Airport // Berlin airport
-      const to = airportsMap.get('KRK') as Airport // Krakow airport
+      const from = await airports.getInfo('BER') // Berlin airport
+      const to = await airports.getInfo('KRK') // Krakow airport
       const distance = airports.calculateDistance([from, to])
 
       expect(distance).toBeGreaterThan(505800)
