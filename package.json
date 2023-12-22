@@ -61,7 +61,7 @@
     "trailingComma": "none"
   },
   "dependencies": {
-    "date-fns": "2.30.0",
+    "date-fns": "3.0.6",
     "fast-cartesian": "9.0.0",
     "got": "14.0.0",
     "tough-cookie": "4.1.3",
