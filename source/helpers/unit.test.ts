@@ -59,10 +59,12 @@ describe('date', () => {
       expect(Array.isArray(result)).toBeTruthy()
     })
 
-    it('throws a RangeError when start date is after end date', () => {
-      expect.assertions(1)
+    it('returns a reversed array when start date is after end date', () => {
+      expect.assertions(2)
 
-      expect(() => getFirstDayOfEachMonthInRange('2021-01-01', '2020-12-31')).toThrow(RangeError)
+      const result = getFirstDayOfEachMonthInRange('2021-01-01', '2020-12-31')
+      expect(result).toHaveLength(2)
+      expect(result[1]).toBe('2020-12-01')
     })
 
     it('returns an array of length 1 when start and end dates are in the same month', () => {
