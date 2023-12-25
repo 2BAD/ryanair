@@ -40,8 +40,15 @@ export const isAfterISO = (firstDate: string, secondDate: string): boolean => {
  *
  * @param startDate - The start date of the range (formatted as 'YYYY-MM-DD')
  * @param endDate - The end date of the range (formatted as 'YYYY-MM-DD')
+ * @throws {RangeError} - Start date must be before the end date.
  */
 export const getFirstDayOfEachMonthInRange = (startDate: StrDate, endDate: StrDate): StrDate[] => {
-  const dates = eachMonthOfInterval({ start: new Date(startDate), end: new Date(endDate) })
-  return dates.map((d) => format(d, 'yyyy-MM-01'))
+  const start = new Date(startDate)
+  const end = new Date(endDate)
+
+  if (start > end) {
+    throw new RangeError('Invalid date range. The start date must be before the end date.')
+  }
+
+  return eachMonthOfInterval({ start, end }).map((d) => format(d, 'yyyy-MM-01'))
 }
