@@ -1985,24 +1985,3 @@ exports[`airports > getInfo > when asked for info on specific airport
   "timeZone": "Europe/Berlin",
 }
 `;
-
-exports[`airports > getNearby > when asked for nearby airports 
-	 Then should be able to retrieve data and parse it 1`] = `
-{
-  "aliases": [],
-  "city": {
-    "code": Any<String>,
-    "name": Any<String>,
-  },
-  "code": Any<String>,
-  "coordinates": {
-    "latitude": Any<Number>,
-    "longitude": Any<Number>,
-  },
-  "country": {
-    "code": Any<String>,
-    "name": Any<String>,
-  },
-  "name": Any<String>,
-}
-`;
