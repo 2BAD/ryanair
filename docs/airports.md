@@ -7,6 +7,8 @@ Source code: [`source/airports/`](../source/airports/)
   - [getClosest()](#getclosest)
   - [getDestinations(code: IataCode)](#getdestinationscode-iatacode)
   - [getInfo(code: IataCode)](#getinfocode-iatacode)
+  - [getNearby()](#getnearby)
+  - [getSchedules()](#getschedules)
   - [findRoutes(from: IataCode, to: IataCode)](#findroutesfrom-iatacode-to-iatacode)
 
 ## <code>getActive()</code>
@@ -59,6 +61,30 @@ Returns information about an airport.
 import { airports } from '@2bad/ryanair'
 
 const info = await airports.getInfo('BER')
+```
+
+## <code>getNearby()</code>
+
+Returns information about the nearby airports based on the user's IP address.
+
+**Returns: `Promise<AirportShort[]>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const airports = await airports.getNearby()
+```
+
+## <code>getSchedules()</code>
+
+Returns a list of available flight schedules departing from an airport.
+
+**Returns: `Promise<Schedules>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const schedules = await airports.getSchedules()
 ```
 
 ## <code>findRoutes(from: IataCode, to: IataCode)</code>
