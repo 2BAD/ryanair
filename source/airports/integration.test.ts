@@ -1,6 +1,6 @@
 import * as airports from '~/airports/index.ts'
 import * as client from '~/client/index.ts'
-import { VIEWS_API } from '~/endpoints.ts'
+import { TIMETABLE_API, VIEWS_API } from '~/endpoints.ts'
 
 describe('airports', () => {
   afterEach(() => {
@@ -82,6 +82,30 @@ describe('airports', () => {
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
       await expect(airports.getInfo('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
+    })
+  })
+
+  describe('getSchedules', () => {
+    it('when passed iata code ', async () => {
+      expect.assertions(1)
+      const getSpy = vi.spyOn(client, 'get')
+      const code = 'BER'
+      await airports.getSchedules(code)
+
+      expect(getSpy).toHaveBeenNthCalledWith(1, `${TIMETABLE_API}/schedules/${code}/periods`)
+    })
+    it('when asked for schedules for a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
+      expect.assertions(4)
+
+      const data = await airports.getSchedules('BER')
+      expect(data['BRU']).haveOwnProperty('firstFlightDate')
+      expect(data['BRU']).haveOwnProperty('lastFlightDate')
+      expect(data['BRU']).haveOwnProperty('months')
+      expect(data['BRU']).haveOwnProperty('monthsFromToday')
+    })
+    it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
+      expect.assertions(1)
+      await expect(airports.getSchedules('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
     })
   })
 

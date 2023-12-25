@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { StrDate } from '~/date.types.ts'
 
 export const IataCode = z
   .string()
@@ -76,3 +77,16 @@ export const Destination = z.object({
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Destination = z.infer<typeof Destination>
+
+export const Schedule = z.object({
+  firstFlightDate: StrDate,
+  lastFlightDate: StrDate,
+  months: z.number(),
+  monthsFromToday: z.number()
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type Schedule = z.infer<typeof Schedule>
+
+export const Schedules = z.record(z.string(), Schedule)
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type Schedules = z.infer<typeof Schedules>
