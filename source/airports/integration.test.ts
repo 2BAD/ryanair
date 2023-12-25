@@ -2,6 +2,26 @@ import * as airports from '~/airports/index.ts'
 import * as client from '~/client/index.ts'
 import { TIMETABLE_API, VIEWS_API } from '~/endpoints.ts'
 
+const AirportShortSnapshot = {
+  /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+  aliases: [],
+  city: {
+    code: expect.any(String),
+    name: expect.any(String)
+  },
+  code: expect.any(String),
+  coordinates: {
+    latitude: expect.any(Number),
+    longitude: expect.any(Number)
+  },
+  country: {
+    code: expect.any(String),
+    name: expect.any(String)
+  },
+  name: expect.any(String)
+  /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+}
+
 describe('airports', () => {
   afterEach(() => {
     vi.restoreAllMocks()
@@ -21,25 +41,16 @@ describe('airports', () => {
       expect.assertions(1)
 
       const data = await airports.getClosest()
-      expect(data).toMatchSnapshot({
-        /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-        aliases: [],
-        city: {
-          code: expect.any(String),
-          name: expect.any(String)
-        },
-        code: expect.any(String),
-        coordinates: {
-          latitude: expect.any(Number),
-          longitude: expect.any(Number)
-        },
-        country: {
-          code: expect.any(String),
-          name: expect.any(String)
-        },
-        name: expect.any(String)
-        /* eslint-enable @typescript-eslint/no-unsafe-assignment */
-      })
+      expect(data).toMatchSnapshot(AirportShortSnapshot)
+    })
+  })
+
+  describe('getNearby', () => {
+    it('when asked for nearby airports \n\t Then should be able to retrieve data and parse it', async () => {
+      expect.assertions(1)
+
+      const data = await airports.getNearby()
+      expect(data[0]).toMatchSnapshot(AirportShortSnapshot)
     })
   })
 
