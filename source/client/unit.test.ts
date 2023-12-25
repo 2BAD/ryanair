@@ -1,6 +1,6 @@
 import { performance } from 'node:perf_hooks'
 import { DELAY_MS, get } from '~/client/index.ts'
-import { TIMETABLE_API } from '~/endpoints'
+import { TIMETABLE_API } from '~/endpoints.ts'
 
 describe('http client', () => {
   it('debounce concurrent requests', async () => {
