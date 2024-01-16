@@ -529,6 +529,43 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
   {
     "arrivalAirport": {
       "aliases": [],
+      "base": false,
+      "city": {
+        "code": "CASTELLON",
+        "name": "Castellon",
+      },
+      "code": "CDT",
+      "coordinates": {
+        "latitude": 39.999,
+        "longitude": 0.026,
+      },
+      "country": {
+        "code": "es",
+        "currency": "EUR",
+        "defaultAirportCode": "BCN",
+        "name": "Spain",
+      },
+      "macCity": {
+        "code": "VALENCIA",
+        "macCode": "VNC",
+        "name": "Valencia",
+      },
+      "name": "Castellon (Valencia)",
+      "region": {
+        "code": "COSTA_AZAHAR",
+        "name": "Costa Azahar",
+      },
+      "seoName": "castellon",
+      "timeZone": "Europe/Madrid",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
       "base": true,
       "city": {
         "code": "CORFU",
