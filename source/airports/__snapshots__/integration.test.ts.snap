@@ -25,11 +25,6 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
-    "BLL",
-    "GDN",
-  ],
-  [
-    "BER",
     "CFU",
     "GDN",
   ],
@@ -357,38 +352,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
     },
     "operator": "FR",
     "recent": true,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
-        "code": "BILLUND",
-        "name": "Billund",
-      },
-      "code": "BLL",
-      "coordinates": {
-        "latitude": 55.7403,
-        "longitude": 9.15178,
-      },
-      "country": {
-        "code": "dk",
-        "currency": "DKK",
-        "defaultAirportCode": "BLL",
-        "name": "Denmark",
-      },
-      "name": "Billund",
-      "region": {
-        "code": "SOUTHERN_DENMARK",
-        "name": "Southern Denmark",
-      },
-      "seoName": "billund",
-      "timeZone": "Europe/Copenhagen",
-    },
-    "operator": "FR",
-    "recent": false,
     "seasonal": false,
     "tags": [],
   },
