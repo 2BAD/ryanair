@@ -17,6 +17,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [7.0.0] - 2024-01-23
+
+### Breaking Changes
+
+- Updated `got` dependency to v14.
+- Dropped support for node@18.
+
+### Added
+
+- Implemented `airports.getSchedules` method.
+- Implemented `airports.getNearby` method.
+- Added renovate for dependency management.
+- Pinned npm version and added section for corepack.
+- Added tests for extractCoordinates helper.
+- Added postman badge with a link to the collection.
+
+### Fixed
+
+### Changed
+
+- Now reports unused disable directives while using eslint.
+- `getFirstDayOfEachMonthInRange` now throws a `RangeError` if the end date is before the start date.
+- Will no longer try to match snapshots on dynamic values.
+- Updated dependencies.
+
+### Removed
+
 ## [6.0.1] - 2023-11-03
 
 ### Fixed
@@ -124,10 +151,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set tests timeouts for `vitest` to 30 seconds
 - Unify origin and destination airports for testing purposes [f72af1b](https://github.com/2BAD/ryanair/commit/f72af1be09c7d697bbd18951d923e6c5fe0addd6)
 
-## [1.0.0] - 2017-04-14
+## [1.0.0] - 2023-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v6.0.1...HEAD
-[6.0.1]: https://github.com/2BAD/ryanair/compare/v6.0.0...v1.0.0
+[unreleased]: https://github.com/2BAD/ryanair/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/2BAD/ryanair/compare/v6.0.1...v7.0.0
+[6.0.1]: https://github.com/2BAD/ryanair/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/2BAD/ryanair/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/2BAD/ryanair/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/2BAD/ryanair/compare/v3.0.0...v4.0.0
