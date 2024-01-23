@@ -33,16 +33,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added tests for extractCoordinates helper.
 - Added postman badge with a link to the collection.
 
-### Fixed
-
 ### Changed
 
 - Now reports unused disable directives while using eslint.
 - `getFirstDayOfEachMonthInRange` now throws a `RangeError` if the end date is before the start date.
 - Will no longer try to match snapshots on dynamic values.
 - Updated dependencies.
-
-### Removed
 
 ## [6.0.1] - 2023-11-03
 
