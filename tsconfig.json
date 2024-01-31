@@ -6,7 +6,6 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
-    "types": ["vitest/globals"],
     "paths": {
       "~/*": ["./*"]
     }

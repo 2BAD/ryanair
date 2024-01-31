@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
 import { getAvailable, getDates } from '~/flights/index.ts'

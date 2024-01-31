@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { FARE_FINDER_API } from '~/endpoints.ts'
 import { findCheapestRoundTrip, findDailyFaresInRange, getCheapestPerDay } from '~/fares/index.ts'

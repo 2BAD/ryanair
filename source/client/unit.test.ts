@@ -1,4 +1,5 @@
 import { performance } from 'node:perf_hooks'
+import { describe, expect, it } from 'vitest'
 import { DELAY_MS, get } from '~/client/index.ts'
 import { TIMETABLE_API } from '~/endpoints.ts'
 
