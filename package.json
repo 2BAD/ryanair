@@ -36,7 +36,7 @@
   ],
   "scripts": {
     "build": "run-p build:*",
-    "build:swc": "swc ./source -d ./build",
+    "build:swc": "swc ./source -d ./build --strip-leading-paths",
     "build:types": "tsc --project tsconfig.build.json",
     "check": "run-p check:*",
     "check:code": "eslint . --ext .ts --report-unused-disable-directives --max-warnings 0",
