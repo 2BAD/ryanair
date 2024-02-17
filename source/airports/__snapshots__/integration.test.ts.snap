@@ -1472,6 +1472,38 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
   {
     "arrivalAirport": {
       "aliases": [],
+      "base": false,
+      "city": {
+        "code": "REGGIO",
+        "name": "Reggio Calabria",
+      },
+      "code": "REG",
+      "coordinates": {
+        "latitude": 38.0419,
+        "longitude": 15.3913,
+      },
+      "country": {
+        "code": "it",
+        "currency": "EUR",
+        "defaultAirportCode": "BGY",
+        "name": "Italy",
+      },
+      "name": "Reggio Calabria",
+      "region": {
+        "code": "CALABRIA",
+        "name": "Calabria",
+      },
+      "seoName": "Reggio",
+      "timeZone": "Europe/Rome",
+    },
+    "operator": "FR",
+    "recent": true,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
       "base": true,
       "city": {
         "code": "RHODES",
