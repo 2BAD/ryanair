@@ -3,7 +3,8 @@
   "version": "7.0.0",
   "type": "module",
   "workspaces": [
-    "packages/ryanair"
+    "packages/ryanair",
+    "packages/ryanair-cli"
   ],
   "scripts": {
     "prebuild": "rimraf build",
