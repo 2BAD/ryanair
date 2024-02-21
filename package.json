@@ -1,41 +1,14 @@
 {
-  "name": "@2bad/ryanair",
+  "name": "2bad",
   "version": "7.0.0",
-  "description": "Unofficial typescript client for the Ryanair API that allows you to easily retrieve information about airports, flights and prices.",
-  "keywords": [
-    "api-client",
-    "api",
-    "client",
-    "rest-client",
-    "rest",
-    "ryanair",
-    "typescript"
-  ],
-  "homepage": "https://github.com/2BAD/ryanair#readme",
-  "bugs": {
-    "url": "https://github.com/2BAD/ryanair/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/2BAD/ryanair.git"
-  },
-  "license": "MIT",
-  "author": "2BAD (https://github.com/2BAD)",
-  "contributors": [
-    {
-      "name": "Jason Hyde",
-      "email": "github@2bad.me",
-      "url": "https://github.com/mrhyde"
-    }
-  ],
   "type": "module",
-  "exports": "./build/index.js",
-  "typings": "./build/index.d.ts",
-  "files": [
-    "build"
+  "workspaces": [
+    "packages/ryanair"
   ],
   "scripts": {
+    "prebuild": "rimraf build",
     "build": "run-p build:*",
+    "postbuild": "run-s fix:alias fix:ext",
     "build:swc": "swc ./source -d ./build --strip-leading-paths",
     "build:types": "tsc --project tsconfig.build.json",
     "check": "run-p check:*",
@@ -46,8 +19,6 @@
     "fix:code": "run-s 'lint -- --fix'",
     "fix:ext": "./fix-ext.sh",
     "fix:format": "prettier --write 'source/**/*.ts'",
-    "postbuild": "run-s fix:alias fix:ext",
-    "prebuild": "rimraf build",
     "prepublishOnly": "run-s build",
     "preversion": "run-s check test build",
     "test": "vitest run",
@@ -59,13 +30,6 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none"
-  },
-  "dependencies": {
-    "date-fns": "3.3.1",
-    "fast-cartesian": "9.0.0",
-    "got": "14.2.0",
-    "tough-cookie": "4.1.3",
-    "zod": "3.22.4"
   },
   "devDependencies": {
     "@2bad/tsconfig": "2.0.1",
@@ -94,12 +58,12 @@
     "vite-tsconfig-paths": "4.3.1",
     "vitest": "1.3.1"
   },
+  "packageManager": "npm@10.4.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
     "node": "20.11.1",
     "npm": "10.4.0"
-  },
-  "packageManager": "npm@10.4.0"
+  }
 }

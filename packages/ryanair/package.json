@@ -1,0 +1,64 @@
+{
+  "name": "@2bad/ryanair",
+  "version": "7.0.0",
+  "description": "Unofficial typescript client for the Ryanair API that allows you to easily retrieve information about airports, flights and prices.",
+  "keywords": [
+    "api-client",
+    "api",
+    "client",
+    "rest-client",
+    "rest",
+    "ryanair",
+    "typescript"
+  ],
+  "homepage": "https://github.com/2BAD/ryanair#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/ryanair/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2BAD/ryanair.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "exports": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "run-p build:*",
+    "postbuild": "run-s fix:alias fix:ext",
+    "build:swc": "swc ./source -d ./build --strip-leading-paths",
+    "build:types": "tsc --project tsconfig.build.json",
+    "check": "run-p check:*",
+    "check:code": "eslint . --ext .ts --report-unused-disable-directives --max-warnings 0",
+    "check:format": "prettier --check 'source/**/*.ts'",
+    "fix": "run-s fix:code fix:format",
+    "fix:alias": "tsc-alias -p tsconfig.build.json",
+    "fix:code": "run-s 'lint -- --fix'",
+    "fix:ext": "./fix-ext.sh",
+    "fix:format": "prettier --write 'source/**/*.ts'",
+    "prepublishOnly": "run-s build",
+    "test": "vitest run",
+    "test:integration": "vitest run integration --coverage",
+    "test:unit": "vitest run unit --coverage",
+    "preversion": "run-s check test build"
+  },
+  "dependencies": {
+    "date-fns": "3.3.1",
+    "fast-cartesian": "9.0.0",
+    "got": "14.2.0",
+    "tough-cookie": "4.1.3",
+    "zod": "3.22.4"
+  }
+}
