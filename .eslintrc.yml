@@ -34,18 +34,19 @@ extends:
 
 rules:
   '@typescript-eslint/consistent-type-definitions': ['error', 'type']
-  '@typescript-eslint/strict-boolean-expressions': ['error', allowNullableObject: true]
   '@typescript-eslint/non-nullable-type-assertion-style': 'off'
   '@typescript-eslint/promise-function-async': 'off'
+  '@typescript-eslint/strict-boolean-expressions': ['error', allowNullableObject: true]
+  # covered by import/no-extraneous-dependencies
+  'n/no-extraneous-import': 'off'
   'import/no-default-export': 'error'
-  'import/no-unresolved': 'error'
   # disabled since it's already covered by the 'import/no-unresolved'
   'n/no-missing-import': 'off'
+  'import/no-unresolved': 'error'
+  'jsdoc/check-param-names': ['error', checkDestructured: false]
+  'jsdoc/require-hyphen-before-param-description': 'error'
   'jsdoc/require-jsdoc': ['error', { 'require': { 'FunctionExpression': true, 'ArrowFunctionExpression': true } }]
+  'jsdoc/require-param': ['error', checkDestructured: false]
   'jsdoc/require-returns': 'off'
   'jsdoc/require-throws': 'error'
-  'jsdoc/require-param': ['error', checkDestructured: false]
-  'jsdoc/check-param-names': ['error', checkDestructured: false]
   'jsdoc/tag-lines': ['error', 'any', startLines: 1]
-  'jsdoc/require-hyphen-before-param-description': 'error'
-  'vitest/no-hooks': ['error', 'allow': ['afterEach']]
