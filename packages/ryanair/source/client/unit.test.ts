@@ -14,7 +14,6 @@ describe('http client', () => {
     await Promise.all(requests)
     const elapsedTime = performance.now() - startedAt
 
-    // eslint-disable-next-line vitest/no-conditional-tests, vitest/no-conditional-in-test
     const totalDelay = Array.isArray(DELAY_MS) ? Math.min(...DELAY_MS) : DELAY_MS * requests.length
     expect(elapsedTime).toBeGreaterThan(totalDelay)
   })
