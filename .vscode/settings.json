@@ -1,4 +1,5 @@
 {
+  "cSpell.words": ["farfnd", "geoloc", "schengen", "timtbl"],
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.organizeImports": "always"
@@ -6,5 +7,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "cSpell.words": ["farfnd", "geoloc", "schengen", "timtbl"]
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }
