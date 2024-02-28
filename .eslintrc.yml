@@ -50,3 +50,4 @@ rules:
   'jsdoc/require-returns': 'off'
   'jsdoc/require-throws': 'error'
   'jsdoc/tag-lines': ['error', 'any', startLines: 1]
+  'vitest/no-hooks': ['error', 'allow': ['afterEach']]
