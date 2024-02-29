@@ -16,7 +16,7 @@
     "@2bad/tsconfig": "2.0.1",
     "@swc/cli": "0.3.10",
     "@swc/core": "1.4.2",
-    "@types/node": "20.11.21",
+    "@types/node": "20.11.22",
     "@types/tough-cookie": "4.0.5",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -39,12 +39,12 @@
     "vite-tsconfig-paths": "4.3.1",
     "vitest": "1.3.1"
   },
-  "packageManager": "npm@10.4.0",
+  "packageManager": "npm@10.5.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
     "node": "20.11.1",
-    "npm": "10.4.0"
+    "npm": "10.5.0"
   }
 }
