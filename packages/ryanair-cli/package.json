@@ -25,7 +25,7 @@
   ],
   "type": "module",
   "bin": {
-    "ryanair": "./bin/run.mjs"
+    "ryanair": "./bin/run.js"
   },
   "files": [
     "bin",
@@ -54,18 +54,12 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.0.0",
-    "@oclif/core": "3.20.0",
-    "@oclif/plugin-help": "6.0.14",
-    "@oclif/plugin-plugins": "4.2.5"
+    "@oclif/core": "3.20.0"
   },
   "oclif": {
     "bin": "ryanair",
     "dirname": "ryanair",
     "commands": "./build/commands",
-    "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
     "topicSeparator": " "
   }
 }
