@@ -25,7 +25,7 @@
   ],
   "type": "module",
   "bin": {
-    "ryanair": "./bin/run.js"
+    "ryanair": "./bin/run.mjs"
   },
   "files": [
     "bin",

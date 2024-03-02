@@ -1,7 +1,8 @@
 {
-  "name": "2bad",
+  "name": "@2bad/root",
   "version": "7.0.0",
   "type": "module",
+  "private": true,
   "workspaces": [
     "packages/ryanair",
     "packages/ryanair-cli"
