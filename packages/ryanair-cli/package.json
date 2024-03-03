@@ -54,7 +54,11 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.0.0",
-    "@oclif/core": "3.20.0"
+    "@oclif/core": "3.20.0",
+    "prompts": "2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "2.4.9"
   },
   "oclif": {
     "bin": "ryanair",
