@@ -3,6 +3,11 @@
   "exclude": ["build", "**/*.test.ts", "vitest.config.ts"],
   "tsc-alias": {
     "verbose": true,
-    "resolveFullPaths": true
+    "resolveFullPaths": true,
+    "replacers": {
+      "base-url": {
+        "enabled": false
+      }
+    }
   }
 }
