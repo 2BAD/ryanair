@@ -1,6 +1,7 @@
 import { Airport, Coordinates } from '~/airports/types.ts'
 
 export type Location = Airport | Coordinates
+
 /**
  * Extracts the coordinates from a Location object.
  *
