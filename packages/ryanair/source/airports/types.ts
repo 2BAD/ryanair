@@ -52,18 +52,37 @@ export const AirportConnection = z.object({
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AirportConnection = z.infer<typeof AirportConnection>
 
-export const Airport = z.object({
-  code: IataCode,
+export const AirportBase = z.object({
   name: z.string(),
   seoName: z.string(),
   aliases: z.array(z.string()),
   base: z.boolean(),
+  coordinates: Coordinates,
+  timeZone: z.string()
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type AirportBase = z.infer<typeof AirportBase>
+
+export const AirportV3 = AirportBase.extend({
+  iataCode: IataCode,
+  countryCode: z.string(),
+  regionCode: z.string(),
+  cityCode: z.string(),
+  currencyCode: z.string(),
+  routes: z.array(z.string()),
+  seasonalRoutes: z.array(z.string()),
+  categories: z.array(z.string()),
+  priority: z.number()
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type AirportV3 = z.infer<typeof AirportV3>
+
+export const Airport = AirportBase.extend({
+  code: IataCode,
   city: Location,
   macCity: Location.optional(),
   region: Location.omit({ macCode: true }),
-  country: Country,
-  coordinates: Coordinates,
-  timeZone: z.string()
+  country: Country
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Airport = z.infer<typeof Airport>

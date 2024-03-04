@@ -36,6 +36,7 @@ const cheapest = await fares.getCheapestPerDay('BER', 'DUB', '2023-10-10')
 
 - [Airports](docs/airports.md#airports-api)
   - [getActive](docs/airports.md#getactive)
+  - [getActiveV3](docs/airports.md#getactivev3)
   - [getClosest](docs/airports.md#getclosest)
   - [getDestinations](docs/airports.md#getdestinationscode-iatacode)
   - [getInfo](docs/airports.md#getinfocode-iatacode)

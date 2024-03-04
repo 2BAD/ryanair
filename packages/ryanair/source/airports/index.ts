@@ -1,6 +1,6 @@
 export { calculateDistance } from '~/airports/calculateDistance.ts'
 export { findRoutes } from '~/airports/findRoutes.ts'
-export { getActive } from '~/airports/getActive.ts'
+export { getActive, getActiveV3 } from '~/airports/getActive.ts'
 export { getClosest } from '~/airports/getClosest.ts'
 export { getDestinations } from '~/airports/getDestinations.ts'
 export { getInfo } from '~/airports/getInfo.ts'

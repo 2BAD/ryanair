@@ -4,6 +4,7 @@ Source code: [`source/airports/`](../source/airports/)
 
 - [Airports API](#airports-api)
   - [getActive()](#getactive)
+  - [getActiveV3()](#getactivev3)
   - [getClosest()](#getclosest)
   - [getDestinations(code: IataCode)](#getdestinationscode-iatacode)
   - [getInfo(code: IataCode)](#getinfocode-iatacode)
@@ -20,7 +21,19 @@ Retrieves a list of all active airports.
 ```typescript
 import { airports } from '@2bad/ryanair'
 
-const airports = await airports.getClosest()
+const airports = await airports.getActive()
+```
+
+## <code>getActiveV3()</code>
+
+Retrieves a list of all active airports.
+
+**Returns: `Promise<AirportV3[]>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const airports = await airports.getActiveV3()
 ```
 
 ## <code>getClosest()</code>
