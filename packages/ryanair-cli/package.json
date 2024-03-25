@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.0.0",
-    "@oclif/core": "3.25.2"
+    "@oclif/core": "3.26.0"
   },
   "oclif": {
     "bin": "ryanair",
