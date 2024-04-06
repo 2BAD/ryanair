@@ -45,11 +45,6 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
-    "FCO",
-    "GDN",
-  ],
-  [
-    "BER",
     "KRK",
     "GDN",
   ],

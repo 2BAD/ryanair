@@ -151,7 +151,7 @@ describe('airports', () => {
     })
     it('when asked for route between two airports that do not have one leg connection \n\t Then should return an empty array', async () => {
       expect.assertions(1)
-      const from = 'VBY' // Visby Gotland airport
+      const from = 'AAL' // Aalborg airport
       const to = 'OUD' // Oujda airport
       const data = await airports.findRoutes(from, to)
 
