@@ -43,7 +43,7 @@
     "check:format": "prettier --check 'source/**/*.ts'",
     "fix": "run-s fix:code fix:format",
     "fix:alias": "tsc-alias -p tsconfig.build.json",
-    "fix:code": "run-s 'lint -- --fix'",
+    "fix:code": "run-s 'check:code -- --fix'",
     "fix:ext": "./fix-ext.sh",
     "fix:format": "prettier --write 'source/**/*.ts'",
     "prepublishOnly": "run-s build",
