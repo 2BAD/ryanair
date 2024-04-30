@@ -20,7 +20,7 @@ extends:
   - 'plugin:import/typescript'
   - 'plugin:prettier/recommended'
   - 'plugin:jsdoc/recommended-typescript-error'
-  - 'plugin:vitest/all'
+  - 'plugin:vitest/legacy-all'
   - 'love'
 
 rules:
