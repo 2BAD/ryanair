@@ -17,7 +17,7 @@
     "@2bad/tsconfig": "3.0.0",
     "@swc/cli": "0.3.12",
     "@swc/core": "1.4.17",
-    "@types/node": "20.12.7",
+    "@types/node": "20.12.8",
     "@types/tough-cookie": "4.0.5",
     "@vitest/coverage-v8": "1.5.3",
     "eslint-config-love": "46.0.0",
@@ -34,12 +34,12 @@
     "vite-tsconfig-paths": "4.3.2",
     "vitest": "1.5.3"
   },
-  "packageManager": "npm@10.6.0",
+  "packageManager": "npm@10.7.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
     "node": "20.12.2",
-    "npm": "10.6.0"
+    "npm": "10.7.0"
   }
 }
