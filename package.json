@@ -16,8 +16,8 @@
   "devDependencies": {
     "@2bad/tsconfig": "3.0.0",
     "@swc/cli": "0.3.12",
-    "@swc/core": "1.4.17",
-    "@types/node": "20.12.8",
+    "@swc/core": "1.5.3",
+    "@types/node": "20.12.9",
     "@types/tough-cookie": "4.0.5",
     "@vitest/coverage-v8": "1.6.0",
     "eslint-config-love": "46.0.0",
