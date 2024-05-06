@@ -3,9 +3,9 @@
 exports[`zod StrDate type > should throw error for wrong date string format 1`] = `
 [ZodError: [
   {
-    "validation": "regex",
     "code": "invalid_string",
-    "message": "Invalid",
+    "validation": "date",
+    "message": "Invalid date",
     "path": []
   }
 ]]
