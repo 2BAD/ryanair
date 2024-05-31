@@ -1,11 +1,10 @@
 {
   "name": "@2bad/root",
   "version": "7.0.0",
-  "type": "module",
   "private": true,
+  "type": "module",
   "workspaces": [
-    "packages/ryanair",
-    "packages/ryanair-cli"
+    "packages/*"
   ],
   "prettier": {
     "printWidth": 120,
