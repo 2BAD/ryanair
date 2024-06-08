@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
-import { getAvailable, getDates } from '~/flights/index.ts'
 import { tomorrow } from '~/helpers/date.ts'
+import { flights } from '~/index.ts'
 
 describe('flights', () => {
   describe('getDates', () => {
@@ -13,7 +13,7 @@ describe('flights', () => {
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
 
-      await getDates(from, to)
+      await flights.getDates(from, to)
 
       expect(getSpy).toHaveBeenNthCalledWith(1, `${FARE_FINDER_API}/oneWayFares/${from}/${to}/availabilities`)
     })
@@ -24,7 +24,7 @@ describe('flights', () => {
       const from = 'BER' // Berlin airport
       const to = 'KRK' // Krakow airport
 
-      const data = await getDates(from, to)
+      const data = await flights.getDates(from, to)
       expect(data.length).toBeGreaterThan(0)
     })
 
@@ -34,7 +34,7 @@ describe('flights', () => {
       const from = 'WRONG_IATA_CODE'
       const to = 'KRK' // Krakow airport
 
-      await expect(getDates(from, to)).rejects.toThrow('Response code 400 (Bad Request)')
+      await expect(flights.getDates(from, to)).rejects.toThrow('Response code 400 (Bad Request)')
     })
   })
 
@@ -64,7 +64,7 @@ describe('flights', () => {
       }
       const urlParams = new URLSearchParams(options)
 
-      await getAvailable(options)
+      await flights.getAvailable(options)
 
       expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
     })
@@ -95,7 +95,7 @@ describe('flights', () => {
       }
       const urlParams = new URLSearchParams({ ...defaults, ...options })
 
-      await getAvailable(options)
+      await flights.getAvailable(options)
 
       expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
     })
@@ -107,9 +107,9 @@ describe('flights', () => {
         ADT: '1',
         DateOut: tomorrow()
       }
-      await getAvailable(options)
+      await flights.getAvailable(options)
 
-      const data = await getAvailable(options)
+      const data = await flights.getAvailable(options)
       expect(data.trips[0]?.dates.length).toBeGreaterThan(0)
     })
   })

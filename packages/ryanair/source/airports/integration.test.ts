@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import * as airports from '~/airports/index.ts'
 import * as client from '~/client/index.ts'
 import { TIMETABLE_API, VIEWS_API } from '~/endpoints.ts'
+import { airports } from '~/index.ts'
 
 const AirportShortSnapshot = {
   /* eslint-disable @typescript-eslint/no-unsafe-assignment */

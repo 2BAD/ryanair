@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { FARE_FINDER_API } from '~/endpoints.ts'
-import { findCheapestRoundTrip, findDailyFaresInRange, getCheapestPerDay } from '~/fares/index.ts'
 import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
+import { fares } from '~/index.ts'
 
 describe('fares', () => {
   describe('getCheapestPerDay', () => {
@@ -14,7 +14,7 @@ describe('fares', () => {
       const to = 'KRK' // Krakow airport
       const startDate = tomorrow()
       const currency = 'EUR'
-      await getCheapestPerDay(from, to, startDate, currency)
+      await fares.getCheapestPerDay(from, to, startDate, currency)
 
       expect(getSpy).toHaveBeenNthCalledWith(
         1,
@@ -30,7 +30,7 @@ describe('fares', () => {
       const startDate = tomorrow()
       const currency = 'EUR'
 
-      const data = await getCheapestPerDay(from, to, startDate, currency)
+      const data = await fares.getCheapestPerDay(from, to, startDate, currency)
       expect(data.outbound.fares.length).toBeGreaterThan(0)
     })
 
@@ -42,7 +42,9 @@ describe('fares', () => {
       const startDate = tomorrow()
       const currency = 'EUR'
 
-      await expect(getCheapestPerDay(from, to, startDate, currency)).rejects.toThrow('Response code 400 (Bad Request)')
+      await expect(fares.getCheapestPerDay(from, to, startDate, currency)).rejects.toThrow(
+        'Response code 400 (Bad Request)'
+      )
     })
   })
 
@@ -60,7 +62,7 @@ describe('fares', () => {
       const [year, month] = startDate.split('-')
       const firstDayOfMonth = `${year}-${month}-01`
 
-      await findDailyFaresInRange(from, to, startDate, endDate, currency)
+      await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenNthCalledWith(
         1,
@@ -77,7 +79,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await findDailyFaresInRange(from, to, startDate, endDate, currency)
+      const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
       expect(data.length).toBeGreaterThan(0)
     })
 
@@ -90,7 +92,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await findDailyFaresInRange(from, to, startDate, endDate, currency)
+      const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
       expect(data.every((fare) => fare.price !== null)).toBeTruthy()
     })
   })
@@ -109,7 +111,7 @@ describe('fares', () => {
       const [year, month] = startDate.split('-')
       const firstDayOfMonth = `${year}-${month}-01`
 
-      await findCheapestRoundTrip(from, to, startDate, endDate, currency)
+      await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
       expect(getSpy).toHaveBeenNthCalledWith(
         1,
@@ -126,7 +128,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.length).toBeGreaterThan(0)
     })
 
@@ -139,7 +141,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.every((trip) => trip.departure.price !== null)).toBeTruthy()
       expect(data.every((trip) => trip.return.price !== null)).toBeTruthy()
     })
@@ -153,7 +155,7 @@ describe('fares', () => {
       const endDate = nextMonth()
       const currency = 'EUR'
 
-      const data = await findCheapestRoundTrip(from, to, startDate, endDate, currency)
+      const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
       expect(data.every((trip) => isAfterISO(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })
