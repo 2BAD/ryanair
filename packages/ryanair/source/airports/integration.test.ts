@@ -37,6 +37,15 @@ describe('airports', () => {
     })
   })
 
+  describe('getActiveV3', () => {
+    it('when asked for a list of active airports (older v3 api) \n\t Then should be able to retrieve data and parse it', async () => {
+      expect.assertions(1)
+
+      const data = await airports.getActiveV3()
+      expect(data.length).toBeGreaterThan(0)
+    })
+  })
+
   describe('getClosest', () => {
     it('when asked for the closest airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
