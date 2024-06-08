@@ -44,7 +44,7 @@ export const Segment = z.object({
   duration: z.string()
 })
 
-export const Fare = z.object({
+const Fare = z.object({
   type: z.string(),
   amount: z.number(),
   count: z.number(),
