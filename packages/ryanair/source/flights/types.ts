@@ -44,7 +44,7 @@ export const Segment = z.object({
   duration: z.string()
 })
 
-export const Fare = z.object({
+export const FlightFare = z.object({
   type: z.string(),
   amount: z.number(),
   count: z.number(),
@@ -59,7 +59,7 @@ export const Fare = z.object({
 export const FareType = z.object({
   fareKey: z.string(),
   fareClass: z.string(),
-  fares: z.array(Fare)
+  fares: z.array(FlightFare)
 })
 
 export const Flight = z.object({
