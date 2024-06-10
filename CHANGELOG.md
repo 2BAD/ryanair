@@ -17,6 +17,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [7.1.0] - 2024-06-10
+
+### Added
+
+- Add `ryanair-cli` package to monorepo (still wip)
+- Add api v3 support for `airports.getActive()` under `airports.getActiveV3()`
+
+### Fixed
+
+- Fix `swc` build breaking bug https://github.com/swc-project/cli/issues/281
+- Fix eslint in vscode incorrectly resolving import paths in monorepo
+- Fix script name for linting the code (`lint` -> `check:code`)
+- Make payload types available for consumers, #70 #71
+
+### Changed
+
+- Move to monorepo setup
+- Move package scripts to packages/\*
+- Replace dependency `npm-run-all` with `npm-run-all2` v6
+- Simplified eslint configuration by switching to `eslint-config-love`
+- Use `zod.datetime()` and `zod.date()` for date and time validations
+- Align swc target with tsc (`es2022`)
+
 ## [7.0.0] - 2024-01-23
 
 ### Breaking Changes
@@ -149,7 +172,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2023-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v7.0.0...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v7.1.0...HEAD
+[7.1.0]: https://github.com/2BAD/ryanair/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/2BAD/ryanair/compare/v6.0.1...v7.0.0
 [6.0.1]: https://github.com/2BAD/ryanair/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/2BAD/ryanair/compare/v5.0.0...v6.0.0
