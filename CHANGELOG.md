@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [7.1.1] - 2024-06-10
+
+### Fixed
+
+- Fix publishing ci action to run `npm publish` with `--ws` flag
+
 ## [7.1.0] - 2024-06-10
 
 ### Added
@@ -172,7 +178,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2023-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v7.1.0...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v7.1.1...HEAD
+[7.1.1]: https://github.com/2BAD/ryanair/compare/v7.1.0...v7.1.1
 [7.1.0]: https://github.com/2BAD/ryanair/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/2BAD/ryanair/compare/v6.0.1...v7.0.0
 [6.0.1]: https://github.com/2BAD/ryanair/compare/v6.0.0...v6.0.1
