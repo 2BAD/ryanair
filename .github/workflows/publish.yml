@@ -19,8 +19,8 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4
         with:
-          node-version-file: 'package.json'
-          registry-url: 'https://registry.npmjs.org'
+          node-version-file: package.json
+          registry-url: https://registry.npmjs.org
 
       - run: npm ci
       - run: npm publish --ws --provenance --access public
