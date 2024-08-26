@@ -15,7 +15,7 @@
   "devDependencies": {
     "@2bad/tsconfig": "3.0.1",
     "@swc/cli": "0.4.0",
-    "@swc/core": "1.7.14",
+    "@swc/core": "1.7.18",
     "@types/node": "20.16.1",
     "@types/tough-cookie": "4.0.5",
     "@vitest/coverage-v8": "2.0.5",
@@ -38,7 +38,7 @@
     "node": ">=20"
   },
   "volta": {
-    "node": "22.6.0",
+    "node": "22.7.0",
     "npm": "10.8.2"
   }
 }
