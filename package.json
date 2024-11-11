@@ -15,7 +15,7 @@
   "devDependencies": {
     "@2bad/tsconfig": "3.0.1",
     "@swc/cli": "0.5.0",
-    "@swc/core": "1.8.0",
+    "@swc/core": "1.9.2",
     "@types/node": "20.17.6",
     "@types/tough-cookie": "4.0.5",
     "@vitest/coverage-v8": "2.1.4",
