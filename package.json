@@ -24,7 +24,7 @@
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-jsdoc": "48.11.0",
     "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-vitest": "0.5.4",
+    "@vitest/eslint-plugin": "1.0.1",
     "npm-run-all2": "6.2.6",
     "prettier": "3.3.3",
     "rimraf": "6.0.1",
