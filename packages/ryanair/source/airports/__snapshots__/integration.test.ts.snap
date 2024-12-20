@@ -30,11 +30,6 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
-    "CHQ",
-    "GDN",
-  ],
-  [
-    "BER",
     "DUB",
     "GDN",
   ],
@@ -558,38 +553,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       "aliases": [],
       "base": true,
       "city": {
-        "code": "CHANIA",
-        "name": "Chania",
-      },
-      "code": "CHQ",
-      "coordinates": {
-        "latitude": 35.5317,
-        "longitude": 24.1497,
-      },
-      "country": {
-        "code": "gr",
-        "currency": "EUR",
-        "defaultAirportCode": "ATH",
-        "name": "Greece",
-      },
-      "name": "Chania",
-      "region": {
-        "code": "GREEK_ISLANDS",
-        "name": "Greek Islands",
-      },
-      "seoName": "crete",
-      "timeZone": "Europe/Athens",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
         "code": "CATANIA",
         "name": "Catania",
       },
@@ -1065,38 +1028,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "seoName": "gran-canaria",
       "timeZone": "Atlantic/Canary",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": false,
-      "city": {
-        "code": "LUXEMBOURG",
-        "name": "Luxembourg",
-      },
-      "code": "LUX",
-      "coordinates": {
-        "latitude": 49.6233,
-        "longitude": 6.2044,
-      },
-      "country": {
-        "code": "lu",
-        "currency": "EUR",
-        "defaultAirportCode": "STN",
-        "name": "Luxembourg",
-      },
-      "name": "Luxembourg",
-      "region": {
-        "code": "DEFAULT_LU",
-        "name": "Default LU",
-      },
-      "seoName": "luxembourg",
-      "timeZone": "Europe/Luxembourg",
     },
     "operator": "FR",
     "recent": false,
