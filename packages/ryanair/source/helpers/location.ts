@@ -19,5 +19,5 @@ export const extractCoordinates = (location: Location): Coordinates => {
     return c.data
   }
 
-  throw new Error('Unable to extract coordinates from location: ' + JSON.stringify(location))
+  throw new Error(`Unable to extract coordinates from location: ${JSON.stringify(location)}`)
 }

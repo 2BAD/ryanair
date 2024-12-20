@@ -1,5 +1,5 @@
 import { addDays, addMonths, eachMonthOfInterval, format, isAfter } from 'date-fns'
-import { type StrDate } from '~/date.types.ts'
+import type { StrDate } from '~/date.types.ts'
 
 /**
  * Calculates the date for the next day (formatted as 'YYYY-MM-DD')

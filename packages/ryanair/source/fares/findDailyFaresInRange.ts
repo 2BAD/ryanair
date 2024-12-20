@@ -1,7 +1,7 @@
-import { type IataCode } from '~/airports/types.ts'
-import { type StrDate } from '~/date.types.ts'
+import type { IataCode } from '~/airports/types.ts'
+import type { StrDate } from '~/date.types.ts'
 import { getCheapestPerDay } from '~/fares/index.ts'
-import { type Fare } from '~/fares/types.ts'
+import type { Fare } from '~/fares/types.ts'
 import { getFirstDayOfEachMonthInRange } from '~/helpers/date.ts'
 
 /**

@@ -1,4 +1,4 @@
-import { type Fare } from '~/fares/types.ts'
+import type { Fare } from '~/fares/types.ts'
 
 /**
  * Retrieves the fare price from a Fare object.

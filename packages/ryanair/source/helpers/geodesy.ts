@@ -1,4 +1,4 @@
-import { type Coordinates } from '~/airports/types.ts'
+import type { Coordinates } from '~/airports/types.ts'
 
 /**
  * Converts an angle from degrees to radians.

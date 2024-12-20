@@ -1,13 +1,16 @@
-import { type BeforeRequestHook, type ExtendOptions, type InitHook, type Options, type OptionsInit } from 'got'
+/* eslint-disable @stylistic/indent */
+import type { BeforeRequestHook, ExtendOptions, InitHook, Options, OptionsInit } from 'got'
 import { setTimeout } from 'node:timers/promises'
 
 const crypto = await import('node:crypto')
 
 export type Debounce = {
-  debounce?: {
-    queue: Promise<void>
-    duration: [number, number] | number
-  }
+  debounce?:
+   | {
+      queue: Promise<void>
+      duration: [number, number] | number
+     }
+   | undefined
 }
 
 export type OptionsWithDebounce = {
@@ -26,7 +29,7 @@ const initOptionsHook: InitHook = (raw: Debounce & OptionsInit, options: Options
       queue: Promise.resolve(),
       duration: raw.debounce
     }
-    delete raw.debounce
+    raw.debounce = undefined
   }
 }
 

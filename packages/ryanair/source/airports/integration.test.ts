@@ -4,7 +4,6 @@ import { TIMETABLE_API, VIEWS_API } from '~/endpoints.ts'
 import { airports } from '~/index.ts'
 
 const AirportShortSnapshot = {
-  /* eslint-disable @typescript-eslint/no-unsafe-assignment */
   aliases: [],
   city: {
     code: expect.any(String),
@@ -20,7 +19,6 @@ const AirportShortSnapshot = {
     name: expect.any(String)
   },
   name: expect.any(String)
-  /* eslint-enable @typescript-eslint/no-unsafe-assignment */
 }
 
 describe('airports', () => {
@@ -107,7 +105,7 @@ describe('airports', () => {
   })
 
   describe('getSchedules', () => {
-    it('when passed iata code ', async () => {
+    it('when passed iata code', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
       const code = 'BER'

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { StrDate } from '~/date.types.ts'
-import { type Fare } from '~/fares/types.ts'
+import type { Fare } from '~/fares/types.ts'
 import { getFirstDayOfEachMonthInRange, nextMonth, tomorrow } from '~/helpers/date.ts'
 import { getFarePrice } from '~/helpers/fares.ts'
 import { extractCoordinates, type Location } from './location.ts'
@@ -18,7 +18,7 @@ describe('date', () => {
       expect.assertions(3)
 
       const result = tomorrow()
-      const [year, month, day] = result.split('-').map((part) => parseInt(part))
+      const [year, month, day] = result.split('-').map((part) => Number.parseInt(part))
 
       // @ts-expect-error even if the values are going to be undefined the test will cover it
       const date = new Date(year, month - 1, day)
@@ -41,7 +41,7 @@ describe('date', () => {
       expect.assertions(3)
 
       const result = nextMonth()
-      const [year, month, day] = result.split('-').map((part) => parseInt(part))
+      const [year, month, day] = result.split('-').map((part) => Number.parseInt(part))
 
       // @ts-expect-error even if the values are going to be undefined the test will cover it
       const date = new Date(year, month - 1, day)
@@ -204,7 +204,7 @@ describe('extractCoordinates', () => {
 
     const badInput = { unexpectedField: true }
     expect(() => extractCoordinates(badInput as unknown as Location)).toThrow(
-      'Unable to extract coordinates from location: ' + JSON.stringify(badInput)
+      `Unable to extract coordinates from location: ${JSON.stringify(badInput)}`
     )
   })
 })
