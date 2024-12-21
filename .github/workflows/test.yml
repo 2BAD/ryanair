@@ -47,7 +47,7 @@ jobs:
       - run: npm ci
 
       - run: npm run test:unit --ws
-      - uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4
+      - uses: codecov/codecov-action@1e68e06f1dbfde0e4cefc87efeba9e4643565303 # v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unit
@@ -55,7 +55,7 @@ jobs:
       - run: rm -rf coverage
 
       - run: npm run test:integration --ws
-      - uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4
+      - uses: codecov/codecov-action@1e68e06f1dbfde0e4cefc87efeba9e4643565303 # v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: integration
