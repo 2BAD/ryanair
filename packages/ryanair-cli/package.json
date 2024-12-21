@@ -25,10 +25,9 @@
   ],
   "type": "module",
   "bin": {
-    "ryanair": "bin/run.mjs"
+    "ryanair": "build/run.js"
   },
   "files": [
-    "bin",
     "build",
     "oclif.manifest.json"
   ],

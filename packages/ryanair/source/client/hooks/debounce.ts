@@ -6,11 +6,11 @@ const crypto = await import('node:crypto')
 
 export type Debounce = {
   debounce?:
-   | {
-      queue: Promise<void>
-      duration: [number, number] | number
-     }
-   | undefined
+    | {
+        queue: Promise<void>
+        duration: [number, number] | number
+      }
+    | undefined
 }
 
 export type OptionsWithDebounce = {
