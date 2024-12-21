@@ -55,7 +55,7 @@
     "preversion": "run-s check test build"
   },
   "dependencies": {
-    "date-fns": "3.6.0",
+    "date-fns": "4.1.0",
     "fast-cartesian": "9.0.0",
     "got": "14.4.5",
     "tough-cookie": "4.1.4",
