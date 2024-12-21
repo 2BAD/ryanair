@@ -6,12 +6,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "prettier": {
-    "printWidth": 120,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none"
-  },
   "devDependencies": {
     "@2bad/axiom": "1.0.0-beta.9",
     "@2bad/tsconfig": "3.0.1",
