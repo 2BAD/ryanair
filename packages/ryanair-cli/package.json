@@ -65,5 +65,13 @@
   },
   "devDependencies": {
     "@types/prompts": "2.4.9"
+  },
+  "packageManager": "npm@11.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "volta": {
+    "node": "22.12.0",
+    "npm": "11.0.0"
   }
 }
