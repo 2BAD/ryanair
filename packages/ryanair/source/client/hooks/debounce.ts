@@ -1,58 +1,60 @@
-/* eslint-disable @stylistic/indent */
-import type { BeforeRequestHook, ExtendOptions, InitHook, Options, OptionsInit } from 'got'
+import type { BeforeRequestHook, ExtendOptions, Options } from 'got'
+import { randomInt } from 'node:crypto'
 import { setTimeout } from 'node:timers/promises'
 
-const crypto = await import('node:crypto')
-
-export type Debounce = {
-  debounce?:
-    | {
-        queue: Promise<void>
-        duration: [number, number] | number
-      }
-    | undefined
+export type DebounceOptions = {
+  /**
+   * Time to wait between requests in milliseconds
+   * Can be a fixed number or a range [min, max] for random delays
+   */
+  duration: number | [number, number]
 }
 
-export type OptionsWithDebounce = {
-  context: Debounce & Record<string, unknown>
-} & Options
+let globalQueue = Promise.resolve()
 
 /**
- * Merge the debounce properties into the options instance
+ * Creates a delay between API requests using a global queue
  *
- * @param raw - Plain request options, right before their normalization.
- * @param options - The `Got` options object.
+ * @param duration - Fixed delay in ms or [min, max] range for random delay
  */
-const initOptionsHook: InitHook = (raw: Debounce & OptionsInit, options: Options) => {
-  if (raw.debounce) {
-    options.context['debounce'] = {
-      queue: Promise.resolve(),
-      duration: raw.debounce
-    }
-    raw.debounce = undefined
-  }
-}
+const debounceRequest = async (duration: number | [number, number]): Promise<void> => {
+  const timeout = Array.isArray(duration) ? randomInt(...duration) : duration
 
-/**
- * Debounce hook used as a BeforeRequestHook.
- *
- * @param options - The `Got` options object with debounce properties.
- */
-const debounceHook: BeforeRequestHook = async (options: OptionsWithDebounce) => {
-  if (!options.context.debounce) return
-  const { debounce } = options.context
-  const timeout = Array.isArray(debounce.duration) ? crypto.randomInt(...debounce.duration) : debounce.duration
-  const previous = debounce.queue
-  debounce.queue = (async () => {
+  const previous = globalQueue
+
+  globalQueue = (async () => {
     await previous
     await setTimeout(timeout)
   })()
-  await debounce.queue
+
+  await globalQueue
 }
 
-export const debounce: ExtendOptions = {
-  hooks: {
-    init: [initOptionsHook],
-    beforeRequest: [debounceHook]
+/**
+ * Hook that runs before each request to enforce delay between API calls
+ *
+ * @param options - Got request options containing debounce configuration
+ */
+const beforeRequestHook: BeforeRequestHook = async (options: Options): Promise<void> => {
+  const debounceOpts = options.context['debounce'] as DebounceOptions | undefined
+
+  if (!debounceOpts?.duration) {
+    return
   }
+
+  await debounceRequest(debounceOpts.duration)
 }
+
+/**
+ * Creates a Got extension that adds request debouncing functionality
+ *
+ * @param duration - Fixed delay in ms or [min, max] range for random delay
+ */
+export const debounce = (duration: number | [number, number]): ExtendOptions => ({
+  hooks: {
+    beforeRequest: [beforeRequestHook]
+  },
+  context: {
+    debounce: { duration }
+  }
+})
