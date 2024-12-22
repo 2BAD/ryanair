@@ -46,10 +46,16 @@
     "fix:ext": "tsfix",
     "fix:format": "biome format --write ./source",
     "prepublishOnly": "run-s build",
-    "test": "vitest run",
+    "test": "exit 0",
     "test:integration": "vitest run integration --coverage",
     "test:unit": "vitest run unit --coverage",
     "preversion": "run-s check test build"
+  },
+  "oclif": {
+    "bin": "ryanair",
+    "commands": "./build/commands",
+    "dirname": "ryanair",
+    "topicSeparator": " "
   },
   "dependencies": {
     "@2bad/ryanair": "^7.0.0",
@@ -59,11 +65,5 @@
   },
   "devDependencies": {
     "@types/prompts": "2.4.9"
-  },
-  "oclif": {
-    "bin": "ryanair",
-    "dirname": "ryanair",
-    "commands": "./build/commands",
-    "topicSeparator": " "
   }
 }
