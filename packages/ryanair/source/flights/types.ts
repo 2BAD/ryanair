@@ -58,7 +58,7 @@ export const FlightFare = z.object({
 
 export const FareType = z.object({
   fareKey: z.string(),
-  fareClass: z.string(),
+  fareClass: z.string().optional(),
   fares: z.array(FlightFare)
 })
 
