@@ -17,6 +17,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [7.1.2] - 2024-12-22
+
+### Fixed
+ - Updated debounce hook to work correctly with new versions of got
+ - Made FareType.fareClass optional to match API
+ - Added missing README to package (#72)
+
+### Changed
+ - Switched from prettier to biome for formatting
+ - Updated ESLint config to @2bad/axiom
+
 ## [7.1.1] - 2024-06-10
 
 ### Fixed
