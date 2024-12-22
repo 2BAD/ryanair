@@ -1,6 +1,6 @@
 {
   "name": "@2bad/ryanair-cli",
-  "version": "7.1.1",
+  "version": "7.1.2",
   "description": "CLI for Ryanair API.",
   "keywords": [
     "cli",
