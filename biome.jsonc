@@ -1,20 +1,11 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "files": {
-    "include": ["*.js", "*.mjs", "*.jsx", "*.ts", "*.tsx", "*.json", "*.astro"],
-    "ignore": ["node_modules/**", "build/**"]
+    "include": ["*.js", "*.mjs", "*.jsx", "*.ts", "*.tsx", "*.json"]
   },
   "formatter": {
-    "useEditorconfig": true,
-    "lineWidth": 120
-  },
-  "linter": {
-    "rules": {
-      "complexity": {
-        "noForEach": "off",
-        "useLiteralKeys": "off"
-      }
-    }
+    "lineWidth": 120,
+    "useEditorconfig": true
   },
   "javascript": {
     "formatter": {
@@ -22,6 +13,47 @@
       "quoteStyle": "single",
       "semicolons": "asNeeded",
       "trailingCommas": "none"
+    }
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "useLiteralKeys": "off"
+      },
+      "correctness": {
+        "noUndeclaredDependencies": "error",
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error",
+        "useImportExtensions": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error"
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "noNamespace": "error",
+        "noNamespaceImport": "error",
+        "noNegationElse": "error",
+        "noParameterProperties": "error",
+        "noShoutyConstants": "error",
+        "noYodaExpression": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useFilenamingConvention": "error",
+        "useNamingConvention": "error",
+        "useNodeAssertStrict": "error"
+      },
+      "suspicious": {
+        "noEmptyBlockStatements": "error"
+      }
     }
   },
   "organizeImports": {
