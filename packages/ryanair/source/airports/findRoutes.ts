@@ -1,4 +1,5 @@
 import { z } from 'zod'
+// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as airports from '~/airports/index.ts'
 import { IataCode, type Destination } from './types.ts'
 
@@ -26,7 +27,9 @@ export const findRoutes = async (from: IataCode, to: IataCode): Promise<IataCode
   const departureConnectionsCodes = getIataCodes(departureDestinations)
   const arrivalConnectionsCodes = getIataCodes(arrivalDestinations)
 
-  if (departureConnectionsCodes.has(to)) return [[from, to]]
+  if (departureConnectionsCodes.has(to)) {
+    return [[from, to]]
+  }
 
   let matchingCodes = [...departureConnectionsCodes].filter((code) => arrivalConnectionsCodes.has(code))
   matchingCodes = z.array(IataCode).parse(matchingCodes)

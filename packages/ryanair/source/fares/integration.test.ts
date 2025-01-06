@@ -1,7 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
+// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as client from '~/client/index.ts'
 import { FARE_FINDER_API } from '~/endpoints.ts'
-import { isAfterISO, nextMonth, tomorrow } from '~/helpers/date.ts'
+import { isAfterIso, nextMonth, tomorrow } from '~/helpers/date.ts'
 import { fares } from '~/index.ts'
 
 describe('fares', () => {
@@ -156,7 +157,7 @@ describe('fares', () => {
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
-      expect(data.every((trip) => isAfterISO(trip.return.day, trip.departure.day))).toBeTruthy()
+      expect(data.every((trip) => isAfterIso(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })
 })

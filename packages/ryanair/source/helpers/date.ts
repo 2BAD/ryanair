@@ -29,7 +29,7 @@ export const nextMonth = (): string => {
  * @param firstDate - The first date (formatted as 'YYYY-MM-DD')
  * @param secondDate - The second date (formatted as 'YYYY-MM-DD')
  */
-export const isAfterISO = (firstDate: string, secondDate: string): boolean => {
+export const isAfterIso = (firstDate: string, secondDate: string): boolean => {
   const first = new Date(firstDate)
   const second = new Date(secondDate)
   return isAfter(first, second)

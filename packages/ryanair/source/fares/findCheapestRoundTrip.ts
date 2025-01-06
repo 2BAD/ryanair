@@ -3,7 +3,7 @@ import type { IataCode } from '~/airports/types.ts'
 import type { StrDate } from '~/date.types.ts'
 import { findDailyFaresInRange } from '~/fares/index.ts'
 import type { RoundTrip } from '~/fares/types.ts'
-import { isAfterISO } from '~/helpers/date.ts'
+import { isAfterIso } from '~/helpers/date.ts'
 import { getFarePrice, sortByPrice } from '~/helpers/fares.ts'
 
 /**
@@ -41,7 +41,7 @@ export const findCheapestRoundTrip = async (
       return: inbound,
       price: Number((getFarePrice(outbound) + getFarePrice(inbound)).toFixed(2))
     }))
-    .filter((trip) => isAfterISO(trip.return.day, trip.departure.day))
+    .filter((trip) => isAfterIso(trip.return.day, trip.departure.day))
     .sort((a, b) => a.price - b.price)
     .slice(0, limit)
 

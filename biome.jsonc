@@ -21,15 +21,13 @@
         "useLiteralKeys": "off"
       },
       "correctness": {
-        "noUndeclaredDependencies": "error",
+        // doesn't work in monorepo with dev tools in root
+        // "noUndeclaredDependencies": "error",
         "noUndeclaredVariables": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error",
         "useImportExtensions": "error"
-      },
-      "performance": {
-        "noBarrelFile": "error"
       },
       "style": {
         "noDefaultExport": "error",

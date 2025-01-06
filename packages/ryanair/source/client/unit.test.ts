@@ -7,8 +7,8 @@ describe('http client', () => {
   it('debounce concurrent requests', async () => {
     expect.assertions(1)
 
-    const API_ENDPOINT = `${TIMETABLE_API}/schedules/period`
-    const requests = Array.from({ length: 10 }, () => get(API_ENDPOINT))
+    const endpoint = `${TIMETABLE_API}/schedules/period`
+    const requests = Array.from({ length: 10 }, () => get(endpoint))
 
     const startedAt = performance.now()
     await Promise.all(requests)
