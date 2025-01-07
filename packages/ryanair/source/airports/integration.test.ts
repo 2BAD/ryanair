@@ -129,6 +129,71 @@ describe('airports', () => {
     })
   })
 
+  describe('getSchedulesByRoute', () => {
+    it('should call correct endpoint with from and to IATA codes', async () => {
+      expect.assertions(1)
+      const getSpy = vi.spyOn(client, 'get')
+      const from = 'BER'
+      const to = 'BRU'
+      await airports.getSchedulesByRoute(from, to)
+
+      expect(getSpy).toHaveBeenCalledWith(`${TIMETABLE_API}/schedules/${from}/${to}/period`)
+    })
+
+    it('should return parsed schedule data', async () => {
+      expect.assertions(4)
+      const data = await airports.getSchedulesByRoute('BER', 'BRU')
+
+      expect(data).haveOwnProperty('firstFlightDate')
+      expect(data).haveOwnProperty('lastFlightDate')
+      expect(data).haveOwnProperty('months')
+      expect(data).haveOwnProperty('monthsFromToday')
+    })
+
+    it('should throw HTTP error for non-existing route', async () => {
+      expect.assertions(1)
+      await expect(airports.getSchedulesByRoute('BER', 'XXX')).rejects.toThrow('Response code 404 (Not Found)')
+    })
+  })
+
+  describe('getSchedulesByPeriod', () => {
+    it('should call correct endpoint with from, to, year and month', async () => {
+      expect.assertions(1)
+      const getSpy = vi.spyOn(client, 'get')
+      const from = 'BER'
+      const to = 'BRU'
+      const year = new Date().getFullYear()
+      const month = new Date().getMonth() + 1
+
+      await airports.getSchedulesByPeriod(from, to, year, month)
+
+      expect(getSpy).toHaveBeenCalledWith(`${TIMETABLE_API}/schedules/${from}/${to}/years/${year}/months/${month}`)
+    })
+
+    it('should return parsed monthly schedule data', async () => {
+      expect.assertions(5)
+      const from = 'BER'
+      const to = 'BRU'
+      const year = new Date().getFullYear()
+      const month = new Date().getMonth() + 1
+
+      const data = await airports.getSchedulesByPeriod(from, to, year, month)
+
+      expect(data).haveOwnProperty('month')
+      expect(data).haveOwnProperty('days')
+      expect(data.days[0]).haveOwnProperty('day')
+      expect(data.days[0]).haveOwnProperty('flights')
+      expect(data.days[0]?.flights[0]).haveOwnProperty('carrierCode')
+    })
+
+    it('should throw HTTP error for non-existing period', async () => {
+      expect.assertions(1)
+      await expect(airports.getSchedulesByPeriod('BER', 'BRU', new Date().getFullYear(), 13)).rejects.toThrow(
+        'Response code 404 (Not Found)'
+      )
+    })
+  })
+
   describe('findRoutes', () => {
     it('when passed iata codes \n\t Then should call the correct API URLs', async () => {
       expect.assertions(3)

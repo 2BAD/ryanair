@@ -109,3 +109,22 @@ export type Schedule = z.infer<typeof Schedule>
 export const Schedules = z.record(z.string(), Schedule)
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Schedules = z.infer<typeof Schedules>
+
+export const Flight = z.object({
+  carrierCode: z.string(),
+  number: z.string(),
+  departureTime: z.string(),
+  arrivalTime: z.string()
+})
+
+export const MonthlySchedule = z.object({
+  month: z.number(),
+  days: z.array(
+    z.object({
+      day: z.number(),
+      flights: z.array(Flight)
+    })
+  )
+})
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+export type MonthlySchedule = z.infer<typeof MonthlySchedule>
