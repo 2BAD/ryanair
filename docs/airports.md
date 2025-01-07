@@ -10,6 +10,8 @@ Source code: [`source/airports/`](../source/airports/)
   - [getInfo(code: IataCode)](#getinfocode-iatacode)
   - [getNearby()](#getnearby)
   - [getSchedules()](#getschedules)
+  - [getSchedulesByRoute(from: IataCode, to: IataCode)](#getschedulesbyroutefrom-iatacode-to-iatacode)
+  - [getSchedulesByPeriod(from: IataCode, to: IataCode, year: number, month: number)](#getschedulesbyperiodfrom-iatacode-to-iatacode-year-number-month-number)
   - [findRoutes(from: IataCode, to: IataCode)](#findroutesfrom-iatacode-to-iatacode)
 
 ## <code>getActive()</code>
@@ -92,12 +94,46 @@ const airports = await airports.getNearby()
 
 Returns a list of available flight schedules departing from an airport.
 
+**code: IataCode** - The IATA code of the departure airport.
+
 **Returns: `Promise<Schedules>`**
 
 ```typescript
 import { airports } from '@2bad/ryanair'
 
-const schedules = await airports.getSchedules()
+const schedules = await airports.getSchedules('BER')
+```
+
+## <code>getSchedulesByRoute(from: IataCode, to: IataCode)</code>
+
+Returns the flight schedule for a specific route between two airports.
+
+**from: IataCode** - The departure airport IATA code.
+**to: IataCode** - The arrival airport IATA code.
+
+**Returns: `Promise<Schedule>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const schedule = await airports.getSchedulesByRoute('BER', 'BRU')
+```
+
+## <code>getSchedulesByPeriod(from: IataCode, to: IataCode, year: number, month: number)</code>
+
+Returns detailed flight schedules between two airports for a specific month.
+
+**from: IataCode** - The departure airport IATA code.
+**to: IataCode** - The arrival airport IATA code.
+**year: number** - The year for which to fetch schedules.
+**month: number** - The month for which to fetch schedules (1-12).
+
+**Returns: `Promise<MonthlySchedule>`**
+
+```typescript
+import { airports } from '@2bad/ryanair'
+
+const monthlySchedule = await airports.getSchedulesByPeriod('BER', 'BRU', 2024, 1)
 ```
 
 ## <code>findRoutes(from: IataCode, to: IataCode)</code>

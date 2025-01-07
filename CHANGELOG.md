@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Breaking Changes
 
 ### Added
+- New API methods for retrieving flight schedules:
+  - `airports.getSchedulesByRoute(from, to)`: Returns a single `Schedule` for a specific route
+  - `airports.getSchedulesByPeriod(from, to, year, month)`: Returns a `MonthlySchedule` for a specific period
+
 
 ### Fixed
 
