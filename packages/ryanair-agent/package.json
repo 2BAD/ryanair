@@ -1,0 +1,70 @@
+{
+  "name": "@2bad/ryanair-agent",
+  "version": "7.1.2",
+  "description": "AI agent for Ryanair API.",
+  "keywords": [
+    "ai",
+    "agent",
+    "ryanair"
+  ],
+  "homepage": "https://github.com/2BAD/ryanair#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/ryanair/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2BAD/ryanair.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "bin": {
+    "ryanair": "build/run.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "run-p build:*",
+    "postbuild": "run-s fix:alias fix:ext",
+    "build:swc": "swc ./source -d ./build --strip-leading-paths",
+    "build:types": "tsc --project tsconfig.build.json",
+    "check": "run-p check:*",
+    "check:biome": "biome check ./source",
+    "check:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "fix": "run-s fix:code fix:format",
+    "fix:alias": "tsc-alias -p tsconfig.build.json",
+    "fix:code": "run-s 'check:eslint -- --fix'",
+    "fix:ext": "tsfix",
+    "fix:format": "biome format --write ./source",
+    "prepublishOnly": "run-s build",
+    "preversion": "run-s check test build"
+  },
+  "dependencies": {
+    "@2bad/ryanair": "7.1.2",
+    "@anthropic-ai/sdk": "0.33.1",
+    "chalk": "5.4.1",
+    "lowdb": "7.0.1",
+    "ora": "8.1.1",
+    "prompts": "2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "2.4.9"
+  },
+  "packageManager": "npm@11.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "volta": {
+    "node": "22.12.0",
+    "npm": "11.0.0"
+  }
+}
