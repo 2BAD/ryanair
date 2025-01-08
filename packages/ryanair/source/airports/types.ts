@@ -110,7 +110,7 @@ export const Schedules = z.record(z.string(), Schedule)
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Schedules = z.infer<typeof Schedules>
 
-export const Flight = z.object({
+const Flight = z.object({
   carrierCode: z.string(),
   number: z.string(),
   departureTime: z.string(),
