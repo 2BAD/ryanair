@@ -46,7 +46,12 @@
           }
         },
         "useFilenamingConvention": "error",
-        "useNamingConvention": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false
+          }
+        },
         "useNodeAssertStrict": "error"
       },
       "suspicious": {
