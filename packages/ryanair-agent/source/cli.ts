@@ -17,7 +17,9 @@ async function main() {
   const messageStore = new MessageStore()
   await messageStore.initialize()
 
-  const anthropic = new AnthropicService(ANTHROPIC_API_KEY, messageStore)
+  const anthropic = new AnthropicService(ANTHROPIC_API_KEY, messageStore, {
+    system: `You are a helpful assistant and your name is Jock. Current date in ISO format is ${new Date().toISOString()}.`
+  })
 
   console.log(chalk.cyan('🤖 Welcome to the LLM Chat CLI!'))
   console.log(chalk.gray('Type "exit" to end the conversation\n'))
