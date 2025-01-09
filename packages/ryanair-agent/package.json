@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.1.2",
-    "@anthropic-ai/sdk": "0.33.1",
+    "@anthropic-ai/sdk": "0.34.0-alpha.0",
     "chalk": "5.4.1",
     "lowdb": "7.0.1",
     "ora": "8.1.1",
