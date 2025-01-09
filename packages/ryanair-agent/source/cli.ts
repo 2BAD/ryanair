@@ -1,7 +1,8 @@
 /* eslint-disable n/no-process-exit */
 /* eslint-disable jsdoc/require-jsdoc */
-import { cancel, intro, isCancel, log, outro, spinner, text } from '@clack/prompts'
 import chalk from 'chalk'
+import ora from 'ora'
+import prompts from 'prompts'
 import { AnthropicService } from './llm.ts'
 import { MessageStore } from './memory.ts'
 
@@ -16,36 +17,41 @@ async function main() {
   const anthropic = new AnthropicService(ANTHROPIC_API_KEY, MessageStore.create())
   const conversationId = await anthropic.createConversation()
 
-  intro(chalk.cyan('🤖 Welcome to the LLM Chat CLI!'))
-  log.info(chalk.gray('Type "exit" to end the conversation\n'))
+  console.log(chalk.cyan('🤖 Welcome to the LLM Chat CLI!'))
+  console.log(chalk.gray('Type "exit" to end the conversation\n'))
 
   while (true) {
-    const message = await text({
-      message: 'You:',
-      validate(value) {
-        return value.trim().length === 0 ? 'Please enter a message' : undefined
+    const { message } = await prompts(
+      {
+        type: 'text',
+        name: 'message',
+        message: 'You:',
+        validate: (value) => value.trim().length > 0 || 'Please enter a message'
+      },
+      {
+        onCancel: () => {
+          console.log(chalk.yellow('\nOperation cancelled'))
+          process.exit(0)
+        }
       }
-    })
-
-    // Handle cancellation (Ctrl+C)
-    if (isCancel(message)) {
-      cancel('Operation cancelled')
-      process.exit(0)
-    }
+    )
 
     if (message.toLowerCase() === 'exit') {
-      outro(chalk.yellow('Goodbye! 👋'))
+      console.log(chalk.yellow('\nGoodbye! 👋'))
       process.exit(0)
     }
 
-    const thinking = spinner()
-    thinking.start('Thinking...')
+    const spinner = ora({
+      text: 'Thinking...',
+      color: 'blue'
+    }).start()
+
     try {
       const response = await anthropic.sendMessage(conversationId, message)
-      thinking.stop(`${chalk.blue('Assistant:')} ${response}`)
+      spinner.succeed(chalk.blue('Assistant: ') + response)
     } catch (error) {
-      thinking.stop(chalk.red('Failed to get response'))
-      log.error(`${chalk.red('Fatal error: ')} ${error instanceof Error ? error.message : 'Unknown error'}`)
+      spinner.fail(chalk.red('Failed to get response'))
+      console.error(chalk.red('Fatal error: '), error instanceof Error ? error.message : 'Unknown error')
     }
   }
 }
@@ -53,6 +59,6 @@ async function main() {
 try {
   await main()
 } catch (error) {
-  log.error(`${chalk.red('Fatal error: ')} ${error instanceof Error ? error.message : 'Unknown error'}`)
+  console.error(chalk.red('Fatal error: '), error instanceof Error ? error.message : 'Unknown error')
   process.exit(1)
 }
