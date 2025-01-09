@@ -1,8 +1,7 @@
 /* eslint-disable n/no-process-exit */
 /* eslint-disable jsdoc/require-jsdoc */
+import { cancel, intro, isCancel, log, outro, spinner, text } from '@clack/prompts'
 import chalk from 'chalk'
-import ora from 'ora'
-import prompts from 'prompts'
 import { AnthropicService } from './llm.ts'
 import { MessageStore } from './memory.ts'
 
@@ -14,41 +13,39 @@ async function main() {
     process.exit(1)
   }
 
-  const messageStore = new MessageStore()
-  await messageStore.initialize()
-
-  const anthropic = new AnthropicService(ANTHROPIC_API_KEY, messageStore, {
-    system: `You are a helpful assistant and your name is Jock. Current date in ISO format is ${new Date().toISOString()}.`
-  })
-
-  console.log(chalk.cyan('🤖 Welcome to the LLM Chat CLI!'))
-  console.log(chalk.gray('Type "exit" to end the conversation\n'))
-
-  const spinner = ora('Creating new conversation...').start()
+  const anthropic = new AnthropicService(ANTHROPIC_API_KEY, MessageStore.create())
   const conversationId = await anthropic.createConversation()
-  spinner.succeed('New conversation created')
+
+  intro(chalk.cyan('🤖 Welcome to the LLM Chat CLI!'))
+  log.info(chalk.gray('Type "exit" to end the conversation\n'))
 
   while (true) {
-    const { message } = await prompts({
-      type: 'text',
-      name: 'message',
-      message: chalk.green('You:'),
-      validate: (value) => (value.trim().length > 0 ? true : 'Message cannot be empty')
+    const message = await text({
+      message: 'You:',
+      validate(value) {
+        return value.trim().length === 0 ? 'Please enter a message' : undefined
+      }
     })
 
-    if (message?.toLowerCase() === 'exit') {
-      console.log(chalk.yellow('\nGoodbye! 👋'))
+    // Handle cancellation (Ctrl+C)
+    if (isCancel(message)) {
+      cancel('Operation cancelled')
       process.exit(0)
     }
 
-    const loadingSpinner = ora('Thinking...').start()
+    if (message.toLowerCase() === 'exit') {
+      outro(chalk.yellow('Goodbye! 👋'))
+      process.exit(0)
+    }
+
+    const thinking = spinner()
+    thinking.start('Thinking...')
     try {
       const response = await anthropic.sendMessage(conversationId, message)
-      loadingSpinner.stop()
-      console.log(chalk.blue('\nAssistant:'), response, '\n')
+      thinking.stop(`${chalk.blue('Assistant:')} ${response}`)
     } catch (error) {
-      loadingSpinner.fail(chalk.red('Failed to get response'))
-      console.error(chalk.red('Error: '), error instanceof Error ? error.message : 'Unknown error')
+      thinking.stop(chalk.red('Failed to get response'))
+      log.error(`${chalk.red('Fatal error: ')} ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
 }
@@ -56,6 +53,6 @@ async function main() {
 try {
   await main()
 } catch (error) {
-  console.error(chalk.red('Fatal error: '), error instanceof Error ? error.message : 'Unknown error')
+  log.error(`${chalk.red('Fatal error: ')} ${error instanceof Error ? error.message : 'Unknown error'}`)
   process.exit(1)
 }
