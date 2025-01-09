@@ -1,31 +1,52 @@
 import { randomUUID } from 'node:crypto'
+import type { SetOptional } from 'type-fest'
 
 export type MessageRole = 'user' | 'assistant'
 
+export type MessageProps = {
+  id: string
+  role: MessageRole
+  content: string
+  date: Date
+  conversationId: string
+}
+
 export class Message {
-  private readonly id: string
-  private readonly role: MessageRole
-  private readonly content: string
-  private readonly date: Date
-  private readonly conversationId: string
+  readonly #props: MessageProps
 
-  private constructor(id: string, role: MessageRole, content: string, date: Date, conversationId: string) {
-    this.id = id
-    this.role = role
-    this.content = content
-    this.date = date
-    this.conversationId = conversationId
+  private constructor(props: MessageProps) {
+    this.#props = props
   }
 
-  static create(props: { role: MessageRole; content: string; conversationId: string }): Message {
-    return new Message(randomUUID(), props.role, props.content, new Date(), props.conversationId)
+  static create(props: SetOptional<MessageProps, 'id' | 'date'>): Message {
+    return new Message({
+      ...props,
+      id: props.id || randomUUID(),
+      date: props.date || new Date()
+    })
   }
 
-  getRole(): MessageRole {
-    return this.role
+  static reconstruct(props: MessageProps): Message {
+    return new Message(props)
   }
 
-  getContent(): string {
-    return this.content
+  get id(): string {
+    return this.#props.id
+  }
+
+  get role(): MessageRole {
+    return this.#props.role
+  }
+
+  get content(): string {
+    return this.#props.content
+  }
+
+  get date(): Date {
+    return this.#props.date
+  }
+
+  get conversationId(): string {
+    return this.#props.conversationId
   }
 }

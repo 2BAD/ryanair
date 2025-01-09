@@ -1,6 +1,6 @@
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
-import type { Conversation } from '~/domain/conversation.ts'
+import { Conversation } from '~/domain/conversation.ts'
 import type { ConversationRepository } from './conversationRepository.ts'
 
 type DatabaseSchema = {
@@ -33,8 +33,13 @@ export class FSConversationRepository implements ConversationRepository {
 
   async findById(id: string): Promise<Conversation | null> {
     await this.ensureInitialized()
-    const conversation = this.db.data.conversations.find((c) => c.getId() === id)
-    return conversation || null
+    const raw = this.db.data.conversations.find((c) => c.id === id)
+
+    if (!raw) {
+      return null
+    }
+
+    return Conversation.reconstruct(raw)
   }
 
   async save(conversation: Conversation): Promise<void> {
@@ -45,7 +50,7 @@ export class FSConversationRepository implements ConversationRepository {
 
   async update(conversation: Conversation): Promise<void> {
     await this.ensureInitialized()
-    const index = this.db.data.conversations.findIndex((c) => c.getId() === conversation.getId())
+    const index = this.db.data.conversations.findIndex((c) => c.id === conversation.id)
     if (index !== -1) {
       this.db.data.conversations[index] = conversation
       await this.db.write()
@@ -54,7 +59,7 @@ export class FSConversationRepository implements ConversationRepository {
 
   async delete(id: string): Promise<void> {
     await this.ensureInitialized()
-    const index = this.db.data.conversations.findIndex((c) => c.getId() === id)
+    const index = this.db.data.conversations.findIndex((c) => c.id === id)
     if (index !== -1) {
       this.db.data.conversations.splice(index, 1)
       await this.db.write()

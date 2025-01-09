@@ -19,8 +19,8 @@ export class ChatService {
   private async createNewConversation(): Promise<string> {
     const conversation = Conversation.create()
     await this.conversationRepository.save(conversation)
-    this.currentConversationId = conversation.getId()
-    return conversation.getId()
+    this.currentConversationId = conversation.id
+    return conversation.id
   }
 
   async sendMessage(message: string, options: SendMessageOptions = {}): Promise<string> {
@@ -41,7 +41,7 @@ export class ChatService {
 
     // Add user message and get LLM response
     conversation.addMessage('user', message)
-    const response = await this.llmService.complete(conversation.getMessages())
+    const response = await this.llmService.complete(conversation.messages)
     conversation.addMessage('assistant', response)
 
     // Save updated conversation
