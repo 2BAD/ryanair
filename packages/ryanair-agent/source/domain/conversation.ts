@@ -1,20 +1,23 @@
 import { randomUUID } from 'node:crypto'
-import { Message, type MessageRole } from './message.ts'
+import { Message, type MessageDTO, type MessageRole } from './message.ts'
 
-export type ConversationProps = {
+export type ConversationDTO = {
   id: string
   createdAt: Date
-  messages: Message[]
+  messages: MessageDTO[]
 }
 
 export class Conversation {
-  readonly #props: ConversationProps
+  readonly #props: Omit<ConversationDTO, 'messages'>
+  readonly #messages: Message[]
 
-  constructor(props: ConversationProps) {
-    this.#props = props
+  constructor(props: ConversationDTO) {
+    const { id, createdAt, messages } = props
+    this.#props = { id, createdAt }
+    this.#messages = messages.map(Message.reconstruct)
   }
 
-  static create(props?: ConversationProps): Conversation {
+  static create(props?: ConversationDTO): Conversation {
     return new Conversation({
       id: props?.id || randomUUID(),
       createdAt: props?.createdAt || new Date(),
@@ -22,14 +25,14 @@ export class Conversation {
     })
   }
 
-  static reconstruct(props: ConversationProps): Conversation {
+  static reconstruct(props: ConversationDTO): Conversation {
     props.messages = props.messages.map(Message.reconstruct)
     return new Conversation(props)
   }
 
   addMessage(role: MessageRole, content: string): Message {
     const message = Message.create({ role, content, conversationId: this.#props.id })
-    this.#props.messages.push(message)
+    this.#messages.push(message)
     return message
   }
   get id(): string {
@@ -41,6 +44,14 @@ export class Conversation {
   }
 
   get messages(): Message[] {
-    return [...this.#props.messages]
+    return [...this.#messages]
+  }
+
+  toDTO(): ConversationDTO {
+    return {
+      id: this.#props.id,
+      createdAt: this.#props.createdAt,
+      messages: this.#messages.map((message) => message.toDTO())
+    }
   }
 }

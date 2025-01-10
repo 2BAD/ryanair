@@ -3,7 +3,7 @@ import type { SetOptional } from 'type-fest'
 
 export type MessageRole = 'user' | 'assistant'
 
-export type MessageProps = {
+export type MessageDTO = {
   id: string
   role: MessageRole
   content: string
@@ -12,13 +12,13 @@ export type MessageProps = {
 }
 
 export class Message {
-  readonly #props: MessageProps
+  readonly #props: MessageDTO
 
-  private constructor(props: MessageProps) {
+  private constructor(props: MessageDTO) {
     this.#props = props
   }
 
-  static create(props: SetOptional<MessageProps, 'id' | 'date'>): Message {
+  static create(props: SetOptional<MessageDTO, 'id' | 'date'>): Message {
     return new Message({
       ...props,
       id: props.id || randomUUID(),
@@ -26,7 +26,7 @@ export class Message {
     })
   }
 
-  static reconstruct(props: MessageProps): Message {
+  static reconstruct(props: MessageDTO): Message {
     return new Message(props)
   }
 
@@ -48,5 +48,15 @@ export class Message {
 
   get conversationId(): string {
     return this.#props.conversationId
+  }
+
+  toDTO(): MessageDTO {
+    return {
+      id: this.#props.id,
+      role: this.#props.role,
+      content: this.#props.content,
+      date: this.#props.date,
+      conversationId: this.#props.conversationId
+    }
   }
 }

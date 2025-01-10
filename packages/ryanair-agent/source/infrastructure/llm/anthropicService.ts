@@ -36,11 +36,11 @@ export class AnthropicService implements LLMService {
 
   private formatMessages(messages: Message[]): Anthropic.Messages.MessageParam[] {
     return messages.map((message) => ({
-      role: message.getRole(),
+      role: message.role,
       content: [
         {
           type: 'text',
-          text: message.getContent()
+          text: message.content
         }
       ]
     }))

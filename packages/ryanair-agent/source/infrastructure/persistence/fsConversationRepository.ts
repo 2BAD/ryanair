@@ -1,10 +1,10 @@
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
-import { Conversation } from '~/domain/conversation.ts'
+import { Conversation, type ConversationDTO } from '~/domain/conversation.ts'
 import type { ConversationRepository } from './conversationRepository.ts'
 
 type DatabaseSchema = {
-  conversations: Conversation[]
+  conversations: ConversationDTO[]
 }
 
 export class FSConversationRepository implements ConversationRepository {
@@ -33,18 +33,18 @@ export class FSConversationRepository implements ConversationRepository {
 
   async findById(id: string): Promise<Conversation | null> {
     await this.ensureInitialized()
-    const raw = this.db.data.conversations.find((c) => c.id === id)
+    const conversation = this.db.data.conversations.find((c) => c.id === id)
 
-    if (!raw) {
+    if (!conversation) {
       return null
     }
 
-    return Conversation.reconstruct(raw)
+    return conversation instanceof Conversation ? conversation : Conversation.reconstruct(conversation)
   }
 
   async save(conversation: Conversation): Promise<void> {
     await this.ensureInitialized()
-    this.db.data.conversations.push(conversation)
+    this.db.data.conversations.push(conversation.toDTO())
     await this.db.write()
   }
 
@@ -52,7 +52,7 @@ export class FSConversationRepository implements ConversationRepository {
     await this.ensureInitialized()
     const index = this.db.data.conversations.findIndex((c) => c.id === conversation.id)
     if (index !== -1) {
-      this.db.data.conversations[index] = conversation
+      this.db.data.conversations[index] = conversation.toDTO()
       await this.db.write()
     }
   }
