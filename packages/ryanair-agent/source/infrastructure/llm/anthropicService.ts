@@ -3,11 +3,12 @@ import type { Message } from '~/domain/message.ts'
 import type { LLMService } from './llmService.ts'
 
 export type AnthropicConfig = {
-  model: string
+  model: Anthropic.Messages.Model
+  system?: string
+  tools: Anthropic.Messages.Tool[]
+  temperature: number
   // biome-ignore lint/style/useNamingConvention: external props
   max_tokens: number
-  temperature: number
-  system?: string
 }
 
 export class AnthropicService implements LLMService {
@@ -18,9 +19,10 @@ export class AnthropicService implements LLMService {
     this.anthropic = new Anthropic({ apiKey })
     this.config = {
       model: 'claude-3-5-haiku-latest',
+      tools: [],
+      temperature: 0,
       // biome-ignore lint/style/useNamingConvention: external props
       max_tokens: 1000,
-      temperature: 0,
       ...config
     }
   }
