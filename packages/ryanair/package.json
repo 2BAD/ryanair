@@ -58,15 +58,15 @@
     "date-fns": "4.1.0",
     "fast-cartesian": "9.0.0",
     "got": "14.4.5",
-    "tough-cookie": "5.0.0",
+    "tough-cookie": "5.1.0",
     "zod": "3.24.1"
   },
-  "packageManager": "npm@11.0.0",
+  "packageManager": "npm@11.1.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
-    "node": "22.12.0",
-    "npm": "11.0.0"
+    "node": "22.13.1",
+    "npm": "11.1.0"
   }
 }

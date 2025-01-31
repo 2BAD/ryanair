@@ -11,24 +11,24 @@
     "@2bad/tsconfig": "3.0.1",
     "@2bad/tsfix": "0.1.0",
     "@biomejs/biome": "1.9.4",
-    "@swc/cli": "0.5.2",
-    "@swc/core": "1.10.4",
-    "@types/node": "22.10.5",
+    "@swc/cli": "0.6.0",
+    "@swc/core": "1.10.12",
+    "@types/node": "22.13.0",
     "@types/tough-cookie": "4.0.5",
     "@vitest/coverage-v8": "2.1.8",
     "npm-run-all2": "7.0.2",
     "rimraf": "6.0.1",
     "tsc-alias": "1.8.10",
-    "typescript": "5.7.2",
+    "typescript": "5.7.3",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "2.1.8"
   },
-  "packageManager": "npm@11.0.0",
+  "packageManager": "npm@11.1.0",
   "engines": {
     "node": ">=20"
   },
   "volta": {
-    "node": "22.12.0",
-    "npm": "11.0.0"
+    "node": "22.13.1",
+    "npm": "11.1.0"
   }
 }
