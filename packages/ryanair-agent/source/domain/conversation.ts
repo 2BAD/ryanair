@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto'
-import { Message, type MessageDTO, type MessageRole } from './message.ts'
+import { Message, type MessageDTO, type MessageRole } from '~/domain/message.ts'
 
 export type ConversationDTO = {
   id: string

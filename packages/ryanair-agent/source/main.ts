@@ -1,30 +1,58 @@
-/* eslint-disable n/no-process-exit */
 /* eslint-disable jsdoc/require-jsdoc */
-import chalk from 'chalk'
-import { ChatService } from '~/application/chat.ts'
-import { AnthropicService } from '~/infrastructure/llm/anthropicService.ts'
+import { ChatService } from '~/application/chat/chatService.ts'
+import { CompletionService } from '~/application/llm/completionService.ts'
+import type { EventBus } from '~/domain/shared/eventBus.ts'
+import { AnthropicAdapter } from '~/infrastructure/llm/adapters/anthropic.ts'
 import { FSConversationRepository } from '~/infrastructure/persistence/fsConversationRepository.ts'
 import { CLI } from '~/presentation/cli.ts'
+import type { CompletionReceivedEvent } from './domain/llm/events/completionReceivedEvent.ts'
+import type { CompletionRequestedEvent } from './domain/llm/events/completionRequestedEvent.ts'
+import { InMemoryEventBus } from './infrastructure/eventBus/inMemoryEventBus.ts'
 
-const ANTHROPIC_API_KEY = process.env['ANTHROPIC_API_KEY']
+async function setupEventHandlers(eventBus: EventBus, logger: { info: (message: string, data?: unknown) => void }) {
+  // Subscribe to completion requested events
+  eventBus.subscribe<CompletionRequestedEvent>('CompletionRequestedEvent', async (event) => {
+    logger.info('LLM completion requested', {
+      model: event.completionRequest.config.model,
+      timestamp: event.timestamp
+    })
+  })
+
+  // Subscribe to completion received events
+  eventBus.subscribe<CompletionReceivedEvent>('CompletionReceivedEvent', async (event) => {
+    logger.info('LLM completion received', {
+      tokens: event.completionResponse.usage.total,
+      finishReason: event.completionResponse.finishReason,
+      timestamp: event.timestamp
+    })
+  })
+}
 
 async function main() {
-  if (!ANTHROPIC_API_KEY) {
-    console.error(chalk.red('Error: ANTHROPIC_API_KEY environment variable is not set'))
-    process.exit(1)
-  }
+  // Setup infrastructure
+  const eventBus = new InMemoryEventBus()
+  const anthropicClient = new AnthropicClient({
+    apiKey: process.env.ANTHROPIC_API_KEY
+  })
 
-  const memory = new FSConversationRepository('./db.json')
-  const llm = new AnthropicService(ANTHROPIC_API_KEY)
-  const chat = new ChatService(llm, memory)
-  const cli = new CLI(chat)
+  // Create LLM adapter
+  const llmAdapter = new AnthropicAdapter(anthropicClient, console)
 
-  try {
-    await cli.start()
-  } catch (error) {
-    console.error('Fatal error: ', error)
-    process.exit(1)
-  }
+  // Create completion service
+  const completionService = new CompletionService(llmAdapter, eventBus)
+
+  // Setup event listeners for monitoring/logging
+  await setupEventHandlers(eventBus, console)
+
+  // Create repository
+  const conversationRepository = new FSConversationRepository('./db.json')
+
+  // Create chat service
+  const chatService = new ChatService(completionService, conversationRepository)
+
+  // Create and start CLI
+  const cli = new CLI(chatService)
+  await cli.start()
 }
 
 await main()
