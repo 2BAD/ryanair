@@ -52,6 +52,7 @@
     "@2bad/ryanair": "7.1.2",
     "@ai-sdk/anthropic": "1.1.6",
     "@ai-sdk/openai": "1.1.9",
+    "@mastra/core": "0.5.0-alpha.9",
     "ai": "4.1.16",
     "chalk": "5.4.1",
     "lowdb": "7.0.1",
@@ -62,6 +63,7 @@
   },
   "devDependencies": {
     "@types/prompts": "2.4.9",
+    "mastra": "0.2.9-alpha.9",
     "type-fest": "4.35.0"
   },
   "packageManager": "npm@11.1.0",
