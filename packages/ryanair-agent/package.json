@@ -50,28 +50,28 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.1.2",
-    "@ai-sdk/anthropic": "1.1.6",
-    "@ai-sdk/openai": "1.1.9",
+    "@ai-sdk/anthropic": "1.1.15",
+    "@ai-sdk/openai": "1.2.1",
     "@mastra/core": "0.5.0-alpha.9",
-    "ai": "4.1.16",
+    "ai": "4.1.54",
     "chalk": "5.4.1",
     "lowdb": "7.0.1",
     "ora": "8.2.0",
     "prompts": "2.4.2",
     "zod": "3.24.2",
-    "zod-to-json-schema": "3.24.2"
+    "zod-to-json-schema": "3.24.3"
   },
   "devDependencies": {
     "@types/prompts": "2.4.9",
     "mastra": "0.2.9-alpha.9",
-    "type-fest": "4.35.0"
+    "type-fest": "4.37.0"
   },
-  "packageManager": "npm@11.1.0",
+  "packageManager": "npm@11.2.0",
   "engines": {
     "node": ">=22"
   },
   "volta": {
     "node": "22.14.0",
-    "npm": "11.1.0"
+    "npm": "11.2.0"
   }
 }
