@@ -1,0 +1,63 @@
+{
+  "name": "@2bad/ryanair-mcp",
+  "version": "7.1.2",
+  "description": "Ryanair MCP",
+  "keywords": [
+    "mcp",
+    "ryanair"
+  ],
+  "homepage": "https://github.com/2BAD/ryanair#readme",
+  "bugs": {
+    "url": "https://github.com/2BAD/ryanair/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2BAD/ryanair.git"
+  },
+  "license": "MIT",
+  "author": "2BAD (https://github.com/2BAD)",
+  "contributors": [
+    {
+      "name": "Jason Hyde",
+      "email": "github@2bad.me",
+      "url": "https://github.com/mrhyde"
+    }
+  ],
+  "type": "module",
+  "exports": "./build/index.js",
+  "typings": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "run-p build:*",
+    "build:swc": "swc ./source -d ./build --strip-leading-paths",
+    "build:types": "tsc --project tsconfig.build.json",
+    "postbuild": "run-s fix:alias fix:ext",
+    "check": "run-p check:*",
+    "check:biome": "biome check ./source",
+    "check:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "fix": "run-s fix:code fix:format",
+    "fix:alias": "tsc-alias -p tsconfig.build.json",
+    "fix:code": "run-s 'check:eslint -- --fix'",
+    "fix:ext": "tsfix",
+    "fix:format": "biome format --write ./source",
+    "prepublishOnly": "run-s build",
+    "test": "vitest run",
+    "test:integration": "vitest run integration --coverage",
+    "test:unit": "vitest run unit --coverage",
+    "preversion": "run-s check test build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.7.0"
+  },
+  "packageManager": "npm@11.2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "volta": {
+    "node": "22.14.0",
+    "npm": "11.2.0"
+  }
+}
