@@ -38,6 +38,7 @@
     "check": "run-p check:*",
     "check:biome": "biome check ./source",
     "check:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "dev": "npx @modelcontextprotocol/inspector tsx source/index.js",
     "fix": "run-s fix:code fix:format",
     "fix:alias": "tsc-alias -p tsconfig.build.json",
     "fix:code": "run-s 'check:eslint -- --fix'",
@@ -50,7 +51,13 @@
     "preversion": "run-s check test build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.7.0"
+    "@2bad/ryanair": "7.1.2",
+    "@modelcontextprotocol/sdk": "1.7.0",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "0.6.0",
+    "tsx": "4.19.3"
   },
   "packageManager": "npm@11.2.0",
   "engines": {
