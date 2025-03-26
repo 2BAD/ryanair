@@ -14,10 +14,18 @@ const AIRPORTS_CALCULATE_DISTANCE: Parameters<Tool> = [
     )
   },
   async ({ locations }) => {
-    const data = airports.calculateDistance(locations)
-    const text = JSON.stringify({ distance: data }, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = airports.calculateDistance(locations)
+      const text = JSON.stringify({ distance: data }, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -30,10 +38,18 @@ const AIRPORTS_FIND_ROUTES: Parameters<Tool> = [
     to: z.string().length(3)
   },
   async ({ from, to }) => {
-    const data = await airports.findRoutes(from, to)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.findRoutes(from, to)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -43,10 +59,18 @@ const AIRPORTS_GET_ACTIVE_V3: Parameters<Tool> = [
   'get all active airports using API v3',
   {},
   async () => {
-    const data = await airports.getActiveV3()
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getActiveV3()
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -56,10 +80,18 @@ const AIRPORTS_GET_ACTIVE: Parameters<Tool> = [
   'get all active airports',
   {},
   async () => {
-    const data = await airports.getActive()
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getActive()
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -69,10 +101,18 @@ const AIRPORTS_GET_CLOSEST: Parameters<Tool> = [
   'get the closest airport based on user ip',
   {},
   async () => {
-    const data = await airports.getClosest()
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getClosest()
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -82,10 +122,18 @@ const AIRPORTS_GET_DESTINATIONS: Parameters<Tool> = [
   'get available destinations from a specific airport',
   { code: z.string().length(3) },
   async ({ code }) => {
-    const data = await airports.getDestinations(code)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getDestinations(code)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -95,10 +143,18 @@ const AIRPORTS_GET_INFO: Parameters<Tool> = [
   'get detailed information about a specific airport',
   { code: z.string().length(3) },
   async ({ code }) => {
-    const data = await airports.getInfo(code)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getInfo(code)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -108,10 +164,18 @@ const AIRPORTS_GET_NEARBY: Parameters<Tool> = [
   'get nearby airports based on user ip',
   { locale: z.string().optional() },
   async ({ locale }) => {
-    const data = await airports.getNearby(locale)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getNearby(locale)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -126,10 +190,18 @@ const AIRPORTS_GET_SCHEDULES_BY_PERIOD: Parameters<Tool> = [
     month: z.number()
   },
   async ({ from, to, year, month }) => {
-    const data = await airports.getSchedulesByPeriod(from, to, year, month)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getSchedulesByPeriod(from, to, year, month)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -142,10 +214,18 @@ const AIRPORTS_GET_SCHEDULES_BY_ROUTE: Parameters<Tool> = [
     to: z.string().length(3)
   },
   async ({ from, to }) => {
-    const data = await airports.getSchedulesByRoute(from, to)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getSchedulesByRoute(from, to)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -155,10 +235,18 @@ const AIRPORTS_GET_SCHEDULES: Parameters<Tool> = [
   'get all available flight schedules for a departure airport',
   { from: z.string().length(3) },
   async ({ from }) => {
-    const data = await airports.getSchedules(from)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await airports.getSchedules(from)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]

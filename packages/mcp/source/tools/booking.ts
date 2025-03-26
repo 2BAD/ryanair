@@ -22,9 +22,17 @@ const BOOKING_GENERATE_LINK: Parameters<Tool> = [
     locale: z.string().optional()
   },
   async (params) => {
-    const bookingLink = helpers.generateBookingLink(params)
-    return {
-      content: [{ type: 'text', text: bookingLink }]
+    try {
+      const bookingLink = helpers.generateBookingLink(params)
+      return {
+        content: [{ type: 'text', text: bookingLink }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]

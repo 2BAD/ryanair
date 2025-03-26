@@ -25,46 +25,54 @@ const FLIGHTS_GET_AVAILABLE: Parameters<Tool> = [
     promoCode: z.string().optional()
   },
   async (params) => {
-    // Convert params to the format expected by the API
-    const apiParams: Record<string, string> = {}
+    try {
+      // Convert params to the format expected by the API
+      const apiParams: Record<string, string> = {}
 
-    if (params['origin']) {
-      apiParams['Origin'] = params['origin']
-    }
-    if (params['destination']) {
-      apiParams['Destination'] = params['destination']
-    }
-    if (params['dateOut']) {
-      apiParams['DateOut'] = params['dateOut']
-    }
-    if (params['dateIn']) {
-      apiParams['DateIn'] = params['dateIn']
-    }
-    if (params['adults'] !== undefined) {
-      apiParams['ADT'] = params['adults'].toString()
-    }
-    if (params['children'] !== undefined) {
-      apiParams['CHD'] = params['children'].toString()
-    }
-    if (params['teens'] !== undefined) {
-      apiParams['TEEN'] = params['teens'].toString()
-    }
-    if (params['infants'] !== undefined) {
-      apiParams['INF'] = params['infants'].toString()
-    }
-    if (params['includeConnecting'] !== undefined) {
-      apiParams['IncludeConnectingFlights'] = params['includeConnecting'].toString()
-    }
-    if (params['roundTrip'] !== undefined) {
-      apiParams['RoundTrip'] = params['roundTrip'].toString()
-    }
-    if (params['promoCode']) {
-      apiParams['promoCode'] = params['promoCode']
-    }
-    const data = await flights.getAvailable(apiParams)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+      if (params['origin']) {
+        apiParams['Origin'] = params['origin']
+      }
+      if (params['destination']) {
+        apiParams['Destination'] = params['destination']
+      }
+      if (params['dateOut']) {
+        apiParams['DateOut'] = params['dateOut']
+      }
+      if (params['dateIn']) {
+        apiParams['DateIn'] = params['dateIn']
+      }
+      if (params['adults'] !== undefined) {
+        apiParams['ADT'] = params['adults'].toString()
+      }
+      if (params['children'] !== undefined) {
+        apiParams['CHD'] = params['children'].toString()
+      }
+      if (params['teens'] !== undefined) {
+        apiParams['TEEN'] = params['teens'].toString()
+      }
+      if (params['infants'] !== undefined) {
+        apiParams['INF'] = params['infants'].toString()
+      }
+      if (params['includeConnecting'] !== undefined) {
+        apiParams['IncludeConnectingFlights'] = params['includeConnecting'].toString()
+      }
+      if (params['roundTrip'] !== undefined) {
+        apiParams['RoundTrip'] = params['roundTrip'].toString()
+      }
+      if (params['promoCode']) {
+        apiParams['promoCode'] = params['promoCode']
+      }
+      const data = await flights.getAvailable(apiParams)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -77,10 +85,18 @@ const FLIGHTS_GET_DATES: Parameters<Tool> = [
     to: z.string().length(3)
   },
   async ({ from, to }) => {
-    const data = await flights.getDates(from, to)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await flights.getDates(from, to)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]

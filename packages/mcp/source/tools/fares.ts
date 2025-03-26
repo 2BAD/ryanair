@@ -14,10 +14,18 @@ const FARES_FIND_CHEAPEST_ROUND_TRIP: Parameters<Tool> = [
     limit: z.number().min(1).max(50).optional()
   },
   async ({ from, to, startDate, endDate, currency, limit }) => {
-    const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency, limit)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency, limit)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -33,10 +41,18 @@ const FARES_FIND_DAILY_FARES_IN_RANGE: Parameters<Tool> = [
     currency: z.string().optional()
   },
   async ({ from, to, startDate, endDate, currency }) => {
-    const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
@@ -51,10 +67,18 @@ const FARES_GET_CHEAPEST_PER_DAY: Parameters<Tool> = [
     currency: z.string().optional()
   },
   async ({ from, to, startDate, currency }) => {
-    const data = await fares.getCheapestPerDay(from, to, startDate, currency)
-    const text = JSON.stringify(data, null, 2)
-    return {
-      content: [{ type: 'text', text }]
+    try {
+      const data = await fares.getCheapestPerDay(from, to, startDate, currency)
+      const text = JSON.stringify(data, null, 2)
+      return {
+        content: [{ type: 'text', text }]
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
+      return {
+        isError: true,
+        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
+      }
     }
   }
 ]
