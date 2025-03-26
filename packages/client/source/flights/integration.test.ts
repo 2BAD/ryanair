@@ -12,7 +12,7 @@ describe('flights', () => {
 
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
 
       await flights.getDates(from, to)
 
@@ -23,7 +23,7 @@ describe('flights', () => {
       expect.assertions(1)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
 
       const data = await flights.getDates(from, to)
       expect(data.length).toBeGreaterThan(0)
@@ -33,7 +33,7 @@ describe('flights', () => {
       expect.assertions(1)
 
       const from = 'WRONG_IATA_CODE'
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
 
       await expect(flights.getDates(from, to)).rejects.toThrow('Response code 400 (Bad Request)')
     })

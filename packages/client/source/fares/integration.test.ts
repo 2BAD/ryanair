@@ -12,7 +12,7 @@ describe('fares', () => {
 
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
       await fares.getCheapestPerDay(from, to, startDate, currency)
@@ -27,7 +27,7 @@ describe('fares', () => {
       expect.assertions(1)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
 
@@ -39,7 +39,7 @@ describe('fares', () => {
       expect.assertions(1)
 
       const from = 'WRONG_IATA_CODE'
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
 
@@ -55,7 +55,7 @@ describe('fares', () => {
 
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = tomorrow()
       const currency = 'EUR'
@@ -75,7 +75,7 @@ describe('fares', () => {
       expect.assertions(1)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
@@ -85,15 +85,16 @@ describe('fares', () => {
     })
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
-      expect.assertions(1)
+      expect.assertions(2)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
+      expect(data.length).toBeGreaterThan(0)
       expect(data.every((fare) => fare.price !== null)).toBeTruthy()
     })
   })
@@ -104,7 +105,7 @@ describe('fares', () => {
 
       const getSpy = vi.spyOn(client, 'get')
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = tomorrow()
       const currency = 'EUR'
@@ -124,7 +125,7 @@ describe('fares', () => {
       expect.assertions(1)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
@@ -134,29 +135,33 @@ describe('fares', () => {
     })
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
-      expect.assertions(2)
+      expect.assertions(3)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
+
+      expect(data.length).toBeGreaterThan(0)
       expect(data.every((trip) => trip.departure.price !== null)).toBeTruthy()
       expect(data.every((trip) => trip.return.price !== null)).toBeTruthy()
     })
 
     it('when provided with all parameters \n\t Then should have return trips after departure', async () => {
-      expect.assertions(1)
+      expect.assertions(2)
 
       const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
+      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
+
+      expect(data.length).toBeGreaterThan(0)
       expect(data.every((trip) => isAfterIso(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })
