@@ -9,19 +9,19 @@
   "devDependencies": {
     "@2bad/axiom": "1.0.0-beta.14",
     "@2bad/tsconfig": "3.0.1",
-    "@2bad/tsfix": "0.1.0",
+    "@2bad/tsfix": "1.0.0",
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "0.6.0",
     "@swc/core": "1.11.13",
     "@types/node": "22.13.13",
     "@types/tough-cookie": "4.0.5",
-    "@vitest/coverage-v8": "2.1.9",
+    "@vitest/coverage-v8": "3.0.9",
     "npm-run-all2": "7.0.2",
     "rimraf": "6.0.1",
     "tsc-alias": "1.8.11",
     "typescript": "5.8.2",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "2.1.9"
+    "vitest": "3.0.9"
   },
   "packageManager": "npm@11.2.0",
   "engines": {
