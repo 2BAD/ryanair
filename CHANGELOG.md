@@ -9,15 +9,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Breaking Changes
 
-### Added
+### Added (API Client)
 - New API methods for retrieving flight schedules:
   - `airports.getSchedulesByRoute(from, to)`: Returns a single `Schedule` for a specific route
   - `airports.getSchedulesByPeriod(from, to, year, month)`: Returns a `MonthlySchedule` for a specific period
+- New booking helper utilities to generate Ryanair booking links:
+  - `helpers.generateBookingLink`: Creates customizable booking URLs with all options
+  - `helpers.generateOneWayBookingLink`: Simplified helper for one-way flight booking links
+  - `helpers.generateReturnBookingLink`: Simplified helper for return flight booking links
+- Comprehensive test suite for booking link generators
+- Exported helpers module through the package's main entry point
 
+### Changed (API Client)
+- Improved code organization with a new helpers index for better module structure
+
+---
+
+### Added (MCP)
+- Implemented comprehensive MCP tools for all airport methods:
+  - `get_active_airports`: List all active airports
+  - `get_active_airports_v3`: List all active airports (API v3)
+  - `get_airport_info`: Get detailed airport information
+  - `get_airport_destinations`: Get destinations from an airport
+  - `calculate_distance`: Calculate distance between locations
+  - `find_routes`: Find routes between airports
+  - `get_airport_schedules`: Get schedules from airports
+  - `get_schedules_by_route`: Get schedules for a specific route
+  - `get_schedules_by_period`: Get schedules for specific timeframes
+- Added MCP tools for flights:
+  - `get_available_flights`: Find available flights with all options
+  - `get_available_flight_dates`: Get dates with available flights
+- Added MCP tools for fares:
+  - `get_cheapest_fares_per_day`: Get cheapest fares by day
+  - `find_daily_fares_in_range`: Find all daily fares in date range
+  - `find_cheapest_round_trip`: Find cheapest round trips
+- Added booking link generation tool:
+  - `generate_booking_link`: Create booking links with all options
+
+### Changed (MCP)
+- Improved package description and keywords for better discoverability
+- Streamlined server initialization code
 
 ### Fixed
-
-### Changed
 
 ### Removed
 
