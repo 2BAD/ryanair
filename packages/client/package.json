@@ -56,17 +56,17 @@
   },
   "dependencies": {
     "date-fns": "4.1.0",
-    "fast-cartesian": "9.0.0",
+    "fast-cartesian": "9.0.1",
     "got": "14.4.5",
     "tough-cookie": "5.1.2",
-    "zod": "3.24.2"
+    "zod": "3.24.3"
   },
-  "packageManager": "npm@11.2.0",
+  "packageManager": "npm@11.3.0",
   "engines": {
     "node": ">=22"
   },
   "volta": {
-    "node": "22.14.0",
-    "npm": "11.2.0"
+    "node": "22.15.0",
+    "npm": "11.3.0"
   }
 }
