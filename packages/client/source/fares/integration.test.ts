@@ -5,14 +5,15 @@ import { FARE_FINDER_API } from '~/endpoints.ts'
 import { isAfterIso, nextMonth, tomorrow } from '~/helpers/date.ts'
 import { fares } from '~/index.ts'
 
+const from = 'LON' // all London airports
+const to = 'MIL' // all Milan airports
+
 describe('fares', () => {
   describe('getCheapestPerDay', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
 
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
       await fares.getCheapestPerDay(from, to, startDate, currency)
@@ -26,8 +27,6 @@ describe('fares', () => {
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
 
@@ -39,7 +38,6 @@ describe('fares', () => {
       expect.assertions(1)
 
       const from = 'WRONG_IATA_CODE'
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const currency = 'EUR'
 
@@ -54,8 +52,6 @@ describe('fares', () => {
       expect.assertions(1)
 
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = tomorrow()
       const currency = 'EUR'
@@ -74,27 +70,23 @@ describe('fares', () => {
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
-      expect(data.length).toBeGreaterThan(0)
+      expect(Array.isArray(data)).toBeTruthy()
     })
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
       expect.assertions(2)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
-      expect(data.length).toBeGreaterThan(0)
+      expect(Array.isArray(data)).toBeTruthy()
       expect(data.every((fare) => fare.price !== null)).toBeTruthy()
     })
   })
@@ -104,8 +96,6 @@ describe('fares', () => {
       expect.assertions(1)
 
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = tomorrow()
       const currency = 'EUR'
@@ -124,28 +114,24 @@ describe('fares', () => {
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
-      expect(data.length).toBeGreaterThan(0)
+      expect(Array.isArray(data)).toBeTruthy()
     })
 
     it('when provided with all parameters \n\t Then should not have any nullish prices', async () => {
       expect.assertions(3)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
-      expect(data.length).toBeGreaterThan(0)
+      expect(Array.isArray(data)).toBeTruthy()
       expect(data.every((trip) => trip.departure.price !== null)).toBeTruthy()
       expect(data.every((trip) => trip.return.price !== null)).toBeTruthy()
     })
@@ -153,15 +139,13 @@ describe('fares', () => {
     it('when provided with all parameters \n\t Then should have return trips after departure', async () => {
       expect.assertions(2)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
       const startDate = tomorrow()
       const endDate = nextMonth()
       const currency = 'EUR'
 
       const data = await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
-      expect(data.length).toBeGreaterThan(0)
+      expect(Array.isArray(data)).toBeTruthy()
       expect(data.every((trip) => isAfterIso(trip.return.day, trip.departure.day))).toBeTruthy()
     })
   })

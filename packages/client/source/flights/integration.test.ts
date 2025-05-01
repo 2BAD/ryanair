@@ -5,14 +5,15 @@ import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
 import { tomorrow } from '~/helpers/date.ts'
 import { flights } from '~/index.ts'
 
+const from = 'LON' // all London airports
+const to = 'MIL' // all Milan airports
+
 describe('flights', () => {
   describe('getDates', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
 
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
 
       await flights.getDates(from, to)
 
@@ -22,9 +23,6 @@ describe('flights', () => {
     it('when provided with all parameters \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(1)
 
-      const from = 'BER' // Berlin airport
-      const to = 'BRU' // Bruxelles airport
-
       const data = await flights.getDates(from, to)
       expect(data.length).toBeGreaterThan(0)
     })
@@ -33,7 +31,6 @@ describe('flights', () => {
       expect.assertions(1)
 
       const from = 'WRONG_IATA_CODE'
-      const to = 'BRU' // Bruxelles airport
 
       await expect(flights.getDates(from, to)).rejects.toThrow('Response code 400 (Bad Request)')
     })

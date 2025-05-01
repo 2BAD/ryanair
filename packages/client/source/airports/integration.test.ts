@@ -22,6 +22,9 @@ const AirportShortSnapshot = {
   name: expect.any(String)
 }
 
+const from = 'BER' // Berlin airport
+const to = 'VCE' // Krakow airport
+
 describe('airports', () => {
   afterEach(() => {
     vi.restoreAllMocks()
@@ -117,11 +120,11 @@ describe('airports', () => {
     it('when asked for schedules for a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
       expect.assertions(4)
 
-      const data = await airports.getSchedules('BER')
-      expect(data['BRU']).haveOwnProperty('firstFlightDate')
-      expect(data['BRU']).haveOwnProperty('lastFlightDate')
-      expect(data['BRU']).haveOwnProperty('months')
-      expect(data['BRU']).haveOwnProperty('monthsFromToday')
+      const data = await airports.getSchedules(from)
+      expect(data[to]).haveOwnProperty('firstFlightDate')
+      expect(data[to]).haveOwnProperty('lastFlightDate')
+      expect(data[to]).haveOwnProperty('months')
+      expect(data[to]).haveOwnProperty('monthsFromToday')
     })
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
@@ -133,8 +136,6 @@ describe('airports', () => {
     it('should call correct endpoint with from and to IATA codes', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER'
-      const to = 'BRU'
       await airports.getSchedulesByRoute(from, to)
 
       expect(getSpy).toHaveBeenCalledWith(`${TIMETABLE_API}/schedules/${from}/${to}/period`)
@@ -142,7 +143,7 @@ describe('airports', () => {
 
     it('should return parsed schedule data', async () => {
       expect.assertions(4)
-      const data = await airports.getSchedulesByRoute('BER', 'BRU')
+      const data = await airports.getSchedulesByRoute(from, to)
 
       expect(data).haveOwnProperty('firstFlightDate')
       expect(data).haveOwnProperty('lastFlightDate')
@@ -160,8 +161,6 @@ describe('airports', () => {
     it('should call correct endpoint with from, to, year and month', async () => {
       expect.assertions(1)
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER'
-      const to = 'BRU'
       const year = new Date().getFullYear()
       const month = new Date().getMonth() + 1
 
@@ -172,8 +171,6 @@ describe('airports', () => {
 
     it('should return parsed monthly schedule data', async () => {
       expect.assertions(5)
-      const from = 'BER'
-      const to = 'BRU'
       const year = new Date().getFullYear()
       const month = new Date().getMonth() + 1
 
@@ -198,8 +195,6 @@ describe('airports', () => {
     it('when passed iata codes \n\t Then should call the correct API URLs', async () => {
       expect.assertions(3)
       const getSpy = vi.spyOn(client, 'get')
-      const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
       await airports.findRoutes(from, to)
 
       expect(getSpy).toHaveBeenNthCalledWith(1, `${VIEWS_API}/searchWidget/routes/en/airport/${from}`)
@@ -216,15 +211,13 @@ describe('airports', () => {
     })
     it('when asked for direct route between two airports \n\t Then should return a route that contains only origin and destination', async () => {
       expect.assertions(1)
-      const from = 'BER' // Berlin airport
-      const to = 'KRK' // Krakow airport
       const data = await airports.findRoutes(from, to)
 
       expect(data).toHaveLength(1)
     })
     it('when asked for route between two airports that do not have one leg connection \n\t Then should return an empty array', async () => {
       expect.assertions(1)
-      const from = 'AAL' // Aalborg airport
+      const from = 'TAT' // Poprad - Tatry (Tatra Mountains) airport
       const to = 'OUD' // Oujda airport
       const data = await airports.findRoutes(from, to)
 
