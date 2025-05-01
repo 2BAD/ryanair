@@ -56,7 +56,6 @@ export const Segment = z.object({
   destination: IataCode,
   flightNumber: z.string(),
   time: z.array(StrDateTimeMs),
-  // biome-ignore lint/style/useNamingConvention: UTC is fine
   timeUTC: z.array(z.string().datetime()),
   duration: z.string()
 })
@@ -88,7 +87,6 @@ export const Flight = z.object({
   segments: z.array(Segment),
   flightNumber: z.string(),
   time: z.array(StrDateTimeMs),
-  // biome-ignore lint/style/useNamingConvention: UTC is fine
   timeUTC: z.array(z.string().datetime()),
   duration: z.string()
 })
@@ -121,7 +119,6 @@ export const AvailabilityResponse = z.object({
   tripType: z.string(),
   upgradeType: z.string(),
   trips: z.array(Trip),
-  // biome-ignore lint/style/useNamingConvention: UTC is fine
   serverTimeUTC: z.string().datetime()
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare

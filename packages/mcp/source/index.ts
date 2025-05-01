@@ -27,13 +27,8 @@ for (const tool of ALL_TOOLS) {
  */
 export const main = async () => {
   log('Starting server...')
-  try {
-    const transport = new StdioServerTransport()
-    log('Created transport')
-    await server.connect(transport)
-    log('Server connected and running')
-  } catch (error) {
-    log('Fatal error:', error)
-    process.exit(1)
-  }
+  const transport = new StdioServerTransport()
+  log('Created transport')
+  await server.connect(transport)
+  log('Server connected and running')
 }
