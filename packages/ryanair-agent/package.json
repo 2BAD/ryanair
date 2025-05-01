@@ -34,7 +34,7 @@
   "scripts": {
     "prebuild": "rimraf build",
     "build": "run-p build:*",
-    "postbuild": "run-s fix:alias fix:ext",
+    "postbuild": "tsfix",
     "build:swc": "swc ./source -d ./build --strip-leading-paths",
     "build:types": "tsc --project tsconfig.build.json",
     "check": "run-p check:*",
@@ -42,9 +42,7 @@
     "check:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "dev": "mastra dev",
     "fix": "run-s fix:code fix:format",
-    "fix:alias": "tsc-alias -p tsconfig.build.json",
     "fix:code": "run-s 'check:eslint -- --fix'",
-    "fix:ext": "tsfix",
     "fix:format": "biome format --write ./source",
     "prepublishOnly": "run-s build",
     "test": "exit 0",
