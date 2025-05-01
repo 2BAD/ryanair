@@ -40,11 +40,6 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
-    "KRK",
-    "GDN",
-  ],
-  [
-    "BER",
     "MAN",
     "GDN",
   ],
@@ -56,11 +51,6 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   [
     "BER",
     "PSA",
-    "GDN",
-  ],
-  [
-    "BER",
-    "RIX",
     "GDN",
   ],
   [
@@ -403,44 +393,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "seoName": "bari",
       "timeZone": "Europe/Rome",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
-        "code": "BRUSSELS",
-        "macCode": "BRL",
-        "name": "Brussels",
-      },
-      "code": "BRU",
-      "coordinates": {
-        "latitude": 50.9014,
-        "longitude": 4.48444,
-      },
-      "country": {
-        "code": "be",
-        "currency": "EUR",
-        "defaultAirportCode": "BRU",
-        "name": "Belgium",
-      },
-      "macCity": {
-        "code": "BRUSSELS",
-        "macCode": "BRL",
-        "name": "Brussels",
-      },
-      "name": "Brussels",
-      "region": {
-        "code": "WALLONIA",
-        "name": "Wallonia",
-      },
-      "seoName": "brussels-zaventem",
-      "timeZone": "Europe/Brussels",
     },
     "operator": "FR",
     "recent": false,
@@ -903,70 +855,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
     },
     "operator": "FR",
     "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
-        "code": "KRAKOW",
-        "name": "Krakow",
-      },
-      "code": "KRK",
-      "coordinates": {
-        "latitude": 50.0777,
-        "longitude": 19.7848,
-      },
-      "country": {
-        "code": "pl",
-        "currency": "PLN",
-        "defaultAirportCode": "WMI",
-        "name": "Poland",
-      },
-      "name": "Krakow",
-      "region": {
-        "code": "MALOPOLSKA",
-        "name": "Malopolska",
-      },
-      "seoName": "krakow",
-      "timeZone": "Europe/Warsaw",
-    },
-    "operator": "FR",
-    "recent": true,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
-        "code": "KAUNAS",
-        "name": "Kaunas",
-      },
-      "code": "KUN",
-      "coordinates": {
-        "latitude": 54.9639,
-        "longitude": 24.0848,
-      },
-      "country": {
-        "code": "lt",
-        "currency": "EUR",
-        "defaultAirportCode": "KUN",
-        "name": "Lithuania",
-      },
-      "name": "Kaunas",
-      "region": {
-        "code": "KAUNAS",
-        "name": "Kaunas",
-      },
-      "seoName": "kaunas",
-      "timeZone": "Europe/Vilnius",
-    },
-    "operator": "FR",
-    "recent": true,
     "seasonal": false,
     "tags": [],
   },
@@ -1453,38 +1341,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "seoName": "rhodes",
       "timeZone": "Europe/Athens",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": true,
-      "city": {
-        "code": "RIGA",
-        "name": "Riga",
-      },
-      "code": "RIX",
-      "coordinates": {
-        "latitude": 56.9236,
-        "longitude": 23.9711,
-      },
-      "country": {
-        "code": "lv",
-        "currency": "EUR",
-        "defaultAirportCode": "RIX",
-        "name": "Latvia",
-      },
-      "name": "Riga",
-      "region": {
-        "code": "RIGA_PLANNING_REGION",
-        "name": "Riga Planning Region",
-      },
-      "seoName": "riga",
-      "timeZone": "Europe/Riga",
     },
     "operator": "FR",
     "recent": false,
