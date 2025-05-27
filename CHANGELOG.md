@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed (API Client)
 - Improved code organization with a new helpers index for better module structure
 
+### Fixed (API Client)
+- Add new headers required to get flight availability data
+
 ---
 
 ### Added (MCP)
