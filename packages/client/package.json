@@ -57,7 +57,7 @@
     "fast-cartesian": "9.0.1",
     "got": "14.4.7",
     "tough-cookie": "5.1.2",
-    "zod": "3.25.46"
+    "zod": "3.25.50"
   },
   "devDependencies": {
     "@types/tough-cookie": "4.0.5"
