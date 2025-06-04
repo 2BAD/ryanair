@@ -59,8 +59,8 @@
   },
   "dependencies": {
     "@2bad/ryanair": "7.1.2",
-    "@modelcontextprotocol/sdk": "1.12.0",
-    "zod": "3.25.31"
+    "@modelcontextprotocol/sdk": "1.12.1",
+    "zod": "3.25.46"
   },
   "devDependencies": {
     "@modelcontextprotocol/inspector": "0.13.0"
