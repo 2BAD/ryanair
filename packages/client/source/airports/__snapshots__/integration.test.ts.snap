@@ -1094,6 +1094,7 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       "base": true,
       "city": {
         "code": "BUCHAREST",
+        "macCode": "BUC",
         "name": "Bucharest",
       },
       "code": "OTP",
@@ -1107,7 +1108,12 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
         "defaultAirportCode": "OTP",
         "name": "Romania",
       },
-      "name": "Bucharest",
+      "macCity": {
+        "code": "BUCHAREST",
+        "macCode": "BUC",
+        "name": "Bucharest",
+      },
+      "name": "Bucharest Otopeni",
       "region": {
         "code": "BUCHAREST",
         "name": "Bucharest",

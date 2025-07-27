@@ -128,7 +128,7 @@ describe('airports', () => {
     })
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getSchedules('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.getSchedules('WRONG_IATA_CODE')).rejects.toThrow('Response code 400 (Bad Request)')
     })
   })
 
