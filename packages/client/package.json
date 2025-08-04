@@ -62,12 +62,12 @@
   "devDependencies": {
     "@types/tough-cookie": "4.0.5"
   },
-  "packageManager": "npm@11.5.1",
+  "packageManager": "npm@11.5.2",
   "engines": {
     "node": ">=22"
   },
   "volta": {
-    "node": "24.4.1",
-    "npm": "11.5.1"
+    "node": "24.5.0",
+    "npm": "11.5.2"
   }
 }
