@@ -7,13 +7,13 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@2bad/axiom": "1.0.0",
+    "@2bad/axiom": "1.0.1",
     "@2bad/tsconfig": "3.0.1",
     "@2bad/tsfix": "1.1.1",
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "0.7.8",
     "@swc/core": "1.13.5",
-    "@types/node": "22.18.0",
+    "@types/node": "22.18.1",
     "@vitest/coverage-v8": "3.2.4",
     "npm-run-all2": "8.0.4",
     "rimraf": "6.0.1",
@@ -21,12 +21,12 @@
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
   },
-  "packageManager": "npm@11.5.2",
+  "packageManager": "npm@11.6.0",
   "engines": {
     "node": ">=22"
   },
   "volta": {
-    "node": "24.6.0",
-    "npm": "11.5.2"
+    "node": "24.7.0",
+    "npm": "11.6.0"
   }
 }
