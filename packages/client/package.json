@@ -55,7 +55,7 @@
   "dependencies": {
     "date-fns": "4.1.0",
     "fast-cartesian": "9.0.1",
-    "got": "14.4.8",
+    "got": "14.4.9",
     "tough-cookie": "5.1.2",
     "zod": "3.25.76"
   },
