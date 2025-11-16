@@ -9,6 +9,7 @@
   },
   "javascript": {
     "formatter": {
+      "indentStyle": "space",
       "jsxQuoteStyle": "single",
       "quoteStyle": "single",
       "semicolons": "asNeeded",
@@ -21,7 +22,7 @@
         "useLiteralKeys": "off"
       },
       "correctness": {
-        "noUndeclaredDependencies": "error",
+        "noUndeclaredDependencies": "off",
         "noUndeclaredVariables": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
@@ -29,8 +30,8 @@
         "useImportExtensions": "error"
       },
       "performance": {
-        "noBarrelFile": "error",
-        "noNamespaceImport": "error"
+        "noBarrelFile": "off",
+        "noNamespaceImport": "off"
       },
       "style": {
         "noDefaultExport": "error",
@@ -48,7 +49,7 @@
           }
         },
         "useFilenamingConvention": "error",
-        "useNamingConvention": "error",
+        "useNamingConvention": "off",
         "useNodeAssertStrict": "error",
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",

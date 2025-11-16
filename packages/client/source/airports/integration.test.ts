@@ -184,8 +184,11 @@ describe('airports', () => {
 
     it('should throw HTTP error for non-existing period', async () => {
       expect.assertions(1)
-      await expect(airports.getSchedulesByPeriod('BER', 'BRU', new Date().getFullYear(), 13)).rejects.toThrow(
-        'Response code 404 (Not Found)'
+      const year = new Date().getFullYear()
+      const month = 13 // Invalid month
+
+      await expect(airports.getSchedulesByPeriod('BER', 'BRU', year, month)).rejects.toThrow(
+        `Request failed with status code 404 (Not Found): GET https://www.ryanair.com/api/timtbl/3/schedules/BER/BRU/years/${year}/months/${month}`
       )
     })
   })

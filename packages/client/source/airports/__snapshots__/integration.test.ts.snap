@@ -40,6 +40,11 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
+    "FCO",
+    "GDN",
+  ],
+  [
+    "BER",
     "MAN",
     "GDN",
   ],
@@ -1299,8 +1304,8 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "code": "REG",
       "coordinates": {
-        "latitude": 38.0419,
-        "longitude": 15.3913,
+        "latitude": 38.0641,
+        "longitude": 15.3943,
       },
       "country": {
         "code": "it",
@@ -1395,8 +1400,8 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "code": "SOF",
       "coordinates": {
-        "latitude": 42.67,
-        "longitude": 23.35,
+        "latitude": 42.42,
+        "longitude": 23.2,
       },
       "country": {
         "code": "bg",
@@ -1551,38 +1556,6 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       },
       "seoName": "tallinn",
       "timeZone": "Europe/Tallinn",
-    },
-    "operator": "FR",
-    "recent": false,
-    "seasonal": false,
-    "tags": [],
-  },
-  {
-    "arrivalAirport": {
-      "aliases": [],
-      "base": false,
-      "city": {
-        "code": "TEL_AVIV",
-        "name": "Tel Aviv",
-      },
-      "code": "TLV",
-      "coordinates": {
-        "latitude": 32.0034,
-        "longitude": 34.5258,
-      },
-      "country": {
-        "code": "il",
-        "currency": "EUR",
-        "defaultAirportCode": "VDA",
-        "name": "Israel",
-      },
-      "name": "Tel Aviv",
-      "region": {
-        "code": "DEFAULT_IL",
-        "name": "Default IL",
-      },
-      "seoName": "tel-aviv",
-      "timeZone": "Asia/Jerusalem",
     },
     "operator": "FR",
     "recent": false,
