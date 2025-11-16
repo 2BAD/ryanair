@@ -13,38 +13,22 @@ const StrRange1To25 = z.string().min(1).max(2).regex(FROM_1_TO_25_REGEX, FROM_1_
 const StrBoolean = z.string().regex(/true|false/g)
 
 export const AvailabilityOptions = z.object({
-  // biome-ignore lint/style/useNamingConvention: remote api props
   ADT: StrRange1To25,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   CHD: StrRange0To24,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   DateIn: z.union([StrDate, z.string().max(0)]),
-  // biome-ignore lint/style/useNamingConvention: remote api props
   DateOut: StrDate,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   Destination: IataCode,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   Disc: z.string(),
-  // biome-ignore lint/style/useNamingConvention: remote api props
   INF: StrRange0To24,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   Origin: IataCode,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   TEEN: StrRange0To24,
   promoCode: z.string(),
-  // biome-ignore lint/style/useNamingConvention: remote api props
   IncludeConnectingFlights: StrBoolean,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   FlexDaysBeforeOut: StrRange1To4,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   FlexDaysOut: StrRange1To4,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   FlexDaysBeforeIn: StrRange1To4,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   FlexDaysIn: StrRange1To4,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   RoundTrip: StrBoolean,
-  // biome-ignore lint/style/useNamingConvention: remote api props
   ToUs: z.string().regex(/AGREED/g)
 })
 // eslint-disable-next-line @typescript-eslint/no-redeclare

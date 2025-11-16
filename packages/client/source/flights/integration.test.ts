@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest'
-// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as client from '~/client/index.ts'
 import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
 import { tomorrow } from '~/helpers/date.ts'
@@ -45,38 +44,22 @@ describe('flights', () => {
 
       const getSpy = vi.spyOn(client, 'get')
       const options = {
-        // biome-ignore lint/style/useNamingConvention: remote api props
         ADT: '5',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         CHD: '2',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         DateIn: '',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         DateOut: flightDate,
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Destination: to,
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Disc: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysBeforeIn: '3',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysBeforeOut: '3',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysIn: '3',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysOut: '3',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         IncludeConnectingFlights: 'true',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         INF: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Origin: from,
         promoCode: 'PROMO',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         RoundTrip: 'true',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         TEEN: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         ToUs: 'AGREED'
       }
       const urlParams = new URLSearchParams(options)
@@ -90,41 +73,24 @@ describe('flights', () => {
       expect.assertions(1)
 
       const getSpy = vi.spyOn(client, 'get')
-      // biome-ignore lint/style/useNamingConvention: remote api props
       const options = { ADT: '1', DateOut: flightDate, Origin: from, Destination: to }
       const defaults = {
-        // biome-ignore lint/style/useNamingConvention: remote api props
         ADT: '1',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         CHD: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         DateIn: '',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         DateOut: flightDate,
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Destination: to,
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Disc: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysBeforeIn: '2',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysBeforeOut: '2',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysIn: '2',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         FlexDaysOut: '2',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         IncludeConnectingFlights: 'false',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         INF: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         Origin: from,
         promoCode: '',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         RoundTrip: 'false',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         TEEN: '0',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         ToUs: 'AGREED'
       }
       const urlParams = new URLSearchParams({ ...defaults, ...options })
@@ -138,9 +104,7 @@ describe('flights', () => {
       expect.assertions(1)
 
       const options = {
-        // biome-ignore lint/style/useNamingConvention: remote api props
         ADT: '1',
-        // biome-ignore lint/style/useNamingConvention: remote api props
         DateOut: flightDate
       }
       await flights.getAvailable(options)

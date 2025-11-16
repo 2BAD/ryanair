@@ -9,7 +9,6 @@
   },
   "javascript": {
     "formatter": {
-      "indentStyle": "space",
       "jsxQuoteStyle": "single",
       "quoteStyle": "single",
       "semicolons": "asNeeded",
@@ -30,7 +29,7 @@
         "useImportExtensions": "error"
       },
       "performance": {
-        "noBarrelFile": "off",
+        "noBarrelFile": "error",
         "noNamespaceImport": "error"
       },
       "style": {
@@ -49,7 +48,7 @@
           }
         },
         "useFilenamingConvention": "error",
-        "useNamingConvention": "off",
+        "useNamingConvention": "error",
         "useNodeAssertStrict": "error",
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",

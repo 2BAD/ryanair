@@ -7,6 +7,7 @@ export default defineConfig({
   test: {
     exclude: ['build', 'node_modules'],
     coverage: {
+      include: ['source/**/*.{ts,tsx}'],
       exclude: ['build', ...coverageConfigDefaults.exclude],
       provider: 'v8'
     },

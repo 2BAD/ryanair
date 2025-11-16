@@ -14,7 +14,7 @@ type Period = {
  * @param from - The IATA code of the departure airport
  * @param to - Optional IATA code of the arrival airport
  * @param period - Optional period specification with year and month
- * @throws Error if no schedules are found
+ * @throws {Error} Error if no schedules are found
  */
 const getSchedulesData = async (from: IataCode, to?: IataCode, period?: Period): Promise<unknown> => {
   let url = `${TIMETABLE_API}/schedules/${from}`
@@ -43,7 +43,7 @@ const getSchedulesData = async (from: IataCode, to?: IataCode, period?: Period):
  * Returns all available flight schedules for a departure airport.
  *
  * @param from - The IATA code of the departure airport
- * @throws Error if no schedules are found
+ * @throws {Error} Error if no schedules are found
  */
 export const getSchedules = async (from: IataCode): Promise<Schedules> => {
   const data = await getSchedulesData(from)
@@ -57,7 +57,7 @@ export const getSchedules = async (from: IataCode): Promise<Schedules> => {
  * @param to - The IATA code of the arrival airport
  * @param year - The year for which to fetch schedules
  * @param month - The month for which to fetch schedules
- * @throws Error if no schedule is found
+ * @throws {Error} Error if no schedule is found
  */
 export const getSchedulesByPeriod = async (
   from: IataCode,
@@ -74,7 +74,7 @@ export const getSchedulesByPeriod = async (
  *
  * @param from - The IATA code of the departure airport
  * @param to - The IATA code of the arrival airport
- * @throws Error if no schedule is found
+ * @throws {Error} Error if no schedule is found
  */
 export const getSchedulesByRoute = async (from: IataCode, to: IataCode): Promise<Schedule> => {
   const data = await getSchedulesData(from, to)

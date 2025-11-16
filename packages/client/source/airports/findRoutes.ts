@@ -1,5 +1,4 @@
 import { z } from 'zod'
-// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as airports from '~/airports/index.ts'
 import { IataCode, type Destination } from './types.ts'
 

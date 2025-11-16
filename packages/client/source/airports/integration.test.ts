@@ -1,5 +1,4 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as client from '~/client/index.ts'
 import { TIMETABLE_API, VIEWS_API } from '~/endpoints.ts'
 import { airports } from '~/index.ts'

@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest'
-// biome-ignore lint/style/noNamespaceImport: useful for spying
 import * as client from '~/client/index.ts'
 import { FARE_FINDER_API } from '~/endpoints.ts'
 import { isAfterIso, nextMonth, tomorrow } from '~/helpers/date.ts'
