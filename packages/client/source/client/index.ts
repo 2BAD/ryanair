@@ -1,7 +1,25 @@
-import { got } from 'got'
+import { type Agents, got } from 'got'
+import { HttpProxyAgent, HttpsProxyAgent } from 'hpagent'
 import { debounce } from '~/client/hooks/debounce.ts'
 
 export const DELAY_MS: number | [number, number] = 500
+
+/**
+ * Create proxy agents if proxy environment variables are set
+ */
+const createProxyAgents = (): Agents => {
+  const httpProxy = process.env['HTTP_PROXY']
+  const httpsProxy = process.env['HTTPS_PROXY']
+
+  if (httpProxy || httpsProxy) {
+    return {
+      http: httpProxy ? new HttpProxyAgent({ proxy: httpProxy }) : false,
+      https: httpsProxy ? new HttpsProxyAgent({ proxy: httpsProxy }) : false
+    }
+  }
+
+  return {}
+}
 
 /**
  * Extend `got` http client so every time request is made there is a `rid.sig` cookie
@@ -18,5 +36,6 @@ export const get = got.extend({
   },
   resolveBodyOnly: true,
   responseType: 'json',
+  agent: createProxyAgents(),
   ...debounce(DELAY_MS)
 })

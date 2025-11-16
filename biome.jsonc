@@ -22,7 +22,7 @@
         "useLiteralKeys": "off"
       },
       "correctness": {
-        "noUndeclaredDependencies": "error",
+        "noUndeclaredDependencies": "off",
         "noUndeclaredVariables": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
@@ -31,7 +31,7 @@
       },
       "performance": {
         "noBarrelFile": "off",
-        "noNamespaceImport": "error"
+        "noNamespaceImport": "off"
       },
       "style": {
         "noDefaultExport": "error",

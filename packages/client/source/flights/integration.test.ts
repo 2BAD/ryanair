@@ -34,7 +34,9 @@ describe('flights', () => {
 
       const from = 'WRONG_IATA_CODE'
 
-      await expect(flights.getDates(from, to)).rejects.toThrow('Request failed with status code 400 (Bad Request): GET https://www.ryanair.com/api/farfnd/v4/oneWayFares/WRONG_IATA_CODE/ACE/availabilities')
+      await expect(flights.getDates(from, to)).rejects.toThrow(
+        'Request failed with status code 400 (Bad Request): GET https://www.ryanair.com/api/farfnd/v4/oneWayFares/WRONG_IATA_CODE/ACE/availabilities'
+      )
     })
   })
 
