@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { FARE_FINDER_API } from '~/endpoints.ts'
 import { isAfterIso, nextMonth, tomorrow } from '~/helpers/date.ts'
@@ -8,6 +8,9 @@ const from = 'LON' // all London airports
 const to = 'MIL' // all Milan airports
 
 describe('fares', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
   describe('getCheapestPerDay', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
@@ -41,7 +44,7 @@ describe('fares', () => {
       const currency = 'EUR'
 
       await expect(fares.getCheapestPerDay(from, to, startDate, currency)).rejects.toThrow(
-        'Response code 400 (Bad Request)'
+        'Request failed with status code 400 (Bad Request)'
       )
     })
   })
@@ -60,8 +63,7 @@ describe('fares', () => {
 
       await fares.findDailyFaresInRange(from, to, startDate, endDate, currency)
 
-      expect(getSpy).toHaveBeenNthCalledWith(
-        1,
+      expect(getSpy).toHaveBeenCalledWith(
         `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })
@@ -104,8 +106,7 @@ describe('fares', () => {
 
       await fares.findCheapestRoundTrip(from, to, startDate, endDate, currency)
 
-      expect(getSpy).toHaveBeenNthCalledWith(
-        1,
+      expect(getSpy).toHaveBeenCalledWith(
         `${FARE_FINDER_API}/oneWayFares/${from}/${to}/cheapestPerDay?outboundMonthOfDate=${firstDayOfMonth}&currency=${currency}`
       )
     })

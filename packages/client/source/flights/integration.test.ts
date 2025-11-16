@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import * as client from '~/client/index.ts'
 import { BOOKING_API, FARE_FINDER_API } from '~/endpoints.ts'
 import { tomorrow } from '~/helpers/date.ts'
@@ -11,6 +11,9 @@ const dates = await flights.getDates(from, to)
 const flightDate = dates[0] || tomorrow()
 
 describe('flights', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
   describe('getDates', () => {
     it('when provided with all parameters \n\t Then should call the correct API URL', async () => {
       expect.assertions(1)
@@ -68,7 +71,7 @@ describe('flights', () => {
 
       await flights.getAvailable(options)
 
-      expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
+      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided single parameter \n\t Then should fallback to defaults', async () => {
@@ -99,7 +102,7 @@ describe('flights', () => {
 
       await flights.getAvailable(options)
 
-      expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
+      expect(getSpy).toHaveBeenCalledWith(`${BOOKING_API}/availability?${urlParams.toString()}`)
     })
 
     it('when provided with a valid destination \n\t Then should be able to retrieve data and parse it', async () => {

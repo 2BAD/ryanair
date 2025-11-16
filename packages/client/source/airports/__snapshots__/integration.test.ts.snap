@@ -1567,6 +1567,38 @@ exports[`airports > getDestinations > when asked for destinations from a specifi
       "aliases": [],
       "base": false,
       "city": {
+        "code": "TEL_AVIV",
+        "name": "Tel Aviv",
+      },
+      "code": "TLV",
+      "coordinates": {
+        "latitude": 32.08,
+        "longitude": 34.78,
+      },
+      "country": {
+        "code": "il",
+        "currency": "EUR",
+        "defaultAirportCode": "VDA",
+        "name": "Israel",
+      },
+      "name": "Tel Aviv",
+      "region": {
+        "code": "DEFAULT_IL",
+        "name": "Default IL",
+      },
+      "seoName": "tel-aviv",
+      "timeZone": "Asia/Jerusalem",
+    },
+    "operator": "FR",
+    "recent": false,
+    "seasonal": false,
+    "tags": [],
+  },
+  {
+    "arrivalAirport": {
+      "aliases": [],
+      "base": false,
+      "city": {
         "code": "TRIESTE",
         "name": "Trieste",
       },
