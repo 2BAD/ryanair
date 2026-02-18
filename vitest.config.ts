@@ -5,7 +5,7 @@ import { coverageConfigDefaults, defineConfig } from 'vitest/config'
 // biome-ignore lint/style/noDefaultExport: allow default export for vitest config
 export default defineConfig({
   test: {
-    exclude: ['build', 'node_modules'],
+    exclude: ['**/build/**', '**/node_modules/**'],
     coverage: {
       include: ['source/**/*.{ts,tsx}'],
       exclude: ['build', ...coverageConfigDefaults.exclude],
