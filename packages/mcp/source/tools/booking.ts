@@ -1,8 +1,8 @@
 import { helpers } from '@2bad/ryanair'
 import { z } from 'zod'
-import type { Tool } from '../utils/types.ts'
+import { type ToolTuple, defineTool } from '../utils/types.ts'
 
-const BOOKING_GENERATE_LINK: Parameters<Tool> = [
+const BOOKING_GENERATE_LINK = defineTool(
   'generate_booking_link',
   'generate a Ryanair booking link based on flight details',
   {
@@ -35,6 +35,6 @@ const BOOKING_GENERATE_LINK: Parameters<Tool> = [
       }
     }
   }
-]
+)
 
-export const BOOKING_TOOLS: Parameters<Tool>[] = [BOOKING_GENERATE_LINK]
+export const BOOKING_TOOLS: ToolTuple[] = [BOOKING_GENERATE_LINK]

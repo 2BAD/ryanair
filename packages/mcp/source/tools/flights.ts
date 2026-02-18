@@ -1,8 +1,8 @@
 import { flights } from '@2bad/ryanair'
 import { z } from 'zod'
-import type { Tool } from '../utils/types.ts'
+import { type ToolTuple, defineTool } from '../utils/types.ts'
 
-const FLIGHTS_GET_AVAILABLE: Parameters<Tool> = [
+const FLIGHTS_GET_AVAILABLE = defineTool(
   'get_available_flights',
   'get available flights between two airports with flexible options',
   {
@@ -26,41 +26,40 @@ const FLIGHTS_GET_AVAILABLE: Parameters<Tool> = [
   },
   async (params) => {
     try {
-      // Convert params to the format expected by the API
       const apiParams: Record<string, string> = {}
 
-      if (params['origin']) {
-        apiParams['Origin'] = params['origin']
+      if (params.origin) {
+        apiParams['Origin'] = params.origin
       }
-      if (params['destination']) {
-        apiParams['Destination'] = params['destination']
+      if (params.destination) {
+        apiParams['Destination'] = params.destination
       }
-      if (params['dateOut']) {
-        apiParams['DateOut'] = params['dateOut']
+      if (params.dateOut) {
+        apiParams['DateOut'] = params.dateOut
       }
-      if (params['dateIn']) {
-        apiParams['DateIn'] = params['dateIn']
+      if (params.dateIn) {
+        apiParams['DateIn'] = params.dateIn
       }
-      if (params['adults'] !== undefined) {
-        apiParams['ADT'] = params['adults'].toString()
+      if (params.adults !== undefined && params.adults !== null) {
+        apiParams['ADT'] = params.adults.toString()
       }
-      if (params['children'] !== undefined) {
-        apiParams['CHD'] = params['children'].toString()
+      if (params.children !== undefined && params.children !== null) {
+        apiParams['CHD'] = params.children.toString()
       }
-      if (params['teens'] !== undefined) {
-        apiParams['TEEN'] = params['teens'].toString()
+      if (params.teens !== undefined && params.teens !== null) {
+        apiParams['TEEN'] = params.teens.toString()
       }
-      if (params['infants'] !== undefined) {
-        apiParams['INF'] = params['infants'].toString()
+      if (params.infants !== undefined && params.infants !== null) {
+        apiParams['INF'] = params.infants.toString()
       }
-      if (params['includeConnecting'] !== undefined) {
-        apiParams['IncludeConnectingFlights'] = params['includeConnecting'].toString()
+      if (params.includeConnecting !== undefined && params.includeConnecting !== null) {
+        apiParams['IncludeConnectingFlights'] = params.includeConnecting.toString()
       }
-      if (params['roundTrip'] !== undefined) {
-        apiParams['RoundTrip'] = params['roundTrip'].toString()
+      if (params.roundTrip !== undefined && params.roundTrip !== null) {
+        apiParams['RoundTrip'] = params.roundTrip.toString()
       }
-      if (params['promoCode']) {
-        apiParams['promoCode'] = params['promoCode']
+      if (params.promoCode) {
+        apiParams['promoCode'] = params.promoCode
       }
       const data = await flights.getAvailable(apiParams)
       const text = JSON.stringify(data, null, 2)
@@ -75,9 +74,9 @@ const FLIGHTS_GET_AVAILABLE: Parameters<Tool> = [
       }
     }
   }
-]
+)
 
-const FLIGHTS_GET_DATES: Parameters<Tool> = [
+const FLIGHTS_GET_DATES = defineTool(
   'get_available_flight_dates',
   'get a list of available flight dates between two airports',
   {
@@ -99,6 +98,6 @@ const FLIGHTS_GET_DATES: Parameters<Tool> = [
       }
     }
   }
-]
+)
 
-export const FLIGHTS_TOOLS: Parameters<Tool>[] = [FLIGHTS_GET_AVAILABLE, FLIGHTS_GET_DATES]
+export const FLIGHTS_TOOLS: ToolTuple[] = [FLIGHTS_GET_AVAILABLE, FLIGHTS_GET_DATES]

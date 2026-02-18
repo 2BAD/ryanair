@@ -1,9 +1,13 @@
 import type { ToolCallback } from '@modelcontextprotocol/sdk/server/mcp.js'
-import type { ZodRawShape } from 'zod'
+import type { ZodRawShapeCompat } from '@modelcontextprotocol/sdk/server/zod-compat.js'
 
-export type Tool = <Args extends ZodRawShape>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type ToolTuple = [string, string, ZodRawShapeCompat, ToolCallback<any>]
+
+export const defineTool = <Args extends ZodRawShapeCompat>(
   name: string,
   description: string,
   paramsSchema: Args,
   cb: ToolCallback<Args>
-) => void
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+): ToolTuple => [name, description, paramsSchema, cb as ToolCallback<any>]
