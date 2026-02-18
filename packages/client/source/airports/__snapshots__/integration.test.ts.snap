@@ -30,6 +30,11 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
+    "DBV",
+    "GDN",
+  ],
+  [
+    "BER",
     "DUB",
     "GDN",
   ],
@@ -50,7 +55,22 @@ exports[`airports > findRoutes > when asked for specific route between two airpo
   ],
   [
     "BER",
+    "OTP",
+    "GDN",
+  ],
+  [
+    "BER",
     "PFO",
+    "GDN",
+  ],
+  [
+    "BER",
+    "PMI",
+    "GDN",
+  ],
+  [
+    "BER",
+    "PMO",
     "GDN",
   ],
   [

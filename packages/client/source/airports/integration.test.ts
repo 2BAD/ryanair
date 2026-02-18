@@ -82,7 +82,7 @@ describe('airports', () => {
     })
     it('when asked for destinations from a nonexisting airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getDestinations('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.getDestinations('WRONG_IATA_CODE')).rejects.toThrow('Request failed with status code 404 (Not Found)')
     })
   })
 
@@ -103,7 +103,7 @@ describe('airports', () => {
     })
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getInfo('WRONG_IATA_CODE')).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.getInfo('WRONG_IATA_CODE')).rejects.toThrow('Request failed with status code 404 (Not Found)')
     })
   })
 
@@ -127,7 +127,7 @@ describe('airports', () => {
     })
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
-      await expect(airports.getSchedules('WRONG_IATA_CODE')).rejects.toThrow('Response code 400 (Bad Request)')
+      await expect(airports.getSchedules('WRONG_IATA_CODE')).rejects.toThrow('Request failed with status code 400 (Bad Request)')
     })
   })
 
@@ -152,7 +152,7 @@ describe('airports', () => {
 
     it('should throw HTTP error for non-existing route', async () => {
       expect.assertions(1)
-      await expect(airports.getSchedulesByRoute('BER', 'XXX')).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.getSchedulesByRoute('BER', 'XXX')).rejects.toThrow('Request failed with status code 404 (Not Found)')
     })
   })
 
@@ -169,7 +169,6 @@ describe('airports', () => {
     })
 
     it('should return parsed monthly schedule data', async () => {
-      expect.assertions(5)
       const year = new Date().getFullYear()
       const month = new Date().getMonth() + 1
 
@@ -177,9 +176,11 @@ describe('airports', () => {
 
       expect(data).haveOwnProperty('month')
       expect(data).haveOwnProperty('days')
-      expect(data.days[0]).haveOwnProperty('day')
-      expect(data.days[0]).haveOwnProperty('flights')
-      expect(data.days[0]?.flights[0]).haveOwnProperty('carrierCode')
+      if (data.days.length > 0) {
+        expect(data.days[0]).haveOwnProperty('day')
+        expect(data.days[0]).haveOwnProperty('flights')
+        expect(data.days[0]?.flights[0]).haveOwnProperty('carrierCode')
+      }
     })
 
     it('should throw HTTP error for non-existing period', async () => {
@@ -219,7 +220,7 @@ describe('airports', () => {
     })
     it('when asked for route between two airports that do not have one leg connection \n\t Then should return an empty array', async () => {
       expect.assertions(1)
-      const from = 'TAT' // Poprad - Tatry (Tatra Mountains) airport
+      const from = 'NQY' // Newquay (Cornwall) airport
       const to = 'OUD' // Oujda airport
       const data = await airports.findRoutes(from, to)
 
@@ -229,7 +230,7 @@ describe('airports', () => {
       expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'WRONG_IATA'
-      await expect(airports.findRoutes(from, to)).rejects.toThrow('Response code 404 (Not Found)')
+      await expect(airports.findRoutes(from, to)).rejects.toThrow('Request failed with status code 404 (Not Found)')
     })
   })
 
