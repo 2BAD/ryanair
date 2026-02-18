@@ -75,26 +75,21 @@ const AIRPORTS_GET_ACTIVE_V3 = defineTool(
   }
 )
 
-const AIRPORTS_GET_ACTIVE = defineTool(
-  'get_active_airports',
-  'get all active airports',
-  {},
-  async () => {
-    try {
-      const data = await airports.getActive()
-      const text = JSON.stringify(data, null, 2)
-      return {
-        content: [{ type: 'text', text }]
-      }
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : String(error)
-      return {
-        isError: true,
-        content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
-      }
+const AIRPORTS_GET_ACTIVE = defineTool('get_active_airports', 'get all active airports', {}, async () => {
+  try {
+    const data = await airports.getActive()
+    const text = JSON.stringify(data, null, 2)
+    return {
+      content: [{ type: 'text', text }]
+    }
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    return {
+      isError: true,
+      content: [{ type: 'text', text: JSON.stringify({ error: errorMessage }, null, 2) }]
     }
   }
-)
+})
 
 const AIRPORTS_GET_CLOSEST = defineTool(
   'get_closest_airport',

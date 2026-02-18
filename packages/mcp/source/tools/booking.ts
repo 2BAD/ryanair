@@ -23,9 +23,7 @@ const BOOKING_GENERATE_LINK = defineTool(
   },
   async (params) => {
     try {
-      const bookingLink = helpers.generateBookingLink(
-        params as Parameters<typeof helpers.generateBookingLink>[0]
-      )
+      const bookingLink = helpers.generateBookingLink(params as Parameters<typeof helpers.generateBookingLink>[0])
       return {
         content: [{ type: 'text', text: bookingLink }]
       }
