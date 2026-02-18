@@ -55,20 +55,20 @@
   "dependencies": {
     "date-fns": "4.1.0",
     "fast-cartesian": "9.0.1",
-    "got": "14.6.4",
+    "got": "14.6.6",
     "hpagent": "1.2.0",
     "tough-cookie": "6.0.0",
-    "zod": "4.1.12"
+    "zod": "4.3.6"
   },
   "devDependencies": {
     "@types/tough-cookie": "4.0.5"
   },
-  "packageManager": "npm@11.6.2",
+  "packageManager": "npm@11.10.0",
   "engines": {
     "node": ">=22"
   },
   "volta": {
-    "node": "24.11.1",
-    "npm": "11.6.2"
+    "node": "24.13.1",
+    "npm": "11.10.0"
   }
 }
