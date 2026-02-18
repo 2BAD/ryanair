@@ -1,4 +1,4 @@
-import { type Agents, got } from 'got'
+import { type Agents, type Got, got } from 'got'
 import { HttpProxyAgent, HttpsProxyAgent } from 'hpagent'
 import { debounce } from '~/client/hooks/debounce.ts'
 
@@ -28,7 +28,7 @@ const createProxyAgents = (): Agents => {
  * @returns A promise that resolves with the response data or rejects with an error
  */
 
-export const get = got.extend({
+export const get: Got = got.extend({
   headers: {
     client: 'desktop',
     cookie:

@@ -1,4 +1,4 @@
-import type { BeforeRequestHook, ExtendOptions, Options } from 'got'
+import type { BeforeRequestHook, ExtendOptions } from 'got'
 import { randomInt } from 'node:crypto'
 import { setTimeout } from 'node:timers/promises'
 
@@ -35,7 +35,7 @@ const debounceRequest = async (duration: number | [number, number]): Promise<voi
  *
  * @param options - Got request options containing debounce configuration
  */
-const beforeRequestHook: BeforeRequestHook = async (options: Options): Promise<void> => {
+const beforeRequestHook: BeforeRequestHook = async (options) => {
   const debounceOpts = options.context['debounce'] as DebounceOptions | undefined
 
   if (!debounceOpts?.duration) {
