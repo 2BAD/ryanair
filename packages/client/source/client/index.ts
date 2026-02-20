@@ -36,6 +36,12 @@ export const get: Got = got.extend({
   },
   resolveBodyOnly: true,
   responseType: 'json',
+  retry: {
+    limit: 3,
+    methods: ['GET'],
+    statusCodes: [408, 429, 500, 502, 503, 504],
+    backoffLimit: 5000
+  },
   agent: createProxyAgents(),
   ...debounce(DELAY_MS)
 })

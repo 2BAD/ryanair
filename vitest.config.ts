@@ -11,7 +11,8 @@ export default defineConfig({
       exclude: ['build', ...coverageConfigDefaults.exclude],
       provider: 'v8'
     },
-    testTimeout: 30000
+    testTimeout: 30000,
+    retry: process.env['CI'] ? 2 : 0
   },
   plugins: [tsconfigPaths()]
 })

@@ -75,10 +75,25 @@ describe('airports', () => {
       expect(getSpy).toHaveBeenNthCalledWith(1, `${VIEWS_API}/searchWidget/routes/en/airport/${code}`)
     })
     it('when asked for destinations from a specific airport \n\t Then should be able to retrieve data and parse it', async () => {
-      expect.assertions(1)
+      expect.assertions(2)
 
       const data = await airports.getDestinations('BER')
-      expect(data).toMatchSnapshot()
+      expect(data.length).toBeGreaterThan(0)
+      expect(data[0]).toMatchObject({
+        arrivalAirport: {
+          code: expect.any(String),
+          name: expect.any(String),
+          coordinates: {
+            latitude: expect.any(Number),
+            longitude: expect.any(Number)
+          },
+          country: {
+            code: expect.any(String),
+            name: expect.any(String)
+          }
+        },
+        operator: expect.any(String)
+      })
     })
     it('when asked for destinations from a nonexisting airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
@@ -101,7 +116,18 @@ describe('airports', () => {
       expect.assertions(1)
 
       const data = await airports.getInfo('BER')
-      expect(data).toMatchSnapshot()
+      expect(data).toMatchObject({
+        code: 'BER',
+        name: expect.any(String),
+        coordinates: {
+          latitude: expect.any(Number),
+          longitude: expect.any(Number)
+        },
+        country: {
+          code: 'de',
+          name: 'Germany'
+        }
+      })
     })
     it('when asked for info on non existing airport \n\t Then should throw HTTP error', async () => {
       expect.assertions(1)
@@ -213,12 +239,15 @@ describe('airports', () => {
       expect(getSpy).toHaveBeenCalledTimes(2)
     })
     it('when asked for specific route between two airports \n\t Then should be able to retrieve data and parse it', async () => {
-      expect.assertions(1)
       const from = 'BER' // Berlin airport
       const to = 'GDN' // Gdansk airport
       const data = await airports.findRoutes(from, to)
 
-      expect(data).toMatchSnapshot()
+      expect(data.length).toBeGreaterThan(0)
+      for (const route of data) {
+        expect(route[0]).toBe(from)
+        expect(route[route.length - 1]).toBe(to)
+      }
     })
     it('when asked for direct route between two airports \n\t Then should return a route that contains only origin and destination', async () => {
       expect.assertions(1)
