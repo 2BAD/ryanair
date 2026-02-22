@@ -32,6 +32,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 4.0.18
         version: 4.0.18(vitest@4.0.18(@types/node@24.10.13))
+      eslint:
+        specifier: 9.39.3
+        version: 9.39.3
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4

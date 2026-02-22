@@ -8,6 +8,7 @@
     "@2bad/tsconfig": "3.0.2",
     "@2bad/tsfix": "1.1.2",
     "@biomejs/biome": "2.4.0",
+    "eslint": "9.39.3",
     "@swc/cli": "0.8.0",
     "@swc/core": "1.15.11",
     "@types/node": "24.10.13",
