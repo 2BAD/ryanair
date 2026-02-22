@@ -58,19 +58,19 @@
     "preversion": "run-s check test build"
   },
   "dependencies": {
-    "@2bad/ryanair": "7.1.2",
+    "@2bad/ryanair": "workspace:*",
     "@modelcontextprotocol/sdk": "1.26.0",
     "zod": "4.3.6"
   },
   "devDependencies": {
     "@modelcontextprotocol/inspector": "0.20.0"
   },
-  "packageManager": "npm@11.10.0",
+  "packageManager": "pnpm@10.30.1",
   "engines": {
     "node": ">=22"
   },
   "volta": {
     "node": "24.13.1",
-    "npm": "11.10.0"
+    "pnpm": "10.30.1"
   }
 }
