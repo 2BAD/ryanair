@@ -59,18 +59,18 @@
   },
   "dependencies": {
     "@2bad/ryanair": "workspace:*",
-    "@modelcontextprotocol/sdk": "1.26.0",
+    "@modelcontextprotocol/sdk": "1.27.1",
     "zod": "4.3.6"
   },
   "devDependencies": {
-    "@modelcontextprotocol/inspector": "0.20.0"
+    "@modelcontextprotocol/inspector": "0.21.0"
   },
-  "packageManager": "pnpm@10.30.1",
+  "packageManager": "pnpm@10.30.3",
   "engines": {
     "node": ">=22"
   },
   "volta": {
-    "node": "24.13.1",
-    "pnpm": "10.30.1"
+    "node": "24.14.0",
+    "pnpm": "10.30.3"
   }
 }
