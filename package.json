@@ -4,34 +4,31 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@2bad/axiom": "1.0.3",
+    "@2bad/axiom": "2.0.0",
     "@2bad/tsconfig": "3.0.2",
-    "@2bad/tsfix": "1.1.2",
-    "@biomejs/biome": "2.4.0",
-    "eslint": "9.39.3",
-    "@swc/cli": "0.8.0",
-    "@swc/core": "1.15.11",
-    "@types/node": "24.10.13",
-    "@vitest/coverage-v8": "4.0.18",
+    "@arethetypeswrong/cli": "0.18.2",
+    "@types/node": "25.6.0",
+    "@vitest/coverage-v8": "4.1.5",
     "npm-run-all2": "8.0.4",
-    "rimraf": "6.1.2",
-    "typescript": "5.9.3",
-    "vite-tsconfig-paths": "5.1.4",
-    "vitest": "4.0.18"
+    "oxfmt": "0.46.0",
+    "oxlint": "1.61.0",
+    "publint": "0.3.18",
+    "tsdown": "0.21.9",
+    "typescript": "6.0.3",
+    "vite-tsconfig-paths": "6.1.1",
+    "vitest": "4.1.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@swc/core",
-      "esbuild",
-      "unrs-resolver"
+      "esbuild"
     ]
   },
-  "packageManager": "pnpm@10.30.1",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "volta": {
-    "node": "24.13.1",
-    "pnpm": "10.30.1"
+    "node": "24.15.0",
+    "pnpm": "10.33.0"
   }
 }

@@ -32,30 +32,32 @@
     }
   ],
   "type": "module",
-  "exports": "./build/index.js",
-  "typings": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      }
+    }
+  },
   "bin": "./build/cli.js",
   "files": [
     "build"
   ],
   "scripts": {
-    "prebuild": "rimraf build",
-    "build": "run-p build:*",
-    "postbuild": "tsfix",
-    "build:swc": "swc ./source -d ./build --strip-leading-paths",
-    "build:types": "tsc --project tsconfig.build.json",
-    "check": "run-p check:*",
-    "check:biome": "biome check ./source",
-    "check:eslint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "build": "tsdown",
+    "check": "run-p check:**",
+    "check:code": "oxlint ./source",
+    "check:format": "oxfmt --check ./source",
     "dev": "mcp-inspector tsx source/index.ts",
-    "fix": "run-s fix:code fix:format",
-    "fix:code": "run-s 'check:eslint -- --fix'",
-    "fix:format": "biome format --write ./source",
+    "fix": "run-p fix:**",
+    "fix:code": "oxlint --fix ./source",
+    "fix:format": "oxfmt ./source",
     "prepublishOnly": "run-s build",
+    "preversion": "run-s check test build",
     "test": "exit 0",
     "test:integration": "exit 0",
-    "test:unit": "exit 0",
-    "preversion": "run-s check test build"
+    "test:unit": "exit 0"
   },
   "dependencies": {
     "@2bad/ryanair": "workspace:*",
@@ -65,12 +67,7 @@
   "devDependencies": {
     "@modelcontextprotocol/inspector": "0.20.0"
   },
-  "packageManager": "pnpm@10.30.1",
   "engines": {
-    "node": ">=22"
-  },
-  "volta": {
-    "node": "24.13.1",
-    "pnpm": "10.30.1"
+    "node": ">=24"
   }
 }
