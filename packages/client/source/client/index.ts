@@ -1,4 +1,4 @@
-import { type Agents, type Got, got } from 'got'
+import got, { type Agents, type Got } from 'got'
 import { HttpProxyAgent, HttpsProxyAgent } from 'hpagent'
 import { debounce } from '~/client/hooks/debounce.ts'
 
@@ -36,6 +36,7 @@ export const get: Got = got.extend({
   },
   resolveBodyOnly: true,
   responseType: 'json',
+  strictContentLength: false,
   retry: {
     limit: 3,
     methods: ['GET'],
