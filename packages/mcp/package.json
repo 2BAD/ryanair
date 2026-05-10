@@ -68,6 +68,6 @@
     "@modelcontextprotocol/inspector": "0.21.2"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   }
 }

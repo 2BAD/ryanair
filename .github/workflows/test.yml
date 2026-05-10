@@ -10,13 +10,11 @@ on:
 
 jobs:
   test:
-    name: test on ${{ matrix.os-release }} node@${{ matrix.node-version }}
+    name: test on ${{ matrix.os-release }}
     runs-on: ${{ matrix.os-release }}
 
     strategy:
       matrix:
-        node-version:
-          - 24
         os-release:
           - blacksmith-4vcpu-ubuntu-2404
           - blacksmith-4vcpu-windows-2025
@@ -28,7 +26,7 @@ jobs:
       - uses: pnpm/action-setup@26f6d4f2c533a43e6b5da0b4a5dd983f98f7b49a # v6
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: package.json
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
