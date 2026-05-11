@@ -1,6 +1,6 @@
 {
   "name": "@2bad/ryanair-mcp",
-  "version": "7.1.2",
+  "version": "8.0.0",
   "description": "Model Context Protocol (MCP) server for Ryanair API with tools for querying flights, fares, airports, and generating booking links",
   "keywords": [
     "mcp",
