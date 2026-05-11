@@ -59,6 +59,18 @@ const deals = await fares.getCheapestPerDay('BER', 'DUB', '2024-02-01')
 
 [View Flights Documentation →](docs/flights.md)
 
+## Notes on the booking API
+
+`flights.getAvailable()` hits `/api/booking/v4/*/availability`, which performs a weak presence check on a `fr-correlation-id` cookie and a `client-version` header that must match a currently-deployed Ryanair web client version. This package self-issues the cookie and ships a known-good `client-version` value (currently `3.196.0`).
+
+If Ryanair retires that version from their whitelist, `getAvailable()` will start returning `409 Availability declined`. To recover, find the current version (open ryanair.com in a browser, look at any availability XHR's `client-version` request header in DevTools) and set it before importing the package:
+
+```shell
+RYANAIR_CLIENT_VERSION=3.197.0 node app.js
+```
+
+All other endpoints (airports, fares, flight dates and schedules) require no authentication.
+
 ## Understanding IATA Codes
 
 IATA codes are three-letter identifiers used in aviation for airports worldwide. For example:
