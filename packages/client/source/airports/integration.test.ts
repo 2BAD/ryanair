@@ -210,11 +210,12 @@ describe('airports', () => {
 
       expect(data).haveOwnProperty('month')
       expect(data).haveOwnProperty('days')
-      if (data.days.length > 0) {
-        expect(data.days[0]).haveOwnProperty('day')
-        expect(data.days[0]).haveOwnProperty('flights')
-        expect(data.days[0]?.flights[0]).haveOwnProperty('carrierCode')
-      }
+      expect(data.days.length).toBeGreaterThan(0)
+      expect(data.days[0]).haveOwnProperty('day')
+      expect(data.days[0]).haveOwnProperty('flights')
+
+      const dayWithFlights = data.days.find((d) => d.flights.length > 0)
+      expect(dayWithFlights?.flights[0]).haveOwnProperty('carrierCode')
     })
 
     it('should throw HTTP error for non-existing period', async () => {

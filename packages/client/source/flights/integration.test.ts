@@ -111,5 +111,21 @@ describe('flights', () => {
 
       expect(getSpy).toHaveBeenNthCalledWith(1, `${BOOKING_API}/availability?${urlParams.toString()}`)
     })
+
+    it('hits the live booking API and parses real flight data', async () => {
+      const data = await flights.getAvailable({
+        Origin: from,
+        Destination: to,
+        DateOut: flightDate,
+        RoundTrip: 'false'
+      })
+
+      expect(data.trips.length).toBeGreaterThan(0)
+      expect(data.trips[0]?.origin).toBe(from)
+      expect(data.trips[0]?.destination).toBe(to)
+
+      const dayWithFlights = data.trips[0]?.dates.find((d) => d.flights.length > 0)
+      expect(dayWithFlights?.flights[0]?.flightNumber).toMatch(/^[A-Z]{2}\s?\d+$/)
+    })
   })
 })

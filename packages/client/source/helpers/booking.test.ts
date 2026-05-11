@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { z } from 'zod'
 import {
   BookingLinkOptions,
   generateBookingLink,
@@ -39,7 +40,7 @@ describe('BookingLinkOptions', () => {
         destinationIata: 'BER',
         dateOut: '2025-03-30'
       })
-    ).toThrow()
+    ).toThrow(z.ZodError)
 
     // Too long
     expect(() =>
@@ -48,7 +49,7 @@ describe('BookingLinkOptions', () => {
         destinationIata: 'BER',
         dateOut: '2025-03-30'
       })
-    ).toThrow()
+    ).toThrow(z.ZodError)
   })
 
   it('should throw an error for invalid date format', () => {
@@ -60,7 +61,7 @@ describe('BookingLinkOptions', () => {
         destinationIata: 'BER',
         dateOut: '2025/03/30'
       })
-    ).toThrow()
+    ).toThrow(z.ZodError)
   })
 
   it('should throw an error for invalid passenger counts', () => {
@@ -74,7 +75,7 @@ describe('BookingLinkOptions', () => {
         dateOut: '2025-03-30',
         adults: 0
       })
-    ).toThrow()
+    ).toThrow(z.ZodError)
 
     // Teens above maximum
     expect(() =>
@@ -84,7 +85,7 @@ describe('BookingLinkOptions', () => {
         dateOut: '2025-03-30',
         teens: 25
       })
-    ).toThrow()
+    ).toThrow(z.ZodError)
   })
 })
 
