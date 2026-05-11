@@ -61,15 +61,15 @@ const deals = await fares.getCheapestPerDay('BER', 'DUB', '2024-02-01')
 
 ## Notes on the booking API
 
-`flights.getAvailable()` hits `/api/booking/v4/*/availability`, which performs a weak presence check on a `fr-correlation-id` cookie and a `client-version` header that must match a currently-deployed Ryanair web client version. This package self-issues the cookie and ships a known-good `client-version` value (currently `3.196.0`).
+`flights.getAvailable()` calls `/api/booking/v4/*/availability`. The endpoint checks for a `fr-correlation-id` cookie (any value works, only the presence matters) and a `client-version` header matching a current Ryanair web build. The package generates the cookie itself and defaults `client-version` to `3.196.0`.
 
-If Ryanair retires that version from their whitelist, `getAvailable()` will start returning `409 Availability declined`. To recover, find the current version (open ryanair.com in a browser, look at any availability XHR's `client-version` request header in DevTools) and set it before importing the package:
+When Ryanair drops that version, `getAvailable()` starts returning `409 Availability declined`. Grab a current value from ryanair.com (open DevTools, find any availability XHR, copy its `client-version` request header) and override:
 
 ```shell
 RYANAIR_CLIENT_VERSION=3.197.0 node app.js
 ```
 
-All other endpoints (airports, fares, flight dates and schedules) require no authentication.
+The other endpoints (airports, fares, flight dates, schedules) don't need any auth.
 
 ## Understanding IATA Codes
 
