@@ -9,53 +9,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Breaking Changes
 
-### Added (API Client)
-- New API methods for retrieving flight schedules:
-  - `airports.getSchedulesByRoute(from, to)`: Returns a single `Schedule` for a specific route
-  - `airports.getSchedulesByPeriod(from, to, year, month)`: Returns a `MonthlySchedule` for a specific period
-- New booking helper utilities to generate Ryanair booking links:
-  - `helpers.generateBookingLink`: Creates customizable booking URLs with all options
-  - `helpers.generateOneWayBookingLink`: Simplified helper for one-way flight booking links
-  - `helpers.generateReturnBookingLink`: Simplified helper for return flight booking links
-- Comprehensive test suite for booking link generators
-- Exported helpers module through the package's main entry point
+### Added
 
-### Changed (API Client)
-- Improved code organization with a new helpers index for better module structure
-
-### Fixed (API Client)
-- Add new headers required to get flight availability data
-
----
-
-### Added (MCP)
-- Implemented comprehensive MCP tools for all airport methods:
-  - `get_active_airports`: List all active airports
-  - `get_active_airports_v3`: List all active airports (API v3)
-  - `get_airport_info`: Get detailed airport information
-  - `get_airport_destinations`: Get destinations from an airport
-  - `calculate_distance`: Calculate distance between locations
-  - `find_routes`: Find routes between airports
-  - `get_airport_schedules`: Get schedules from airports
-  - `get_schedules_by_route`: Get schedules for a specific route
-  - `get_schedules_by_period`: Get schedules for specific timeframes
-- Added MCP tools for flights:
-  - `get_available_flights`: Find available flights with all options
-  - `get_available_flight_dates`: Get dates with available flights
-- Added MCP tools for fares:
-  - `get_cheapest_fares_per_day`: Get cheapest fares by day
-  - `find_daily_fares_in_range`: Find all daily fares in date range
-  - `find_cheapest_round_trip`: Find cheapest round trips
-- Added booking link generation tool:
-  - `generate_booking_link`: Create booking links with all options
-
-### Changed (MCP)
-- Improved package description and keywords for better discoverability
-- Streamlined server initialization code
+### Changed
 
 ### Fixed
 
 ### Removed
+
+## [8.0.0] - 2026-05-11
+
+### Breaking Changes
+- Minimum Node version is now 26 (was 20).
+
+### Added (API Client)
+- Schedule methods on `airports`:
+  - `getSchedulesByRoute(from, to)` returns a `Schedule`.
+  - `getSchedulesByPeriod(from, to, year, month)` returns a `MonthlySchedule`.
+- Booking-link helpers, exported from the package root:
+  - `helpers.generateBookingLink` (full options)
+  - `helpers.generateOneWayBookingLink`
+  - `helpers.generateReturnBookingLink`
+- Proxy support via `hpagent` (`HTTP_PROXY` / `HTTPS_PROXY` env vars).
+- `RYANAIR_CLIENT_VERSION` env var to override the `client-version` header when Ryanair retires the bundled value from their whitelist. See README.
+- Live integration test for `flights.getAvailable` against the booking API to catch silent breakage.
+
+### Changed (API Client)
+- `flights.getAvailable` now self-issues a `fr-correlation-id` cookie per process and sends a `client-version` header. The hardcoded session cookie that shipped in 7.1.2 had expired long before this release, and every call was returning `409 Availability declined`.
+- `got` 13 -> 15 (default import only; the runtime named export is gone), `zod` 3 -> 4, `date-fns` 3 -> 4.
+- Build stack: swc + tsc + prettier + eslint -> tsdown + oxlint + oxfmt. No public-API impact.
+- Package manager: npm -> pnpm.
+
+### Fixed (API Client)
+- `flights.getAvailable()` returns real flight data instead of `409 Availability declined`.
+
+### Removed (API Client)
+- `tough-cookie` dependency (never imported).
+- Dead hardcoded session cookie from `client/index.ts`.
+
+---
+
+### Added (MCP)
+First public release of `@2bad/ryanair-mcp`. Bin: `ryanair-mcp`, transport: stdio.
+
+Tools:
+- Airports: `get_active_airports`, `get_active_airports_v3`, `get_airport_info`, `get_airport_destinations`, `get_closest_airport`, `get_nearby_airports`, `calculate_distance`, `find_routes`, `get_airport_schedules`, `get_schedules_by_route`, `get_schedules_by_period`.
+- Flights: `get_available_flights`, `get_available_flight_dates`.
+- Fares: `get_cheapest_fares_per_day`, `find_daily_fares_in_range`, `find_cheapest_round_trip`.
+- Booking: `generate_booking_link`.
+
+### Fixed (MCP)
+- Tool type inference works under `@modelcontextprotocol/sdk` 1.26+.
 
 ## [7.1.2] - 2024-12-22
 
