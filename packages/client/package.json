@@ -59,11 +59,7 @@
     "fast-cartesian": "9.0.1",
     "got": "15.0.5",
     "hpagent": "1.2.0",
-    "tough-cookie": "6.0.1",
     "zod": "4.4.3"
-  },
-  "devDependencies": {
-    "@types/tough-cookie": "4.0.5"
   },
   "engines": {
     "node": ">=26"
