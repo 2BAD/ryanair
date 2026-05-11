@@ -20,32 +20,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [8.0.0] - 2026-05-11
 
 ### Breaking Changes
-- Minimum Node version is now 26 (was 20).
+- Requires Node 26+ (was 20).
 
 ### Added (API Client)
-- Schedule methods on `airports`:
-  - `getSchedulesByRoute(from, to)` returns a `Schedule`.
-  - `getSchedulesByPeriod(from, to, year, month)` returns a `MonthlySchedule`.
-- Booking-link helpers, exported from the package root:
-  - `helpers.generateBookingLink` (full options)
-  - `helpers.generateOneWayBookingLink`
-  - `helpers.generateReturnBookingLink`
+- `airports.getSchedulesByRoute(from, to)` returns a `Schedule`.
+- `airports.getSchedulesByPeriod(from, to, year, month)` returns a `MonthlySchedule`.
+- Booking-link helpers under `helpers`: `generateBookingLink`, `generateOneWayBookingLink`, `generateReturnBookingLink`.
 - Proxy support via `hpagent` (`HTTP_PROXY` / `HTTPS_PROXY` env vars).
-- `RYANAIR_CLIENT_VERSION` env var to override the `client-version` header when Ryanair retires the bundled value from their whitelist. See README.
-- Live integration test for `flights.getAvailable` against the booking API to catch silent breakage.
+- `RYANAIR_CLIENT_VERSION` env var to override the `client-version` header when Ryanair retires the bundled value. See README.
+- Live integration test for `flights.getAvailable` against the booking API.
 
 ### Changed (API Client)
-- `flights.getAvailable` now self-issues a `fr-correlation-id` cookie per process and sends a `client-version` header. The hardcoded session cookie that shipped in 7.1.2 had expired long before this release, and every call was returning `409 Availability declined`.
+- `flights.getAvailable` self-issues a `fr-correlation-id` cookie per process and sends a `client-version` header. The cookie that shipped in 7.1.2 had expired, so every call was returning `409 Availability declined`.
 - `got` 13 -> 15 (default import only; the runtime named export is gone), `zod` 3 -> 4, `date-fns` 3 -> 4.
 - Build stack: swc + tsc + prettier + eslint -> tsdown + oxlint + oxfmt. No public-API impact.
 - Package manager: npm -> pnpm.
 
 ### Fixed (API Client)
-- `flights.getAvailable()` returns real flight data instead of `409 Availability declined`.
+- `flights.getAvailable()` returns flight data instead of `409 Availability declined`.
 
 ### Removed (API Client)
 - `tough-cookie` dependency (never imported).
-- Dead hardcoded session cookie from `client/index.ts`.
+- Hardcoded session cookie from `client/index.ts`.
 
 ---
 
