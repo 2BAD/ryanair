@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
+- `flights.getAvailable()` scrapes the current `client-version` from `ryanair.com/ie/en/trip/flights/select` and retries once on `409 Availability declined`. `RYANAIR_CLIENT_VERSION` skips the scrape.
 
 ### Fixed
 
