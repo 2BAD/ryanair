@@ -67,11 +67,7 @@ describe('client-version discovery', () => {
   it('dedupes concurrent calls into a single request', async () => {
     queue.push({ status: 200, body: '<!-- Desktop version: 1.2.3 -->' })
 
-    const results = await Promise.all([
-      refreshClientVersion(url),
-      refreshClientVersion(url),
-      refreshClientVersion(url)
-    ])
+    const results = await Promise.all([refreshClientVersion(url), refreshClientVersion(url), refreshClientVersion(url)])
 
     expect(results).toEqual(['1.2.3', '1.2.3', '1.2.3'])
     expect(hits).toBe(1)

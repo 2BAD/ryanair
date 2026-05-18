@@ -9,19 +9,21 @@ let pending: Promise<string | undefined> | undefined
 export const getClientVersion = (): string => current
 
 export const refreshClientVersion = (url: string = VERSION_DISCOVERY_URL): Promise<string | undefined> => {
-  pending ??= got(url, {
-    responseType: 'text',
-    resolveBodyOnly: true,
-    retry: { limit: 1 }
-  })
-    .then((html) => {
+  pending ??= (async () => {
+    try {
+      const html = await got(url, {
+        responseType: 'text',
+        resolveBodyOnly: true,
+        retry: { limit: 1 }
+      })
       const next = html.match(VERSION_PATTERN)?.[1]
       if (next) current = next
       return next
-    })
-    .catch(() => undefined)
-    .finally(() => {
+    } catch {
+      return undefined
+    } finally {
       pending = undefined
-    })
+    }
+  })()
   return pending
 }

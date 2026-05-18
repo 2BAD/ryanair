@@ -12,8 +12,7 @@ export const DELAY_MS: number | [number, number] = 500
 // `409 Availability declined`. On 409 the client refreshes the version from the
 // flight-select page and retries once. See `version.ts`.
 
-const isAvailabilityCall = (url: string): boolean =>
-  url.includes('/api/booking/v4/') && url.includes('/availability')
+const isAvailabilityCall = (url: string): boolean => url.includes('/api/booking/v4/') && url.includes('/availability')
 
 const createProxyAgents = (): Agents => {
   const httpProxy = process.env['HTTP_PROXY']
