@@ -61,9 +61,11 @@ const deals = await fares.getCheapestPerDay('BER', 'DUB', '2024-02-01')
 
 ## Notes on the booking API
 
-`flights.getAvailable()` calls `/api/booking/v4/*/availability`. The endpoint checks for a `fr-correlation-id` cookie (any value works, only the presence matters) and a `client-version` header matching a current Ryanair web build. The package generates the cookie itself and defaults `client-version` to `3.196.0`.
+`flights.getAvailable()` calls `/api/booking/v4/*/availability`. The endpoint checks for a `fr-correlation-id` cookie (any value, just has to be present) and a `client-version` header matching the currently-deployed Ryanair web build. The package generates the cookie itself and ships a default `client-version` as a starting guess.
 
-When Ryanair drops that version, `getAvailable()` starts returning `409 Availability declined`. Grab a current value from ryanair.com (open DevTools, find any availability XHR, copy its `client-version` request header) and override:
+That pin gets retired whenever Ryanair ships a new frontend. When it happens the next `getAvailable()` call returns `409 Availability declined`, the client scrapes the current version from ryanair.com, updates its in-memory pin, and retries. Nothing for you to do.
+
+If you'd rather skip the one-off discovery request, or want to lock to a specific version, set it explicitly:
 
 ```shell
 RYANAIR_CLIENT_VERSION=3.197.0 node app.js
