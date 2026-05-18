@@ -2,37 +2,15 @@ import { randomUUID } from 'node:crypto'
 import got, { type Agents, type Got } from 'got'
 import { HttpProxyAgent, HttpsProxyAgent } from 'hpagent'
 import { debounce } from '~/client/hooks/debounce.ts'
+import { getClientVersion, refreshClientVersion } from '~/client/version.ts'
 
 export const DELAY_MS: number | [number, number] = 500
 
 // Booking API gates on a `fr-correlation-id` cookie (presence only, value unchecked)
 // and a `client-version` header. The version must match the currently-deployed
 // Ryanair web client exactly, not a min-version check. Retired pins return
-// `409 Availability declined`.
-//
-// On 409 from an availability call the client scrapes the live version from the
-// flight-select page HTML (`<!-- Desktop version: X.Y.Z -->`), updates the
-// in-memory pin, and retries once. `RYANAIR_CLIENT_VERSION` skips both the
-// default pin and discovery on the first call.
-const VERSION_DISCOVERY_URL = 'https://www.ryanair.com/ie/en/trip/flights/select'
-const VERSION_PATTERN = /Desktop version: (\d+\.\d+\.\d+)/
-
-let clientVersion = process.env['RYANAIR_CLIENT_VERSION'] ?? '3.196.0'
-let pendingDiscovery: Promise<string | undefined> | undefined
-
-const discoverClientVersion = (): Promise<string | undefined> => {
-  pendingDiscovery ??= got(VERSION_DISCOVERY_URL, {
-    responseType: 'text',
-    resolveBodyOnly: true,
-    retry: { limit: 1 }
-  })
-    .then((html) => html.match(VERSION_PATTERN)?.[1])
-    .catch(() => undefined)
-    .finally(() => {
-      pendingDiscovery = undefined
-    })
-  return pendingDiscovery
-}
+// `409 Availability declined`. On 409 the client refreshes the version from the
+// flight-select page and retries once. See `version.ts`.
 
 const isAvailabilityCall = (url: string): boolean =>
   url.includes('/api/booking/v4/') && url.includes('/availability')
@@ -60,7 +38,7 @@ export const get: Got = got.extend(
     hooks: {
       beforeRequest: [
         (options) => {
-          options.headers['client-version'] = clientVersion
+          options.headers['client-version'] = getClientVersion()
         }
       ],
       afterResponse: [
@@ -69,9 +47,8 @@ export const get: Got = got.extend(
           if (!isAvailabilityCall(response.url)) return response
           const ctx = response.request.options.context as { versionRetried?: boolean }
           if (ctx.versionRetried) return response
-          const next = await discoverClientVersion()
+          const next = await refreshClientVersion()
           if (!next) return response
-          clientVersion = next
           return retryWithMergedOptions({ context: { versionRetried: true } })
         }
       ]
