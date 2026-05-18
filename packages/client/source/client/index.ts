@@ -70,7 +70,7 @@ export const get: Got = got.extend(
           const ctx = response.request.options.context as { versionRetried?: boolean }
           if (ctx.versionRetried) return response
           const next = await discoverClientVersion()
-          if (!next || next === clientVersion) return response
+          if (!next) return response
           clientVersion = next
           return retryWithMergedOptions({ context: { versionRetried: true } })
         }
