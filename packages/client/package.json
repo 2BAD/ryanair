@@ -55,7 +55,7 @@
     "test:unit": "vitest run unit --coverage"
   },
   "dependencies": {
-    "date-fns": "4.1.0",
+    "date-fns": "4.2.1",
     "fast-cartesian": "9.0.1",
     "got": "15.0.5",
     "hpagent": "1.2.0",
