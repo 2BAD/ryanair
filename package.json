@@ -8,21 +8,21 @@
     "@2bad/tsconfig": "3.0.2",
     "@arethetypeswrong/cli": "0.18.3",
     "@types/node": "25.9.3",
-    "@vitest/coverage-v8": "4.1.8",
+    "@vitest/coverage-v8": "4.1.9",
     "npm-run-all2": "8.0.4",
-    "oxfmt": "0.54.0",
-    "oxlint": "1.69.0",
+    "oxfmt": "0.55.0",
+    "oxlint": "1.70.0",
     "publint": "0.3.21",
-    "tsdown": "0.22.2",
+    "tsdown": "0.22.3",
     "typescript": "6.0.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.9"
   },
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.8.0",
   "engines": {
     "node": ">=26"
   },
   "volta": {
-    "node": "26.3.0",
-    "pnpm": "11.6.0"
+    "node": "26.3.1",
+    "pnpm": "11.8.0"
   }
 }
