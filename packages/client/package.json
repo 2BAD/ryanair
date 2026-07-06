@@ -57,7 +57,7 @@
   "dependencies": {
     "date-fns": "4.4.0",
     "fast-cartesian": "9.0.1",
-    "got": "15.0.5",
+    "got": "15.1.0",
     "hpagent": "1.2.0",
     "zod": "4.4.3"
   },
