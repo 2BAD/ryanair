@@ -37,5 +37,4 @@ jobs:
       - name: publish
         env:
           NPM_TAG: ${{ steps.dist-tag.outputs.tag }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm -r publish --provenance --access public --no-git-checks --tag "$NPM_TAG"
