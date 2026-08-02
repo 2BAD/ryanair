@@ -12,11 +12,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
-- `flights.getAvailable()` scrapes the current `client-version` from `ryanair.com/ie/en/trip/flights/select` and retries once on `409 Availability declined`. `RYANAIR_CLIENT_VERSION` skips the scrape.
 
 ### Fixed
 
 ### Removed
+
+## [8.1.0] - 2026-08-02
+
+### Changed
+- `flights.getAvailable()` scrapes the current `client-version` from `ryanair.com/ie/en/trip/flights/select` and retries once on `409 Availability declined`. `RYANAIR_CLIENT_VERSION` skips the scrape.
 
 ## [8.0.0] - 2026-05-11
 
@@ -230,7 +234,10 @@ Tools:
 
 ## [1.0.0] - 2023-04-14
 
-[unreleased]: https://github.com/2BAD/ryanair/compare/v7.1.1...HEAD
+[unreleased]: https://github.com/2BAD/ryanair/compare/v8.1.0...HEAD
+[8.1.0]: https://github.com/2BAD/ryanair/compare/v8.0.0...v8.1.0
+[8.0.0]: https://github.com/2BAD/ryanair/compare/v7.1.2...v8.0.0
+[7.1.2]: https://github.com/2BAD/ryanair/compare/v7.1.1...v7.1.2
 [7.1.1]: https://github.com/2BAD/ryanair/compare/v7.1.0...v7.1.1
 [7.1.0]: https://github.com/2BAD/ryanair/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/2BAD/ryanair/compare/v6.0.1...v7.0.0
