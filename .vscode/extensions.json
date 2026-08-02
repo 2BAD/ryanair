@@ -1,7 +1,6 @@
 {
   "recommendations": [
-    "biomejs.biome",
-    "dbaeumer.vscode-eslint",
+    "oxc.oxc-vscode",
     "editorconfig.editorconfig",
     "vitest.explorer"
   ]

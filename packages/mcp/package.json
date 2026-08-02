@@ -49,7 +49,8 @@
     "check": "run-p check:**",
     "check:code": "oxlint ./source",
     "check:format": "oxfmt --check ./source",
-    "dev": "mcp-inspector tsx source/index.ts",
+    "check:types": "tsc --noEmit",
+    "dev": "mcp-inspector node source/cli.ts",
     "fix": "run-p fix:**",
     "fix:code": "oxlint --fix ./source",
     "fix:format": "oxfmt ./source",
@@ -61,11 +62,11 @@
   },
   "dependencies": {
     "@2bad/ryanair": "workspace:*",
-    "@modelcontextprotocol/sdk": "1.29.0",
+    "@modelcontextprotocol/sdk": "1.30.0",
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@modelcontextprotocol/inspector": "0.22.0"
+    "@modelcontextprotocol/inspector": "2.0.0"
   },
   "engines": {
     "node": ">=26"

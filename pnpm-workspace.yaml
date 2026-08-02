@@ -2,4 +2,8 @@ packages:
   - packages/*
 
 allowBuilds:
+  '@modelcontextprotocol/inspector': true
   esbuild: true
+
+minimumReleaseAgeExclude:
+  - '@2bad/*'

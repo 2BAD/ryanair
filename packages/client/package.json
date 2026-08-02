@@ -45,6 +45,7 @@
     "check": "run-p check:**",
     "check:code": "oxlint ./source",
     "check:format": "oxfmt --check ./source",
+    "check:types": "tsc --noEmit",
     "fix": "run-p fix:**",
     "fix:code": "oxlint --fix ./source",
     "fix:format": "oxfmt ./source",
