@@ -10,19 +10,19 @@
     "@types/node": "26.1.2",
     "@vitest/coverage-v8": "4.1.10",
     "npm-run-all2": "9.0.3",
-    "oxfmt": "0.61.0",
-    "oxlint": "1.76.0",
-    "publint": "0.3.22",
+    "oxfmt": "0.62.0",
+    "oxlint": "1.77.0",
+    "publint": "0.3.23",
     "tsdown": "0.22.14",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
-  "packageManager": "pnpm@11.18.0",
+  "packageManager": "pnpm@11.20.0",
   "engines": {
     "node": ">=26"
   },
   "volta": {
-    "node": "26.5.1",
-    "pnpm": "11.18.0"
+    "node": "26.7.0",
+    "pnpm": "11.20.0"
   }
 }
