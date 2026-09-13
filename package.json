@@ -7,22 +7,22 @@
     "@2bad/axiom": "2.1.0",
     "@2bad/tsconfig": "4.0.0",
     "@arethetypeswrong/cli": "0.18.5",
-    "@types/node": "26.2.0",
-    "@vitest/coverage-v8": "4.1.10",
+    "@types/node": "26.5.1",
+    "@vitest/coverage-v8": "4.1.11",
     "npm-run-all2": "9.0.3",
-    "oxfmt": "0.63.0",
-    "oxlint": "1.78.0",
-    "publint": "0.3.23",
-    "tsdown": "0.22.14",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0",
+    "publint": "0.3.24",
+    "tsdown": "0.23.0",
     "typescript": "7.0.2",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@11.26.0",
   "engines": {
     "node": ">=26"
   },
   "volta": {
-    "node": "26.7.0",
-    "pnpm": "11.21.0"
+    "node": "26.8.2",
+    "pnpm": "11.26.0"
   }
 }
