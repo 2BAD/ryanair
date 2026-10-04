@@ -6,8 +6,8 @@ import { getClientVersion, refreshClientVersion } from '~/client/version.ts'
 
 export const DELAY_MS: number | [number, number] = 500
 
-// Booking API gates on a `fr-correlation-id` cookie (presence only, value unchecked)
-// and a `client-version` header. The version must match the currently-deployed
+// Booking API gates on a `fr-correlation-id` cookie (presence only, value unchecked),
+// a `client: desktop` header and a `client-version` header. The version must match the currently-deployed
 // Ryanair web client exactly, not a min-version check. Retired pins return
 // `409 Availability declined`. On 409 the client refreshes the version from the
 // flight-select page and retries once. See `version.ts`.
@@ -32,6 +32,7 @@ export const get: Got = got.extend(
   {
     headers: {
       'user-agent': 'Mozilla/5.0 (compatible; @2bad/ryanair; +https://github.com/2BAD/ryanair)',
+      client: 'desktop',
       cookie: `fr-correlation-id=${randomUUID()}`
     },
     hooks: {

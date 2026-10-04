@@ -3,7 +3,7 @@ import got from 'got'
 const VERSION_DISCOVERY_URL = 'https://www.ryanair.com/ie/en/trip/flights/select'
 const VERSION_PATTERN = /Desktop version: (\d+\.\d+\.\d+)/
 
-let current = process.env['RYANAIR_CLIENT_VERSION'] ?? '3.196.0'
+let current = process.env['RYANAIR_CLIENT_VERSION'] ?? '3.218.0'
 let pending: Promise<string | undefined> | undefined
 
 export const getClientVersion = (): string => current

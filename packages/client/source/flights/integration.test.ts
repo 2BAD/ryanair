@@ -113,10 +113,11 @@ describe('flights', () => {
     })
 
     it('hits the live booking API and parses real flight data', async () => {
+      const dates = await flights.getDates(from, to)
       const data = await flights.getAvailable({
         Origin: from,
         Destination: to,
-        DateOut: flightDate,
+        DateOut: dates[Math.min(7, dates.length - 1)] ?? flightDate,
         RoundTrip: 'false'
       })
 
