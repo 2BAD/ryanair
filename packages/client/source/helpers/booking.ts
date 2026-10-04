@@ -31,7 +31,6 @@ export const BookingLinkOptions = z.object({
   market: z.string().default('gb'),
   locale: z.string().default('en')
 })
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type BookingLinkOptions = z.infer<typeof BookingLinkOptions>
 
 /**

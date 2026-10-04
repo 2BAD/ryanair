@@ -31,7 +31,6 @@ export const AvailabilityOptions = z.object({
   RoundTrip: StrBoolean,
   ToUs: z.string().regex(/AGREED/g)
 })
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AvailabilityOptions = z.infer<typeof AvailabilityOptions>
 
 export const Segment = z.object({
@@ -79,7 +78,6 @@ export const FlightDate = z.object({
   dateOut: StrDateTimeMs,
   flights: z.array(Flight)
 })
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type FlightDate = z.infer<typeof FlightDate>
 
 export const Trip = z.object({
@@ -92,7 +90,6 @@ export const Trip = z.object({
   upgradeType: z.string(),
   dates: z.array(FlightDate)
 })
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Trip = z.infer<typeof Trip>
 
 export const AvailabilityResponse = z.object({
@@ -105,5 +102,4 @@ export const AvailabilityResponse = z.object({
   trips: z.array(Trip),
   serverTimeUTC: z.string().datetime()
 })
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type AvailabilityResponse = z.infer<typeof AvailabilityResponse>
