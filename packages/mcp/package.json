@@ -63,10 +63,10 @@
   "dependencies": {
     "@2bad/ryanair": "workspace:*",
     "@modelcontextprotocol/sdk": "1.32.1",
-    "zod": "4.6.5"
+    "zod": "4.6.7"
   },
   "devDependencies": {
-    "@modelcontextprotocol/inspector": "2.10.1"
+    "@modelcontextprotocol/inspector": "2.11.0"
   },
   "engines": {
     "node": ">=26"
