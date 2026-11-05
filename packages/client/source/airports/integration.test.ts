@@ -21,8 +21,8 @@ const AirportShortSnapshot = {
   name: expect.any(String)
 }
 
-const from = 'BER' // Berlin airport
-const to = 'VCE' // Krakow airport
+const from = 'DUB' // Dublin airport
+const to = 'STN' // London Stansted airport
 
 describe('airports', () => {
   afterEach(() => {
